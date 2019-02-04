@@ -1,0 +1,98 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "userName": "Tom Smith",
+        "email": false,
+        "password": "onePassword"
+      },
+      {
+        "id": 2,
+        "userName": "Dick Smith",
+        "email": false,
+        "password": "twoPassword"
+      },
+      {
+        "id": 3,
+        "userName": "Harry Smith",
+        "email": false,
+        "password": "threePassword"
+      }
+    ],
+    "emotions": [
+        {
+            "id": 1,
+            "emotionName": "Emotion 1",
+            "emotionImage": "",
+            "summary": "Tree trunks grow however makes them happy. All kinds of happy little splashes. I can't think of anything more rewarding than being able to express yourself to others through painting. Take your time. Speed will come later. You better get your coat out, this is going to be a cold painting. See. We take the corner of the brush and let it play back-and-forth.",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 2,
+            "emotionName": "Emotion 2",
+            "emotionImage": "",
+            "summary": "If you overwork it you become a cloud killer. There's nothing worse than a cloud killer. Automatically, all of these beautiful, beautiful things will happen. You can bend rivers. But when I get home, the only thing I have power over is the garbage. We'll put a happy little bush here. Almost everything is going to happen for you automatically - you don't have to spend any time working or worrying. Just relax and let it flow. That easy.",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 3,
+            "emotionName": "Emotion 3",
+            "emotionImage": "",
+            "summary": "This is truly an almighty mountain. Now let's put some happy little clouds in here. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do. Happy painting, God bless. This piece of canvas is your world. The very fact that you're aware of suffering is enough reason to be overjoyed that you're alive and can experience it.",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 4,
+            "emotionName": "Emotion 4",
+            "emotionImage": "",
+            "summary": "There he comes. Even trees need a friend. We all need friends. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Just think about these things in your mind and drop em' on canvas. Let's just drop a little Evergreen right here. In this world, everything can be happy.",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 5,
+            "emotionName": "Emotion 5",
+            "emotionImage": "",
+            "summary": "You can do it. You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it. Let your imagination be your guide. When you do it your way you can go anywhere you choose. All you have to learn here is how to have fun. Isn't it fantastic that you can change your mind and create all these happy things?",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 6,
+            "emotionName": "Emotion 6",
+            "emotionImage": "",
+            "summary": "Let's have a little bit of fun today. Little trees and bushes grow however makes them happy. Nice little clouds playing around in the sky. We don't need any guidelines or formats. All we need to do is just let it flow right out of us. A thin paint will stick to a thick paint. You can't have light without dark. You can't know happiness unless you've known sorrow.",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 7,
+            "emotionName": "Emotion 7",
+            "emotionImage": "",
+            "summary": "There is immense joy in just watching - watching all the little creatures in nature. Let's put some happy trees and bushes back in here. This is a happy place, little squirrels live here and play. Mountains are so simple, they're hard. Maybe we got a few little happy bushes here, just covered with snow. I guess I'm a little weird. I like to talk to trees and animals. That's okay though; I have more fun than most people.",
+            "examples": "",
+            "message": ""
+        },
+        {
+            "id": 8,
+            "emotionName": "Emotion 8",
+            "emotionImage": "",
+            "summary": "Everyone needs a friend. Friends are the most valuable things in the world. We'll put a happy little sky in here. Use absolutely no pressure. Just like an angel's wing. Only God can make a tree - but you can paint one. We must be quiet, soft and gentle. You don't want to kill all your dark areas they are very important.",
+            "examples": "",
+            "message": ""
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "userId": 1,
+            "emotionId": 1,
+            "dueDate": "2019-02-04",
+            "task": "task one",
+            "completion": false
+        }
+    ]
+}
