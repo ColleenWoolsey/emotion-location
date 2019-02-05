@@ -16,7 +16,7 @@ export default class EmotionDetail extends Component {
 
     return (
       <section className="emotion">
-        <div key={animal.id} className="card">
+        <div key={emotion.id} className="card">
           <div className="card-body">
             <h4 className="card-title">
               {emotion.examples}
