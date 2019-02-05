@@ -17,6 +17,7 @@ export default class AppViews extends Component {
            this.setState({
                emotions: allEmotions
            })
+           console.log("allEmotions from componentDidMount", allEmotions)
        })
    };
 
@@ -26,14 +27,14 @@ export default class AppViews extends Component {
 // This is the list of emotions
          <React.Fragment>
 
-           <Route exact path="/emotions"
+           <Route exact path="/"
            render={props => {
                return <EmotionList emotions={this.state.emotions} />            
             }}
            />
     
 {/* This is the detail for individual emotions */}
-            <Route path="/emotions/:emotionId(/d+)"
+            <Route path="/emotions/:emotionId(\d+)"
             render={props => {
                 return (
                     <EmotionDetail {...props}
