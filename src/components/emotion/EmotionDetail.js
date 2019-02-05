@@ -6,7 +6,7 @@ export default class EmotionDetail extends Component {
     console.log(this.props);
     /*
             Using the route parameter, find the emotion that the
-            user clicked on by looking at the `this.props.emotionss`
+            user clicked on by looking at the `this.props.emotions`
             collection that was passed down from AppViews
         */
     const emotion =
