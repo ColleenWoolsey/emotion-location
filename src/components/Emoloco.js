@@ -1,14 +1,34 @@
 import React, { Component } from "react";
+import { Route, Redirect } from "react-router-dom";
+import NavBar from "./nav/NavBar";
 import AppViews from "./AppViews";
-import "./Emoloco.css";
+import EmotionManager from "../modules/EmotionManager";
 // import "bootstrap/dist/css/bootstrap.min.css";
+import "./Emoloco.css";
+import "./nav/Nav.css";
 
-class Emoloco extends Component {
+export default class Emoloco extends Component {
+
+  state = {
+    emotions: []
+  };
+
+ componentDidMount() {
+     EmotionManager.getAll()
+     .then(allEmotions => {
+      console.log(allEmotions)
+         this.setState({
+             emotions: allEmotions
+         })         
+      })      
+    }
+
   render() {
     return (
-        <AppViews />
+      <React.Fragment>
+        <NavBar emotions={this.state.emotions} />
+        <AppViews emotions={this.state.emotions} />
+      </React.Fragment>
     );
   }
 }
-
-export default Emoloco;

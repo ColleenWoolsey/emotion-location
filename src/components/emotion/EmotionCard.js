@@ -5,16 +5,30 @@ import "./Emotion.css";
 export default class EmotionCard extends Component {
   render() {
     return (
-      <div key={this.props.emotion.id} className="card">
-        <div className="card-body">
-          <h5 className="card-title">{this.props.emotion.emotionName}</h5>
-          <img src="{this.props.emotion.imageUrl}" alt="imageUrl" />
-          <h6>{this.props.emotion.summary}</h6>                      
-          <Link className="task-link" to={`/emotions/${this.props.emotion.id}`}>
-            Suggested Tasks
-          </Link>
+      <React.Fragment>
+        <div className="emotions-list">
+          <div className="card">          
+            <div className="card-body">
+              <h5 className="card-title">
+                {this.props.emotion.emotionName}
+                <img src="emotion.imageURL" alt="imageUrl" />
+              </h5>
+                {this.props.emotion.summary}             
+            </div>
+            <div className="addTaskBtn">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
+                  // this.props.history.push("/tasks/new");
+                }}>
+                {`Add an ${this.props.emotion.emotionName} Task`}
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+        
+      </React.Fragment>
     );
   }
 }

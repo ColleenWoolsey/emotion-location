@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import EmotionCard from "./EmotionCard";
+import TaskList from "../task/TaskList";
 import "./Emotion.css";
 
 export default class EmotionList extends Component {
@@ -12,17 +12,7 @@ export default class EmotionList extends Component {
             <EmotionCard key={emotion.id} emotion={emotion} {...this.props} />
           ))}
         </div>
-
-        <div className="addTaskBtn">
-          <button
-            type="button"
-            className="btn"
-            onClick={() => {
-              this.props.history.push("/tasks/new");
-            }}>
-            Add a Task
-          </button>
-        </div>
+        <TaskList />
       </React.Fragment>
     );
   }
