@@ -26,6 +26,7 @@ export default class AppViews extends Component {
            this.setState({
                tasks: allTasks
            })
+           console.log("allEmotions from componentDidMount", allEmotions)
        })
    };
 
@@ -34,6 +35,7 @@ export default class AppViews extends Component {
        return(
 // This is the list of emotions for NavBar
          <React.Fragment>
+
            <Route path="/"
               render={props => {
                 return (
