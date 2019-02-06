@@ -7,15 +7,14 @@ import EmotionDetail from "./emotion/EmotionDetail";
 
 export default class AppViews extends Component {
     state = {
-      emotions: [],
       tasks: []
     };
 
    componentDidMount() {
-       EmotionManager.getAll()
-       .then(allEmotions => {
+       TaskManager.getAll()
+       .then(allTasks => {
            this.setState({
-               emotions: allEmotions
+               tasks: allTasks
            })
        })
    };
@@ -28,20 +27,19 @@ export default class AppViews extends Component {
            <Route path="/"
               render={props => {
                 return (
-                <EmotionList emotions={this.state.emotions} />
+                  <EmotionList {...this.props} />
                 );
               }}
             />
     
 {/* This is the detail for individual emotions */}
-            <Route exact path="/emotions/:emotionId(\d+)"
+            {/* <Route exact path="/emotions/:emotionId(\d+)"
               render={props => {                    
                     return (
-                        <EmotionDetail {...props}
-                        emotions={this.state.emotions} />
-                    );
-              }}
-            />
+                      <EmotionDetail {...this.props} />
+                    )
+                }}
+            /> */}
 
          </React.Fragment>
        )

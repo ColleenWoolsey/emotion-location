@@ -1,7 +1,7 @@
 /* from EmotionList.js */
 .emotions-list {
     display: flex;
-
+    border: 2px solid green;
 }
 
 .addTaskBtn {
@@ -15,7 +15,9 @@
 
 /* shared by EmotionDetail.js and EmotionCard.js */
 .card {
-
+ display: flex;
+ flex-direction: column;
+ background-color: lightyellow;
 }
 
 .card-body {
@@ -23,7 +25,10 @@
 }
 
 .card-title {
-
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
 }
 
 /* from EmotionCard.js */

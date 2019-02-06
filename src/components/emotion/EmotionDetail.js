@@ -11,7 +11,7 @@ export default class EmotionDetail extends Component {
         */
     const emotion =
       this.props.emotions.find(
-        emo => emo.id === parseInt(this.props.match.params.emotionId)
+        a => a.id === parseInt(this.props.match.params.emotionId)
       ) || {};
 
     return (
