@@ -2,6 +2,7 @@ import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
+import TaskList from "./task/TaskList";
 import EmotionCard from "./emotion/EmotionCard";
 import EmotionDetail from "./emotion/EmotionDetail";
 
@@ -36,25 +37,27 @@ export default class AppViews extends Component {
            <Route path="/"
               render={props => {
                 return (
-                  <EmotionList {...this.props} />
+                    <React.Fragment>
+                        <EmotionList {...this.props} />
+                        <TaskList tasks={this.state.tasks} />
+                    </React.Fragment>
                 );
               }}
             />
     
 {/* this is the list of tasks */}
-        <Route
+        {/* <Route
           exact path="/tasks"
           render={props => {
             return (
-              <EmotionList
-                {...props}
-                deleteTask={this.deleteTask}
-                updateTask={this.updateTask}
-                tasks={this.state.tasks}
-              />
+             <TaskList tasks={this.state.tasks} />              
+               
+                // deleteTask={this.deleteTask}
+                // updateTask={this.updateTask}
+              
             );
           }}
-        />
+        /> */}
 
 {/* this is the detail for one task */}
         <Route
