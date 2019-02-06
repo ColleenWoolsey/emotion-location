@@ -16,10 +16,10 @@ export default class Emoloco extends Component {
  componentDidMount() {
      EmotionManager.getAll()
      .then(allEmotions => {
-      console.log(allEmotions)
+      console.log("allEmotions from componentDidMount", allEmotions)
          this.setState({
              emotions: allEmotions
-         })         
+         })                 
       })      
     }
 
