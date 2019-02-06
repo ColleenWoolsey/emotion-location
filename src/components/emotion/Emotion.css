@@ -1,5 +1,6 @@
 /* from EmotionList.js */
 .emotions-list {
+    display: flex;
 
 }
 

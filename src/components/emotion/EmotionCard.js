@@ -7,16 +7,21 @@ export default class EmotionCard extends Component {
     return (
       <React.Fragment>
         <div className="emotions-list">
+        
+          {/* {this.props.emotions.map(emotion => (
+            <EmotionCard key={emotion.id} emotion={emotion} {...this.props} />
+          ))} */}
+        
           <div className="card">  
           
             <div className="card-body">
               <h5 className="card-title">
-                {/* {this.props.emotion.name}
+                {this.props.emotion.emotionName}
                 {this.props.emotion.imageUrl}
                 {this.props.emotion.summary}
                 <Link className="task-link" to={`/emotions/${this.props.emotion.id}`}>
                   Suggested Tasks
-                </Link> */}
+                </Link>
               </h5>
             </div>
           </div>
