@@ -13,7 +13,7 @@ export default class EmotionList extends Component {
           ))}
         </div>
 
-        <div className="addTaskBtn">
+        {/* <div className="addTaskBtn">
           <button
             type="button"
             className="btn"
@@ -22,7 +22,7 @@ export default class EmotionList extends Component {
             }}>
             Add a Task
           </button>
-        </div>
+        </div> */}
       </React.Fragment>
     );
   }
