@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import EmotionCard from "./EmotionCard";
-import TaskList from "../task/TaskList";
+import TaskCard from "../task/TaskCard";
 import "./Emotion.css";
+import "../task/Task.css"
 
 export default class EmotionList extends Component {
   render() {
@@ -12,7 +13,11 @@ export default class EmotionList extends Component {
             <EmotionCard key={emotion.id} emotion={emotion} {...this.props} />
           ))}
         </div>
-        <TaskList />
+        <div className="tasks-list">
+          {this.props.tasks.map(task => (
+            <TaskCard key={task.id} task={task} {...this.props} />
+          ))}
+        </div>
       </React.Fragment>
     );
   }

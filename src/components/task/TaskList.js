@@ -5,13 +5,13 @@ import "./task.css";
 export default class TaskList extends Component {
   render() {
     return (
-      <React.Fragment>
+      
         <div className="tasks-list">
-          {/* {this.props.tasks.map(task => (
+          {this.props.tasks.map(task => (
             <TaskCard key={task.id} task={task} {...this.props} />
-          ))} */}
+          ))}
         </div>
-      </React.Fragment>
+     
     );
   }
 }
