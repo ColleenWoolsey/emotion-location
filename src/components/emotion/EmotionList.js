@@ -20,7 +20,7 @@ export default class EmotionList extends Component {
                 type="button"
                 className="btn"
                 onClick={() => {
-                  // this.props.history.push("/tasks/new");
+                  this.props.history.push("/tasks/new");
                 }}>
                 Add A Task
               </button>

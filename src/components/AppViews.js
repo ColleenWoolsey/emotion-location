@@ -2,6 +2,7 @@ import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
+import TaskAddForm from "./task/TaskAddForm";
 
 export default class AppViews extends Component {
     state = {
@@ -37,12 +38,23 @@ export default class AppViews extends Component {
               render={props => {
                 return (
                     <React.Fragment>
-                        <EmotionList {...this.props} tasks={this.state.tasks} />
-                        
+                        <EmotionList {...this.props} tasks={this.state.tasks} />                        
                     </React.Fragment>
                 );
               }}
             />
+
+            <Route
+            path="/tasks/new"
+            render={props => {
+              return (
+                <TaskAddForm
+                  {...props}
+                  addTask={this.addTask}
+                />
+              );
+            }}
+          />
     
 {/* this is the list of tasks */}
         {/* <Route
@@ -76,8 +88,7 @@ export default class AppViews extends Component {
             return (
               <taskAddForm
                 {...props}
-                addTask={this.addTask}
-                
+                addTask={this.addTask}               
               />
             );
           }}
