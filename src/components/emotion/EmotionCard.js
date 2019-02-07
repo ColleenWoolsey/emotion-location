@@ -14,16 +14,6 @@ export default class EmotionCard extends Component {
               </h5>
                 {this.props.emotion.summary}             
             </div>
-            <div className="addTaskBtn">
-              <button
-                type="button"
-                className="btn"
-                onClick={() => {
-                  // this.props.history.push("/tasks/new");
-                }}>
-                {`Add an ${this.props.emotion.emotionName} Task`}
-              </button>
-            </div>
           </div>
         </div>
         

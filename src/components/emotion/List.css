@@ -1,17 +1,24 @@
-.lists {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 .emotions-list {
     display: flex;
     border: 2px solid green;
     flex-direction: row;
     align-content: flex-end;
 }
+.bottom {
+    display: flex;
+    flex-basis: auto;
+}
+.bottom-right {
+
+}
+.bottom-left{
+
+}
 
 .tasks-list {
     display: flex;
+    flex-wrap: wrap;
     border: 2px solid blue;
     flex-direction: column;
 }
@@ -32,7 +39,12 @@
 
 }
 
-
+.header-add-task {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+    justify-content: space-around;
+}
 
 /* EmotionList.js */
 .emotion-card {
@@ -54,10 +66,6 @@
     font-size: 1.2em;
 }
 
-.task-header {
-    border: 2px solid red;
-}
-
 /* TaskList.js */
 .task-card {
     display: flex;
@@ -75,6 +83,7 @@
     background-color: lightblue;
     justify-content: left;
     margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* ExamplesList */
