@@ -133,6 +133,38 @@
       "dueDate": "2019-02-04",
       "task": "task six",
       "completion": false
+    },
+    {
+      "userId": 2,
+      "emotionId": "3",
+      "dueDate": "",
+      "task": "",
+      "completion": false,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "emotionId": "5",
+      "dueDate": "2019-02-13",
+      "task": "",
+      "completion": false,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "emotionId": "4",
+      "dueDate": "",
+      "task": "",
+      "completion": false,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "emotionId": "7",
+      "dueDate": "2019-02-13",
+      "task": "Feed Cat",
+      "completion": false,
+      "id": 10
     }
   ]
 }
