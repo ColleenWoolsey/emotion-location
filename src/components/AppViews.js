@@ -31,64 +31,43 @@ export default class AppViews extends Component {
    render() {
     
        return(
-// This is the list of emotions for NavBar
+// Route for listing emotions and tasks from NavBar
          <React.Fragment>
 
            <Route exact path="/"
               render={props => {
-                return (
+              console.log("/", props)
+              return (
                     <React.Fragment>
-                        <EmotionList {...this.props} tasks={this.state.tasks} />                        
+                        <EmotionList {...this.props} {...props} tasks={this.state.tasks} />                        
                     </React.Fragment>
                 );
               }}
             />
-
-            <Route
-            path="/tasks/new"
-            render={props => {
+{/* Route for adding tasks */}
+            <Route path="/tasks/new"
+              render={props => {
+              console.log("/tasks/new", props)
               return (
                 <TaskAddForm
                   {...props}
+                  tasks={this.state.tasks}
                   addTask={this.addTask}
                 />
               );
             }}
           />
-    
-{/* this is the list of tasks */}
-        {/* <Route
-          path="/tasks"
-          render={props => {
-            return (
-             <TaskList tasks={this.state.tasks} />              
-               
-                // deleteTask={this.deleteTask}
-                // updateTask={this.updateTask}              
-            );
-          }} */}
-        {/* /> */}
 
-{/* this is the detail for one task */}
-        <Route
-          path="/tasks/:taskId(\d+)"
+{/* Route for singular task */}
+        <Route path="/tasks/:taskId(\d+)"
           render={props => {
+            console.log("/tasks/:taskId(d+)", props)
             return (
               <emotionDetail
                 {...props}
                 tasks={this.state.tasks}
-              />
-            );
-          }}
-        />
-        {/* this is the task add form */}
-        <Route
-          path="/tasks/new"
-          render={props => {
-            return (
-              <taskAddForm
-                {...props}
-                addTask={this.addTask}               
+                deleteTask={this.deleteTask}
+                updateTask={this.updateTask} 
               />
             );
           }}
