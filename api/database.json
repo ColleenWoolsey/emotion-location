@@ -117,6 +117,22 @@
             "dueDate": "2019-02-04",
             "task": "task four",
             "completion": false
+        },
+        {
+            "id": 5,
+            "userId": 1,
+            "emotionId": 8,
+            "dueDate": "2019-02-04",
+            "task": "task five",
+            "completion": false
+        },
+        {
+            "id": 6,
+            "userId": 1,
+            "emotionId": 6,
+            "dueDate": "2019-02-04",
+            "task": "task six",
+            "completion": false
         }
     ]
 }

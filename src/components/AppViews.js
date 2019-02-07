@@ -2,7 +2,6 @@ import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
-import TaskList from "./task/TaskList";
 
 export default class AppViews extends Component {
     state = {
