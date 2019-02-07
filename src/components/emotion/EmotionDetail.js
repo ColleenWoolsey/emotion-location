@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "./Emotion.css";
-
+import "./List.css";
 export default class EmotionDetail extends Component {
   render() {
     console.log(this.props);
@@ -15,10 +14,10 @@ export default class EmotionDetail extends Component {
       ) || {};
 
     return (
-      <section className="emotion">      
-        <div key={emotion.id} className="card">
-          <div className="card-body">
-            <h4 className="card-title">{emotion.examples}</h4>
+      <section className="examples">      
+        <div key={emotion.id} className="example-card">
+          <div className="example-card-body">
+            <h4 className="example-title">{emotion.examples}</h4>
           </div>
         </div>
       </section>

@@ -1,0 +1,99 @@
+.lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.emotions-list {
+    display: flex;
+    border: 2px solid green;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+.tasks-list {
+    display: flex;
+    border: 2px solid blue;
+    flex-direction: column;
+}
+
+.examples-list {
+    display: flex;
+    border: 2px solid red;
+    flex-direction: column;
+}
+
+.addTaskBtn {
+
+}
+.editTaskBtn {
+
+}
+.delTaskBtn {
+
+}
+
+
+
+/* EmotionList.js */
+.emotion-card {
+ display: flex;
+ flex-direction: column;
+ background-color: darkgreen;
+}
+
+.emotion-card-body {
+    background-color: lightyellow;
+    font-size: .8em;
+    
+}
+
+.emotion-card-title {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgreen;    
+    font-size: 1.2em;
+}
+
+.task-header {
+    border: 2px solid red;
+}
+
+/* TaskList.js */
+.task-card {
+    display: flex;
+    flex-direction: column;
+    background-color: darkblue;
+}
+
+.task-card-body {
+    background-color: aliceblue;
+}
+
+.task-card-title {
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+    justify-content: left;
+    margin-left: 15px;
+}
+
+/* ExamplesList */
+.examples-card {
+    display: flex;
+    flex-direction: column;
+    background-color: li;
+   }
+   
+   .examples-card-body {
+       background-color: violet;
+       font-size: .8em;
+   }
+   
+   .examples-card-title {
+       display: flex;
+       flex-direction: column;
+       background-color: aliceblue;
+       justify-content: center;
+   }
+
+
