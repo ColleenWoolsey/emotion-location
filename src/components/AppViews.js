@@ -38,30 +38,31 @@ export default class AppViews extends Component {
               render={props => {
               console.log("/", props)
               return (
-                    <React.Fragment>
-                        <EmotionList {...this.props} {...props} tasks={this.state.tasks} />                        
-                    </React.Fragment>
+                <React.Fragment>
+                  <EmotionList {...this.props} {...props} tasks={this.state.tasks} />                                                */}
+                </React.Fragment>
                 );
               }}
             />
 {/* Route for adding tasks */}
-            <Route path="/tasks/new"
-              render={props => {
-              console.log("/tasks/new", props)
-              return (
-                <TaskAddForm
-                  {...props}
-                  tasks={this.state.tasks}
-                  addTask={this.addTask}
-                />
-              );
-            }}
-          />
+
+        <Route path="/tasks/new"
+          render={props => {
+            return (
+              <TaskAddForm
+                {...props}
+                {...this.props}
+                tasks={this.state.tasks}
+                addTask={this.addTask}
+              />
+            );
+          }}
+        />
 
 {/* Route for singular task */}
         <Route path="/tasks/:taskId(\d+)"
           render={props => {
-            console.log("/tasks/:taskId(d+)", props)
+            console.log("/tasks/:taskId(\d+)", props)
             return (
               <emotionDetail
                 {...props}

@@ -18,8 +18,11 @@ export default class TaskCard extends Component {
                     }}>
                   </input>
                 </div>
+
                 {this.props.task.dueDate}
+
                 {this.props.task.emotion.emotionName}
+
                 <div className="editTaskBtn">
                   <button
                     type="button"
@@ -35,7 +38,7 @@ export default class TaskCard extends Component {
                     type="button"
                     className="btn"
                     onClick={() => {
-                      // this.props.history.push("/tasks/new");
+                      // this.props.history.push("/tasks/:taskId(\d+)");
                     }}>
                     Del
                   </button>
