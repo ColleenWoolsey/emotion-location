@@ -20,7 +20,7 @@ export default class TaskCard extends Component {
                   </input>
                 </div>
                 {this.props.task.dueDate}
-                {/* {this.props.emotion.emotionName} */}
+                {this.props.task.emotion.emotionName}
                 <div className="editTaskBtn">
                   <button
                     type="button"
