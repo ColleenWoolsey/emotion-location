@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../emotion/List.css"
 export default class TaskCard extends Component {
   render() {
@@ -19,8 +18,11 @@ export default class TaskCard extends Component {
                     }}>
                   </input>
                 </div>
+
                 {this.props.task.dueDate}
-                {/* {this.props.emotion.emotionName} */}
+
+                {this.props.task.emotion.emotionName}
+
                 <div className="editTaskBtn">
                   <button
                     type="button"
@@ -36,7 +38,7 @@ export default class TaskCard extends Component {
                     type="button"
                     className="btn"
                     onClick={() => {
-                      // this.props.history.push("/tasks/new");
+                      // this.props.history.push("/tasks/:taskId(\d+)");
                     }}>
                     Del
                   </button>

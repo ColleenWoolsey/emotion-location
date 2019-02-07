@@ -2,6 +2,7 @@ import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
+import TaskAddForm from "./task/TaskAddForm";
 
 export default class AppViews extends Component {
     state = {
@@ -30,54 +31,44 @@ export default class AppViews extends Component {
    render() {
     
        return(
-// This is the list of emotions for NavBar
+// Route for listing emotions and tasks from NavBar
          <React.Fragment>
 
            <Route exact path="/"
               render={props => {
-                return (
-                    <React.Fragment>
-                        <EmotionList {...this.props} tasks={this.state.tasks} />
-                        
-                    </React.Fragment>
+              console.log("/", props)
+              return (
+                <React.Fragment>
+                  <EmotionList {...this.props} {...props} tasks={this.state.tasks} />                                                */}
+                </React.Fragment>
                 );
               }}
             />
-    
-{/* this is the list of tasks */}
-        {/* <Route
-          path="/tasks"
-          render={props => {
-            return (
-             <TaskList tasks={this.state.tasks} />              
-               
-                // deleteTask={this.deleteTask}
-                // updateTask={this.updateTask}              
-            );
-          }} */}
-        {/* /> */}
+{/* Route for adding tasks */}
 
-{/* this is the detail for one task */}
-        <Route
-          path="/tasks/:taskId(\d+)"
+        <Route path="/tasks/new"
           render={props => {
             return (
-              <emotionDetail
+              <TaskAddForm
                 {...props}
+                {...this.props}
                 tasks={this.state.tasks}
+                addTask={this.addTask}
               />
             );
           }}
         />
-        {/* this is the task add form */}
-        <Route
-          path="/tasks/new"
+
+{/* Route for singular task */}
+        <Route path="/tasks/:taskId(\d+)"
           render={props => {
+            console.log("/tasks/:taskId(\d+)", props)
             return (
-              <taskAddForm
+              <emotionDetail
                 {...props}
-                addTask={this.addTask}
-                
+                tasks={this.state.tasks}
+                deleteTask={this.deleteTask}
+                updateTask={this.updateTask} 
               />
             );
           }}

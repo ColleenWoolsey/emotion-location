@@ -14,13 +14,14 @@ export default class EmotionList extends Component {
         
         <div className="bottom">
           <div className="bottom-right">
+
             <div className="header-add-task">
               <h4>My To-Do-List</h4>
               <button className="addTaskBtn"
                 type="button"
                 className="btn"
                 onClick={() => {
-                  // this.props.history.push("/tasks/new");
+                  this.props.history.push("/tasks/new");   
                 }}>
                 Add A Task
               </button>
@@ -36,6 +37,7 @@ export default class EmotionList extends Component {
           <div className="bottom-left">
           
           </div>
+
         </div>
       </React.Fragment>
     );

@@ -4,9 +4,11 @@ export default {
   get(id) {
     return fetch(`${remoteURL}/tasks/${id}`).then(e => e.json());
   },
+ 
   getAll() {
-    return fetch(`${remoteURL}/tasks`).then(e => e.json());
+    return fetch(`${remoteURL}/tasks?_expand=emotion`).then(e => e.json());
   },
+
   post(newTask) {
     return fetch(`${remoteURL}/tasks`, {
       method: "POST",

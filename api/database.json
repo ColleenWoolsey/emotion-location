@@ -1,138 +1,170 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "userName": "Tom Smith",
-        "email": false,
-        "password": "onePassword"
-      },
-      {
-        "id": 2,
-        "userName": "Dick Smith",
-        "email": false,
-        "password": "twoPassword"
-      },
-      {
-        "id": 3,
-        "userName": "Harry Smith",
-        "email": false,
-        "password": "threePassword"
-      }
-    ],
-    "emotions": [
-        {
-            "id": 1,
-            "emotionName": "Emotion 1",
-            "imageUrl": "",
-            "summary": "Tree trunks grow however makes them happy. All kinds of happy little splashes. I can't think of anything more rewarding than being able to express yourself to others through painting. Take your time.",
-            "examples": "Example One goes here",
-            "message": ""
-        },
-        {
-            "id": 2,
-            "emotionName": "Emotion 2",
-            "imageUrl": "",
-            "summary": "If you overwork it you become a cloud killer. There's nothing worse than a cloud killer. Automatically, all of these beautiful, beautiful things will happen. You can bend rivers. But when I get home",
-            "examples": "Example Two goes here",
-            "message": ""
-        },
-        {
-            "id": 3,
-            "emotionName": "Emotion 3",
-            "imageUrl": "",
-            "summary": "This is truly an almighty mountain. Now let's put some happy little clouds in here. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued",
-            "examples": "Example Three goes here",
-            "message": ""
-        },
-        {
-            "id": 4,
-            "emotionName": "Emotion 4",
-            "imageUrl": "",
-            "summary": "There he comes. Even trees need a friend. We all need friends. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Just think about these things in your mind",
-            "examples": "Example Four goes here",
-            "message": ""
-        },
-        {
-            "id": 5,
-            "emotionName": "Emotion 5",
-            "imageUrl": "",
-            "summary": "You can do it. You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it. Let your imagination be your guide. When you do it your way you can go anywhere",
-            "examples": "Example Five goes here",
-            "message": ""
-        },
-        {
-            "id": 6,
-            "emotionName": "Emotion 6",
-            "imageUrl": "",
-            "summary": "Let's have a little bit of fun today. Little trees and bushes grow however makes them happy. Nice little clouds playing around in the sky. We don't need any guidelines or formats. All we need to do is just",
-            "examples": "Example Six goes here",
-            "message": ""
-        },
-        {
-            "id": 7,
-            "emotionName": "Emotion 7",
-            "imageUrl": "",
-            "summary": "There is immense joy in just watching - watching all the little creatures in nature. Let's put some happy trees and bushes back in here. This is a happy place, little squirrels live here and play. Mountains are",
-            "examples": "Example Seven goes here",
-            "message": ""
-        },
-        {
-            "id": 8,
-            "emotionName": "Emotion 8",
-            "imageUrl": "",
-            "summary": "Everyone needs a friend. Friends are the most valuable things in the world. We'll put a happy little sky in here. Use absolutely no pressure. Just like an angel's wing. Only God can make a tree - but you can paint",
-            "examples": "Example Eight goes here",
-            "message": ""
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "userId": 1,
-            "emotionId": 1,
-            "dueDate": "2019-02-04",
-            "task": "task one",
-            "completion": false
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "emotionId": 3,
-            "dueDate": "2019-02-04",
-            "task": "task two",
-            "completion": false
-        },
-        {
-            "id": 3,
-            "userId": 1,
-            "emotionId": 5,
-            "dueDate": "2019-02-04",
-            "task": "task three",
-            "completion": false
-        },
-        {
-            "id": 4,
-            "userId": 1,
-            "emotionId": 4,
-            "dueDate": "2019-02-04",
-            "task": "task four",
-            "completion": false
-        },
-        {
-            "id": 5,
-            "userId": 1,
-            "emotionId": 8,
-            "dueDate": "2019-02-04",
-            "task": "task five",
-            "completion": false
-        },
-        {
-            "id": 6,
-            "userId": 1,
-            "emotionId": 6,
-            "dueDate": "2019-02-04",
-            "task": "task six",
-            "completion": false
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "userName": "Tom Smith",
+      "email": false,
+      "password": "onePassword"
+    },
+    {
+      "id": 2,
+      "userName": "Dick Smith",
+      "email": false,
+      "password": "twoPassword"
+    },
+    {
+      "id": 3,
+      "userName": "Harry Smith",
+      "email": false,
+      "password": "threePassword"
+    }
+  ],
+  "emotions": [
+    {
+      "id": 1,
+      "emotionName": "Emotion 1",
+      "imageUrl": "",
+      "summary": "Tree trunks grow however makes them happy. All kinds of happy little splashes. I can't think of anything more rewarding than being able to express yourself to others through painting. Take your time.",
+      "examples": "Example One goes here",
+      "message": ""
+    },
+    {
+      "id": 2,
+      "emotionName": "Emotion 2",
+      "imageUrl": "",
+      "summary": "If you overwork it you become a cloud killer. There's nothing worse than a cloud killer. Automatically, all of these beautiful, beautiful things will happen. You can bend rivers. But when I get home",
+      "examples": "Example Two goes here",
+      "message": ""
+    },
+    {
+      "id": 3,
+      "emotionName": "Emotion 3",
+      "imageUrl": "",
+      "summary": "This is truly an almighty mountain. Now let's put some happy little clouds in here. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued",
+      "examples": "Example Three goes here",
+      "message": ""
+    },
+    {
+      "id": 4,
+      "emotionName": "Emotion 4",
+      "imageUrl": "",
+      "summary": "There he comes. Even trees need a friend. We all need friends. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Just think about these things in your mind",
+      "examples": "Example Four goes here",
+      "message": ""
+    },
+    {
+      "id": 5,
+      "emotionName": "Emotion 5",
+      "imageUrl": "",
+      "summary": "You can do it. You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it. Let your imagination be your guide. When you do it your way you can go anywhere",
+      "examples": "Example Five goes here",
+      "message": ""
+    },
+    {
+      "id": 6,
+      "emotionName": "Emotion 6",
+      "imageUrl": "",
+      "summary": "Let's have a little bit of fun today. Little trees and bushes grow however makes them happy. Nice little clouds playing around in the sky. We don't need any guidelines or formats. All we need to do is just",
+      "examples": "Example Six goes here",
+      "message": ""
+    },
+    {
+      "id": 7,
+      "emotionName": "Emotion 7",
+      "imageUrl": "",
+      "summary": "There is immense joy in just watching - watching all the little creatures in nature. Let's put some happy trees and bushes back in here. This is a happy place, little squirrels live here and play. Mountains are",
+      "examples": "Example Seven goes here",
+      "message": ""
+    },
+    {
+      "id": 8,
+      "emotionName": "Emotion 8",
+      "imageUrl": "",
+      "summary": "Everyone needs a friend. Friends are the most valuable things in the world. We'll put a happy little sky in here. Use absolutely no pressure. Just like an angel's wing. Only God can make a tree - but you can paint",
+      "examples": "Example Eight goes here",
+      "message": ""
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "emotionId": 1,
+      "dueDate": "2019-02-04",
+      "task": "task one",
+      "completion": false
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "emotionId": 3,
+      "dueDate": "2019-02-04",
+      "task": "task two",
+      "completion": false
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "emotionId": 5,
+      "dueDate": "2019-02-04",
+      "task": "task three",
+      "completion": false
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "emotionId": 4,
+      "dueDate": "2019-02-04",
+      "task": "task four",
+      "completion": false
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "emotionId": 8,
+      "dueDate": "2019-02-04",
+      "task": "task five",
+      "completion": false
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "emotionId": 6,
+      "dueDate": "2019-02-04",
+      "task": "task six",
+      "completion": false
+    },
+    {
+      "userId": 2,
+      "emotionId": "3",
+      "dueDate": "",
+      "task": "",
+      "completion": false,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "emotionId": "5",
+      "dueDate": "2019-02-13",
+      "task": "",
+      "completion": false,
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "emotionId": "4",
+      "dueDate": "",
+      "task": "",
+      "completion": false,
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "emotionId": "7",
+      "dueDate": "2019-02-13",
+      "task": "Feed Cat",
+      "completion": false,
+      "id": 10
+    }
+  ]
 }
