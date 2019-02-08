@@ -13,9 +13,10 @@ export default class TaskCard extends Component {
                     type="checkbox"
                     className="checkComplete"
                     value={this.props.task.complete}
-                    onClick={() => {
-                      // this.props.history.push("/tasks/edit");
-                    }}>
+                    // onClick={() => {
+                    //   this.props.history.push("/tasks/edit");
+                    // }}
+                    >
                   </input>
                 </div>
 
@@ -27,20 +28,25 @@ export default class TaskCard extends Component {
                   <button
                     type="button"
                     className="btn"
-                    onClick={() => {
-                      // this.props.history.push("/tasks/edit");
-                    }}>
+                    // onClick={() =>
+                    //  this.props.history.push("/tasks/:taskId(\d+)") 
+                    // }
+                  >
                     Edit
                   </button>
                 </div>
+
                 <div className="delTaskBtn">
                   <button
                     type="button"
                     className="btn"
                     onClick={() => {
-                      // this.props.history.push("/tasks/:taskId(\d+)");
-                    }}>
-                    Del
+                      this.props
+                      .deleteTask(this.props.task.id)
+                      // this.props.history.push("/");
+                    }}
+                    >
+                    Delete
                   </button>
                 </div>
                 {this.props.task.task}

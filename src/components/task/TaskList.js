@@ -8,7 +8,7 @@ export default class TaskList extends Component {
       <React.Fragment>
         <div className="tasks-list">
           {this.props.tasks.map(task => (
-            <TaskCard key={task.id} task={task} {...this.props} />
+            <TaskCard key={task.id} task={task} {...props} />
           ))}
         </div>
       </React.Fragment>    

@@ -87,84 +87,28 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "emotionId": 1,
-      "dueDate": "2019-02-04",
-      "task": "task one",
-      "completion": false
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-04",
-      "task": "task two",
-      "completion": false
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "emotionId": 5,
-      "dueDate": "2019-02-04",
-      "task": "task three",
-      "completion": false
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "emotionId": 4,
-      "dueDate": "2019-02-04",
-      "task": "task four",
-      "completion": false
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "emotionId": 8,
-      "dueDate": "2019-02-04",
-      "task": "task five",
-      "completion": false
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "emotionId": 6,
-      "dueDate": "2019-02-04",
-      "task": "task six",
-      "completion": false
-    },
-    {
       "userId": 2,
       "emotionId": "3",
-      "dueDate": "",
-      "task": "",
+      "dueDate": "2019-02-03",
+      "task": "task for emotion 3",
       "completion": false,
-      "id": 7
+      "id": 4
     },
     {
       "userId": 2,
-      "emotionId": "5",
-      "dueDate": "2019-02-13",
-      "task": "",
+      "emotionId": "1",
+      "dueDate": "2019-02-01",
+      "task": "Task One",
       "completion": false,
-      "id": 8
+      "id": 5
     },
     {
       "userId": 2,
-      "emotionId": "4",
-      "dueDate": "",
-      "task": "",
+      "emotionId": "2",
+      "dueDate": "2019-02-02",
+      "task": "Task Two",
       "completion": false,
-      "id": 9
-    },
-    {
-      "userId": 2,
-      "emotionId": "7",
-      "dueDate": "2019-02-13",
-      "task": "Feed Cat",
-      "completion": false,
-      "id": 10
+      "id": 6
     }
   ]
 }
