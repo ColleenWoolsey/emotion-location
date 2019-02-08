@@ -10,15 +10,14 @@ export default class AppViews extends Component {
       tasks: []
     };
     
-updateTask = (taskId, editedTaskObj) => {
-  return TaskManager.patch(taskId, editedTaskObj)
+updateTask = (taskId, editedTaskObj) => 
+ TaskManager.patch(taskId, editedTaskObj)
   .then(() => TaskManager.getAll())
-  .then(tasks => {
+  .then(tasks => 
     this.setState({
       tasks: tasks
     })
-  });
-};
+  );
 
 deleteTask = task =>
   TaskManager.del(task)
@@ -63,8 +62,7 @@ addTask = task =>
                   {...this.props} 
                   {...props} 
                   tasks={this.state.tasks}
-                  deleteTask={this.deleteTask}
-                  updateTask={this.updateTask} />                                                */}
+                  deleteTask={this.deleteTask} />                                                */}
                 </React.Fragment>
                 );
               }}
@@ -86,9 +84,9 @@ addTask = task =>
         />
 
 {/* Route for singular task */}
-        <Route path="/tasks/:taskId(\d+)"
+        <Route path="/tasks/edit"
           render={props => {
-            console.log("/tasks/:taskId(\d+)", props)
+            console.log("/tasks/edit", props)
             return (
               <TaskEditForm
                 {...this.props}

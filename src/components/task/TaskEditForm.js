@@ -7,6 +7,7 @@ export default class TaskEditForm extends React.Component {
 state = {
     userId: 2,
     emotionId: "",
+    emotionName: "",
     dueDate: "",
     task: "",
     completion: false
@@ -31,6 +32,7 @@ updateExistingTask = evt => {
         id: this.state.id,
         userId: this.state.userId,
         emotionId: this.state.emotionId,
+        emotionName: this.state.emotionName,
         dueDate: this.state.dueDate,
         task: this.state.task,
         completion: this.state.completion      
@@ -39,7 +41,7 @@ updateExistingTask = evt => {
     console.log("updateExistingTask from TaskEditForm", existingTask);
     this.props.updateTask(this.props.match.params.taskId, existingTask)
     .then(() => this.props.history
-    .push("/tasks/:taskId(\d+)"))
+    .push("/tasks/edit"))
      
   }
 
@@ -68,7 +70,7 @@ updateExistingTask = evt => {
               id="emotionId"
               onChange={this.handleFieldChange}
             >
-            <option value="">Select Emotion</option>
+            <option value={this.state.emotionName}>{this.state.emotionName}</option>
             {this.props.emotions.map(evt => (
               <option key={evt.id} value={evt.id}>
               {evt.emotionName}

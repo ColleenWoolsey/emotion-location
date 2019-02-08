@@ -117,6 +117,14 @@
       "task": "Three",
       "completion": false,
       "id": 9
+    },
+    {
+      "userId": 2,
+      "emotionId": "6",
+      "dueDate": "2019-02-06",
+      "task": "task six",
+      "completion": false,
+      "id": 10
     }
   ]
 }

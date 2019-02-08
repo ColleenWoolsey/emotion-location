@@ -97,14 +97,6 @@ constructNewTask = evt => {
             >Clear
             </button>
         </div>
-        {/* <Button
-            type="submit"
-            onClick={this.constructNewTask}
-            className="btn"
-          >          
-            Submit
-        </Button> */}
-
       </Form>
       </React.Fragment>
     )

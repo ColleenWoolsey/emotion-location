@@ -29,8 +29,8 @@ export default class TaskCard extends Component {
                     type="button"
                     className="btn"
                     onClick={() => {
-                      this.props
-                      .updateTask(this.props.task.id)
+                      this.props.history.push("/tasks/edit"); 
+                      // this.props.updateTask(this.props.task.id)
                     }}
                   >
                     Edit
