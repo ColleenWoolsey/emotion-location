@@ -39,7 +39,7 @@ updateExistingTask = evt => {
     console.log("updateExistingTask from TaskEditForm", existingTask);
     this.props.updateTask(this.props.match.params.taskId, existingTask)
     .then(() => this.props.history
-    .push("/"))
+    .push("/tasks/:taskId(\d+)"))
      
   }
 
@@ -56,26 +56,6 @@ updateExistingTask = evt => {
       });
     });
   }
-
-/* Local method for validation, creating task object, and
-    invoking the function reference passed from parent component */
-constructNewTask = evt => {
-    evt.preventDefault();
-
-    const task = {
-        userId: this.state.userId,
-        emotionId: this.state.emotionId,
-        dueDate: this.state.dueDate,
-        task: this.state.task,
-        completion: this.state.completion
-    };
-
-// Create the task and redirect user to task list
-    this.props
-        .addTask(task)
-        .then(() => this.props.history.push("/"));
-};
-
 
   render() {
     return (
@@ -105,6 +85,7 @@ constructNewTask = evt => {
             name="dueDate"
             id="dueDate"
             onChange={this.handleFieldChange}
+            value={this.state.task}
             />
         </div>
 
@@ -113,10 +94,11 @@ constructNewTask = evt => {
             <Input className="form-control"
             type="text"
             required 
-            name="task" 
-            id="task" 
-            placeholder="task"
+            name="task"
+            // placeholder="task"
             onChange={this.handleFieldChange}
+            id="task" 
+            value={this.state.task}
             />
             </div>
 

@@ -11,7 +11,7 @@ export default class AppViews extends Component {
     };
     
 updateTask = (taskId, editedTaskObj) => {
-  return TaskManager.put(taskId, editedTaskObj)
+  return TaskManager.patch(taskId, editedTaskObj)
   .then(() => TaskManager.getAll())
   .then(tasks => {
     this.setState({
@@ -73,6 +73,7 @@ addTask = task =>
 
         <Route path="/tasks/new"
           render={props => {
+            console.log("/tasks/new", props)
             return (
               <TaskAddForm
                 {...props}
@@ -90,7 +91,7 @@ addTask = task =>
             console.log("/tasks/:taskId(\d+)", props)
             return (
               <TaskEditForm
-                // {...this.props}
+                {...this.props}
                 {...props}
                 tasks={this.state.tasks}
                 deleteTask={this.deleteTask}

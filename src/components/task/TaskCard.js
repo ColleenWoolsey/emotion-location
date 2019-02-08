@@ -44,7 +44,6 @@ export default class TaskCard extends Component {
                     onClick={() => {
                       this.props
                       .deleteTask(this.props.task.id)
-                      // this.props.history.push("/");
                     }}
                     >
                     Delete

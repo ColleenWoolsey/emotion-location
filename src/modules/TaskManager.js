@@ -28,9 +28,9 @@ export default {
     })
   },
 
-  put(taskId, existingTask) {
+  patch(taskId, existingTask) {
     return fetch(`${remoteURL}/tasks/${taskId}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
