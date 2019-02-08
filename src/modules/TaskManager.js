@@ -28,8 +28,8 @@ export default {
     })
   },
 
-  put(taskId, existingTask) {
-    return fetch(`${remoteURL}/tasks/${taskId}`, {
+  put(id, existingTask) {
+    return fetch(`${remoteURL}/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

@@ -29,7 +29,7 @@ export default class TaskCard extends Component {
                     type="button"
                     className="btn"
                     onClick={() => {
-                      this.props.history.push("/tasks/id")
+                      this.props.history.push("/edit/task/:id")
                       // this.props.history.push("/tasks/:taskId(\d+)/edit");
                       // this.props.history.push(`/tasks/${taskId}/edit`)
                       // this.props.history.push(`/tasks/:taskId(${taskId})/edit`)

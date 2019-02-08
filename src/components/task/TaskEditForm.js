@@ -27,7 +27,7 @@ handleFieldChange = evt => {
     this.setState(stateToChange);
 };
 
-updateExistingTask = evt => {
+updateTask = evt => {
     evt.preventDefault()
 
     const existingTask = {
@@ -40,14 +40,16 @@ updateExistingTask = evt => {
         completion: this.state.completion      
     }
 
-    console.log("updateExistingTask from TaskEditForm", existingTask);
-    this.props.updateTask(this.props.match.params.taskId, existingTask)
-    .then(() => this.props.history.push("/tasks/id"))
+    console.log("updateTask from TaskEditForm", existingTask);
+    
+    this.props.updateTask(this.props.match.params.id, existingTask)
+    .then(() => this.props.history.push("/edit/task/:id"))
   }     
  
   componentDidMount() {
-    TaskManager.get(this.props.match.params.taskId)
+    TaskManager.get(this.props.match.params.id)
     .then(task => {
+      console.log("task", task)
       this.setState({
         id: task.id,
         userId: task.userId,
@@ -66,12 +68,12 @@ updateExistingTask = evt => {
       <div className="form-group">
         <label htmlFor="emotionId">{this.state.emotionId}</label>
           <select
-            defaultValue={this.state.emotionId}
             name="emotionId"
             id="emotionId"
             onChange={this.handleFieldChange}
           >
-          <option value="">{this.state.emotionName}</option>
+          {/* <option value="">{this.state.emotionName}</option> */}
+          <option>{this.state.emotionName}</option>
           {this.props.emotions.map(evt => (
             <option key={evt.id} value={evt.id}>
             {evt.emotionName}
@@ -84,7 +86,6 @@ updateExistingTask = evt => {
         <div className="form-group">
           <label htmlFor="dueDate">{this.state.dueDate}</label>
           <Input className="form-control"
-            defaultValue={this.state.dueDate}
             type="date"
             required
             name="dueDate"
@@ -98,7 +99,7 @@ updateExistingTask = evt => {
         <div className="form-group">
           <label htmlFor="task">Task</label>
           <Input className="form-control"
-          defaultValue={this.state.task}
+          // defaultValue={this.state.task}
           type="text"
           required 
           name="task"

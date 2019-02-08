@@ -96,22 +96,6 @@
     },
     {
       "userId": 2,
-      "emotionId": "2",
-      "dueDate": "2019-02-02",
-      "task": "Two",
-      "completion": false,
-      "id": 8
-    },
-    {
-      "userId": 2,
-      "emotionId": "3",
-      "dueDate": "2019-02-03",
-      "task": "Three",
-      "completion": false,
-      "id": 9
-    },
-    {
-      "userId": 2,
       "emotionId": "6",
       "dueDate": "2019-02-06",
       "task": "task six",
@@ -120,11 +104,35 @@
     },
     {
       "userId": 2,
-      "emotionId": "2",
-      "dueDate": "2019-02-13",
+      "emotionId": "1",
+      "dueDate": "2019-02-01",
+      "task": "Task One",
+      "completion": false,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "emotionId": "5",
+      "dueDate": "2019-02-05",
+      "task": "Task Five",
+      "completion": false,
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "emotionId": "1",
+      "dueDate": "2019-02-01",
       "task": "Feed Cat",
       "completion": false,
-      "id": 11
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "emotionId": "2",
+      "dueDate": "2019-02-15",
+      "task": "Feed dog",
+      "completion": false,
+      "id": 15
     }
   ]
 }

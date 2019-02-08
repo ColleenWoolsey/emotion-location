@@ -10,14 +10,16 @@ export default class AppViews extends Component {
       tasks: []
     };
 
-updateTask = task =>
-  TaskManager.put(task)
-    .then(() => TaskManager.getAll())
-    .then(tasks =>
-      this.setState({
-        tasks: tasks
-      })
-    );
+updateTask = (id, existingTask) => {
+  return TaskManager.put(id, existingTask).then(() => {
+      TaskManager.getAll()
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }))
+  })
+
+}
 
 deleteTask = task =>
   TaskManager.del(task)
@@ -62,13 +64,8 @@ addTask = task =>
                   {...this.props} 
                   {...props} 
                   tasks={this.state.tasks}
-                  deleteTask={this.deleteTask}/>
-
-                  {/* <TaskEditForm
-                  {...props}
-                  {...this.props}
-                  tasks={this.state.tasks}
-                  updateTask={this.updateTask} />                                             */} */}
+                  deleteTask={this.deleteTask}
+                  />
                 </React.Fragment>
                 );
               }}
@@ -90,20 +87,19 @@ addTask = task =>
         />
 
 {/* Route for singular task */}
-        {/* <Route path="/tasks/:taskId(\d+)/edit" */}
-        <Route path="/tasks/id"
-          render={props => {
-            console.log("/tasks/ props from", props)
-            return (
-              <TaskEditForm
-                {...this.props}
-                {...props}
-                // tasks={this.state.tasks}
-                updateTask={this.updateTask} 
-              />
-            );
-          }}
-        />
+        <Route path="/edit/task/:id"
+         render={props => {
+           console.log("/edit/task/:id", props)
+           return (
+             <TaskEditForm
+               {...props}
+               {...this.props}
+               tasks={this.state.tasks}
+               updateTask={this.updateTask} 
+             />
+           );
+         }}
+       />
         </React.Fragment>
        )
       }
