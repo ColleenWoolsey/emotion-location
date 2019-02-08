@@ -7,16 +7,49 @@ import TaskAddForm from "./task/TaskAddForm";
 export default class AppViews extends Component {
     state = {
       tasks: []
-    };
+    };    
 
-    addTask = task =>
-    TaskManager.post(task)
-      .then(() => TaskManager.getAll())
-      .then(tasks =>
-        this.setState({
-          tasks: tasks
-        })
-      );
+deleteTask = task =>
+  TaskManager.del(task)
+    .then(() => TaskManager.getAll())
+    .then(tasks =>
+      this.setState({
+        tasks: tasks
+      })
+    );
+
+
+
+// deleteTask = id => {
+//   return fetch(`http://localhost:5002/tasks/${id}`, {
+//     method: "DELETE"
+//   })
+//     .then(response => response.json())
+//     .then(() => TaskManager.getAll())
+//     .then(tasks =>
+//     this.setState({
+//     tasks: tasks
+//   })
+// );
+
+
+    //     .then(() => fetch(`http://localhost:5002//tasks?_expand=emotion`))
+    //     .then(response => response.json())
+    //     .then(tasks =>
+    //       this.setState({
+    //         tasks: tasks
+    //       })
+    //     );
+    // };
+
+addTask = task =>
+  TaskManager.post(task)
+    .then(() => TaskManager.getAll())
+    .then(tasks =>
+      this.setState({
+        tasks: tasks
+      })
+    ); 
 
    componentDidMount() {
        TaskManager.getAll()
@@ -39,7 +72,12 @@ export default class AppViews extends Component {
               console.log("/", props)
               return (
                 <React.Fragment>
-                  <EmotionList {...this.props} {...props} tasks={this.state.tasks} />                                                */}
+                  <EmotionList 
+                  {...this.props} 
+                  {...props} 
+                  tasks={this.state.tasks}
+                  deleteTask={this.deleteTask}
+                  updateTask={this.updateTask} />                                                */}
                 </React.Fragment>
                 );
               }}
