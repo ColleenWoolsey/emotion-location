@@ -21,13 +21,15 @@ state = {
 
 handleFieldChange = evt => {
     const stateToChange = {};
-    console.log(evt.target.id, evt.target.value);
+    console.log("evt.target.id",evt.target.id);
+    console.log("evt.target.value", evt.target.value);
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
 };
 
 updateExistingTask = evt => {
     evt.preventDefault()
+
     const existingTask = {
         id: this.state.id,
         userId: this.state.userId,
@@ -40,11 +42,9 @@ updateExistingTask = evt => {
 
     console.log("updateExistingTask from TaskEditForm", existingTask);
     this.props.updateTask(this.props.match.params.taskId, existingTask)
-    .then(() => this.props.history
-    .push("/tasks/edit"))
-     
-  }
-
+    .then(() => this.props.history.push("/tasks/id"))
+  }     
+ 
   componentDidMount() {
     TaskManager.get(this.props.match.params.taskId)
     .then(task => {
@@ -64,45 +64,50 @@ updateExistingTask = evt => {
       <React.Fragment>
       <Form inline>
       <div className="form-group">
-            <select
-              defaultValue=""
-              name="emotionId"
-              id="emotionId"
-              onChange={this.handleFieldChange}
-            >
-            <option value={this.state.emotionName}>{this.state.emotionName}</option>
-            {this.props.emotions.map(evt => (
-              <option key={evt.id} value={evt.id}>
-              {evt.emotionName}
-              </option>
-            ))}
-            </select>
-          </div>
+        <label htmlFor="emotionId">{this.state.emotionId}</label>
+          <select
+            defaultValue={this.state.emotionId}
+            name="emotionId"
+            id="emotionId"
+            onChange={this.handleFieldChange}
+          >
+          <option value="">{this.state.emotionName}</option>
+          {this.props.emotions.map(evt => (
+            <option key={evt.id} value={evt.id}>
+            {evt.emotionName}
+            </option>
+          ))}
+          </select>
+        </div>
 
         {/* {' '} */}
         <div className="form-group">
+          <label htmlFor="dueDate">{this.state.dueDate}</label>
           <Input className="form-control"
+            defaultValue={this.state.dueDate}
             type="date"
             required
             name="dueDate"
             id="dueDate"
             onChange={this.handleFieldChange}
-            value={this.state.task}
+            // value={this.state.dueDate}
             />
         </div>
 
         {/* {' '} */}
         <div className="form-group">
-            <Input className="form-control"
-            type="text"
-            required 
-            name="task"
-            // placeholder="task"
-            onChange={this.handleFieldChange}
-            id="task" 
-            value={this.state.task}
-            />
-            </div>
+          <label htmlFor="task">Task</label>
+          <Input className="form-control"
+          defaultValue={this.state.task}
+          type="text"
+          required 
+          name="task"
+          // placeholder="task"
+          onChange={this.handleFieldChange}
+          id="task" 
+          // value={this.state.task}
+          />
+        </div>
 
         {/* {' '} */}
         <div>

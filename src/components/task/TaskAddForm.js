@@ -42,6 +42,7 @@ constructNewTask = evt => {
       <React.Fragment>
       <Form inline>
       <div className="form-group">
+        <label htmlFor="emotionId">Emotion</label>
         <select
           defaultValue=""
           name="emotionId"
@@ -59,6 +60,7 @@ constructNewTask = evt => {
 
         {/* {' '} */}
         <div className="form-group">
+          <label htmlFor="dueDate">Completion Date</label>
           <Input className="form-control"
             type="date"
             required
@@ -70,7 +72,8 @@ constructNewTask = evt => {
 
         {/* {' '} */}
         <div className="form-group">
-            <Input className="form-control"
+          <label htmlFor="task">Task</label>
+          <Input className="form-control"
             type="text"
             required 
             name="task" 
@@ -78,24 +81,24 @@ constructNewTask = evt => {
             placeholder="task"
             onChange={this.handleFieldChange}
             />
-            </div>
+          </div>
 
         {/* {' '} */}
         <div>
-            <button
-              type="submit"
-              className="btn"
-              onClick={this.constructNewTask}
-              id="add-form-btn"
-            >Save
-            </button>
-            <button
-              type="submit"
-              className="btn"
-              onClick={this.clearForm}
-              id="add-form-btn"
-            >Clear
-            </button>
+          <button
+            type="submit"
+            className="btn"
+            onClick={this.constructNewTask}
+            id="add-form-btn"
+          >Save
+          </button>
+          <button
+            type="submit"
+            className="btn"
+            onClick={this.clearForm}
+            id="add-form-btn"
+          >Clear
+          </button>
         </div>
       </Form>
       </React.Fragment>

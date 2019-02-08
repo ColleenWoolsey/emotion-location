@@ -96,14 +96,6 @@
     },
     {
       "userId": 2,
-      "emotionId": "1",
-      "dueDate": "2019-02-01",
-      "task": "One",
-      "completion": false,
-      "id": 7
-    },
-    {
-      "userId": 2,
       "emotionId": "2",
       "dueDate": "2019-02-02",
       "task": "Two",
@@ -125,6 +117,14 @@
       "task": "task six",
       "completion": false,
       "id": 10
+    },
+    {
+      "userId": 2,
+      "emotionId": "2",
+      "dueDate": "2019-02-13",
+      "task": "Feed Cat",
+      "completion": false,
+      "id": 11
     }
   ]
 }

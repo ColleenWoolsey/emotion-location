@@ -14,7 +14,7 @@ export default class TaskCard extends Component {
                     className="checkComplete"
                     value={this.props.task.complete}
                     // onClick={() => {
-                    //   this.props.history.push("/tasks/edit");
+                    //   this.props.history.push("/tasks/:taskId(\d+)/edit");
                     // }}
                     >
                   </input>
@@ -29,8 +29,11 @@ export default class TaskCard extends Component {
                     type="button"
                     className="btn"
                     onClick={() => {
-                      this.props.history.push("/tasks/edit"); 
-                      // this.props.updateTask(this.props.task.id)
+                      this.props.history.push("/tasks/id")
+                      // this.props.history.push("/tasks/:taskId(\d+)/edit");
+                      // this.props.history.push(`/tasks/${taskId}/edit`)
+                      // this.props.history.push(`/tasks/:taskId(${taskId})/edit`)
+                      
                     }}
                   >
                     Edit

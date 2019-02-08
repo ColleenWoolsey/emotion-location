@@ -9,15 +9,15 @@ export default class AppViews extends Component {
     state = {
       tasks: []
     };
-    
-updateTask = (taskId, editedTaskObj) => 
- TaskManager.patch(taskId, editedTaskObj)
-  .then(() => TaskManager.getAll())
-  .then(tasks => 
-    this.setState({
-      tasks: tasks
-    })
-  );
+
+updateTask = task =>
+  TaskManager.put(task)
+    .then(() => TaskManager.getAll())
+    .then(tasks =>
+      this.setState({
+        tasks: tasks
+      })
+    );
 
 deleteTask = task =>
   TaskManager.del(task)
@@ -55,14 +55,20 @@ addTask = task =>
 
            <Route exact path="/"
               render={props => {
-              console.log("/", props)
+              console.log("/ props from", props)
               return (
                 <React.Fragment>
                   <EmotionList 
                   {...this.props} 
                   {...props} 
                   tasks={this.state.tasks}
-                  deleteTask={this.deleteTask} />                                                */}
+                  deleteTask={this.deleteTask}/>
+
+                  {/* <TaskEditForm
+                  {...props}
+                  {...this.props}
+                  tasks={this.state.tasks}
+                  updateTask={this.updateTask} />                                             */} */}
                 </React.Fragment>
                 );
               }}
@@ -71,7 +77,7 @@ addTask = task =>
 
         <Route path="/tasks/new"
           render={props => {
-            console.log("/tasks/new", props)
+            console.log("/tasks/new props from", props)
             return (
               <TaskAddForm
                 {...props}
@@ -84,15 +90,15 @@ addTask = task =>
         />
 
 {/* Route for singular task */}
-        <Route path="/tasks/edit"
+        {/* <Route path="/tasks/:taskId(\d+)/edit" */}
+        <Route path="/tasks/id"
           render={props => {
-            console.log("/tasks/edit", props)
+            console.log("/tasks/ props from", props)
             return (
               <TaskEditForm
                 {...this.props}
                 {...props}
-                tasks={this.state.tasks}
-                deleteTask={this.deleteTask}
+                // tasks={this.state.tasks}
                 updateTask={this.updateTask} 
               />
             );
