@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
 export default class TaskAddForm extends React.Component {
         
 state = {
@@ -38,26 +37,25 @@ constructNewTask = evt => {
         .then(() => this.props.history.push("/"));
 };
 
-
   render() {
     return (
       <React.Fragment>
       <Form inline>
       <div className="form-group">
-            <select
-              defaultValue=""
-              name="emotionId"
-              id="emotionId"
-              onChange={this.handleFieldChange}
-            >
-            <option value="">Select Emotion</option>
-            {this.props.emotions.map(evt => (
-              <option key={evt.id} value={evt.id}>
-              {evt.emotionName}
-              </option>
-            ))}
-            </select>
-          </div>
+        <select
+          defaultValue=""
+          name="emotionId"
+          id="emotionId"
+          onChange={this.handleFieldChange}
+        >
+          <option value="">Select Emotion</option>
+          {this.props.emotions.map(evt => (
+            <option key={evt.id} value={evt.id}>
+            {evt.emotionName}
+            </option>
+          ))}
+        </select>
+      </div>
 
         {/* {' '} */}
         <div className="form-group">

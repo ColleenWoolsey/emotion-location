@@ -88,14 +88,6 @@
   "tasks": [
     {
       "userId": 2,
-      "emotionId": "3",
-      "dueDate": "2019-02-03",
-      "task": "task for emotion 3",
-      "completion": false,
-      "id": 4
-    },
-    {
-      "userId": 2,
       "emotionId": "1",
       "dueDate": "2019-02-01",
       "task": "Task One",
