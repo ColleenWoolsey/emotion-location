@@ -99,8 +99,7 @@ addTask = task =>
             );
           }}
         />
-
-         </React.Fragment>
+        </React.Fragment>
        )
       }
     }
