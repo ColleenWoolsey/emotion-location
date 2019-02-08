@@ -26,5 +26,15 @@ export default {
           "Content-Type": "application/json"
         }
     })
+  },
+
+  put(id, existingTask) {
+    return fetch(`${remoteURL}/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(existingTask)
+      }).then(data => data.json());
   }
-};
+}

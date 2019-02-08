@@ -3,11 +3,23 @@ import React, { Component } from "react";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
 import TaskAddForm from "./task/TaskAddForm";
+import TaskEditForm from "./task/TaskEditForm";
 
 export default class AppViews extends Component {
     state = {
       tasks: []
-    };    
+    };
+
+updateTask = (id, existingTask) => {
+  return TaskManager.put(id, existingTask).then(() => {
+      TaskManager.getAll()
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }))
+  })
+
+}
 
 deleteTask = task =>
   TaskManager.del(task)
@@ -17,30 +29,6 @@ deleteTask = task =>
         tasks: tasks
       })
     );
-
-
-
-// deleteTask = id => {
-//   return fetch(`http://localhost:5002/tasks/${id}`, {
-//     method: "DELETE"
-//   })
-//     .then(response => response.json())
-//     .then(() => TaskManager.getAll())
-//     .then(tasks =>
-//     this.setState({
-//     tasks: tasks
-//   })
-// );
-
-
-    //     .then(() => fetch(`http://localhost:5002//tasks?_expand=emotion`))
-    //     .then(response => response.json())
-    //     .then(tasks =>
-    //       this.setState({
-    //         tasks: tasks
-    //       })
-    //     );
-    // };
 
 addTask = task =>
   TaskManager.post(task)
@@ -69,7 +57,7 @@ addTask = task =>
 
            <Route exact path="/"
               render={props => {
-              console.log("/", props)
+              console.log("/ props from", props)
               return (
                 <React.Fragment>
                   <EmotionList 
@@ -77,7 +65,7 @@ addTask = task =>
                   {...props} 
                   tasks={this.state.tasks}
                   deleteTask={this.deleteTask}
-                  updateTask={this.updateTask} />                                                */}
+                  />
                 </React.Fragment>
                 );
               }}
@@ -86,6 +74,7 @@ addTask = task =>
 
         <Route path="/tasks/new"
           render={props => {
+            console.log("/tasks/new props from", props)
             return (
               <TaskAddForm
                 {...props}
@@ -98,21 +87,20 @@ addTask = task =>
         />
 
 {/* Route for singular task */}
-        <Route path="/tasks/:taskId(\d+)"
-          render={props => {
-            console.log("/tasks/:taskId(\d+)", props)
-            return (
-              <emotionDetail
-                {...props}
-                tasks={this.state.tasks}
-                deleteTask={this.deleteTask}
-                updateTask={this.updateTask} 
-              />
-            );
-          }}
-        />
-
-         </React.Fragment>
+        <Route path="/edit/task/:id"
+         render={props => {
+           console.log("/edit/task/:id", props)
+           return (
+             <TaskEditForm
+               {...props}
+               {...this.props}
+               tasks={this.state.tasks}
+               updateTask={this.updateTask} 
+             />
+           );
+         }}
+       />
+        </React.Fragment>
        )
       }
     }

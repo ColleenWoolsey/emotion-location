@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
 export default class TaskAddForm extends React.Component {
         
 state = {
@@ -38,29 +37,30 @@ constructNewTask = evt => {
         .then(() => this.props.history.push("/"));
 };
 
-
   render() {
     return (
       <React.Fragment>
       <Form inline>
       <div className="form-group">
-            <select
-              defaultValue=""
-              name="emotionId"
-              id="emotionId"
-              onChange={this.handleFieldChange}
-            >
-            <option value="">Select Emotion</option>
-            {this.props.emotions.map(evt => (
-              <option key={evt.id} value={evt.id}>
-              {evt.emotionName}
-              </option>
-            ))}
-            </select>
-          </div>
+        <label htmlFor="emotionId">Emotion</label>
+        <select
+          defaultValue=""
+          name="emotionId"
+          id="emotionId"
+          onChange={this.handleFieldChange}
+        >
+          <option value="">Select Emotion</option>
+          {this.props.emotions.map(evt => (
+            <option key={evt.id} value={evt.id}>
+            {evt.emotionName}
+            </option>
+          ))}
+        </select>
+      </div>
 
         {/* {' '} */}
         <div className="form-group">
+          <label htmlFor="dueDate">Completion Date</label>
           <Input className="form-control"
             type="date"
             required
@@ -72,7 +72,8 @@ constructNewTask = evt => {
 
         {/* {' '} */}
         <div className="form-group">
-            <Input className="form-control"
+          <label htmlFor="task">Task</label>
+          <Input className="form-control"
             type="text"
             required 
             name="task" 
@@ -80,33 +81,25 @@ constructNewTask = evt => {
             placeholder="task"
             onChange={this.handleFieldChange}
             />
-            </div>
+          </div>
 
         {/* {' '} */}
         <div>
-            <button
-              type="submit"
-              className="btn"
-              onClick={this.constructNewTask}
-              id="add-form-btn"
-            >Save
-            </button>
-            <button
-              type="submit"
-              className="btn"
-              onClick={this.clearForm}
-              id="add-form-btn"
-            >Clear
-            </button>
-        </div>
-        {/* <Button
+          <button
             type="submit"
-            onClick={this.constructNewTask}
             className="btn"
-          >          
-            Submit
-        </Button> */}
-
+            onClick={this.constructNewTask}
+            id="add-form-btn"
+          >Save
+          </button>
+          <button
+            type="submit"
+            className="btn"
+            onClick={this.clearForm}
+            id="add-form-btn"
+          >Clear
+          </button>
+        </div>
       </Form>
       </React.Fragment>
     )

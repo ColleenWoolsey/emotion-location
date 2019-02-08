@@ -88,11 +88,19 @@
   "tasks": [
     {
       "userId": 2,
-      "emotionId": "3",
-      "dueDate": "2019-02-03",
-      "task": "task for emotion 3",
+      "emotionId": "2",
+      "dueDate": "2019-02-02",
+      "task": "Task Two",
       "completion": false,
-      "id": 4
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "emotionId": "6",
+      "dueDate": "2019-02-06",
+      "task": "task six",
+      "completion": false,
+      "id": 10
     },
     {
       "userId": 2,
@@ -100,15 +108,31 @@
       "dueDate": "2019-02-01",
       "task": "Task One",
       "completion": false,
-      "id": 5
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "emotionId": "5",
+      "dueDate": "2019-02-05",
+      "task": "Task Five",
+      "completion": false,
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "emotionId": "1",
+      "dueDate": "2019-02-01",
+      "task": "Feed Cat",
+      "completion": false,
+      "id": 14
     },
     {
       "userId": 2,
       "emotionId": "2",
-      "dueDate": "2019-02-02",
-      "task": "Task Two",
+      "dueDate": "2019-02-15",
+      "task": "Feed dog",
       "completion": false,
-      "id": 6
+      "id": 15
     }
   ]
 }
