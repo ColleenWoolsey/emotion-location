@@ -87,12 +87,13 @@
   ],
   "tasks": [
     {
+      "id": 6,
       "userId": 2,
       "emotionId": "2",
+      "emotionName": "",
       "dueDate": "2019-02-02",
       "task": "Task Two",
-      "completion": false,
-      "id": 6
+      "completion": false
     },
     {
       "userId": 2,
@@ -133,6 +134,13 @@
       "task": "Feed dog",
       "completion": false,
       "id": 15
+    }
+  ],
+  "examples": [
+    {
+      "emotionId": "",
+      "example": "",
+      "id": 1
     }
   ]
 }
