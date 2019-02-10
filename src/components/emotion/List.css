@@ -1,18 +1,24 @@
+.container {
+    display:flex;
+    border: 5px solid pink;
+    flex-basis: 100%;
+    
+}
 
 .emotions-list {
     display: flex;
-    border: 2px solid green;
-    flex-direction: row;
-    align-content: flex-end;
+    border: 2px solid green;   
+    flex-wrap: wrap;
+    flex-basis: 60%;
 }
-.bottom {
+.right {
     display: flex;
-    flex-basis: auto;
+    flex-basis: 40%;
 }
-.bottom-right {
+.top-right {
 
 }
-.bottom-left{
+.bottom-right{
 
 }
 
@@ -50,13 +56,13 @@
 .emotion-card {
  display: flex;
  flex-direction: column;
- background-color: darkgreen;
+ background-color: lightgoldenrodyellow;
+ flex-basis: 24.5%;
+ border: 2px solid darkgreen;
 }
 
-.emotion-card-body {
-    background-color: lightyellow;
-    font-size: .8em;
-    
+.emotion-card-link {
+   
 }
 
 .emotion-card-title {

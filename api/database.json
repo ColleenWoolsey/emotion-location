@@ -22,7 +22,7 @@
   "emotions": [
     {
       "id": 1,
-      "emotionName": "Emotion 1",
+      "emotionName": "HURT",
       "imageUrl": "",
       "summary": "Tree trunks grow however makes them happy. All kinds of happy little splashes. I can't think of anything more rewarding than being able to express yourself to others through painting. Take your time.",
       "examples": "Example One goes here",
@@ -30,7 +30,7 @@
     },
     {
       "id": 2,
-      "emotionName": "Emotion 2",
+      "emotionName": "LONELY",
       "imageUrl": "",
       "summary": "If you overwork it you become a cloud killer. There's nothing worse than a cloud killer. Automatically, all of these beautiful, beautiful things will happen. You can bend rivers. But when I get home",
       "examples": "Example Two goes here",
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "emotionName": "Emotion 3",
+      "emotionName": "SAD",
       "imageUrl": "",
       "summary": "This is truly an almighty mountain. Now let's put some happy little clouds in here. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued",
       "examples": "Example Three goes here",
@@ -46,7 +46,7 @@
     },
     {
       "id": 4,
-      "emotionName": "Emotion 4",
+      "emotionName": "ANGER",
       "imageUrl": "",
       "summary": "There he comes. Even trees need a friend. We all need friends. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Just think about these things in your mind",
       "examples": "Example Four goes here",
@@ -54,7 +54,7 @@
     },
     {
       "id": 5,
-      "emotionName": "Emotion 5",
+      "emotionName": "FEAR",
       "imageUrl": "",
       "summary": "You can do it. You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it. Let your imagination be your guide. When you do it your way you can go anywhere",
       "examples": "Example Five goes here",
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "emotionName": "Emotion 6",
+      "emotionName": "SHAME",
       "imageUrl": "",
       "summary": "Let's have a little bit of fun today. Little trees and bushes grow however makes them happy. Nice little clouds playing around in the sky. We don't need any guidelines or formats. All we need to do is just",
       "examples": "Example Six goes here",
@@ -70,7 +70,7 @@
     },
     {
       "id": 7,
-      "emotionName": "Emotion 7",
+      "emotionName": "GUILT",
       "imageUrl": "",
       "summary": "There is immense joy in just watching - watching all the little creatures in nature. Let's put some happy trees and bushes back in here. This is a happy place, little squirrels live here and play. Mountains are",
       "examples": "Example Seven goes here",
@@ -78,7 +78,7 @@
     },
     {
       "id": 8,
-      "emotionName": "Emotion 8",
+      "emotionName": "GLAD",
       "imageUrl": "",
       "summary": "Everyone needs a friend. Friends are the most valuable things in the world. We'll put a happy little sky in here. Use absolutely no pressure. Just like an angel's wing. Only God can make a tree - but you can paint",
       "examples": "Example Eight goes here",

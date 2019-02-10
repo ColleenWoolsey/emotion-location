@@ -14,13 +14,17 @@ export default class EmotionDetail extends Component {
       ) || {};
 
     return (
-      <section className="examples">      
-        <div key={emotion.id} className="example-card">
-          <div className="example-card-body">
+      <div className="detail-card">
+        <section className="summary">
+        {this.props.emotion.summary} 
+        </section>
+      
+        <section className="examples">      
+          <div key={emotion.id} className="example-card">            
             <h4 className="example-title">{emotion.examples}</h4>
-          </div>
-        </div>
-      </section>
+          </div>          
+        </section>
+      </div>
     );
   }
 }
