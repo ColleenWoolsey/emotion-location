@@ -128,19 +128,14 @@
       "id": 14
     },
     {
+      "id": 15,
       "userId": 2,
       "emotionId": "2",
+      "emotionName": "",
       "dueDate": "2019-02-15",
-      "task": "Feed dog",
-      "completion": false,
-      "id": 15
+      "task": "Feed sheep",
+      "completion": false
     }
   ],
-  "examples": [
-    {
-      "emotionId": "",
-      "example": "",
-      "id": 1
-    }
-  ]
+  "examples": []
 }

@@ -3,20 +3,31 @@ import { Link } from "react-router-dom";
 import "./List.css";
 export default class EmotionCard extends Component {
   render() {
-    return (
+    console.log ("this.props passed to EmotionCard", this.props)
+    return (      
       <React.Fragment>
-        {/* <div className="emotions-list"> */}
-          <div className="emotion-card">        
-            <div className="emotion-card-body">
-              <h5 className="emotion-card-title">
-                {this.props.emotion.emotionName}
-                <img src="emotion.imageURL" alt="imageUrl" />
-              </h5>
-                {this.props.emotion.summary}             
-            </div>
+            
+        <div key={this.props.emotion.id} className="emotion-card">
+          <div className="emotion-card-title">
+            {this.props.emotion.emotionName}
+            <img src="emotion.imageURL" alt="imageUrl" />
           </div>
-        {/* </div> */}
-        
+
+          <Link to={`emotion/${this.props.emotion.id}`}>
+            More Info
+          </Link>
+          {/* <div className="emotionDetailBtn">
+            <button
+              type="button"
+              className="btn"
+              onClick={() => {
+                this.props.history.push(`/emotion/${this.props.emotion.id}`)                     
+              }}
+            >
+              More Info
+            </button>
+          </div>            */}
+        </div>        
       </React.Fragment>
     );
   }
