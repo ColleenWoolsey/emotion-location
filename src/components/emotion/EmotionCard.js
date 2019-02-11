@@ -63,8 +63,25 @@ export default class EmotionCard extends Component {
             <DropdownToggle caret>
               Expand
             </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem>{this.props.emotion.summary}</DropdownItem>
+            <DropdownMenu
+    modifiers={{
+      setMaxHeight: {
+        enabled: true,
+        order: 890,
+        fn: (data) => {
+          return {
+            ...data,
+            styles: {
+              ...data.styles,
+              overflow: 'auto',
+              maxHeight: 100,
+            },
+          };
+        },
+      },
+    }}
+  >
+      <DropdownItem>{this.props.emotion.summary}</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
           </div>

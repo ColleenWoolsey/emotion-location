@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Login from "./authentication/Login";
 import NavBar from "./nav/NavBar";
 import AppViews from "./AppViews";
 import EmotionManager from "../modules/EmotionManager";
@@ -25,6 +26,7 @@ export default class Emoloco extends Component {
   render() {
     return (
       <React.Fragment>
+        <Login users={this.state.users} />
         <NavBar emotions={this.state.emotions} />
         <AppViews emotions={this.state.emotions} />
       </React.Fragment>

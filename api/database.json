@@ -92,7 +92,7 @@
       "emotionId": "2",
       "emotionName": "",
       "dueDate": "2019-02-02",
-      "task": "Task Two",
+      "task": "Task lonely",
       "completion": false
     },
     {
@@ -135,6 +135,14 @@
       "dueDate": "2019-02-15",
       "task": "Feed sheep",
       "completion": false
+    },
+    {
+      "userId": 2,
+      "emotionId": "5",
+      "dueDate": "2019-02-15",
+      "task": "Task fear",
+      "completion": false,
+      "id": 16
     }
   ],
   "examples": []

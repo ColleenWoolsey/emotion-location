@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 export default class TaskAddForm extends React.Component {
         
 state = {
@@ -44,8 +44,9 @@ constructNewTask = evt => {
       <React.Fragment>
       <Form inline>
       <div className="form-group">
-        <label htmlFor="emotionId">Emotion</label>
+        <label htmlFor="emotionId" sm={2} size="lg">Emotion</label>
         <select
+        bssize="lg"
           defaultValue=""
           name="emotionId"
           id="emotionId"
