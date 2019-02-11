@@ -78,7 +78,6 @@ render() {
           <EmotionDetail
             {...props}
             {...this.props}           
-            emotions={this.state.emotions}
           />
         );
       }}

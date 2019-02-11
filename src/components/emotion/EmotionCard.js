@@ -13,10 +13,10 @@ export default class EmotionCard extends Component {
             <img src="emotion.imageURL" alt="imageUrl" />
           </div>
 
-          <Link to={`emotion/${this.props.emotion.id}`}>
+          {/* <Link to={`emotion/${this.props.emotion.id}`}>
             More Info
-          </Link>
-          {/* <div className="emotionDetailBtn">
+          </Link> */}
+          <div className="emotionDetailBtn">
             <button
               type="button"
               className="btn"
@@ -26,7 +26,7 @@ export default class EmotionCard extends Component {
             >
               More Info
             </button>
-          </div>            */}
+          </div>           
         </div>        
       </React.Fragment>
     );

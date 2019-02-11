@@ -10,22 +10,20 @@ export default class EmotionDetail extends Component {
   
     const emotion =
       this.props.emotions.find(
-        emotion => emotion.id === parseInt(this.props.match.params.emotionId)
-      ) || {};
+        a => a.id === parseInt(this.props.match.params.id)) || {};
 
-      console.log("emotionId", emotion)
+    console.log("found", emotion)
 
     return (
      <React.Fragment>
-      <div key={this.props.emotion.id} className="detail-card">
-    
+      <div className="detail-card">      
         <div className="detail-card">
           <section className="summary">
-            {this.props.emotion.summary} 
+            {emotion.summary} 
           </section>
         
           <section className="examples"> 
-            <h4 className="example-title">{this.props.emotion.examples}</h4>
+            <h4 className="example-title">{emotion.examples}</h4>
           </section>
           
         </div>
