@@ -7,7 +7,7 @@ export default class NavBar extends Component {
             <ul className="nav">
 
                 <li className="nav-title">
-                    <h2>What are you feeling?</h2>
+                    <h3>I am feeling ...</h3>
                 </li>
 
                 {this.props.emotions.map(emotion => (

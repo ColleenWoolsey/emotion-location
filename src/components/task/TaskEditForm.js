@@ -27,7 +27,7 @@ handleFieldChange = evt => {
     this.setState(stateToChange);
 };
 
-updateTask = evt => {
+updateExistingTask = evt => {
     evt.preventDefault()
 
     const existingTask = {
@@ -43,7 +43,7 @@ updateTask = evt => {
     console.log("updateTask from TaskEditForm", existingTask);
     
     this.props.updateTask(this.props.match.params.id, existingTask)
-    .then(() => this.props.history.push("/edit/task/:id"))
+    .then(() => this.props.history.push("/"))
   }     
  
   componentDidMount() {
@@ -66,8 +66,9 @@ updateTask = evt => {
       <React.Fragment>
       <Form inline>
       <div className="form-group">
-        <label htmlFor="emotionId">{this.state.emotionId}</label>
+        <label htmlFor="emotionId">Emotion:  </label>
           <select
+            value={this.state.emotionId}
             name="emotionId"
             id="emotionId"
             onChange={this.handleFieldChange}
@@ -84,20 +85,20 @@ updateTask = evt => {
 
         {/* {' '} */}
         <div className="form-group">
-          <label htmlFor="dueDate">{this.state.dueDate}</label>
+          <label htmlFor="dueDate">Due Date:  </label>
           <Input className="form-control"
             type="date"
             required
             name="dueDate"
             id="dueDate"
             onChange={this.handleFieldChange}
-            // value={this.state.dueDate}
+            value={this.state.dueDate}
             />
         </div>
 
         {/* {' '} */}
         <div className="form-group">
-          <label htmlFor="task">Task</label>
+          <label htmlFor="task">Task:  </label>
           <Input className="form-control"
           // defaultValue={this.state.task}
           type="text"
@@ -106,7 +107,7 @@ updateTask = evt => {
           // placeholder="task"
           onChange={this.handleFieldChange}
           id="task" 
-          // value={this.state.task}
+          value={this.state.task}
           />
         </div>
 
@@ -115,7 +116,7 @@ updateTask = evt => {
             <button
               type="submit"
               className="btn"
-              onClick={this.updateExistingEvent}
+              onClick={this.updateExistingTask}
               id="add-form-btn"
             >Update
             </button>
