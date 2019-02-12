@@ -4,19 +4,31 @@
       "id": 1,
       "userName": "Tom Smith",
       "email": "email@gmail.com",
-      "password": "onePassword"
+      "password": "one"
     },
     {
       "id": 2,
       "userName": "Dick Smith",
       "email": "email@gmail.com",
-      "password": "twoPassword"
+      "password": "two"
     },
     {
       "id": 3,
       "userName": "Harry SMith",
       "email": "email@gmail.com",
-      "password": "threePassword"
+      "password": "three"
+    },
+    {
+      "userName": "Santa",
+      "email": "email@gmail.com",
+      "password": "four",
+      "id": 4
+    },
+    {
+      "userName": "Colleen",
+      "email": "email@gmail.com",
+      "password": "five",
+      "id": 5
     }
   ],
   "emotions": [

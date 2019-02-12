@@ -9,13 +9,17 @@ export default {
   get(id) {
     return fetch(`${remoteURL}/users/${id}`).then(e => e.json());
   },
+
   getAll() {
     return fetch(`${remoteURL}/users`).then(e => e.json());
   },
-  getNameAndPassword(userName, password){
+  
+  getNameAndPassword(userName, password) {
     return fetch(`${remoteURL}/users?userName=${userName}&password=${password}`)
     .then(response => response.json())
-},
+  },
+
+// http://localhost:5002/users?userName=Tom Smith&password=onePassword
 
   post(newUser) {
     return fetch(`${remoteURL}/users`, {

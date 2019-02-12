@@ -25,11 +25,11 @@ export default class Registration extends Component {
         email: this.state.email,
         password: this.state.password,
         id: this.state.id
-  }
+    }
 
     this.props.addUser(newUser).then(response => {
         console.log(response)
-        this.props.history.push("/registration")
+        this.props.history.push("/home")
     })
     }
 

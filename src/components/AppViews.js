@@ -37,17 +37,23 @@ export default class AppViews extends Component {
         })
       );
 
-  verifyUser = (userName, password) => {
-    console.log("userName", userName)
+  verifyUser = (userName, password) => {  
+    console.log("userName from verifyUser.js", userName);
+    console.log("password from verifyUser.js", password);
     return LoginManager.getNameAndPassword(userName, password)
-
-      .then(allUsers => 
-        this.setState({
-        users: allUsers
-      }))
+    
+    // .then(allUsers => {
+    //   console.log("allUsers [] from verifyUser", allUsers)
+    //   this.setState ({ users: allUsers })
+               
+    // .then (users => {
+    //   console.log ("users[]", users)
+      // return users
+    // })
+    // })
   }
 
-  updateTask = (id, existingTask) => {
+   updateTask = (id, existingTask) => {
     return TaskManager.put(id, existingTask).then(() => {
       TaskManager.getAll()
       .then(tasks => 
@@ -100,11 +106,11 @@ export default class AppViews extends Component {
 
       <Route exact path="/" 
         render={(props) => {
-          console.log("/login", props)
+          console.log("/", props)
           return (
           <Login
           {...props} 
-          component={Login}
+          // component={Login}
           verifyUser={this.verifyUser}
           users={this.state.users} />
           )

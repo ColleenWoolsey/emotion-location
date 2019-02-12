@@ -24,24 +24,25 @@ handleLogin = evt => {
     console.log(this.state.email);
     console.log(this.state.password);
     evt.preventDefault();
-
+    // this.props.verifyUser(this.props.user.userName, this.props.user.password)
     this.props.verifyUser(this.state.userName, this.state.password)
+    // this.props.verifyUser(userName, password)
 
-    .then(user => {
-        console.log("users []", user)
-        if (user.length < 1) {
+    .then(users => {
+        console.log("users []", users)
+        if (users.length < 1) {
             alert("Sorry, not finding you. Try registering below")
         } else {
-            user.forEach(person => {
+            users.forEach(person => {
             let loggedIn= false;
             if (this.state.userName === person.userName 
                 && this.state.password === person.password) {
                     loggedIn = true;
                 }
             if (loggedIn === true) {
-                sessionStorage.setItem("User", person.id);
-                let sessionPerson = sessionStorage.setItem("User")
-                console.log("sessionPerson", sessionPerson)
+                // sessionStorage.setItem("users", person.id);
+                // let sessionPerson = sessionStorage.setItem("users")
+                // console.log("sessionPerson", sessionPerson)
                 this.props.history.push("/home");
             }
         })
