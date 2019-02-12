@@ -1,8 +1,9 @@
 import { Route, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import LoginManager from "../modules/LoginManager";
-import LoginForm from "./authentication/LoginForm"
-import Login from "./authentication/Login"
+import Registration from "./authentication/Registration";
+import Login from "./authentication/Login";
+import NavBar from "./nav/NavBar";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
@@ -11,32 +12,40 @@ import TaskEditForm from "./task/TaskEditForm";
 
 export default class AppViews extends Component {
 
-  isAuthenticated = () => sessionStorage.getItem("credentials") !== null
-
   state = {
     users: [],
     tasks: [],
     examples: [],
-    userId: sessionStorage.getItem("user")
+    userId: sessionStorage.getItem("User")
   };
 
-  isAuthenticated = () => sessionStorage.getItem("user") !== null
+  isAuthenticated = () => sessionStorage.getItem("User") !== null
+
+  showNav() {
+    if (this.isAuthenticated()) {
+      return <NavBar />
+    }
+  }
 
   addUser = newUser =>
     LoginManager.post(newUser)
       .then(() => LoginManager.getAll())
-      .then(user =>
+
+      .then(allUsers =>
         this.setState({
-          users: user
+          users: allUsers
         })
       );
 
-  verifyUser = (username, password) => {
-    LoginManager.getUsernameAndPassword(username, password)
-      .then(allUsers => this.setState({
+  verifyUser = (userName, password) => {
+    console.log("userName", userName)
+    return LoginManager.getNameAndPassword(userName, password)
+
+      .then(allUsers => 
+        this.setState({
         users: allUsers
       }))
-  } 
+  }
 
   updateTask = (id, existingTask) => {
     return TaskManager.put(id, existingTask).then(() => {
@@ -67,6 +76,15 @@ export default class AppViews extends Component {
   ); 
 
   componentDidMount() {
+
+    LoginManager.getAll()
+    .then(allUsers => {
+        this.setState({
+            tasks: allUsers
+        })
+        console.log("allUsers from componentDidMount", allUsers)
+    })
+
     TaskManager.getAll()
     .then(allTasks => {
         this.setState({
@@ -80,8 +98,21 @@ export default class AppViews extends Component {
   return(
     <React.Fragment>
 
-  {/* Route for listing emotions and tasks from NavBar */}
-      <Route exact path="/"
+      <Route exact path="/" 
+        render={(props) => {
+          console.log("/login", props)
+          return (
+          <Login
+          {...props} 
+          component={Login}
+          verifyUser={this.verifyUser}
+          users={this.state.users} />
+          )
+        }}
+      />
+    
+{/* Route for listing emotions and tasks from NavBar */}
+      <Route exact path="/home"
         render={props => {
         console.log("/ props from", props)
         return (
@@ -97,23 +128,12 @@ export default class AppViews extends Component {
         }}
       />
 
-      <Route path="/login" 
+      <Route exact path="/registration" 
         render={(props) => {
-          console.log("/login", props)
+          console.log("/registration", props)
           return (
-          <Login {...props} 
-          component={Login}
-          verifyUser={this.verifyUser}
-          users={this.state.users} />
-          )
-        }}
-      />
-
-      <Route exact path="/register" 
-        render={(props) => {
-          console.log("/register", props)
-          return (
-          <LoginForm {...props}
+          <Registration
+          {...props}
           users={this.state.users}
           addUser={this.addUser}
           userId={this.state.userId} />

@@ -36,7 +36,7 @@ constructNewTask = evt => {
         .addTask(task)
         .then(() => 
         alert("Your task has been added!"),
-        this.props.history.push("/"));
+        this.props.history.push("/home"));
 };
 
   render() {

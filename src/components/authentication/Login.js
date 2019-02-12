@@ -1,14 +1,15 @@
 import React, { Component } from "react"
+
 import "./Login.css"
+import AppViews from "../AppViews";
 
 export default class Login extends Component {
 
 // Set initial state
     state = {
-        username: "",
+        userName: "",
         email: "",
         password: "",
-
     }
 
 // Update state whenever an input field is edited
@@ -18,79 +19,83 @@ handleFieldChange = (evt) => {
     this.setState(stateToChange)
 }
 
-handleLogin = e => {
+handleLogin = evt => {
     console.log(this.state.userName);
     console.log(this.state.email);
     console.log(this.state.password);
-    e.preventDefault();
-    this.props.verifyUser(this.state.username, this.state.email, this.state.password)
-    if(this.props.users.length < 1) {
-        alert("We can't seem to find you! Try registering below")
-    } else {
-        // if(this.props.users.length < 1) {
-        this.props.users.forEach(user => {
+    evt.preventDefault();
+
+    this.props.verifyUser(this.state.userName, this.state.password)
+
+    .then(user => {
+        console.log("users []", user)
+        if (user.length < 1) {
+            alert("Sorry, not finding you. Try registering below")
+        } else {
+            user.forEach(person => {
             let loggedIn= false;
-            if (this.state.userName === user.userName 
-                && this.state.email === user.email
-                && this.state.password === user.password) {
+            if (this.state.userName === person.userName 
+                && this.state.password === person.password) {
                     loggedIn = true;
                 }
-            if (loggedIn === true){
-                sessionStorage.setItem("user", user.id);
-                this.props.history.push("/navBar");
+            if (loggedIn === true) {
+                sessionStorage.setItem("User", person.id);
+                let sessionPerson = sessionStorage.setItem("User")
+                console.log("sessionPerson", sessionPerson)
+                this.props.history.push("/home");
             }
         })
-    }
-
-    sessionStorage.setItem(
-      "credentials",
-      JSON.stringify({
-        userName: this.state.userName,
-        email: this.state.email,
-        password: this.state.password
-      })
-    );
-  };
+      }
+    })
+  }
 
 render() {
     return (
+      <div className="login-container">
         <form className="logInForm" onSubmit={this.handleLogin}>
-            <h1 className="welcome">Welcome to EmoLocation</h1>
-            <h1 className="request">Please sign in</h1>
+
+          <h1 className="welcome">Welcome to EmoLocation</h1>
+            
+          <div className="form-group">
             <label htmlFor="inputUserName">
-                User Name
-            </label>
+                User Name:  </label>
             <input onChange={this.handleFieldChange} type="text"
                     id="userName"
                     placeholder="User Name"
                     required="" autoFocus="" />
+          </div>
 
+          <div className="form-group">
             <label htmlFor="inputUserEmail">
-                Email
-            </label>
+                Email:  </label>
             <input onChange={this.handleFieldChange} type="email"
                     id="email"
                     placeholder="Email"
                     required="" autoFocus="" />
-            
+          </div>
+          
+          <div className="form-group"> 
             <label htmlFor="inputPassword">
-                Password
-            </label>
+                Password:  </label>
             <input onChange={this.handleFieldChange} type="password"
                     id="password"
                     placeholder="Password"
                     required="" />
+          </div>
 
-            <button className="signInButton" type="submit">
-                Sign in
+            <button className="loginButton" type="submit"
+                onClick={this.handleLogin}>
+                Login
             </button>
 
+            <h5 className="request">Not Registered?</h5>
+
             <button className="registerButton" type="button"
-                        onClick={()=> this.props.history.push("/register")}
-                        className="btn btn-success">
-                    Register
-                </button>
+                onClick={()=> this.props.history.push("/registration")}>
+                Create an Account
+            </button>
         </form>
+      </div>
     )
-}
+  }
 }

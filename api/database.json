@@ -3,19 +3,19 @@
     {
       "id": 1,
       "userName": "Tom Smith",
-      "email": false,
+      "email": "email@gmail.com",
       "password": "onePassword"
     },
     {
       "id": 2,
       "userName": "Dick Smith",
-      "email": false,
+      "email": "email@gmail.com",
       "password": "twoPassword"
     },
     {
       "id": 3,
-      "userName": "Harry Smith",
-      "email": false,
+      "userName": "Harry SMith",
+      "email": "email@gmail.com",
       "password": "threePassword"
     }
   ],
