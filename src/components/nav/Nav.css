@@ -1,11 +1,4 @@
 .nav {
     display: flex;
     list-style: none;
-    justify-content: center;
-    margin: 1px;
-    padding: 1px;
-}
-
-.nav-title {
-    border: 2px solid red;
 }

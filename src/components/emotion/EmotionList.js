@@ -6,6 +6,9 @@ export default class EmotionList extends Component {
   render() {
     return (
       <React.Fragment>
+        <div>
+        <h3>How are you feeling {sessionStorage.getItem("userName")}?</h3>
+        </div>
         <div className="container">
          
           <div className="emotions-list">

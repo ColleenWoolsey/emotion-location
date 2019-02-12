@@ -10,6 +10,7 @@ export default class Login extends Component {
         userName: "",
         email: "",
         password: "",
+        user: ""
     }
 
 // Update state whenever an input field is edited
@@ -29,26 +30,41 @@ handleLogin = evt => {
     // this.props.verifyUser(userName, password)
 
     .then(users => {
-        console.log("users []", users)
-        if (users.length < 1) {
-            alert("Sorry, not finding you. Try registering below")
-        } else {
-            users.forEach(person => {
-            let loggedIn= false;
-            if (this.state.userName === person.userName 
-                && this.state.password === person.password) {
-                    loggedIn = true;
-                }
-            if (loggedIn === true) {
-                // sessionStorage.setItem("users", person.id);
-                // let sessionPerson = sessionStorage.setItem("users")
-                // console.log("sessionPerson", sessionPerson)
+      console.log("users []", users);
+
+      if (users.length < 1) {
+          alert("Sorry, not finding you. Try registering below")
+      } else {
+        users.forEach(user => {
+        let loggedIn= false;
+          if (this.state.userName === user.userName 
+              && this.state.password === user.password) {
+                  loggedIn = true;
+              }
+          if (loggedIn === true) {
+              
+                sessionStorage.setItem("user", user.id);
+                sessionStorage.setItem("userName", user.userName)
+                    sessionStorage.setItem(
+                          "credentials",
+                          JSON.stringify({
+                              username: this.state.username,
+                              password: this.state.password,
+                              status:true,
+                          })
+                      )
+                console.log("this.props from login", this.props)
+                console.log("this.state from login", this.state)
                 this.props.history.push("/home");
+             
+              } else {
+
+                this.props.history.push("/")
+              
             }
         })
-      }
-    })
-  }
+      }})
+    }
 
 render() {
     return (

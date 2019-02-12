@@ -3,7 +3,7 @@ import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 export default class TaskAddForm extends React.Component {
         
 state = {
-    userId: 2,
+    userId: sessionStorage.getItem("user"),
     emotionId: "",
     dueDate: "",
     task: "",

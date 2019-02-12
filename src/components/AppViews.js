@@ -16,17 +16,12 @@ export default class AppViews extends Component {
     users: [],
     tasks: [],
     examples: [],
-    userId: sessionStorage.getItem("User")
+    userName: sessionStorage.getItem("userName"),
+    user: sessionStorage.getItem("user")
   };
-
-  isAuthenticated = () => sessionStorage.getItem("User") !== null
-
-  showNav() {
-    if (this.isAuthenticated()) {
-      return <NavBar />
-    }
-  }
-
+    
+  isAuthenticated = () => sessionStorage.getItem("user") !== null
+  
   addUser = newUser =>
     LoginManager.post(newUser)
       .then(() => LoginManager.getAll())
@@ -40,17 +35,7 @@ export default class AppViews extends Component {
   verifyUser = (userName, password) => {  
     console.log("userName from verifyUser.js", userName);
     console.log("password from verifyUser.js", password);
-    return LoginManager.getNameAndPassword(userName, password)
-    
-    // .then(allUsers => {
-    //   console.log("allUsers [] from verifyUser", allUsers)
-    //   this.setState ({ users: allUsers })
-               
-    // .then (users => {
-    //   console.log ("users[]", users)
-      // return users
-    // })
-    // })
+    return LoginManager.getNameAndPassword(userName, password)    
   }
 
    updateTask = (id, existingTask) => {
@@ -96,6 +81,8 @@ export default class AppViews extends Component {
         this.setState({
             tasks: allTasks
         })
+        console.log(sessionStorage.getItem("user"))
+        console.log(this.state.user)
         console.log("allTasks from componentDidMount", allTasks)
     })
   };
@@ -120,17 +107,21 @@ export default class AppViews extends Component {
 {/* Route for listing emotions and tasks from NavBar */}
       <Route exact path="/home"
         render={props => {
-        console.log("/ props from", props)
-        return (
-          // <React.Fragment>
-            <EmotionList 
-            {...this.props} 
-            {...props} 
-            tasks={this.state.tasks}
-            deleteTask={this.deleteTask}
-            />
-          // </React.Fragment>
-          );
+          if (this.isAuthenticated()) {
+          console.log("/ props from", props)
+          return (          
+              <EmotionList 
+              {...this.props} 
+              {...props} 
+              tasks={this.state.tasks}
+              deleteTask={this.deleteTask}
+              userName={sessionStorage.getItem("userName")}
+              user={sessionStorage.getItem("user")}
+              />
+            )
+          } else {
+            return <Redirect to="/" />;
+          }
         }}
       />
 
