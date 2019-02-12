@@ -24,8 +24,8 @@ constructNewTask = evt => {
     evt.preventDefault();
 
     const task = {
-        userId: this.state.userId,
-        emotionId: this.state.emotionId,
+        userId: Number(this.state.userId),
+        emotionId: Number(this.state.emotionId),
         dueDate: this.state.dueDate,
         task: this.state.task,
         completion: this.state.completion

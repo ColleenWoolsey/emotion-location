@@ -32,8 +32,8 @@ updateExistingTask = evt => {
 
     const existingTask = {
         id: this.state.id,
-        userId: this.state.userId,
-        emotionId: this.state.emotionId,
+        userId: Number(this.state.userId),
+        emotionId: Number(this.state.emotionId),
         emotionName: this.state.emotionName,
         dueDate: this.state.dueDate,
         task: this.state.task,

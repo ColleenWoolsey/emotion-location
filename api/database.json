@@ -163,6 +163,22 @@
       "task": "Task Four",
       "completion": false,
       "id": 17
+    },
+    {
+      "userId": "4",
+      "emotionId": "1",
+      "dueDate": "2019-02-13",
+      "task": "Hurt One",
+      "completion": false,
+      "id": 18
+    },
+    {
+      "userId": "4",
+      "emotionId": "2",
+      "dueDate": "2019-02-09",
+      "task": "Feed Cat",
+      "completion": false,
+      "id": 19
     }
   ],
   "examples": []
