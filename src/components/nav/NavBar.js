@@ -11,11 +11,14 @@ export default class NavBar extends Component {
                 </li>
 
                 {this.props.emotions.map(emotion => (
-                <li key={emotion.id} emotion={emotion} {...this.props} className="nav-item">
+                <li key={emotion.id} emotion={emotion} 
+                {...this.props} className="nav-item">
                     <Link to={`emotions/${emotion.id}`}></Link>
                 </li>
-
                 ))}
+
+                <li>Logout</li>
+
             </ul>
         </nav>
     )   

@@ -3,20 +3,32 @@
     {
       "id": 1,
       "userName": "Tom Smith",
-      "email": false,
-      "password": "onePassword"
+      "email": "email@gmail.com",
+      "password": "one"
     },
     {
       "id": 2,
       "userName": "Dick Smith",
-      "email": false,
-      "password": "twoPassword"
+      "email": "email@gmail.com",
+      "password": "two"
     },
     {
       "id": 3,
-      "userName": "Harry Smith",
-      "email": false,
-      "password": "threePassword"
+      "userName": "Harry SMith",
+      "email": "email@gmail.com",
+      "password": "three"
+    },
+    {
+      "userName": "Santa",
+      "email": "email@gmail.com",
+      "password": "four",
+      "id": 4
+    },
+    {
+      "userName": "Colleen",
+      "email": "email@gmail.com",
+      "password": "five",
+      "id": 5
     }
   ],
   "emotions": [
@@ -92,7 +104,7 @@
       "emotionId": "2",
       "emotionName": "",
       "dueDate": "2019-02-02",
-      "task": "Task Two",
+      "task": "Task lonely",
       "completion": false
     },
     {
@@ -135,6 +147,14 @@
       "dueDate": "2019-02-15",
       "task": "Feed sheep",
       "completion": false
+    },
+    {
+      "userId": 2,
+      "emotionId": "5",
+      "dueDate": "2019-02-15",
+      "task": "Task fear",
+      "completion": false,
+      "id": 16
     }
   ],
   "examples": []

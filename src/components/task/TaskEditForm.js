@@ -43,7 +43,7 @@ updateExistingTask = evt => {
     console.log("updateTask from TaskEditForm", existingTask);
     
     this.props.updateTask(this.props.match.params.id, existingTask)
-    .then(() => this.props.history.push("/"))
+    .then(() => this.props.history.push("/home"))
   }     
  
   componentDidMount() {

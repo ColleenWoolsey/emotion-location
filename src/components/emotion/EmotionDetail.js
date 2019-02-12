@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import "./List.css";
 export default class EmotionDetail extends Component {
   render() {
     console.log("EmotionDetail props Line 5", this.props);
-    
+
+
       // Using the route parameter, find the emotion that the
       // user clicked on by looking at the `this.props.emotions`
       // collection that was passed down from AppViews
