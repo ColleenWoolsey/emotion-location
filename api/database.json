@@ -148,7 +148,97 @@
       "task": "Fear Task",
       "completion": false,
       "id": 6
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "emotionId": 6,
+      "emotionName": "",
+      "dueDate": "2019-02-15",
+      "task": "Shame Task Edited",
+      "completion": false
     }
   ],
-  "examples": []
+  "examples": [
+    {
+      "id": 1,
+      "emotionId": 1,
+      "example": ""
+    },
+    {
+      "id": 2,
+      "emotionId": 1,
+      "example": ""
+    },
+    {
+      "id": 3,
+      "emotionId": 1,
+      "example": ""
+    },
+    {
+      "id": 4,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 5,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 6,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 7,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 8,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 9,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 10,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 11,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 12,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 13,
+      "emotionId": 4,
+      "example": ""
+    },
+    {
+      "id": 14,
+      "emotionId": 4,
+      "example": ""
+    },
+    {
+      "id": 15,
+      "emotionId": 4,
+      "example": ""
+    },
+    {
+      "id": 16,
+      "emotionId": 4,
+      "example": ""
+    }
+  ]
 }

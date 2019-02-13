@@ -25,10 +25,9 @@ handleLogin = evt => {
     console.log(this.state.email);
     console.log(this.state.password);
     evt.preventDefault();
-    // this.props.verifyUser(this.props.user.userName, this.props.user.password)
+    
     this.props.verifyUser(this.state.userName, this.state.password)
-    // this.props.verifyUser(userName, password)
-
+    
     .then(users => {
       console.log("users []", users);
 

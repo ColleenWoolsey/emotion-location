@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import EmotionCard from "./EmotionCard";
 import TaskCard from "../task/TaskCard";
+import TaskManager from "../../modules/TaskManager";
 import "./List.css";
 export default class EmotionList extends Component {
+
+  // componentDidMount() {
+
+  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //   .then(allTasks => {
+  //       this.setState({
+  //           tasks: allTasks
+  //       })
+  //       console.log(sessionStorage.getItem("user"))
+  //       console.log(this.state.user)
+  //       console.log("getTasksByUser from EmotionListcomponentDidMount", allTasks)
+  //   })
+  // };
+
   render() {
     return (
       <React.Fragment>

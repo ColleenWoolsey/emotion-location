@@ -3,12 +3,12 @@ import React, { Component } from "react";
 import LoginManager from "../modules/LoginManager";
 import Registration from "./authentication/Registration";
 import Login from "./authentication/Login";
-import TaskCard from "./task/TaskCard";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
 import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
+import TaskCard from "./task/TaskCard";
 
 export default class AppViews extends Component {
 
@@ -40,7 +40,7 @@ export default class AppViews extends Component {
 
    updateTask = (id, existingTask) => {
     return TaskManager.put(id, existingTask).then(() => {
-      TaskManager.getAll()
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
       .then(tasks => 
         this.setState({
           tasks: tasks
@@ -48,21 +48,19 @@ export default class AppViews extends Component {
     })
   }
 
-    addCheckChange = (changedObj, id) => {
-      console.log(id);
-      return TaskManager.patch(changedObj, id)
-      .then(() => TaskManager.getAll()
-      .then(response =>
-      this.setState({
-        tasks: response
-        })
-      )
-     )
-    }
+  updateCheck = (id, existingTask) => {
+    return TaskManager.patch(id, existingTask).then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }))
+    })
+  }
 
   deleteTask = task =>
     TaskManager.del(task)
-      .then(() => TaskManager.getAll())
+      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
       .then(tasks =>
         this.setState({
           tasks: tasks
@@ -71,7 +69,7 @@ export default class AppViews extends Component {
 
   addTask = task =>
     TaskManager.post(task)
-      .then(() => TaskManager.getAll())
+      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
       .then(tasks =>
         this.setState({
           tasks: tasks
@@ -88,7 +86,7 @@ export default class AppViews extends Component {
         console.log("allUsers from componentDidMount", allUsers)
     })
 
-    TaskManager.getAll()
+    TaskManager.getTasksByUser(sessionStorage.getItem("user"))
     .then(allTasks => {
         this.setState({
             tasks: allTasks
@@ -187,11 +185,27 @@ export default class AppViews extends Component {
               {...props}
               {...this.props}
               tasks={this.state.tasks}
-              updateTask={this.updateTask} 
+              updateTask={this.updateTask}
+              updateCheck={this.updateCheck} 
             />
           );
         }}
       />
+
+      {/* <Route path="/task/:id/check"
+        render={props => {
+          console.log("/task/:id/check", props)
+          return (
+            <TaskCard
+              {...props}
+              {...this.props}
+              tasks={this.state.tasks}
+              updateCheck={this.updateCheck} 
+            />
+          );
+        }}
+      /> */}
+
       </React.Fragment>
       )
     }

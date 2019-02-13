@@ -12,18 +12,7 @@ export default class Emoloco extends Component {
 
   state = {
     emotions: [],
-    // users: []
   };
-
-  // componentDidMount() {
-  //   LoginManager.getAll()
-  //   .then(allUsers => {
-  //    console.log("allUsers from componentDidMount in EmoLoco", allUsers)
-  //       this.setState({
-  //           users: allUsers
-  //       })                 
-  //    })      
-  //  }
 
  componentDidMount() {
      EmotionManager.getAll()
@@ -32,13 +21,13 @@ export default class Emoloco extends Component {
          this.setState({
              emotions: allEmotions
          })                 
-      })      
+      })
+           
     }
 
   render() {
     return (
       <React.Fragment>
-        {/* <Login {...this.props} users={this.state.users} /> */}
         <NavBar emotions={this.state.emotions} />
         <AppViews emotions={this.state.emotions} />
       </React.Fragment>

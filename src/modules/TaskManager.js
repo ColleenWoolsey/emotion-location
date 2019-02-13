@@ -6,15 +6,16 @@ export default {
   },
  
   getAll() {
-    return fetch(`${remoteURL}/tasks/?_expand=emotion&_expand=example`).then(e => e.json());
+    return fetch(`${remoteURL}/tasks/?_expand=emotion`).then(e => e.json());
   },
 
-  getTasksByUser(userId) {
-    return fetch(`${remoteURL}/tasks?userId=${userId}&_expand=emotion&_expand=examples`)
+  getTasksByUser(id) {
+    return fetch(`${remoteURL}/tasks?userId=${id}&_expand=emotion`)
     .then(e => e.json());
   },
 
   // http://localhost:5002/tasks?userId=2&_expand=emotion&sort=dueDate
+   // http://localhost:5002/tasks?userId=2&_expand=emotion
 
   post(newTask) {
     return fetch(`${remoteURL}/tasks`, {
@@ -35,14 +36,14 @@ export default {
     })
   },
 
-  patch (changes, id){
-    return fetch (`${remoteURL}/tasks/${id}`,{
+  patch(id, existingTask) {
+    return fetch(`${remoteURL}/tasks/${id}`, {
       method: "PATCH",
       headers: {
-          "Content-Type": "application/json"
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(changes)
-    })
+      body: JSON.stringify(existingTask)
+      }).then(data => data.json());
   },
 
   put(id, existingTask) {
