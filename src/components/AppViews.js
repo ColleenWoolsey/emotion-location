@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import LoginManager from "../modules/LoginManager";
 import Registration from "./authentication/Registration";
 import Login from "./authentication/Login";
-import NavBar from "./nav/NavBar";
+import TaskCard from "./task/TaskCard";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
@@ -47,6 +47,18 @@ export default class AppViews extends Component {
       }))
     })
   }
+
+    addCheckChange = (changedObj, id) => {
+      console.log(id);
+      return TaskManager.patch(changedObj, id)
+      .then(() => TaskManager.getAll()
+      .then(response =>
+      this.setState({
+        tasks: response
+        })
+      )
+     )
+    }
 
   deleteTask = task =>
     TaskManager.del(task)
@@ -169,7 +181,7 @@ export default class AppViews extends Component {
   {/* Route for singular task */}
       <Route path="/task/:id"
         render={props => {
-          console.log("/edit/task/:id", props)
+          console.log("/task/:id", props)
           return (
             <TaskEditForm
               {...props}

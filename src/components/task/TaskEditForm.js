@@ -40,7 +40,7 @@ updateExistingTask = evt => {
         completion: this.state.completion      
     }
 
-    console.log("updateTask from TaskEditForm", existingTask);
+    console.log("updateExistingTask from TaskEditForm", existingTask);
     
     this.props.updateTask(this.props.match.params.id, existingTask)
     .then(() => this.props.history.push("/home"))

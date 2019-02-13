@@ -34,6 +34,7 @@ export default class EmotionList extends Component {
               {/* End of div header-add-task */}
 
               <div className="tasks-list">
+              {/* { this.props.tasks.sort(function(a,b){return new dueDate - new dueDate}).reverse()} */}
                 {this.props.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} />
                 ))}

@@ -1,6 +1,20 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import TaskEditForm from "./TaskEditForm";
 import "../emotion/List.css"
 export default class TaskCard extends Component {
+
+  handleCheckChange = e => {
+    e.preventDefault();
+    const completeCheck = {
+      complete: !this.props.task.complete
+    };
+  
+   this.props
+   .addCheckChange(completeCheck, this.props.task.id)
+  
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -11,13 +25,12 @@ export default class TaskCard extends Component {
                 <div>
                   <input
                     type="checkbox"
+                    name="complete"
                     className="checkComplete"
-                    value={this.props.task.complete}
-                    // onClick={() => {
-                    //   this.props.history.push("/tasks/:taskId(\d+)/edit");
-                    // }}
-                    >
-                  </input>
+                    checked={this.props.task.complete}
+                    onChange={this.handleCheckChange}  
+                   />
+                    {console.log(this.props)}                 
                 </div>
 
                 {this.props.task.dueDate}
