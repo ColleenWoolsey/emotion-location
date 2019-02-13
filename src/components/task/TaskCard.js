@@ -4,30 +4,6 @@ import TaskManager from "../../modules/TaskManager";
 import "../emotion/List.css"
 export default class TaskCard extends Component {
 
-state = {
-  userId: 2,
-  emotionId: "",
-  emotionName: "",
-  dueDate: "",
-  task: "",
-  completion: false,
-  userName: sessionStorage.getItem("userName"),
-  user: sessionStorage.getItem("user")
-};
-
-// componentDidMount() {
-
-//   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-//   .then(allTasks => {
-//       this.setState({
-//           tasks: allTasks
-//       })
-//       console.log(sessionStorage.getItem("user"))
-//       console.log(this.state.user)
-//       console.log("allTasks from componentDidMount", allTasks)
-//   })
-// };
-
 handleFieldChange = evt => {
     const stateToChange = {};
     console.log("evt.target.id",evt.target.id);
@@ -46,10 +22,11 @@ updateExistingCheck = evt => {
       emotionName: this.state.emotionName,
       dueDate: this.state.dueDate,
       task: this.state.task,
-      complete: !this.props.task.complete     
+      complete: true     
     }
 
     console.log("updateCheck from TaskCardForm", existingTask);
+    {console.log("this.props passed to updateTask from TaskCard", this.props)} 
     
     this.props.updateCheck(this.props.match.params.id, existingTask)
     .then(() => this.props.history.push("/home"))
@@ -70,7 +47,7 @@ updateExistingCheck = evt => {
                     checked={this.props.task.complete}
                     onChange={this.handleFieldChange} 
                     />
-                    {console.log(this.props)}             
+                                
                 </div>
 
                 {this.props.task.dueDate}
@@ -82,6 +59,7 @@ updateExistingCheck = evt => {
                     type="button"
                     className="btn"
                     onClick={() => {
+                      
                       this.props.history.push(`/task/${this.props.task.id}`)                     
                     }}
                   >

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import LoginManager from "../../modules/LoginManager";
 
 import "./Login.css"
 import AppViews from "../AppViews";
@@ -7,10 +8,10 @@ export default class Login extends Component {
 
 // Set initial state
     state = {
-        userName: "",
-        email: "",
-        password: "",
-        user: ""
+      id: "",
+      userName: "",
+      email: "",
+      password: "",
     }
 
 // Update state whenever an input field is edited
@@ -21,16 +22,15 @@ handleFieldChange = (evt) => {
 }
 
 handleLogin = evt => {
-    console.log(this.state.userName);
-    console.log(this.state.email);
-    console.log(this.state.password);
+    console.log("this.state.userName", this.state.userName);
+    console.log("this.state.password", this.state.password);
     evt.preventDefault();
     
     this.props.verifyUser(this.state.userName, this.state.password)
     
     .then(users => {
-      console.log("users []", users);
-
+      console.log("users array returned from verifyUser", users);
+      
       if (users.length < 1) {
           alert("Sorry, not finding you. Try registering below")
       } else {
@@ -44,16 +44,9 @@ handleLogin = evt => {
               
                 sessionStorage.setItem("user", user.id);
                 sessionStorage.setItem("userName", user.userName)
-                    sessionStorage.setItem(
-                          "credentials",
-                          JSON.stringify({
-                              username: this.state.username,
-                              password: this.state.password,
-                              status:true,
-                          })
-                      )
-                console.log("this.props from login", this.props)
-                console.log("this.state from login", this.state)
+                   
+                console.log("SS setItem user", user.id)
+                console.log("SS setItem userName", user.userName)
                 this.props.history.push("/home");
              
               } else {

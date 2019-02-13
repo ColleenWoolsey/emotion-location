@@ -5,18 +5,25 @@ import TaskManager from "../../modules/TaskManager";
 import "./List.css";
 export default class EmotionList extends Component {
 
-  // componentDidMount() {
+  state = {
+    
+    tasks: [],
+    examples: [],
+    
+  };
 
-  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //   .then(allTasks => {
-  //       this.setState({
-  //           tasks: allTasks
-  //       })
-  //       console.log(sessionStorage.getItem("user"))
-  //       console.log(this.state.user)
-  //       console.log("getTasksByUser from EmotionListcomponentDidMount", allTasks)
-  //   })
-  // };
+  componentDidMount() {
+    
+    TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+    .then(allTasks => {
+        this.setState({
+            tasks: allTasks
+        })
+        console.log(sessionStorage.getItem("user"))
+        console.log(this.state.user)
+        console.log("allTasks from componentDidMount", allTasks)
+    })
+  };
 
   render() {
     return (
@@ -50,7 +57,7 @@ export default class EmotionList extends Component {
 
               <div className="tasks-list">
               {/* { this.props.tasks.sort(function(a,b){return new dueDate - new dueDate}).reverse()} */}
-                {this.props.tasks.map(task => (
+                {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} />
                 ))}
               </div>

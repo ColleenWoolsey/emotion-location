@@ -4,6 +4,7 @@ export default class NavBar extends Component {
 
   endSessionStorage = () => {
     sessionStorage.clear()
+    console.log("sessionStorage.getItem('user')", sessionStorage.getItem("user"))
   }
 
   render() {
@@ -17,10 +18,9 @@ export default class NavBar extends Component {
               <Link to={`emotions/${emotion.id}`}></Link>
           </li>
           ))}
+
           <li className="signout" onClick={this.endSessionStorage}>
-          <Link to="/login">Sign Out</Link> 
-          {/* component={Link} to='/login'> */}
-          
+          <Link to="/">Sign Out</Link> 
           </li>
 
         </ul>

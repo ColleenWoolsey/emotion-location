@@ -99,55 +99,40 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "emotionId": 8,
-      "emotionName": "",
-      "dueDate": "2019-02-08",
-      "task": "Glad Task",
-      "completion": false
-    },
-    {
       "id": 2,
       "userId": 1,
       "emotionId": 7,
       "emotionName": "",
       "dueDate": "2019-02-07",
-      "task": "Guilt Tasks",
+      "task": "Tom Guilt Tasks Edited",
       "completion": false
     },
     {
-      "id": 3,
-      "userId": 1,
-      "emotionId": 1,
-      "emotionName": "",
-      "dueDate": "2019-02-09",
-      "task": "Hurt Task",
-      "completion": false
-    },
-    {
+      "id": 4,
       "userId": 2,
       "emotionId": 3,
+      "emotionName": "",
       "dueDate": "2019-02-17",
-      "task": "Sad Task",
-      "completion": false,
-      "id": 4
+      "task": "Sad Task Dick Edited",
+      "completion": false
     },
     {
+      "id": 5,
       "userId": 2,
       "emotionId": 4,
+      "emotionName": "",
       "dueDate": "2019-02-21",
-      "task": "Anger Task",
-      "completion": false,
-      "id": 5
+      "task": "Anger Task Dick Edited",
+      "completion": false
     },
     {
+      "id": 6,
       "userId": 2,
       "emotionId": 5,
+      "emotionName": "",
       "dueDate": "2019-02-04",
-      "task": "Fear Task",
-      "completion": false,
-      "id": 6
+      "task": "Fear Task Dick Edited",
+      "completion": false
     },
     {
       "id": 7,
@@ -155,8 +140,41 @@
       "emotionId": 6,
       "emotionName": "",
       "dueDate": "2019-02-15",
-      "task": "Shame Task Edited",
+      "task": "Tom Shame Task Edited",
       "completion": false
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "emotionId": 1,
+      "emotionName": "",
+      "dueDate": "2019-02-13",
+      "task": "Tom Hurt Task Edited",
+      "completion": false
+    },
+    {
+      "userId": 2,
+      "emotionId": 1,
+      "dueDate": "2019-02-14",
+      "task": "Feed Cat",
+      "completion": false,
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "emotionId": 2,
+      "dueDate": "2019-02-13",
+      "task": "Feed dog",
+      "completion": false,
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "emotionId": 1,
+      "dueDate": "2019-02-02",
+      "task": "Tom Four",
+      "completion": false,
+      "id": 21
     }
   ],
   "examples": [
