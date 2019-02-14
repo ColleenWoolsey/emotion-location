@@ -34,48 +34,6 @@ export default class AppViews extends Component {
     return LoginManager.getNameAndPassword(userName, password)  
   }
 
-  //  updateTask = (id, existingTask) => {
-  //   return TaskManager.put(id, existingTask)
-  //   .then(() => {
-  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //     .then(tasks => 
-  //       this.setState({
-  //         tasks: tasks
-  //     }))
-  //   })
-  // }
-
-  // addCheckChange = (changedObj, id) => {
-  //   console.log("id (task) from addCheckChange", id);
-  //   return TaskManager.patch(changedObj, id)
-  //   .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //   .then(response =>
-  //    this.setState({
-  //      tasks: response
-  //     })
-  //   ))
-  // }
-
-  // deleteTask = (taskId) => {
-  //   return TaskManager.del(taskId)
-  //   .then(() => {
-  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //     .then(tasks => 
-  //       this.setState({
-  //         tasks: tasks
-  //     }, () => null))
-  //   })
-  // }
-
-  // deleteTask = task =>
-  //   TaskManager.del(task)
-  //     .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
-  //     .then(tasks =>
-  //       this.setState({
-  //         tasks: tasks
-  //     })
-  // );
-
   addTask = (task) => {
     return TaskManager.post(task)
     .then(() => {
@@ -161,8 +119,8 @@ export default class AppViews extends Component {
         render={props => {
           console.log("/tasks/new props from", props)
           return (
-            <TaskAddForm
-              {...props}
+            <TaskAddForm 
+              {...props}           
               {...this.props}
               tasks={this.state.tasks}
               addTask={this.addTask}

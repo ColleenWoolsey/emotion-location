@@ -136,7 +136,7 @@
       "emotionId": 6,
       "dueDate": "2019-02-15",
       "task": "Tom Shame Task Edited",
-      "complete": false
+      "complete": true
     },
     {
       "userId": 3,
@@ -231,8 +231,24 @@
       "emotionId": 8,
       "dueDate": "2019-02-28",
       "task": "Glad Task",
-      "complete": false,
+      "complete": true,
       "id": 37
+    },
+    {
+      "userId": 1,
+      "emotionId": 8,
+      "dueDate": "2019-02-09",
+      "task": "Task Eight",
+      "complete": false,
+      "id": 38
+    },
+    {
+      "userId": 1,
+      "emotionId": 7,
+      "dueDate": "2019-02-18",
+      "task": "Task Eight",
+      "complete": true,
+      "id": 39
     }
   ],
   "examples": [

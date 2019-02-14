@@ -10,16 +10,19 @@ export default class EmotionList extends Component {
     examples: [],    
   };
 
-  addTask = (task) => {
-    return TaskManager.post(task)
-    .then(() => {
-      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-      .then(tasks => 
-        this.setState({
-          tasks: tasks
-      }, () => null))
-    })
-  }
+  // addTask = (task) => {
+  //   return TaskManager.post(task)
+  //   .then(() => {
+  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //     .then(tasks => 
+  //       this.setState({
+  //         tasks: tasks
+  //     }, () => null))
+  //   })
+  // }
+  // //  () => null))  isa null function that forces state be updated
+  // //  then the .then on the alert forces tasks to be updated before
+  // //  this.props.history.push("/tasks/new") in EmotionList
 
   deleteTask = task =>
     TaskManager.del(task)
@@ -118,6 +121,7 @@ export default class EmotionList extends Component {
                 {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} 
                   tasks={this.state.tasks}
+                  addTask={this.addTask}
                   deleteTask={this.deleteTask}
                   updateTask={this.updateTask}
                   addCheckChange={this.addCheckChange}/>
