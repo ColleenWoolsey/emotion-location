@@ -53,33 +53,13 @@ export default class EmotionList extends Component {
     })
   };
 
-  // componentDidMount() {
-    
-  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //   .then(allTasks => {
-  //     allTasks.sort(function(a, b){return new Date(a.date) - new Date(b.date)})
-  //       .then(()=> 
-  //         {this.setState({
-  //           tasks: allTasks
-  //         })
-  //        }
-  //       )         
-  //   })
-  // };
-
   render() {
-
-    // this.props.tasks.sort(function(a, b){return new Date(a.dueDate) - new Date(b.dueDate)});
-
-    // this.state.tasks.sort(function(a,b){return new Date(a.dueDate) - new Date(b.dueDate)}).reverse();
 
     this.state.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
                  b = new Date(b.dueDate);
                  return a>b ? -1 : a<b ? 1 : 0;}).reverse();
-
-    return (
-      
+    return (      
       <React.Fragment>
         <div>
         <h3>How are you feeling {sessionStorage.getItem("userName")}?</h3>
@@ -109,19 +89,7 @@ export default class EmotionList extends Component {
               {/* End of div header-add-task */}
 
               <div className="tasks-list">
-                
-                {/* {this.state.tasks.sort(function(a, b) 
-                {a = new Date(a.dueDate);
-                 b = new Date(b.dueDate);
-                 return a>b ? -1 : a<b ? 1 : 0;})} */}
-
-                
-                {/* {function orderByDate(arr, dateProp) {
-                  return arr.slice().sort(function (a, b) {
-                    return a[dateProp] < b[dateProp] ? -1 : 1;
-                  });
-                }} */}
-                
+                                
                 {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} 
                   tasks={this.state.tasks}
