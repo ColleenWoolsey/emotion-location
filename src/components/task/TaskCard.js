@@ -14,14 +14,6 @@ export default class TaskCard extends Component {
    .addCheckChange(completeCheck, this.props.task.id)  
   }
 
-    // console.log("updateCheck from TaskCardForm", existingTask);
-    // console.log("this.props passed to updateTask from TaskCard", this.props) 
-    
-    // this.props.updateCheck(this.props.match.params.id, existingTask)
-    // .then(() => this.props.history.push("/home"))
-  
-  
-
   render() {
     return (
       <React.Fragment>
@@ -67,16 +59,7 @@ export default class TaskCard extends Component {
 
               {this.props.task.task}
             </h5>
-            {/* <form>
-        <label>
-          <input
-            className="btn"
-            name="completed"
-            type="checkbox"
-            checked={this.props.task.complete}
-            onChange={this.handleCheckChange} />
-        </label>
-      </form> */}
+           
             </div>          
         </div>
       </React.Fragment>

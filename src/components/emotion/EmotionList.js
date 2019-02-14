@@ -53,7 +53,21 @@ export default class EmotionList extends Component {
               {/* End of div header-add-task */}
 
               <div className="tasks-list">
-              {/* { this.props.tasks.sort(function(a,b){return new dueDate - new dueDate}).reverse()} */}
+                
+                {this.state.tasks.sort(function(a, b) 
+                {a = new Date(a.dueDate);
+                 b = new Date(b.dueDate);
+                 return a>b ? -1 : a<b ? 1 : 0;})}
+
+                {/* {this.state.tasks.sort(function(a, b){
+                 return new Date(a.date) - new Date(b.date)})} */}
+
+                {/* {function orderByDate(arr, dateProp) {
+                  return arr.slice().sort(function (a, b) {
+                    return a[dateProp] < b[dateProp] ? -1 : 1;
+                  });
+                }} */}
+
                 {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} />
                 ))}
