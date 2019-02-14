@@ -55,16 +55,25 @@ export default class AppViews extends Component {
     ))
   }
 
-  deleteTask = (task) => {
-    return TaskManager.delete(task)
-    .then(() => {
-      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-      .then(tasks => 
+  // deleteTask = (taskId) => {
+  //   return TaskManager.del(taskId)
+  //   .then(() => {
+  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //     .then(tasks => 
+  //       this.setState({
+  //         tasks: tasks
+  //     }, () => null))
+  //   })
+  // }
+
+  deleteTask = task =>
+    TaskManager.del(task)
+      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
+      .then(tasks =>
         this.setState({
           tasks: tasks
-      }, () => null))
-    })
-  }
+      })
+  );
 
   addTask = (task) => {
     return TaskManager.post(task)
@@ -170,7 +179,6 @@ export default class AppViews extends Component {
               {...props}
               {...this.props}
               tasks={this.state.tasks}
-              deleteTask={this.deleteTask}
               updateTask={this.updateTask}
               addCheckChange={this.addCheckChange}
             />

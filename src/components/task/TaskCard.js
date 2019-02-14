@@ -31,36 +31,34 @@ export default class TaskCard extends Component {
               {this.props.task.dueDate}
               {this.props.task.emotion.emotionName}
 
-              <div className="editTaskBtn">
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={() => {
+            <div className="editTaskBtn">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
 
-                    this.props.history.push(`/task/${this.props.task.id}`)                     
-                  }}
+                  this.props.history.push(`/task/${this.props.task.id}`)                     
+                }}
+              >
+                Edit
+              </button>
+            </div>
+
+            <div className="delTaskBtn">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
+                  this.props
+                  .deleteTask(this.props.task.id)                
+                }}
                 >
-                  Edit
-                </button>
-              </div>
-
-              <div className="delTaskBtn">
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={() => {                      
-                  this.deleteTask(this.props.task.id)
-                  .then(() => this.props.history.push("/home"))
-                    // .then(() => alert("Your task has been deleted!"))
-
-                    // this.props.history.push(`/task/${this.props.task.id}`)
-                  }}
-                  >
-                  Delete
-                </button>
-              </div>
+                Delete
+              </button>
+            </div>
 
               {this.props.task.task}
+
             </h5>
            
             </div>          

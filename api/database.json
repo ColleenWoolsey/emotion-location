@@ -171,34 +171,26 @@
       "complete": true
     },
     {
+      "id": 26,
       "userId": 1,
       "emotionId": 1,
       "dueDate": "2019-02-06",
-      "task": "Feed Cat",
-      "complete": false,
-      "id": 26
+      "task": "Tom Feed Cat Edited",
+      "complete": false
     },
     {
+      "id": 27,
       "userId": 1,
       "emotionId": 2,
       "dueDate": "2019-02-06",
-      "task": "Task Seven",
-      "complete": false,
-      "id": 27
+      "task": "Tom Task Seven",
+      "complete": false
     },
     {
       "userId": 1,
-      "emotionId": 2,
-      "dueDate": "2019-02-13",
-      "task": "Feed Cat",
-      "complete": false,
-      "id": 28
-    },
-    {
-      "userId": 1,
-      "emotionId": 4,
-      "dueDate": "2019-02-12",
-      "task": "Feed dog",
+      "emotionId": 3,
+      "dueDate": "2019-02-20",
+      "task": "Tom Sad Task",
       "complete": false,
       "id": 29
     }
