@@ -1,11 +1,33 @@
 import React, { Component } from "react";
 import EmotionCard from "./EmotionCard";
 import TaskCard from "../task/TaskCard";
+import TaskManager from "../../modules/TaskManager";
 import "./List.css";
 export default class EmotionList extends Component {
+
+  state = {
+    tasks: [],
+    examples: [],    
+  };
+
+  componentDidMount() {
+    
+    TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+    .then(allTasks => {
+        this.setState({
+            tasks: allTasks
+        })
+        
+        console.log("allTasks from componentDidMount", allTasks)
+    })
+  };
+
   render() {
     return (
       <React.Fragment>
+        <div>
+        <h3>How are you feeling {sessionStorage.getItem("userName")}?</h3>
+        </div>
         <div className="container">
          
           <div className="emotions-list">
@@ -31,7 +53,8 @@ export default class EmotionList extends Component {
               {/* End of div header-add-task */}
 
               <div className="tasks-list">
-                {this.props.tasks.map(task => (
+              {/* { this.props.tasks.sort(function(a,b){return new dueDate - new dueDate}).reverse()} */}
+                {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} />
                 ))}
               </div>

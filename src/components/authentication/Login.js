@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import LoginManager from "../../modules/LoginManager";
 
 import "./Login.css"
 import AppViews from "../AppViews";
@@ -7,9 +8,10 @@ export default class Login extends Component {
 
 // Set initial state
     state = {
-        userName: "",
-        email: "",
-        password: "",
+      id: "",
+      userName: "",
+      email: "",
+      password: "",
     }
 
 // Update state whenever an input field is edited
@@ -20,35 +22,41 @@ handleFieldChange = (evt) => {
 }
 
 handleLogin = evt => {
-    console.log(this.state.userName);
-    console.log(this.state.email);
-    console.log(this.state.password);
+    console.log("this.state.userName", this.state.userName);
+    console.log("this.state.password", this.state.password);
     evt.preventDefault();
-    // this.props.verifyUser(this.props.user.userName, this.props.user.password)
+    
     this.props.verifyUser(this.state.userName, this.state.password)
-    // this.props.verifyUser(userName, password)
-
+    
     .then(users => {
-        console.log("users []", users)
-        if (users.length < 1) {
-            alert("Sorry, not finding you. Try registering below")
-        } else {
-            users.forEach(person => {
-            let loggedIn= false;
-            if (this.state.userName === person.userName 
-                && this.state.password === person.password) {
-                    loggedIn = true;
-                }
-            if (loggedIn === true) {
-                // sessionStorage.setItem("users", person.id);
-                // let sessionPerson = sessionStorage.setItem("users")
-                // console.log("sessionPerson", sessionPerson)
+      console.log("users array returned from verifyUser", users);
+      
+      if (users.length < 1) {
+          alert("Sorry, not finding you. Try registering below")
+      } else {
+        users.forEach(user => {
+        let loggedIn= false;
+          if (this.state.userName === user.userName 
+              && this.state.password === user.password) {
+                  loggedIn = true;
+              }
+          if (loggedIn === true) {
+              
+                sessionStorage.setItem("user", user.id);
+                sessionStorage.setItem("userName", user.userName)
+                   
+                console.log("SS setItem user", user.id)
+                console.log("SS setItem userName", user.userName)
                 this.props.history.push("/home");
+             
+              } else {
+
+                this.props.history.push("/")
+              
             }
         })
-      }
-    })
-  }
+      }})
+    }
 
 render() {
     return (

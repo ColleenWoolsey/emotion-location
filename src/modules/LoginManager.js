@@ -15,11 +15,11 @@ export default {
   },
   
   getNameAndPassword(userName, password) {
-    return fetch(`${remoteURL}/users?userName=${userName}&password=${password}`)
+    return fetch(`${remoteURL}/users/?userName=${userName}&password=${password}`)
     .then(response => response.json())
   },
 
-// http://localhost:5002/users?userName=Tom Smith&password=onePassword
+// http://localhost:5002/users?userName=Tom Smith&password=one
 
   post(newUser) {
     return fetch(`${remoteURL}/users`, {

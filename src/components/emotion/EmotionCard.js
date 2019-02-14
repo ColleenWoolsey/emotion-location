@@ -19,7 +19,7 @@ export default class EmotionCard extends Component {
   }
   
   render() {
-    console.log ("this.props passed to EmotionCard", this.props)
+    // console.log ("this.props passed to EmotionCard", this.props)
     return (      
       <React.Fragment>
         

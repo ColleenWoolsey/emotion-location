@@ -14,12 +14,12 @@
     },
     {
       "id": 3,
-      "userName": "Harry SMith",
+      "userName": "Harry Smith",
       "email": "email@gmail.com",
       "password": "three"
     },
     {
-      "userName": "Santa",
+      "userName": "Santa Clause",
       "email": "email@gmail.com",
       "password": "four",
       "id": 4
@@ -99,63 +99,169 @@
   ],
   "tasks": [
     {
+      "id": 2,
+      "userId": 1,
+      "emotionId": 7,
+      "dueDate": "2019-02-07",
+      "task": "Tom Guilt Tasks Edited",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "emotionId": 3,
+      "dueDate": "2019-02-17",
+      "task": "Sad Task Dick Edited",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "emotionId": 4,
+      "dueDate": "2019-02-21",
+      "task": "Anger Task Dick Edited",
+      "complete": false
+    },
+    {
       "id": 6,
       "userId": 2,
-      "emotionId": "2",
-      "emotionName": "",
-      "dueDate": "2019-02-02",
-      "task": "Task lonely",
-      "completion": false
+      "emotionId": 5,
+      "dueDate": "2019-02-04",
+      "task": "Fear Task Dick Edited",
+      "complete": false
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "emotionId": 6,
+      "dueDate": "2019-02-15",
+      "task": "Tom Shame Task Edited",
+      "complete": false
     },
     {
       "userId": 2,
-      "emotionId": "6",
-      "dueDate": "2019-02-06",
-      "task": "task six",
-      "completion": false,
-      "id": 10
-    },
-    {
-      "userId": 2,
-      "emotionId": "1",
-      "dueDate": "2019-02-01",
-      "task": "Task One",
-      "completion": false,
-      "id": 12
-    },
-    {
-      "userId": 2,
-      "emotionId": "5",
-      "dueDate": "2019-02-05",
-      "task": "Task Five",
-      "completion": false,
-      "id": 13
-    },
-    {
-      "userId": 2,
-      "emotionId": "1",
-      "dueDate": "2019-02-01",
+      "emotionId": 1,
+      "dueDate": "2019-02-14",
       "task": "Feed Cat",
-      "completion": false,
-      "id": 14
+      "complete": false,
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "emotionId": 2,
+      "dueDate": "2019-02-13",
+      "task": "Feed dog",
+      "complete": false,
+      "id": 20
+    },
+    {
+      "userId": 3,
+      "emotionId": 8,
+      "dueDate": "2019-02-15",
+      "task": "Task Eight",
+      "complete": false,
+      "id": 21
+    },
+    {
+      "id": 22,
+      "userId": 3,
+      "emotionId": 2,
+      "dueDate": "2019-02-01",
+      "task": "Feed dog",
+      "complete": false
+    },
+    {
+      "userId": 1,
+      "emotionId": 8,
+      "dueDate": "2019-02-15",
+      "task": "Glad Task",
+      "complete": true,
+      "id": 24
+    },
+    {
+      "id": 25,
+      "userId": 3,
+      "emotionId": 2,
+      "dueDate": "2019-02-14",
+      "task": "Harry Lonely Task Edited",
+      "complete": true
+    }
+  ],
+  "examples": [
+    {
+      "id": 1,
+      "emotionId": 1,
+      "example": ""
+    },
+    {
+      "id": 2,
+      "emotionId": 1,
+      "example": ""
+    },
+    {
+      "id": 3,
+      "emotionId": 1,
+      "example": ""
+    },
+    {
+      "id": 4,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 5,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 6,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 7,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 8,
+      "emotionId": 2,
+      "example": ""
+    },
+    {
+      "id": 9,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 10,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 11,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 12,
+      "emotionId": 3,
+      "example": ""
+    },
+    {
+      "id": 13,
+      "emotionId": 4,
+      "example": ""
     },
     {
       "id": 15,
-      "userId": 2,
-      "emotionId": "2",
-      "emotionName": "",
-      "dueDate": "2019-02-15",
-      "task": "Feed sheep",
-      "completion": false
+      "emotionId": 4,
+      "example": ""
     },
     {
-      "userId": 2,
-      "emotionId": "5",
-      "dueDate": "2019-02-15",
-      "task": "Task fear",
-      "completion": false,
-      "id": 16
+      "id": 16,
+      "emotionId": 4,
+      "example": ""
     }
-  ],
-  "examples": []
+  ]
 }

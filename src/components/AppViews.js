@@ -3,30 +3,25 @@ import React, { Component } from "react";
 import LoginManager from "../modules/LoginManager";
 import Registration from "./authentication/Registration";
 import Login from "./authentication/Login";
-import NavBar from "./nav/NavBar";
 import TaskManager from "../modules/TaskManager";
 import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
 import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
+import TaskCard from "./task/TaskCard";
 
 export default class AppViews extends Component {
 
   state = {
     users: [],
-    tasks: [],
+    // tasks: [],
     examples: [],
-    userId: sessionStorage.getItem("User")
+    userName: sessionStorage.getItem("userName"),
+    user: sessionStorage.getItem("user")
   };
-
-  isAuthenticated = () => sessionStorage.getItem("User") !== null
-
-  showNav() {
-    if (this.isAuthenticated()) {
-      return <NavBar />
-    }
-  }
-
+    
+  isAuthenticated = () => sessionStorage.getItem("user") !== null
+  
   addUser = newUser =>
     LoginManager.post(newUser)
       .then(() => LoginManager.getAll())
@@ -35,27 +30,16 @@ export default class AppViews extends Component {
         this.setState({
           users: allUsers
         })
-      );
-
+      );  
+ 
   verifyUser = (userName, password) => {  
-    console.log("userName from verifyUser.js", userName);
-    console.log("password from verifyUser.js", password);
-    return LoginManager.getNameAndPassword(userName, password)
-    
-    // .then(allUsers => {
-    //   console.log("allUsers [] from verifyUser", allUsers)
-    //   this.setState ({ users: allUsers })
-               
-    // .then (users => {
-    //   console.log ("users[]", users)
-      // return users
-    // })
-    // })
+    return LoginManager.getNameAndPassword(userName, password)  
   }
 
    updateTask = (id, existingTask) => {
-    return TaskManager.put(id, existingTask).then(() => {
-      TaskManager.getAll()
+    return TaskManager.put(id, existingTask)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
       .then(tasks => 
         this.setState({
           tasks: tasks
@@ -63,42 +47,80 @@ export default class AppViews extends Component {
     })
   }
 
+  addCheckChange = (changedObj, id) => {
+    console.log("id (task) from addCheckChange", id);
+    return TaskManager.patch(changedObj, id)
+    .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+    .then(response =>
+     this.setState({
+       tasks: response
+      })
+    )
+   )
+  }
+
+  // updateCheck = (id, existingTask) => {
+  //   return TaskManager.patch(id, existingTask).then(() => {
+  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //     .then(tasks => 
+  //       this.setState({
+  //         tasks: tasks
+  //     }))
+  //   })
+  // }
+
   deleteTask = task =>
     TaskManager.del(task)
-      .then(() => TaskManager.getAll())
+      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
       .then(tasks =>
         this.setState({
           tasks: tasks
       })
   );
 
-  addTask = task =>
-    TaskManager.post(task)
-      .then(() => TaskManager.getAll())
-      .then(tasks =>
+  addTask = (task) => {
+    return TaskManager.post(task)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
         this.setState({
           tasks: tasks
-      })
-  ); 
-
-  componentDidMount() {
-
-    LoginManager.getAll()
-    .then(allUsers => {
-        this.setState({
-            tasks: allUsers
-        })
-        console.log("allUsers from componentDidMount", allUsers)
+      }))
     })
+  }
 
-    TaskManager.getAll()
-    .then(allTasks => {
-        this.setState({
-            tasks: allTasks
-        })
-        console.log("allTasks from componentDidMount", allTasks)
-    })
-  };
+  // addTask = task =>
+  //   TaskManager.post(task)
+  //     .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
+  //     .then(tasks =>
+  //       this.setState({
+  //         tasks: tasks
+  //     })
+  // ); 
+  
+  // componentDidMount() {
+
+  //   const newState = {}
+
+  //   LoginManager.getAll()
+  //   .then(allUsers => {
+  //       newState.users = allUsers
+  //     })        
+  //   .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
+  //   .then(tasks => newState.tasks = tasks)
+
+  //   .then(() => this.setState(newState))
+  // };
+  
+  // componentDidMount() {
+  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //   .then(allTasks => {
+  //       this.setState({
+  //           tasks: allTasks
+  //       })
+  //       console.log("allTasks from componentDidMount", allTasks)
+  //   })
+  // };
 
   render() {
   return(
@@ -106,11 +128,9 @@ export default class AppViews extends Component {
 
       <Route exact path="/" 
         render={(props) => {
-          console.log("/", props)
           return (
           <Login
           {...props} 
-          // component={Login}
           verifyUser={this.verifyUser}
           users={this.state.users} />
           )
@@ -120,17 +140,24 @@ export default class AppViews extends Component {
 {/* Route for listing emotions and tasks from NavBar */}
       <Route exact path="/home"
         render={props => {
-        console.log("/ props from", props)
-        return (
-          // <React.Fragment>
-            <EmotionList 
-            {...this.props} 
-            {...props} 
-            tasks={this.state.tasks}
-            deleteTask={this.deleteTask}
-            />
-          // </React.Fragment>
-          );
+          if (this.isAuthenticated()) {
+          console.log("props from /", props)
+          return (          
+              <EmotionList 
+              {...this.props} 
+              {...props} 
+              tasks={this.state.tasks}
+              addCheckChange={this.addCheckChange}
+              deleteTask={this.deleteTask}
+              addTask={this.addTask}
+
+              userName={sessionStorage.getItem("userName")}
+              user={sessionStorage.getItem("user")}
+              />
+            )
+          } else {
+            return <Redirect to="/" />;
+          }
         }}
       />
 
@@ -154,7 +181,7 @@ export default class AppViews extends Component {
           return (
             <EmotionDetail
               {...props}
-              {...this.props}           
+              {...this.props}         
             />
           );
         }}
@@ -178,17 +205,33 @@ export default class AppViews extends Component {
   {/* Route for singular task */}
       <Route path="/task/:id"
         render={props => {
-          console.log("/edit/task/:id", props)
+          console.log("/task/:id", props)
           return (
             <TaskEditForm
               {...props}
               {...this.props}
               tasks={this.state.tasks}
-              updateTask={this.updateTask} 
+              updateTask={this.updateTask}
+              addCheckChange={this.addCheckChange}
             />
           );
         }}
       />
+
+      {/* <Route path="/task/:id/check"
+        render={props => {
+          console.log("/task/:id/check", props)
+          return (
+            <TaskCard
+              {...props}
+              {...this.props}
+              tasks={this.state.tasks}
+              updateCheck={this.updateCheck} 
+            />
+          );
+        }}
+      /> */}
+
       </React.Fragment>
       )
     }

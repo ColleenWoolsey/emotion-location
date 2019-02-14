@@ -3,11 +3,11 @@ import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 export default class TaskAddForm extends React.Component {
         
 state = {
-    userId: 2,
+    userId: sessionStorage.getItem("user"),
     emotionId: "",
     dueDate: "",
     task: "",
-    completion: false
+    complete: false
 };
 
 // Update state whenever an input field is edited
@@ -24,11 +24,11 @@ constructNewTask = evt => {
     evt.preventDefault();
 
     const task = {
-        userId: this.state.userId,
-        emotionId: this.state.emotionId,
+        userId: Number(this.state.userId),
+        emotionId: Number(this.state.emotionId),
         dueDate: this.state.dueDate,
         task: this.state.task,
-        completion: this.state.completion
+        complete: this.state.complete
     };
 
 // Create the task and redirect user to task list
@@ -63,7 +63,7 @@ constructNewTask = evt => {
 
         {/* {' '} */}
         <div className="form-group">
-          <label htmlFor="dueDate">Completion Date</label>
+          <label htmlFor="dueDate">complete Date</label>
           <Input className="form-control"
             type="date"
             required

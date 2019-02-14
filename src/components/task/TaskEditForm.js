@@ -7,17 +7,10 @@ export default class TaskEditForm extends React.Component {
 state = {
     userId: 2,
     emotionId: "",
-    emotionName: "",
     dueDate: "",
     task: "",
-    completion: false
+    complete: false
 };
-
-// Update state whenever an input field is edited
-
-// evt.target.id functions like an index number in
-// the array. The target depends on the field with
-// event listener
 
 handleFieldChange = evt => {
     const stateToChange = {};
@@ -31,16 +24,15 @@ updateExistingTask = evt => {
     evt.preventDefault()
 
     const existingTask = {
-        id: this.state.id,
-        userId: this.state.userId,
-        emotionId: this.state.emotionId,
-        emotionName: this.state.emotionName,
-        dueDate: this.state.dueDate,
-        task: this.state.task,
-        completion: this.state.completion      
+      id: this.state.id,
+      userId: Number(this.state.userId),
+      emotionId: Number(this.state.emotionId),
+      dueDate: this.state.dueDate,
+      task: this.state.task,
+      complete: this.state.complete     
     }
 
-    console.log("updateTask from TaskEditForm", existingTask);
+    console.log("updateExistingTask from TaskEditForm", existingTask);
     
     this.props.updateTask(this.props.match.params.id, existingTask)
     .then(() => this.props.history.push("/home"))
@@ -56,7 +48,7 @@ updateExistingTask = evt => {
         emotionId: task.emotionId,
         dueDate: task.dueDate,
         task: task.task,
-        completion: task.completion
+        complete: task.complete
       });
     });
   }
