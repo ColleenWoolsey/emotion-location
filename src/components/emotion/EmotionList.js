@@ -10,20 +10,6 @@ export default class EmotionList extends Component {
     examples: [],    
   };
 
-  // addTask = (task) => {
-  //   return TaskManager.post(task)
-  //   .then(() => {
-  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //     .then(tasks => 
-  //       this.setState({
-  //         tasks: tasks
-  //     }, () => null))
-  //   })
-  // }
-  // //  () => null))  isa null function that forces state be updated
-  // //  then the .then on the alert forces tasks to be updated before
-  // //  this.props.history.push("/tasks/new") in EmotionList
-
   deleteTask = task =>
     TaskManager.del(task)
       .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
@@ -67,10 +53,30 @@ export default class EmotionList extends Component {
     })
   };
 
+  // componentDidMount() {
+    
+  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //   .then(allTasks => {
+  //     allTasks.sort(function(a, b){return new Date(a.date) - new Date(b.date)})
+  //       .then(()=> 
+  //         {this.setState({
+  //           tasks: allTasks
+  //         })
+  //        }
+  //       )         
+  //   })
+  // };
+
   render() {
 
-    {this.state.tasks.sort(function(a, b){
-    return new Date(a.date) - new Date(b.date)})}
+    // this.props.tasks.sort(function(a, b){return new Date(a.dueDate) - new Date(b.dueDate)});
+
+    // this.state.tasks.sort(function(a,b){return new Date(a.dueDate) - new Date(b.dueDate)}).reverse();
+
+    this.state.tasks.sort(function(a, b) 
+                {a = new Date(a.dueDate);
+                 b = new Date(b.dueDate);
+                 return a>b ? -1 : a<b ? 1 : 0;}).reverse();
 
     return (
       
@@ -109,9 +115,7 @@ export default class EmotionList extends Component {
                  b = new Date(b.dueDate);
                  return a>b ? -1 : a<b ? 1 : 0;})} */}
 
-                {/* {this.state.tasks.sort(function(a, b){
-                 return new Date(a.date) - new Date(b.date)})} */}
-
+                
                 {/* {function orderByDate(arr, dateProp) {
                   return arr.slice().sort(function (a, b) {
                     return a[dateProp] < b[dateProp] ? -1 : 1;

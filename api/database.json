@@ -249,6 +249,30 @@
       "task": "Task Eight",
       "complete": true,
       "id": 39
+    },
+    {
+      "userId": 2,
+      "emotionId": 8,
+      "dueDate": "2019-02-06",
+      "task": "Task Eight",
+      "complete": false,
+      "id": 40
+    },
+    {
+      "userId": 2,
+      "emotionId": 7,
+      "dueDate": "2019-02-28",
+      "task": "Task Eight",
+      "complete": false,
+      "id": 41
+    },
+    {
+      "userId": 2,
+      "emotionId": 5,
+      "dueDate": "2019-02-12",
+      "task": "Feed Cat",
+      "complete": false,
+      "id": 42
     }
   ],
   "examples": [
