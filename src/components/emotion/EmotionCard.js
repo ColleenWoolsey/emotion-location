@@ -82,6 +82,7 @@ export default class EmotionCard extends Component {
     }}
   >
       <DropdownItem>{this.props.emotion.summary}</DropdownItem>
+      <DropdownItem>{this.props.emotion.examples}</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
           </div>

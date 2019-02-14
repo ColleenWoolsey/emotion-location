@@ -11,7 +11,7 @@ export default class TaskCard extends Component {
     };
   
    this.props
-   .addCheckChange(completeCheck, this.props.task.id)  
+   .addCheckChange(completeCheck, this.props.task.id)
   }
 
   render() {
@@ -39,7 +39,7 @@ export default class TaskCard extends Component {
                 type="button"
                 className="btn"
                 onClick={() => {
-
+                  
                   this.props.history.push(`/task/${this.props.task.id}`)                     
                 }}
               >

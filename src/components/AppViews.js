@@ -48,6 +48,17 @@ export default class AppViews extends Component {
   //  then the .then on the alert forces tasks to be updated before
   //  this.props.history.push("/tasks/new") in EmotionList
 
+  updateTask = (id, existingTask) => {
+    return TaskManager.put(id, existingTask)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }))
+    })
+  }
+
   render() {
   return(
     <React.Fragment>

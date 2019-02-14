@@ -11,6 +11,13 @@
     flex-wrap: wrap;
     flex-basis: 60%;
 }
+
+.examples-list {
+    display: flex;
+    border: 2px solid red;
+    flex-direction: column;
+}
+
 .right {
     display: flex;
     flex-basis: 40%;
@@ -29,10 +36,16 @@
     flex-direction: column;
 }
 
-.examples-list {
+.add-form-group {
     display: flex;
-    border: 2px solid red;
     flex-direction: column;
+    align-items: center;
+}
+
+.edit-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .addTaskBtn {

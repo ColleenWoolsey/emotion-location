@@ -1,5 +1,7 @@
 import React from 'react';
 import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import "../emotion/List.css";
+
 export default class TaskAddForm extends React.Component {
         
 state = {
@@ -41,7 +43,8 @@ constructNewTask = evt => {
     return (
       <React.Fragment>
       <Form inline>
-      <div className="form-group">
+      <div className="add-form-group">
+
         <label htmlFor="emotionId" sm={2} size="lg">Emotion</label>
         <select
         bssize="lg"
@@ -58,10 +61,11 @@ constructNewTask = evt => {
           ))}
         </select>
       </div>
-
-        {/* {' '} */}
-        <div className="form-group">
-          <label htmlFor="dueDate">complete Date</label>
+      <br></br>
+      <br></br>
+       
+        <div className="add-form-group">
+          <label htmlFor="dueDate">Completion Date</label>
           <Input className="form-control"
             type="date"
             required
@@ -70,9 +74,10 @@ constructNewTask = evt => {
             onChange={this.handleFieldChange}
             />
         </div>
-
-        {/* {' '} */}
-        <div className="form-group">
+        <br></br>
+        <br></br>
+          
+        <div className="add-form-group">
           <label htmlFor="task">Task</label>
           <Input className="form-control"
             type="text"
@@ -82,10 +87,11 @@ constructNewTask = evt => {
             placeholder="task"
             onChange={this.handleFieldChange}
             />
-          </div>
-
-        {/* {' '} */}
-        <div>
+        </div>
+        <br></br>
+        <br></br>
+        
+        <div className="add-form-group">
           <button
             type="submit"
             className="btn"
@@ -93,6 +99,9 @@ constructNewTask = evt => {
             id="add-form-btn"
           >Save
           </button>
+          <br></br>
+          <br></br>
+
           <button
             type="submit"
             className="btn"

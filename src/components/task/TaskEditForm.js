@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import TaskManager from "../../modules/TaskManager";
+import "../emotion/List.css";
 
 export default class TaskEditForm extends React.Component {
         
@@ -57,7 +58,7 @@ updateExistingTask = evt => {
     return (
       <React.Fragment>
       <Form inline>
-      <div className="form-group">
+      <div className="edit-form-group">
         <label htmlFor="emotionId">Emotion:  </label>
           <select
             value={this.state.emotionId}
@@ -65,7 +66,7 @@ updateExistingTask = evt => {
             id="emotionId"
             onChange={this.handleFieldChange}
           >
-          {/* <option value="">{this.state.emotionName}</option> */}
+          
           <option>{this.state.emotionName}</option>
           {this.props.emotions.map(evt => (
             <option key={evt.id} value={evt.id}>
@@ -74,9 +75,10 @@ updateExistingTask = evt => {
           ))}
           </select>
         </div>
+        <br></br>
+        <br></br>
 
-        {/* {' '} */}
-        <div className="form-group">
+        <div className="edit-form-group">
           <label htmlFor="dueDate">Due Date:  </label>
           <Input className="form-control"
             type="date"
@@ -87,9 +89,10 @@ updateExistingTask = evt => {
             value={this.state.dueDate}
             />
         </div>
+        <br></br>
+        <br></br>
 
-        {/* {' '} */}
-        <div className="form-group">
+        <div className="edit-form-group">
           <label htmlFor="task">Task:  </label>
           <Input className="form-control"
           // defaultValue={this.state.task}
@@ -102,9 +105,10 @@ updateExistingTask = evt => {
           value={this.state.task}
           />
         </div>
+        <br></br>
+        <br></br>
 
-        {/* {' '} */}
-        <div>
+        <div className="edit-form-group">
             <button
               type="submit"
               className="btn"

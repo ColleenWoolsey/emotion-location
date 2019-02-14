@@ -1,8 +1,5 @@
 import React, { Component } from "react"
-import LoginManager from "../../modules/LoginManager";
-
 import "./Login.css"
-import AppViews from "../AppViews";
 
 export default class Login extends Component {
 
@@ -67,42 +64,45 @@ render() {
             
           <div className="form-group">
             <label htmlFor="inputUserName">
-                User Name:  </label>
+                User Name :  </label>
             <input onChange={this.handleFieldChange} type="text"
                     id="userName"
-                    placeholder="User Name"
+                    // placeholder="User Name"
                     required="" autoFocus="" />
           </div>
-
+          <br></br>
+          <br></br>
           <div className="form-group">
             <label htmlFor="inputUserEmail">
-                Email:  </label>
+                Email :  </label>
             <input onChange={this.handleFieldChange} type="email"
                     id="email"
-                    placeholder="Email"
+                    // placeholder="Email"
                     required="" autoFocus="" />
           </div>
-          
+          <br></br>
+          <br></br>
           <div className="form-group"> 
             <label htmlFor="inputPassword">
-                Password:  </label>
+                Password :  </label>
             <input onChange={this.handleFieldChange} type="password"
                     id="password"
-                    placeholder="Password"
+                    // placeholder="Password"
                     required="" />
           </div>
+          <br></br>
+          <br></br>
+          <button className="loginButton" type="submit"
+              onClick={this.handleLogin}>
+              Login
+          </button>
 
-            <button className="loginButton" type="submit"
-                onClick={this.handleLogin}>
-                Login
-            </button>
+          <h5 className="request">Not Registered?</h5>
 
-            <h5 className="request">Not Registered?</h5>
-
-            <button className="registerButton" type="button"
-                onClick={()=> this.props.history.push("/registration")}>
-                Create an Account
-            </button>
+          <button className="registerButton" type="button"
+              onClick={()=> this.props.history.push("/registration")}>
+              Create an Account
+          </button>
         </form>
       </div>
     )

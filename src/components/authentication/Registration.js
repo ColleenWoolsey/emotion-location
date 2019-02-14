@@ -35,43 +35,45 @@ export default class Registration extends Component {
 
   render() {
     return (
-    <div className="register">
+    <div className="register-container">
       <form onSubmit={this.handleRegister}>
         <h3 className="welcome">Register at EmoLocation</h3>
             
           <div className="form-group">
             <label htmlFor="inputUserName">
-                User Name:  </label>
+                User Name :  </label>
             <input onChange={this.handleFieldChange} type="text"
                     id="userName"
-                    placeholder="User Name"
+                    // placeholder="User Name"
                     required="" autoFocus="" />
           </div>
-
+          <br></br>
+          <br></br>
           <div className="form-group">
             <label htmlFor="inputUserEmail">
-                Email:  </label>
+                Email :  </label>
             <input onChange={this.handleFieldChange} type="email"
                     id="email"
-                    placeholder="Email"
+                    // placeholder="Email"
                     required="" autoFocus="" />
           </div>
-          
+          <br></br>
+          <br></br>
           <div className="form-group"> 
             <label htmlFor="inputPassword">
-                Password:  </label>
+                Password :  </label>
             <input onChange={this.handleFieldChange} type="password"
                     id="password"
-                    placeholder="Password"
+                    // placeholder="Password"
                     required="" />
           </div>
-
-           <br></br>
+          <br></br>
+          <br></br>         
                 
-            <button type="submit" onClick={() => this.constructNewUser()} 
-                className="btn">
-                Sign Up
-            </button>
+          <button type="submit" onClick={() => this.constructNewUser()} 
+              className="btn">
+              Sign Up
+          </button>
         </form>
 
     </div>
