@@ -10,6 +10,51 @@ export default class EmotionList extends Component {
     examples: [],    
   };
 
+  // addTask = (task) => {
+  //   return TaskManager.post(task)
+  //   .then(() => {
+  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //     .then(tasks => 
+  //       this.setState({
+  //         tasks: tasks
+  //     }, () => null))
+  //   })
+  // }
+  // //  () => null))  isa null function that forces state be updated
+  // //  then the .then on the alert forces tasks to be updated before
+  // //  this.props.history.push("/tasks/new") in EmotionList
+
+  deleteTask = task =>
+    TaskManager.del(task)
+      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
+      .then(tasks =>
+        this.setState({
+          tasks: tasks
+      })
+  );
+
+  updateTask = (id, existingTask) => {
+    return TaskManager.put(id, existingTask)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }))
+    })
+  }
+
+  addCheckChange = (changedObj, id) => {
+    console.log("id (task) from addCheckChange", id);
+    return TaskManager.patch(changedObj, id)
+    .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+    .then(response =>
+     this.setState({
+       tasks: response
+      })
+    ))
+  }
+
   componentDidMount() {
     
     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
@@ -23,7 +68,12 @@ export default class EmotionList extends Component {
   };
 
   render() {
+
+    {this.state.tasks.sort(function(a, b){
+    return new Date(a.date) - new Date(b.date)})}
+
     return (
+      
       <React.Fragment>
         <div>
         <h3>How are you feeling {sessionStorage.getItem("userName")}?</h3>
@@ -53,10 +103,33 @@ export default class EmotionList extends Component {
               {/* End of div header-add-task */}
 
               <div className="tasks-list">
-              {/* { this.props.tasks.sort(function(a,b){return new dueDate - new dueDate}).reverse()} */}
+                
+                {/* {this.state.tasks.sort(function(a, b) 
+                {a = new Date(a.dueDate);
+                 b = new Date(b.dueDate);
+                 return a>b ? -1 : a<b ? 1 : 0;})} */}
+
+                {/* {this.state.tasks.sort(function(a, b){
+                 return new Date(a.date) - new Date(b.date)})} */}
+
+                {/* {function orderByDate(arr, dateProp) {
+                  return arr.slice().sort(function (a, b) {
+                    return a[dateProp] < b[dateProp] ? -1 : 1;
+                  });
+                }} */}
+                
                 {this.state.tasks.map(task => (
-                  <TaskCard key={task.id} task={task} {...this.props} />
-                ))}
+                  <TaskCard key={task.id} task={task} {...this.props} 
+                  tasks={this.state.tasks}
+                  addTask={this.addTask}
+                  deleteTask={this.deleteTask}
+                  updateTask={this.updateTask}
+                  addCheckChange={this.addCheckChange}/>
+                  
+                ))
+                
+                }
+                {/* {this.state.deleteTask(this.props.task.id)} */}
               </div>
               {/* End of div tasks-list */}
 

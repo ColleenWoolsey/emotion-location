@@ -14,15 +14,10 @@ export default class TaskCard extends Component {
    .addCheckChange(completeCheck, this.props.task.id)  
   }
 
-    // console.log("updateCheck from TaskCardForm", existingTask);
-    // console.log("this.props passed to updateTask from TaskCard", this.props) 
-    
-    // this.props.updateCheck(this.props.match.params.id, existingTask)
-    // .then(() => this.props.history.push("/home"))
-  
-  
-
   render() {
+    // {this.state.tasks.sort(function(a, b){
+    //   return new Date(a.date) - new Date(b.date)})}
+    console.log("props passed from EmotionList", this.props)
     return (
       <React.Fragment>
         <div className="task-list"> 
@@ -39,44 +34,37 @@ export default class TaskCard extends Component {
               {this.props.task.dueDate}
               {this.props.task.emotion.emotionName}
 
-              <div className="editTaskBtn">
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={() => {
+            <div className="editTaskBtn">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
 
-                    this.props.history.push(`/task/${this.props.task.id}`)                     
-                  }}
+                  this.props.history.push(`/task/${this.props.task.id}`)                     
+                }}
+              >
+                Edit
+              </button>
+            </div>
+
+            <div className="delTaskBtn">
+              <button
+                type="button"
+                className="btn"
+                onClick={() => {
+                  this.props.deleteTask(this.props.task.id)
+                  // .then(() => this.props.history.push("/home"))
+                  // .then(() => alert("Your task has been deleted!"))                
+                }}
                 >
-                  Edit
-                </button>
-              </div>
-
-              <div className="delTaskBtn">
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={() => {
-                    this.props
-                    .deleteTask(this.props.task.id)
-                  }}
-                  >
-                  Delete
-                </button>
-              </div>
+                Delete
+              </button>
+            </div>
 
               {this.props.task.task}
+
             </h5>
-            {/* <form>
-        <label>
-          <input
-            className="btn"
-            name="completed"
-            type="checkbox"
-            checked={this.props.task.complete}
-            onChange={this.handleCheckChange} />
-        </label>
-      </form> */}
+           
             </div>          
         </div>
       </React.Fragment>
