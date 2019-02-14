@@ -10,6 +10,48 @@ export default class EmotionList extends Component {
     examples: [],    
   };
 
+  addTask = (task) => {
+    return TaskManager.post(task)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }, () => null))
+    })
+  }
+
+  deleteTask = task =>
+    TaskManager.del(task)
+      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
+      .then(tasks =>
+        this.setState({
+          tasks: tasks
+      })
+  );
+
+  updateTask = (id, existingTask) => {
+    return TaskManager.put(id, existingTask)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
+        this.setState({
+          tasks: tasks
+      }))
+    })
+  }
+
+  addCheckChange = (changedObj, id) => {
+    console.log("id (task) from addCheckChange", id);
+    return TaskManager.patch(changedObj, id)
+    .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+    .then(response =>
+     this.setState({
+       tasks: response
+      })
+    ))
+  }
+
   componentDidMount() {
     
     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
@@ -23,7 +65,12 @@ export default class EmotionList extends Component {
   };
 
   render() {
+
+    {this.state.tasks.sort(function(a, b){
+    return new Date(a.date) - new Date(b.date)})}
+
     return (
+      
       <React.Fragment>
         <div>
         <h3>How are you feeling {sessionStorage.getItem("userName")}?</h3>
@@ -67,10 +114,18 @@ export default class EmotionList extends Component {
                     return a[dateProp] < b[dateProp] ? -1 : 1;
                   });
                 }} */}
-
+                
                 {this.state.tasks.map(task => (
-                  <TaskCard key={task.id} task={task} {...this.props} />
-                ))}
+                  <TaskCard key={task.id} task={task} {...this.props} 
+                  tasks={this.state.tasks}
+                  deleteTask={this.deleteTask}
+                  updateTask={this.updateTask}
+                  addCheckChange={this.addCheckChange}/>
+                  
+                ))
+                
+                }
+                {/* {this.state.deleteTask(this.props.task.id)} */}
               </div>
               {/* End of div tasks-list */}
 

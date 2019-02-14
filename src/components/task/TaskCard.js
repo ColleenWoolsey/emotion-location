@@ -15,6 +15,9 @@ export default class TaskCard extends Component {
   }
 
   render() {
+    // {this.state.tasks.sort(function(a, b){
+    //   return new Date(a.date) - new Date(b.date)})}
+    console.log("props passed from EmotionList", this.props)
     return (
       <React.Fragment>
         <div className="task-list"> 
@@ -49,8 +52,9 @@ export default class TaskCard extends Component {
                 type="button"
                 className="btn"
                 onClick={() => {
-                  this.props
-                  .deleteTask(this.props.task.id)                
+                  this.props.deleteTask(this.props.task.id)
+                  // .then(() => this.props.history.push("/home"))
+                  // .then(() => alert("Your task has been deleted!"))                
                 }}
                 >
                 Delete
