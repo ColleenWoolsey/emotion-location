@@ -29,6 +29,12 @@
       "email": "email@gmail.com",
       "password": "five",
       "id": 5
+    },
+    {
+      "userName": "",
+      "email": "",
+      "password": "",
+      "id": 6
     }
   ],
   "emotions": [
@@ -273,6 +279,30 @@
       "task": "Feed Cat",
       "complete": false,
       "id": 42
+    },
+    {
+      "userId": 1,
+      "emotionId": 6,
+      "dueDate": "2019-02-12",
+      "task": "Feed dog",
+      "complete": true,
+      "id": 44
+    },
+    {
+      "id": 46,
+      "userId": 1,
+      "emotionId": 2,
+      "dueDate": "2019-02-12",
+      "task": "Fear Task Tom Edited",
+      "complete": true
+    },
+    {
+      "userId": 1,
+      "emotionId": 4,
+      "dueDate": "2019-02-27",
+      "task": "Task Seven",
+      "complete": false,
+      "id": 47
     }
   ],
   "examples": [
