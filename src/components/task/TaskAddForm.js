@@ -34,9 +34,8 @@ constructNewTask = evt => {
 // Create the task and redirect user to task list
     this.props
         .addTask(task)
-        .then(() => 
-        alert("Your task has been added!"),
-        this.props.history.push("/home"));
+        .then(() => this.props.history.push("/home"))
+        .then(() => alert("Your task has been added!"))
 };
 
   render() {

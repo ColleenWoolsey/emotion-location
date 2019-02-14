@@ -54,10 +54,10 @@ export default class EmotionList extends Component {
 
               <div className="tasks-list">
                 
-                {this.state.tasks.sort(function(a, b) 
+                {/* {this.state.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
                  b = new Date(b.dueDate);
-                 return a>b ? -1 : a<b ? 1 : 0;})}
+                 return a>b ? -1 : a<b ? 1 : 0;})} */}
 
                 {/* {this.state.tasks.sort(function(a, b){
                  return new Date(a.date) - new Date(b.date)})} */}

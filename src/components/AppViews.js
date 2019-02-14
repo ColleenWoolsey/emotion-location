@@ -8,13 +8,11 @@ import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
 import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
-import TaskCard from "./task/TaskCard";
 
 export default class AppViews extends Component {
 
   state = {
     users: [],
-    // tasks: [],
     examples: [],
     userName: sessionStorage.getItem("userName"),
     user: sessionStorage.getItem("user")
@@ -25,7 +23,6 @@ export default class AppViews extends Component {
   addUser = newUser =>
     LoginManager.post(newUser)
       .then(() => LoginManager.getAll())
-
       .then(allUsers =>
         this.setState({
           users: allUsers
@@ -55,28 +52,19 @@ export default class AppViews extends Component {
      this.setState({
        tasks: response
       })
-    )
-   )
+    ))
   }
 
-  // updateCheck = (id, existingTask) => {
-  //   return TaskManager.patch(id, existingTask).then(() => {
-  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //     .then(tasks => 
-  //       this.setState({
-  //         tasks: tasks
-  //     }))
-  //   })
-  // }
-
-  deleteTask = task =>
-    TaskManager.del(task)
-      .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
-      .then(tasks =>
+  deleteTask = (task) => {
+    return TaskManager.delete(task)
+    .then(() => {
+      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+      .then(tasks => 
         this.setState({
           tasks: tasks
-      })
-  );
+      }, () => null))
+    })
+  }
 
   addTask = (task) => {
     return TaskManager.post(task)
@@ -85,54 +73,24 @@ export default class AppViews extends Component {
       .then(tasks => 
         this.setState({
           tasks: tasks
-      }))
+      }, () => null))
     })
   }
-
-  // addTask = task =>
-  //   TaskManager.post(task)
-  //     .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
-  //     .then(tasks =>
-  //       this.setState({
-  //         tasks: tasks
-  //     })
-  // ); 
-  
-  // componentDidMount() {
-
-  //   const newState = {}
-
-  //   LoginManager.getAll()
-  //   .then(allUsers => {
-  //       newState.users = allUsers
-  //     })        
-  //   .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
-  //   .then(tasks => newState.tasks = tasks)
-
-  //   .then(() => this.setState(newState))
-  // };
-  
-  // componentDidMount() {
-  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-  //   .then(allTasks => {
-  //       this.setState({
-  //           tasks: allTasks
-  //       })
-  //       console.log("allTasks from componentDidMount", allTasks)
-  //   })
-  // };
-
+  //  () => null))  isa null function that forces state be updated
+  //  then the .then on the alert forces tasks to be updated before
+  //  this.props.history.push("/tasks/new") in EmotionLis
+  t
   render() {
   return(
     <React.Fragment>
-
       <Route exact path="/" 
         render={(props) => {
           return (
-          <Login
-          {...props} 
-          verifyUser={this.verifyUser}
-          users={this.state.users} />
+            <Login
+              {...props} 
+              verifyUser={this.verifyUser}
+              users={this.state.users} 
+            />
           )
         }}
       />
@@ -143,17 +101,17 @@ export default class AppViews extends Component {
           if (this.isAuthenticated()) {
           console.log("props from /", props)
           return (          
-              <EmotionList 
+            <EmotionList 
               {...this.props} 
               {...props} 
-              tasks={this.state.tasks}
+              // tasks={this.state.tasks}
               addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               addTask={this.addTask}
 
-              userName={sessionStorage.getItem("userName")}
-              user={sessionStorage.getItem("user")}
-              />
+              // userName={sessionStorage.getItem("userName")}
+              // user={sessionStorage.getItem("user")}
+            />
             )
           } else {
             return <Redirect to="/" />;
@@ -165,27 +123,28 @@ export default class AppViews extends Component {
         render={(props) => {
           console.log("/registration", props)
           return (
-          <Registration
-          {...props}
-          users={this.state.users}
-          addUser={this.addUser}
-          userId={this.state.userId} />
-          )
+            <Registration
+              {...props}
+              users={this.state.users}
+              addUser={this.addUser}
+              userId={this.state.userId} 
+            />
+          );
         }} 
       />
 
     {/* this is the detail for individual emotion */}
     <Route exact path="/emotion/:id"
         render={props => {
-          console.log("/emotions/:id from", props)
-          return (
-            <EmotionDetail
-              {...props}
-              {...this.props}         
-            />
-          );
-        }}
-      /> 
+        console.log("/emotions/:id from", props)
+        return (
+          <EmotionDetail
+            {...props}
+            {...this.props}         
+          />
+        );
+      }}
+    /> 
 
   {/* Route for adding tasks */}
       <Route path="/tasks/new"
@@ -211,28 +170,14 @@ export default class AppViews extends Component {
               {...props}
               {...this.props}
               tasks={this.state.tasks}
+              deleteTask={this.deleteTask}
               updateTask={this.updateTask}
               addCheckChange={this.addCheckChange}
             />
           );
         }}
       />
-
-      {/* <Route path="/task/:id/check"
-        render={props => {
-          console.log("/task/:id/check", props)
-          return (
-            <TaskCard
-              {...props}
-              {...this.props}
-              tasks={this.state.tasks}
-              updateCheck={this.updateCheck} 
-            />
-          );
-        }}
-      /> */}
-
-      </React.Fragment>
-      )
-    }
+    </React.Fragment>
+    )
+  }
 }
