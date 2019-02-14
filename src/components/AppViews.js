@@ -14,7 +14,7 @@ export default class AppViews extends Component {
 
   state = {
     users: [],
-    tasks: [],
+    // tasks: [],
     examples: [],
     userName: sessionStorage.getItem("userName"),
     user: sessionStorage.getItem("user")
@@ -30,18 +30,8 @@ export default class AppViews extends Component {
         this.setState({
           users: allUsers
         })
-      );
-      
-  // verifyUser = (userName, password) => {
-  //   LoginManager.getNameAndPassword(userName, password)
-  //     .then(verifiedUsers => {
-  //         this.setState({
-  //             users: verifiedUsers
-  //         })
-        
-  //         console.log("verifiedUsers from verifyUser", users)
-  //     })
-
+      );  
+ 
   verifyUser = (userName, password) => {  
     return LoginManager.getNameAndPassword(userName, password)  
   }
@@ -57,15 +47,27 @@ export default class AppViews extends Component {
     })
   }
 
-  updateCheck = (id, existingTask) => {
-    return TaskManager.patch(id, existingTask).then(() => {
-      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-      .then(tasks => 
-        this.setState({
-          tasks: tasks
-      }))
-    })
+  addCheckChange = (changedObj, id) => {
+    console.log("id (task) from addCheckChange", id);
+    return TaskManager.patch(changedObj, id)
+    .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+    .then(response =>
+     this.setState({
+       tasks: response
+      })
+    )
+   )
   }
+
+  // updateCheck = (id, existingTask) => {
+  //   return TaskManager.patch(id, existingTask).then(() => {
+  //     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //     .then(tasks => 
+  //       this.setState({
+  //         tasks: tasks
+  //     }))
+  //   })
+  // }
 
   deleteTask = task =>
     TaskManager.del(task)
@@ -95,28 +97,30 @@ export default class AppViews extends Component {
   //         tasks: tasks
   //     })
   // ); 
-
-  componentDidMount() {
-
-    LoginManager.getAll()
-    .then(allUsers => {
-        this.setState({
-            users: allUsers
-        })
-        
-        console.log("allUsers from componentDidMount", allUsers)
-    })
   
+  // componentDidMount() {
 
-    // TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-    // .then(allTasks => {
-    //     this.setState({
-    //         tasks: allTasks
-    //     })
-    //     console.log("user in session storage", this.state.userId)
-    //     console.log("allTasks from componentDidMount", allTasks)
-    // })
-  };
+  //   const newState = {}
+
+  //   LoginManager.getAll()
+  //   .then(allUsers => {
+  //       newState.users = allUsers
+  //     })        
+  //   .then(() => TaskManager.getTasksByUser(sessionStorage.getItem("user")))
+  //   .then(tasks => newState.tasks = tasks)
+
+  //   .then(() => this.setState(newState))
+  // };
+  
+  // componentDidMount() {
+  //   TaskManager.getTasksByUser(sessionStorage.getItem("user"))
+  //   .then(allTasks => {
+  //       this.setState({
+  //           tasks: allTasks
+  //       })
+  //       console.log("allTasks from componentDidMount", allTasks)
+  //   })
+  // };
 
   render() {
   return(
@@ -137,12 +141,13 @@ export default class AppViews extends Component {
       <Route exact path="/home"
         render={props => {
           if (this.isAuthenticated()) {
-          console.log("/ props from", props)
+          console.log("props from /", props)
           return (          
               <EmotionList 
               {...this.props} 
               {...props} 
               tasks={this.state.tasks}
+              addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               addTask={this.addTask}
 
@@ -207,7 +212,7 @@ export default class AppViews extends Component {
               {...this.props}
               tasks={this.state.tasks}
               updateTask={this.updateTask}
-              updateCheck={this.updateCheck} 
+              addCheckChange={this.addCheckChange}
             />
           );
         }}

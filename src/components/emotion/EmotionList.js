@@ -6,10 +6,8 @@ import "./List.css";
 export default class EmotionList extends Component {
 
   state = {
-    
     tasks: [],
-    examples: [],
-    
+    examples: [],    
   };
 
   componentDidMount() {
@@ -19,8 +17,7 @@ export default class EmotionList extends Component {
         this.setState({
             tasks: allTasks
         })
-        console.log(sessionStorage.getItem("user"))
-        console.log(this.state.user)
+        
         console.log("allTasks from componentDidMount", allTasks)
     })
   };

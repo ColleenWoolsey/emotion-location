@@ -7,10 +7,9 @@ export default class TaskEditForm extends React.Component {
 state = {
     userId: 2,
     emotionId: "",
-    emotionName: "",
     dueDate: "",
     task: "",
-    completion: false
+    complete: false
 };
 
 handleFieldChange = evt => {
@@ -28,10 +27,9 @@ updateExistingTask = evt => {
       id: this.state.id,
       userId: Number(this.state.userId),
       emotionId: Number(this.state.emotionId),
-      emotionName: this.state.emotionName,
       dueDate: this.state.dueDate,
       task: this.state.task,
-      completion: this.state.completion      
+      complete: this.state.complete     
     }
 
     console.log("updateExistingTask from TaskEditForm", existingTask);
@@ -50,7 +48,7 @@ updateExistingTask = evt => {
         emotionId: task.emotionId,
         dueDate: task.dueDate,
         task: task.task,
-        completion: task.completion
+        complete: task.complete
       });
     });
   }

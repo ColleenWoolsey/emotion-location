@@ -10,7 +10,7 @@ export default {
   },
 
   getTasksByUser(id) {
-    return fetch(`${remoteURL}/tasks?userId=${id}&_expand=emotion`)
+    return fetch(`${remoteURL}/tasks?userId=${id}&complete=false&_expand=emotion`)
     .then(e => e.json());
   },
 
@@ -36,14 +36,14 @@ export default {
     })
   },
 
-  patch(id, existingTask) {
-    return fetch(`${remoteURL}/tasks/${id}`, {
+  patch (changes, id){
+    return fetch (`${remoteURL}/tasks/${id}`,{
       method: "PATCH",
       headers: {
-        "Content-Type": "application/json"
+          "Content-Type": "application/json"
       },
-      body: JSON.stringify(existingTask)
-      }).then(data => data.json());
+      body: JSON.stringify(changes)
+    })
   },
 
   put(id, existingTask) {

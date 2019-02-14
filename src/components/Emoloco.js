@@ -12,16 +12,25 @@ export default class Emoloco extends Component {
 
   state = {
     emotions: [],
+    login: []
   };
 
  componentDidMount() {
-     EmotionManager.getAll()
-     .then(allEmotions => {
-      console.log("allEmotions from componentDidMount", allEmotions)
-         this.setState({
-             emotions: allEmotions
-         })                 
-      })
+    EmotionManager.getAll()
+    .then(allEmotions => {
+    console.log("allEmotions from componentDidMount", allEmotions)
+        this.setState({
+            emotions: allEmotions
+        })                 
+    })
+
+    LoginManager.getAll()
+    .then(allUsers => {
+        this.setState({
+            tasks: allUsers
+        })
+        console.log("allUsers from componentDidMount", allUsers)
+    })
            
     }
 

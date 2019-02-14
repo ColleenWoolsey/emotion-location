@@ -7,7 +7,7 @@ state = {
     emotionId: "",
     dueDate: "",
     task: "",
-    completion: false
+    complete: false
 };
 
 // Update state whenever an input field is edited
@@ -28,7 +28,7 @@ constructNewTask = evt => {
         emotionId: Number(this.state.emotionId),
         dueDate: this.state.dueDate,
         task: this.state.task,
-        completion: this.state.completion
+        complete: this.state.complete
     };
 
 // Create the task and redirect user to task list
@@ -63,7 +63,7 @@ constructNewTask = evt => {
 
         {/* {' '} */}
         <div className="form-group">
-          <label htmlFor="dueDate">Completion Date</label>
+          <label htmlFor="dueDate">complete Date</label>
           <Input className="form-control"
             type="date"
             required
