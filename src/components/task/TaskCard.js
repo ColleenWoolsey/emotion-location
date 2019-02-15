@@ -30,22 +30,25 @@ export default class TaskCard extends Component {
             type="checkbox"
             checked={this.props.task.complete}
             onChange={this.handleCheckChange} />
+            {"  "}
 
-              {this.props.task.dueDate}
-              {this.props.task.emotion.emotionName}
+            {this.props.task.dueDate}
+            {"   "}
+            {this.props.task.emotion.emotionName}
+            {"   "}
 
-            <div className="editTaskBtn">
-              <button
-                type="button"
-                className="btn"
-                onClick={() => {
-                  
-                  this.props.history.push(`/task/${this.props.task.id}`)                     
-                }}
-              >
-                Edit
-              </button>
-            </div>
+          <div className="editTaskBtn">
+            <button
+              type="button"
+              className="btn"
+              onClick={() => {
+                
+                this.props.history.push(`/task/${this.props.task.id}`)                     
+              }}
+            >
+              Edit
+            </button>
+          </div>
 
             <div className="delTaskBtn">
               <button
@@ -59,8 +62,9 @@ export default class TaskCard extends Component {
                 >
                 Delete
               </button>
+             
             </div>
-
+              
               {this.props.task.task}
 
             </h5>

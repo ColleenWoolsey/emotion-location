@@ -19,17 +19,6 @@ export default class EmotionList extends Component {
       })
   );
 
-  updateTask = (id, existingTask) => {
-    return TaskManager.put(id, existingTask)
-    .then(() => {
-      TaskManager.getTasksByUser(sessionStorage.getItem("user"))
-      .then(tasks => 
-        this.setState({
-          tasks: tasks
-      }))
-    })
-  }
-
   addCheckChange = (changedObj, id) => {
     console.log("id (task) from addCheckChange", id);
     return TaskManager.patch(changedObj, id)
@@ -61,11 +50,13 @@ export default class EmotionList extends Component {
                  return a>b ? -1 : a<b ? 1 : 0;}).reverse();
     return (      
       <React.Fragment>
+
         <div>
-        <h3>How are you feeling {sessionStorage.getItem("userName")}?</h3>
+          <h1 className="Header">How are you feeling {sessionStorage.getItem("userName")}?</h1>
         </div>
+        
         <div className="container">
-         
+                   
           <div className="emotions-list">
               {this.props.emotions.map(emotion => (
                 <EmotionCard key={emotion.id} emotion={emotion} {...this.props} />
