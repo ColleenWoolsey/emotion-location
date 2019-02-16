@@ -74,8 +74,6 @@ export default class EmotionList extends Component {
               <div className="header-add-task">
                 <h4>My To-Do-List</h4>
                 <button
-                  // outline color="secondary"
-                  size="lg"
                   type="button"
                   className="addTaskBtn"
                   onClick={() => {
@@ -86,20 +84,16 @@ export default class EmotionList extends Component {
               </div>
               {/* End of div header-add-task */}
 
-              <div className="tasks-list">
-                                
+              <div className="tasks-list">                                
                 {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} 
                   tasks={this.state.tasks}
                   addTask={this.addTask}
                   deleteTask={this.deleteTask}
                   updateTask={this.updateTask}
-                  addCheckChange={this.addCheckChange}/>
-                  
-                ))
-                
+                  addCheckChange={this.addCheckChange}/>                  
+                  ))                
                 }
-                {/* {this.state.deleteTask(this.props.task.id)} */}
               </div>
               {/* End of div tasks-list */}
 

@@ -20,14 +20,11 @@ export default class TaskCard extends Component {
     console.log("props passed from EmotionList", this.props)
     return (
       <React.Fragment>
-        <div className="task-list">
-
-         <div key={this.props.task.id} className="task-card">
-
-          <div className="top-line">         
+        <div key={this.props.task.id}>
+         <div className="cardT">
+          <div className="top-line">
 
             <section>{this.props.task.dueDate}</section>
-            
             <section className="emotion-name">{this.props.task.emotion.emotionName}</section>           
 
             <section>
@@ -57,7 +54,7 @@ export default class TaskCard extends Component {
 
             <section>
               <input
-              className="btn"
+              className="check-box"
               name="completed"
               type="checkbox"
               checked={this.props.task.complete}

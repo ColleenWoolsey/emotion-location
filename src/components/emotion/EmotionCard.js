@@ -26,21 +26,23 @@ export default class EmotionCard extends React.Component {
   render() {
       return (
         <React.Fragment>
-        <div key={this.props.emotion.id} className="emotions-list">
-          <Card className="card" color={this.props.emotion.eColor}>
-            <CardImg className="card-img" top width="100%" src="emotion.imageURL" alt="imageUrl" />
-            <CardBody className="card-body">
+        <div key={this.props.emotion.id}>
+          <Card className="cardE">
+            <CardImg className="cardE-img" top width="100%" src="emotion.imageURL" alt="imageUrl" />
+            {/* <CardBody className="card-body"> */}
 
-              <h3 className="card-title">{this.props.emotion.emotionName}<Badge color="secondary"></Badge></h3>
+              <h3 className="cardE-title">{this.props.emotion.emotionName}<Badge color="secondary"></Badge></h3>
+                           
+              <CardSubtitle className="cardE-gift-subtitle">GIFT</CardSubtitle>              
+              <CardText className="cardE-gift-text">{this.props.emotion.gift}</CardText> 
               
-              <CardSubtitle className="card-subtitle">{this.props.emotion.impairment}</CardSubtitle>
-              
-              <CardText className="card-text">{this.props.emotion.gift}</CardText>    
-          
-              <Button color="danger" onClick={this.toggle}>DETAIL</Button>
+              <CardSubtitle className="cardE-impairment-subtitle">IMPAIRMENT</CardSubtitle>
+              <CardText className="cardE-impairment-text">{this.props.emotion.impairment}</CardText> 
+
+                <Button className="detailBtn" onClick={this.toggle}>DETAIL</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                  <ModalHeader toggle={this.toggle}></ModalHeader>
-                  <ModalBody>
+                  {/* <ModalHeader toggle={this.toggle}></ModalHeader> */}
+                  <ModalBody className="modal-body">
                   {this.props.emotion.summary}
                   </ModalBody>
                   {/* <ModalFooter>
@@ -48,7 +50,9 @@ export default class EmotionCard extends React.Component {
                     <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                   </ModalFooter> */}
                 </Modal>
-            </CardBody>
+
+              {/* </CardBody>           */}
+            
           </Card> 
         </div>
       </React.Fragment>

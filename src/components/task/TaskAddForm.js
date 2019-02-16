@@ -43,7 +43,7 @@ constructNewTask = evt => {
     return (
       <React.Fragment>
       <Form inline>
-      <div className="add-form-group">
+      <div className="form-group">
 
         <label htmlFor="emotionId" sm={2} size="lg">Emotion</label>
         <select
@@ -64,7 +64,7 @@ constructNewTask = evt => {
       <br></br>
       <br></br>
        
-        <div className="add-form-group">
+        <div className="form-group">
           <label htmlFor="dueDate">Completion Date</label>
           <Input className="form-control"
             type="date"
@@ -77,7 +77,7 @@ constructNewTask = evt => {
         <br></br>
         <br></br>
           
-        <div className="add-form-group">
+        <div className="form-group">
           <label htmlFor="task">Task</label>
           <Input className="form-control"
             type="text"
@@ -91,10 +91,10 @@ constructNewTask = evt => {
         <br></br>
         <br></br>
         
-        <div className="add-form-group">
+        <div className="form-group">
           <button
             type="submit"
-            className="btn"
+            className="add-form-btn"
             onClick={this.constructNewTask}
             id="add-form-btn"
           >Save
@@ -106,7 +106,7 @@ constructNewTask = evt => {
             type="submit"
             className="btn"
             onClick={this.clearForm}
-            id="add-form-btn"
+            id="clear-form-btn"
           >Clear
           </button>
         </div>

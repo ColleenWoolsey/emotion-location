@@ -58,7 +58,7 @@ updateExistingTask = evt => {
     return (
       <React.Fragment>
       <Form inline>
-      <div className="edit-form-group">
+      <div className="form-group">
         <label htmlFor="emotionId">Emotion:  </label>
           <select
             value={this.state.emotionId}
@@ -78,7 +78,7 @@ updateExistingTask = evt => {
         <br></br>
         <br></br>
 
-        <div className="edit-form-group">
+        <div className="form-group">
           <label htmlFor="dueDate">Due Date:  </label>
           <Input className="form-control"
             type="date"
@@ -92,7 +92,7 @@ updateExistingTask = evt => {
         <br></br>
         <br></br>
 
-        <div className="edit-form-group">
+        <div className="form-group">
           <label htmlFor="task">Task:  </label>
           <Input className="form-control"
           // defaultValue={this.state.task}
@@ -108,12 +108,12 @@ updateExistingTask = evt => {
         <br></br>
         <br></br>
 
-        <div className="edit-form-group">
+        <div className="form-group">
             <button
               type="submit"
               className="btn"
               onClick={this.updateExistingTask}
-              id="add-form-btn"
+              id="edit-form-btn"
             >Update
             </button>
         </div>   
