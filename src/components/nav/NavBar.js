@@ -11,7 +11,7 @@ export default class NavBar extends Component {
     return (
       <nav>
         <ul className="nav">
-            
+          
           {this.props.emotions.map(emotion => (
           <li key={emotion.id} emotion={emotion} 
           {...this.props} className="nav-item">
@@ -19,9 +19,9 @@ export default class NavBar extends Component {
           </li>
           ))}
 
-          <li className="signout" onClick={this.endSessionStorage}>
-          <Link to="/">Sign Out</Link> 
-          </li>
+        <li className="signout" onClick={this.endSessionStorage}>
+          <Link to="/">Sign Out</Link>           
+        </li>
 
         </ul>
       </nav>

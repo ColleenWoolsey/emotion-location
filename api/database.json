@@ -34,7 +34,7 @@
       "impairment": "IMPAIRMENT: Resentment",
       "summary": "Hurt lets us know that we have pain. It’s the thread that runs through all feelings. It’s an opportunity to admit, accept, and surrender to the truth of our neediness. Hurt points to our need for help from those who have genuine regard and love for us. All healing comes thru relationship.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "primary"
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@
       "impairment": "IMPAIRMENT: Apathy",
       "summary": "Loneliness speaks to our deep hunger to belong and be known, received and loved. It’s a gift that causes us to seek out relationship where we can be expectant. We are lonely when we have both a desire to live in hope, and a willingness to hear, “no”.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "secondary"
     },
     {
       "id": 3,
@@ -54,7 +54,7 @@
       "impairment": "IMPAIRMENT: Self-Pity & Hopeless Resignation",
       "summary": "Sadness speaks to how much we VALUE what is missed, what’s gone, what’s lost. It also speaks of how much we value what we love, what we have and what we live. The more we live an open hearted life of fullness, the more we lose! Sadness gives us the gift of valuing and honoring life.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "success"
     },
     {
       "id": 4,
@@ -64,7 +64,7 @@
       "impairment": "IMPAIRMENT: Pride & Depression",
       "summary": "ANGER MOVES US TO ACTION. It shows our yearning and hunger for life. It exposes the substance, desires and commitments of our hearts. Angry people can be known because of their unwillingness to hide. It’s the first step to authentic living. It’s a caring feeling saying something matters.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "danger"
     },
     {
       "id": 5,
@@ -74,7 +74,7 @@
       "impairment": "IMPAIRMENT: Anxiety, Judgement & Blindness",
       "summary": "FEAR MAKES US AWARE OF OUR CHOICES. Fear brings us STRENGTH. It allows us to experience RISK (or run from it). Risk your heart with your need. TRUST others for assistance (or not). DEPEND on others for their skill and willingness. COLLABORATE with others for mutual gain (or become fretful and controlling). We can gain wisdom through the deeply experienced awareness of spiritual truth that starts with listening to fear.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "warning"
     },
     {
       "id": 6,
@@ -84,7 +84,7 @@
       "impairment": "IMPAIRMENT: Toxic Shame & Contempt",
       "summary": "SHAME is a consciousness of our limitations and giftedness that allows empathy for others. It allows us to stop comparison and competition in order to prove our worth, and start giving ourselves to something greater - the service of others - In humility we are grateful and merciful.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "info"
     },
     {
       "id": 7,
@@ -94,7 +94,7 @@
       "impairment": "IMPAIRMENT: Toxic Shame & Shamelessness",
       "summary": "GUILT prompts us to seek the forgiveness that sets us free. Through guilt the heart confronts behavior and behavior reveals the state of our hearts. Guilt is our most precious gift because the relinquishing of the heart to another has transforming power. Love comes through truth not merit.",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "light"
     },
     {
       "id": 8,
@@ -104,7 +104,7 @@
       "impairment": "IMPAIRMENT: Pleasure without heart",
       "summary": "",
       "examples": "Dropdown of suggested tasks",
-      "message": ""
+      "eColor": "dark"
     }
   ],
   "tasks": [
@@ -114,14 +114,14 @@
       "emotionId": 3,
       "dueDate": "2019-02-14",
       "task": "Value openly by having deep sadness",
-      "complete": false
+      "complete": true
     },
     {
       "userId": 1,
       "emotionId": 3,
       "dueDate": "2019-02-15",
       "task": "Write poems and songs",
-      "complete": false,
+      "complete": true,
       "id": 2
     },
     {
@@ -133,12 +133,12 @@
       "id": 3
     },
     {
+      "id": 4,
       "userId": 1,
       "emotionId": 3,
       "dueDate": "2019-02-17",
-      "task": "Hug my friends and say I love you",
-      "complete": false,
-      "id": 4
+      "task": "Hug Harry and say I love you",
+      "complete": false
     },
     {
       "userId": 1,
@@ -219,14 +219,6 @@
       "task": "Hug my children & hold their hand in the dark",
       "complete": false,
       "id": 14
-    },
-    {
-      "userId": 2,
-      "emotionId": 5,
-      "dueDate": "2019-03-02",
-      "task": "Kiss my Father",
-      "complete": false,
-      "id": 15
     },
     {
       "id": 16,

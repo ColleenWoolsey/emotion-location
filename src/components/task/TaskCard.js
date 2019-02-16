@@ -16,44 +16,35 @@ export default class TaskCard extends Component {
 
   render() {
     // {this.state.tasks.sort(function(a, b){
-    //   return new Date(a.date) - new Date(b.date)})}
+    //   return new Date(a.dueDate) - new Date(b.dueDate)})}
     console.log("props passed from EmotionList", this.props)
     return (
       <React.Fragment>
-        <div className="task-list"> 
-          <div key={this.props.task.id} className="task-card">
-            <h5 className="task-card-title">
+        <div className="task-list">
 
-            <input
-            className="btn"
-            name="completed"
-            type="checkbox"
-            checked={this.props.task.complete}
-            onChange={this.handleCheckChange} />
-            {"  "}
+         <div key={this.props.task.id} className="task-card">
 
-            {this.props.task.dueDate}
-            {"   "}
-            {this.props.task.emotion.emotionName}
-            {"   "}
+          <div className="top-line">         
 
-          <div className="editTaskBtn">
-            <button
-              type="button"
-              className="btn"
-              onClick={() => {
-                
-                this.props.history.push(`/task/${this.props.task.id}`)                     
-              }}
-            >
-              Edit
-            </button>
-          </div>
+            <section>{this.props.task.dueDate}</section>
+            
+            <section className="emotion-name">{this.props.task.emotion.emotionName}</section>           
 
-            <div className="delTaskBtn">
+            <section>
               <button
                 type="button"
-                className="btn"
+                className="editTaskBtn"
+                onClick={() => {
+                  
+                  this.props.history.push(`/task/${this.props.task.id}`)                     
+                }}
+              >
+                Edit
+              </button>
+            
+              <button
+                type="button"
+                className="delTaskBtn"
                 onClick={() => {
                   this.props.deleteTask(this.props.task.id)
                   // .then(() => this.props.history.push("/home"))
@@ -62,15 +53,26 @@ export default class TaskCard extends Component {
                 >
                 Delete
               </button>
-             
-            </div>
-              
-              {this.props.task.task}
+            </section>
 
-            </h5>
-           
-            </div>          
+            <section>
+              <input
+              className="btn"
+              name="completed"
+              type="checkbox"
+              checked={this.props.task.complete}
+              onChange={this.handleCheckChange} />
+              <label>Mark Completed</label>
+            </section>
+
+          </div>
+          {/* End of top-line div */}          
+
+          <div className="bottom-line">              
+            {this.props.task.task}            
+          </div>
         </div>
+      </div>
       </React.Fragment>
     );
   }

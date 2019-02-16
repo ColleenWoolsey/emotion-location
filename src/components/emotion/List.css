@@ -1,21 +1,24 @@
 .header {
+    text-align: center;
+    color: #F1F1F2;
+}
+
+.header-add-task {
+   background-color: #BCBABE;
     
 }
 
 .container {
     display:flex;
-    flex-basis: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-    max-height: 600px;
+    flex-basis: 100%;    
+    background-color: #1995AD;
+    
 }
 
 .emotions-list {
     display: flex;
-    border: 2px solid ghostwhite;   
-    flex-wrap: wrap;
-    max-height: 40%;
-    flex-basis: 62%;
+    flex-direction: row;
+    flex-basis: 63%;
 }
 
 .examples-list {
@@ -26,13 +29,16 @@
 
 .right {
     display: flex;
-    flex-basis: 38%;
+    flex-basis: 37%;
 }
 .top-right {
-
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
 }
 .bottom-right{
-
+    /* display: flex;
+    flex-basis: 100%; */
 }
 
 .tasks-list {
@@ -40,6 +46,8 @@
     flex-wrap: wrap;
     border: 2px solid black;
     flex-direction: column;
+    background-color: #A1D6E2;
+    padding-bottom: 15px;
 }
 
 .add-form-group {
@@ -55,10 +63,10 @@
 }
 
 .addTaskBtn {
-    
+    margin-left: 30px;
 }
 .editTaskBtn {
-
+    margin-right: 12px;
 }
 .delTaskBtn {
 
@@ -67,51 +75,80 @@
 .header-add-task {
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
-    justify-content: space-around;
-    background-color: lightgrey;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: #F1F1F2;
 }
 
 /* EmotionList.js */
-.emotion-card {
- display: flex;
- flex-direction: column;
- max-height: 98%; 
- margin-left: 2px;
- flex-basis: 24%;
- border: 2px solid black;
-}
-
-.emotion-card-link {
-   
-}
-
-.emotion-card-title {
+.card {    
     display: flex;
     flex-direction: column;
-    background-color: lightgray;    
-    font-size: 1.2em;
-    max-height: 25%;
+    margin: 2px;
+    padding: 5px;
+    background-color: #F1F1F2;
+    text-align: center;
+        
+}
+
+.card-img {
+
+}
+
+.card-body {
+
+}
+
+.card-title {
+    background-color: #1995AD;
+    padding: 10px;
+}
+
+.card-subtitle {
+    background-color: #A1D6E2;
+}
+
+.card-text {
+    background-color: #BCBABE;
 }
 
 /* TaskList.js */
 .task-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
+    justify-content: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    border: 1px solid black;
+    padding-bottom: 12px;
+    background-color: #F1F1F2;
     
+}
+
+.bottom-line {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 15px; 
+}
+
+.top-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.emotion-name {
+    font-weight: bold;
+    color: #1995AD;
 }
 
 .task-card-body {
     
-}
-
-.task-card-title {
-    display: flex;
-    flex-direction: row;
-    
-    justify-content: left;
-    margin-left: 15px;
-    margin-right: 15px;
 }
 
 /* ExamplesList */
@@ -119,18 +156,18 @@
     display: flex;
     flex-direction: column;
     background-color: li;
-   }
-   
-   .examples-card-body {
-       background-color: violet;
-       font-size: .8em;
-   }
-   
-   .examples-card-title {
-       display: flex;
-       flex-direction: column;
-       background-color: aliceblue;
-       justify-content: center;
-   }
+}
+
+.examples-card-body {
+    background-color: violet;
+    font-size: .8em;
+}
+
+.examples-card-title {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+}
 
 

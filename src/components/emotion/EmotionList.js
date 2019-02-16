@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import EmotionCard from "./EmotionCard";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
+import { Button } from 'reactstrap';
 import "./List.css";
 export default class EmotionList extends Component {
 
@@ -51,9 +52,9 @@ export default class EmotionList extends Component {
     return (      
       <React.Fragment>
 
-        <div>
-          <h1 className="Header">How are you feeling {sessionStorage.getItem("userName")}?</h1>
-        </div>
+        {/* <div>
+          <h4 className="Header">How are you feeling {sessionStorage.getItem("userName")}?</h4>
+        </div> */}
         
         <div className="container">
                    
@@ -66,11 +67,17 @@ export default class EmotionList extends Component {
           <div className="right">
             <div className="top-right">
 
+              <div>
+                <h2 className="header">How are you feeling {sessionStorage.getItem("userName")}?</h2>
+              </div>
+
               <div className="header-add-task">
                 <h4>My To-Do-List</h4>
-                <button className="addTaskBtn"
+                <button
+                  // outline color="secondary"
+                  size="lg"
                   type="button"
-                  className="btn"
+                  className="addTaskBtn"
                   onClick={() => {
                     this.props.history.push("/tasks/new");   
                   }}>
