@@ -8,6 +8,7 @@ import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
 import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
+import "./emotion/List.css";
 
 export default class AppViews extends Component {
 

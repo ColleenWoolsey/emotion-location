@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import EmotionCard from "./EmotionCard";
+import EmotionSummary from "./EmotionSummary";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
-import { Button } from 'reactstrap';
 import "./List.css";
 export default class EmotionList extends Component {
 
@@ -57,12 +57,25 @@ export default class EmotionList extends Component {
         </div> */}
         
         <div className="container">
-                   
-          <div className="emotions-list">
-              {this.props.emotions.map(emotion => (
-                <EmotionCard key={emotion.id} emotion={emotion} {...this.props} />
-              ))}
+
+          <div className="left">
+
+            <div className="emotions-list">
+                {this.props.emotions.map(emotion => (
+                  <EmotionCard key={emotion.id} emotion={emotion} {...this.props} />
+                ))}
+            </div>
+            {/* End of div emotions-list */} 
+
+            <div className="bottom-left">
+                {/* {this.props.emotions.map(emotion => (
+                  <EmotionSummary key={emotion.id} emotion={emotion} {...this.props} />
+                  ))} */}
+            </div>
+             {/* End of div bottom-left */}                
+            
           </div>
+          {/* End of div left */}
           
           <div className="right">
             <div className="top-right">
@@ -100,10 +113,7 @@ export default class EmotionList extends Component {
             </div>
             {/* End of div top-right */}
 
-            <div className="bottom-right"></div>
-             {/* End of div bottom-right */}
-
-          </div>
+           </div>
           {/* End of div right */}
 
           </div>

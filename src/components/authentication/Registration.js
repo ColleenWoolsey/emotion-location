@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./Login.css"
+import "../emotion/List.css";
 
 export default class Registration extends Component {
 
@@ -35,43 +36,44 @@ export default class Registration extends Component {
 
   render() {
     return (
-    <div className="register-container">
-      <form onSubmit={this.handleRegister}>
-        <h3 className="welcome">Register at EmoLocation</h3>
+    <div className="form">
+      <form className="login-container" onSubmit={this.handleRegister}>
+
+        <h1 className="welcome">Register at EmoLocation</h1>
             
-          <div className="form-group">
-            <label htmlFor="inputUserName">
-                User Name :  </label>
+          <div className="userName">
+            {/* <label htmlFor="inputUserName">
+                User Name :  </label> */}
             <input onChange={this.handleFieldChange} type="text"
                     id="userName"
-                    // placeholder="User Name"
+                    placeholder="User Name"
                     required="" autoFocus="" />
           </div>
           <br></br>
           <br></br>
-          <div className="form-group">
-            <label htmlFor="inputUserEmail">
-                Email :  </label>
+          <div className="email">
+            {/* <label htmlFor="inputUserEmail">
+                Email :  </label> */}
             <input onChange={this.handleFieldChange} type="email"
                     id="email"
-                    // placeholder="Email"
+                    placeholder="Email"
                     required="" autoFocus="" />
           </div>
           <br></br>
           <br></br>
-          <div className="form-group"> 
-            <label htmlFor="inputPassword">
-                Password :  </label>
+          <div className="password"> 
+            {/* <label htmlFor="inputPassword">
+                Password :  </label> */}
             <input onChange={this.handleFieldChange} type="password"
                     id="password"
-                    // placeholder="Password"
+                    placeholder="Password"
                     required="" />
           </div>
           <br></br>
           <br></br>         
                 
           <button type="submit" onClick={() => this.constructNewUser()} 
-              className="btn">
+              className="btnSignUp">
               Sign Up
           </button>
         </form>

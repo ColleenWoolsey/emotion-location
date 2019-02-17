@@ -57,9 +57,10 @@ export default class TaskCard extends Component {
               className="check-box"
               name="completed"
               type="checkbox"
+              
               checked={this.props.task.complete}
               onChange={this.handleCheckChange} />
-              <label>Mark Completed</label>
+              <label>Completed</label>
             </section>
 
           </div>
