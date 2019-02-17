@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./Login.css"
+import "../emotion/List.css";
 
 export default class Login extends Component {
 
@@ -57,51 +58,56 @@ handleLogin = evt => {
 
 render() {
     return (
-      <div className="login-container">
-        <form className="logInForm" onSubmit={this.handleLogin}>
-
-          <h1 className="welcome">Welcome to EmoLocation</h1>
+      <div className="form">
+        <form className="login-container" onSubmit={this.handleLogin}>
+         
+          <h1 className="h1">Welcome to EmoLocation</h1>
+          <br></br>
+          
             
-          <div className="form-group">
-            <label htmlFor="inputUserName">
-                User Name :  </label>
+          <div className="userName">
+            {/* <label htmlFor="inputUserName">
+                User Name :  </label> */}
             <input onChange={this.handleFieldChange} type="text"
                     id="userName"
-                    // placeholder="User Name"
+                    placeholder="User Name"
                     required="" autoFocus="" />
           </div>
           <br></br>
           <br></br>
-          <div className="form-group">
-            <label htmlFor="inputUserEmail">
-                Email :  </label>
+          
+          <div className="email">
+            {/* <label htmlFor="inputUserEmail">
+                Email :  </label> */}
             <input onChange={this.handleFieldChange} type="email"
                     id="email"
-                    // placeholder="Email"
+                    placeholder="Email"
                     required="" autoFocus="" />
           </div>
           <br></br>
           <br></br>
-          <div className="form-group"> 
-            <label htmlFor="inputPassword">
-                Password :  </label>
+          
+          <div className="password"> 
+            {/* <label htmlFor="inputPassword">
+                Password :  </label> */}
             <input onChange={this.handleFieldChange} type="password"
                     id="password"
-                    // placeholder="Password"
+                    placeholder="Password"
                     required="" />
           </div>
           <br></br>
           <br></br>
-          <button className="loginButton" type="submit"
+          
+          <button className="btnSignIn" type="submit"
               onClick={this.handleLogin}>
-              Login
+              Sign In
           </button>
 
-          <h5 className="request">Not Registered?</h5>
+          {/* <h5 className="request">Not Registered?</h5> */}
 
-          <button className="registerButton" type="button"
+          <button className="btnSignUp" type="button"
               onClick={()=> this.props.history.push("/registration")}>
-              Create an Account
+              Sign Up
           </button>
         </form>
       </div>
