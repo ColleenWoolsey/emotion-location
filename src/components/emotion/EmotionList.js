@@ -68,6 +68,13 @@ export default class EmotionList extends Component {
             {/* End of div emotions-list */} 
 
             <div className="bottom-left">
+              <div className="journal">
+                <h2>Journal?</h2>
+              </div>
+
+              <div className="journalImage">
+                {/* <img className="journalImage" src="./Pencil.jpg"></img> */}
+              </div>
                 {/* {this.props.emotions.map(emotion => (
                   <EmotionSummary key={emotion.id} emotion={emotion} {...this.props} />
                   ))} */}
@@ -85,7 +92,7 @@ export default class EmotionList extends Component {
               </div>
 
               <div className="header-add-task">
-                <h4>My To-Do-List</h4>
+                <h4>My To-Be-List</h4>
                 <button
                   type="button"
                   className="addTaskBtn"
