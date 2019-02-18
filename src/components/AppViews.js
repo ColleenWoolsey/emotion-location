@@ -25,13 +25,7 @@ export default class AppViews extends Component {
     
   verifyUser = (userName, password) => {  
     return LoginManager.getNameAndPassword(userName, password)
-    // .then(users =>
-    //   this.setState({
-    //     users: users
-    //   })
-    // )}
-  }
-  
+  }  
   
   addUser = newUser =>
     LoginManager.post(newUser)
@@ -67,6 +61,17 @@ export default class AppViews extends Component {
     })
   }
 
+  componentDidMount() {
+
+    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
+    .then(allArticles => {
+        this.setState({
+            articles: allArticles
+        })        
+        console.log("allArticles from componentDidMount", allArticles)
+    })
+  };
+
   render() {
   return(
     <React.Fragment>
@@ -91,6 +96,8 @@ export default class AppViews extends Component {
               {...this.props} 
               {...props} 
               tasks={this.state.tasks}
+              // articles={this.state.articles}
+              // examples={this.state.examples}
               addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               updateTask={this.updateTask}
@@ -123,7 +130,7 @@ export default class AppViews extends Component {
           console.log("/articles", props)
           return (
             <ArticleList
-              {...props}
+              {...this.props}
               articles={this.state.articles}
               userId={this.state.userId} 
             />

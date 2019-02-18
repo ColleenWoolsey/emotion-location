@@ -54,22 +54,14 @@ export default class EmotionList extends Component {
         })        
         console.log("allTasks from componentDidMount", allTasks)
     })
-
-    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
-    .then(allArticles => {
-        this.setState({
-            articles: allArticles
-        })        
-        console.log("allArticles from componentDidMount", allArticles)
-    })
   };
 
   render() {
 
-    this.state.articles.sort(function(a, b) 
-                {a = new Date(a.entryDate);
-                 b = new Date(b.entryDate);
-                 return a>b ? -1 : a<b ? 1 : 0;}).reverse();
+    // this.state.articles.sort(function(a, b) 
+    //             {a = new Date(a.entryDate);
+    //              b = new Date(b.entryDate);
+    //              return a>b ? -1 : a<b ? 1 : 0;}).reverse();
 
     this.state.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
@@ -97,17 +89,17 @@ export default class EmotionList extends Component {
                   <button
                     type="button"
                     className="listArticlesBtn"
-                    onClick={() => {                      
-                      // this.props.history.push(`/articles`)                     
-                    }}
-                  >
+                    onClick={() => {                 
+                      this.props.history.push("/articles");   
+                  }}> 
+                  >                 
                     Read Journal Entries
                   </button>                  
                 </div>
 
-                  <div>
-                    <h4 className="reflect">... reflect... repent... rejoice... reconcile</h4>
-                  </div>
+                <div>
+                  <h4 className="reflect">... reflect... repent... rejoice... reconcile</h4>
+                </div>
 
               </div>
               {/* End of div search */}

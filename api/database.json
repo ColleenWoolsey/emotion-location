@@ -275,14 +275,6 @@
       "dueDate": "2019-02-06",
       "task": "lonel",
       "complete": true
-    },
-    {
-      "userId": 1,
-      "emotionId": 1,
-      "dueDate": "2019-02-06",
-      "task": "Feed Cat",
-      "complete": false,
-      "id": 23
     }
   ],
   "examples": [
