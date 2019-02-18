@@ -28,11 +28,6 @@
       "userName": "Santa",
       "password": "p",
       "id": 5
-    },
-    {
-      "userName": "Santa",
-      "password": "p",
-      "id": 6
     }
   ],
   "emotions": [
@@ -362,6 +357,50 @@
       "id": 16,
       "emotionId": 4,
       "example": ""
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "userId": "1",
+      "entryDate": "2019-02-17",
+      "article": "This is the first journal entry for Tom Smith who is userId 1"
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
+      "article": "This is my first journal entry",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
+      "article": "This is my first journal entry",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
+      "article": "This is my first journal entry",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:50:02 GMT-0600 (Central Standard Time)",
+      "article": "second journal entry",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:58:35 GMT-0600 (Central Standard Time)",
+      "article": "Third journal entry",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:59:18 GMT-0600 (Central Standard Time)",
+      "article": "Fourth Journal Entry",
+      "id": 7
     }
   ]
 }

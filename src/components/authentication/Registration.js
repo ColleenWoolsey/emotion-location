@@ -35,7 +35,7 @@ export default class Registration extends Component {
   render() {
     return (
     <div className="form">
-      <form className="register-container" onSubmit={this.handleRegister}>
+      <form className="login-container" onSubmit={this.handleRegister}>
 
         <h1 className="welcome">EmoLocation</h1>
         <br></br>

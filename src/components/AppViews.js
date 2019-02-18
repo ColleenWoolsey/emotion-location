@@ -8,6 +8,8 @@ import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
 import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
+import ArticleManager from "../modules/ArticleManager";
+import ArticleList from "./article/ArticleList";
 import "./emotion/List.css";
 
 export default class AppViews extends Component {
@@ -15,6 +17,7 @@ export default class AppViews extends Component {
   state = {
     users: [],
     tasks: [],
+    articles: [],
     examples: [],
     userName: sessionStorage.getItem("userName"),
     user: sessionStorage.getItem("user")
@@ -29,7 +32,7 @@ export default class AppViews extends Component {
         this.setState({
           users: allUsers
         })
-      );  
+      );
  
   verifyUser = (userName, password) => {  
     return LoginManager.getNameAndPassword(userName, password)  
@@ -88,6 +91,7 @@ export default class AppViews extends Component {
               addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               updateTask={this.updateTask}
+              addArticle={this.addArticle}
               
               userName={sessionStorage.getItem("userName")}
               user={sessionStorage.getItem("user")}
@@ -113,8 +117,22 @@ export default class AppViews extends Component {
         }} 
       />
 
-    {/* this is the detail for individual emotion */}
-    <Route exact path="/emotion/:id"
+      {/* this is for list of Journal Entries */}
+      <Route exact path="/articles" 
+        render={(props) => {
+          console.log("/articles", props)
+          return (
+            <ArticleList
+              {...props}
+              articles={this.state.articles}
+              userId={this.state.userId} 
+            />
+          );
+        }} 
+      />
+
+      {/* this is the detail for individual emotion */}
+      <Route exact path="/emotion/:id"
         render={props => {
         console.log("/emotions/:id from", props)
         return (

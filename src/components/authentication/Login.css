@@ -24,20 +24,6 @@
     display: flex;
     flex-direction: column;
     background-image: url("./threeChecks.jpg");
-    /* background-image: url("./handsReaching.jpg"); */
-    width:400px;
-    align-items: center;
-    border-radius:6px;
-    margin: 0 auto 0 auto;
-    padding:0px 0px 70px 0px;
-    border: #eba63f 15px solid; 
-  }
-
-  .register-container {
-    display: flex;
-    flex-direction: column;
-    /* background-image: url("./threeChecks.jpg"); */
-    background-image: url("./handsReaching.jpg");
     width:400px;
     align-items: center;
     border-radius:6px;
