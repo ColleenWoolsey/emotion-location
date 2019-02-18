@@ -59,7 +59,9 @@ handleLogin = evt => {
 render() {
     return (
       <div className="form">
-        <form className="login-container" onSubmit={this.handleLogin}>
+        <form className="login-container" 
+        onSubmit={this.handleLogin}
+        autoComplete="off">
 
           <h1 className="h1">Welcome to EmoLocation</h1>
           <br></br>
@@ -75,12 +77,10 @@ render() {
           <br></br>        
             
           <div className="userName">
-            {/* <label htmlFor="inputUserName">
-                User Name :  </label> */}
             <input onChange={this.handleFieldChange} type="text"
-                    id="userName"
-                    placeholder="User Name"
-                    required="" autoFocus="" />
+              id="userName"
+              placeholder="User Name"
+              required />
           </div>
           <br></br>
           {/* <br></br> */}
@@ -95,12 +95,10 @@ render() {
           </div> */}
                     
           <div className="password"> 
-            {/* <label htmlFor="inputPassword">
-                Password :  </label> */}
             <input onChange={this.handleFieldChange} type="password"
-                    id="password"
-                    placeholder="Password"
-                    required="" />
+              id="password"
+              placeholder="Password"
+              required />
           </div>
           <br></br>
           

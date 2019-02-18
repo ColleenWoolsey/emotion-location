@@ -15,8 +15,6 @@ export default class TaskCard extends Component {
   }
 
   render() {
-    // {this.state.tasks.sort(function(a, b){
-    //   return new Date(a.dueDate) - new Date(b.dueDate)})}
     console.log("props passed from EmotionList", this.props)
     return (
       <React.Fragment>

@@ -23,7 +23,15 @@ export default class AppViews extends Component {
     user: sessionStorage.getItem("user")
   };
     
-  isAuthenticated = () => sessionStorage.getItem("user") !== null
+  verifyUser = (userName, password) => {  
+    return LoginManager.getNameAndPassword(userName, password)
+    // .then(users =>
+    //   this.setState({
+    //     users: users
+    //   })
+    // )}
+  }
+  
   
   addUser = newUser =>
     LoginManager.post(newUser)
@@ -34,10 +42,6 @@ export default class AppViews extends Component {
         })
       );
  
-  verifyUser = (userName, password) => {  
-    return LoginManager.getNameAndPassword(userName, password)  
-  }
-
   addTask = (task) => {
     return TaskManager.post(task)
     .then(() => {
@@ -81,7 +85,6 @@ export default class AppViews extends Component {
 {/* Route for listing emotions and tasks from NavBar */}
       <Route exact path="/home"
         render={props => {
-          if (this.isAuthenticated()) {
           console.log("props from /home", props)
           return (          
             <EmotionList 
@@ -93,13 +96,10 @@ export default class AppViews extends Component {
               updateTask={this.updateTask}
               addArticle={this.addArticle}
               
-              userName={sessionStorage.getItem("userName")}
-              user={sessionStorage.getItem("user")}
+              // userName={sessionStorage.getItem("userName")}
+              // user={sessionStorage.getItem("user")}
             />
             )
-          } else {
-            return <Redirect to="/" />;
-          }
         }}
       />
 

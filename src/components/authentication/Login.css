@@ -23,7 +23,8 @@
   .login-container {
     display: flex;
     flex-direction: column;
-    background-image: url("./threeChecks.jpg");
+    background-image: url("./checkboxesSquare.jpg");
+    border-image-width: 400px;
     width:400px;
     align-items: center;
     border-radius:6px;

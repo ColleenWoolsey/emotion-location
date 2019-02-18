@@ -38,10 +38,11 @@
     flex-basis: column;
     border: 5px solid #eba63f;
     background-color: #fefce9;    
-    background-image: url("./Pencil.jpg");
+    background-image: url("./pencil2.jpg");
     margin: 7px;
-    min-height: 170px;
-    max-height: 170px;
+    max-width: 100%;
+    height: 170px;
+    background-size: 100% 100%;
     color: #fefce9;
     opacity:  0.8;
 }

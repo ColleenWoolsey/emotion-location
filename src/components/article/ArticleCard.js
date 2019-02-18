@@ -1,72 +1,40 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Link } from "react-router-dom";
 import ArticleManager from "../../modules/ArticleManager";
 import "../emotion/List.css"
-
 export default class ArticleCard extends Component {
 
-    state = {
-        userId: sessionStorage.getItem("user"),
-        entryDate: Date(),
-        article: ""
-    };
-    
-    // Update state whenever an input field is edited
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        console.log(evt.target.id, evt.target.value);
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-    };
-    
-    /* Local method for validation, creating article object, and
-        invoking the function reference passed from parent component */
-    constructNewArticle = evt => {
-        evt.preventDefault();
-    
-        const article = {
-            userId: Number(this.state.userId),
-            entryDate: this.state.entryDate,
-            article: this.state.article
-        };
-    
-    // Create the article and redirect user to home
-        this.props.addArticle(article)
-        .then(() => 
-          this.props.history.push("/home"))
-          alert("Your journal entry has been saved")
-    }
+  // handleCheckChange = e => {
+  //   e.preventDefault();
+  //   };
+  
+  //  this.props
+  //  .addCheckChange(completeCheck, this.props.task.id)
+  // }
 
   render() {
-    console.log("props passed from EmotionList", this.props)
+    // {this.state.tasks.sort(function(a, b){
+    //   return new Date(a.dueDate) - new Date(b.dueDate)})}
+    console.log("props passed from ArticleList", this.props)
     return (
       <React.Fragment>
-       
-          <form className="article-input">
+        <div key={this.props.article.id}>
+         <div className="cardA">
+          <div className="top-line">
 
-            <FormGroup>
-              <Input className="article-textarea"
-                type="textarea" 
-                name="article" 
-                id="article"
-                rows="8"
-                cols="72"
-                placeholder="Start Journal Entry ..."
-                onChange={this.handleFieldChange}
-              />
-            </FormGroup>
+            <section className="entry-date">{this.props.article.entryDate}</section>
+            <section className="journal-entry">{this.props.task.article.emotionName}</section>           
 
-            <FormGroup>
-              <button
-                type="submit"
-                className="addArticleBtn"                                
-                onClick={this.constructNewArticle}
-              >
-                Submit
-              </button>             
-            </FormGroup>
-          </form>
-        
+          </div>
+          {/* End of top-line div */}          
+
+          <div className="bottom-line"></div>
+
+          </div>
+          {/* End of cardA div */}
+
+        </div>
+        {/* End of key div */} 
       </React.Fragment>
     );
   }

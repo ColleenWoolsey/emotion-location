@@ -23,11 +23,6 @@
       "email": "rlwool@aol.com",
       "password": "p",
       "id": 4
-    },
-    {
-      "userName": "Santa",
-      "password": "p",
-      "id": 5
     }
   ],
   "emotions": [
@@ -280,6 +275,14 @@
       "dueDate": "2019-02-06",
       "task": "lonel",
       "complete": true
+    },
+    {
+      "userId": 1,
+      "emotionId": 1,
+      "dueDate": "2019-02-06",
+      "task": "Feed Cat",
+      "complete": false,
+      "id": 23
     }
   ],
   "examples": [
@@ -401,6 +404,12 @@
       "entryDate": "Sun Feb 17 2019 22:59:18 GMT-0600 (Central Standard Time)",
       "article": "Fourth Journal Entry",
       "id": 7
+    },
+    {
+      "userId": 4,
+      "entryDate": "Mon Feb 18 2019 13:05:09 GMT-0600 (Central Standard Time)",
+      "article": "Journal entry five",
+      "id": 8
     }
   ]
 }

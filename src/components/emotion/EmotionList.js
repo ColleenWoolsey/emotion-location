@@ -5,6 +5,7 @@ import EmotionSummary from "./EmotionSummary";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
 import ArticleManager from "../../modules/ArticleManager";
+import JournalCard from "../article/JournalCard";
 import ArticleCard from "../article/ArticleCard";
 import "./List.css";
 export default class EmotionList extends Component {
@@ -65,6 +66,11 @@ export default class EmotionList extends Component {
 
   render() {
 
+    this.state.articles.sort(function(a, b) 
+                {a = new Date(a.entryDate);
+                 b = new Date(b.entryDate);
+                 return a>b ? -1 : a<b ? 1 : 0;}).reverse();
+
     this.state.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
                  b = new Date(b.dueDate);
@@ -92,17 +98,11 @@ export default class EmotionList extends Component {
                     type="button"
                     className="listArticlesBtn"
                     onClick={() => {                      
-                      this.props.history.push(`/articles`)                     
+                      // this.props.history.push(`/articles`)                     
                     }}
                   >
                     Read Journal Entries
-                  </button>             
-                
-                  {/* {this.state.articles.map(article => (
-                      <ArticleList key={article.entryDate} article={article} {...this.props} 
-                      />                  
-                    ))                
-                    } */}
+                  </button>                  
                 </div>
 
                   <div>
@@ -113,7 +113,7 @@ export default class EmotionList extends Component {
               {/* End of div search */}
 
               <div className="journal-article">
-                < ArticleCard
+                < JournalCard
                 {...this.props}
                 articles={this.state.articles}
                 addArticle={this.addArticle}
