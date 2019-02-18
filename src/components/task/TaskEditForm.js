@@ -57,7 +57,7 @@ updateExistingTask = evt => {
   render() {
     return (
       <React.Fragment>
-      <Form inline>
+      <Form inline autoComplete="off">
       <div className="form-group">
         <label htmlFor="emotionId">Emotion:  </label>
           <select

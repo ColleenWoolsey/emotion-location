@@ -1,15 +1,29 @@
 import React, { Component } from "react";
+import { Alert } from 'reactstrap';
 import EmotionCard from "./EmotionCard";
 import EmotionSummary from "./EmotionSummary";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
+import ArticleManager from "../../modules/ArticleManager";
+import JournalCard from "../article/JournalCard";
+import ArticleCard from "../article/ArticleCard";
 import "./List.css";
 export default class EmotionList extends Component {
 
   state = {
     tasks: [],
-    examples: [],    
+    examples: [],
+    articles: []   
   };
+
+  addArticle = article =>
+    ArticleManager.post(article)
+      .then(() => ArticleManager.getArticlesByUser(sessionStorage.getItem("user")))
+      .then(allArticles =>
+        this.setState({
+          articles: allArticles
+        })
+      ); 
 
   deleteTask = task =>
     TaskManager.del(task)
@@ -37,13 +51,25 @@ export default class EmotionList extends Component {
     .then(allTasks => {
         this.setState({
             tasks: allTasks
-        })
-        
+        })        
         console.log("allTasks from componentDidMount", allTasks)
+    })
+
+    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
+    .then(allArticles => {
+        this.setState({
+            articles: allArticles
+        })        
+        console.log("allArticles from componentDidMount", allArticles)
     })
   };
 
   render() {
+
+    this.state.articles.sort(function(a, b) 
+                {a = new Date(a.entryDate);
+                 b = new Date(b.entryDate);
+                 return a>b ? -1 : a<b ? 1 : 0;}).reverse();
 
     this.state.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
@@ -51,10 +77,6 @@ export default class EmotionList extends Component {
                  return a>b ? -1 : a<b ? 1 : 0;}).reverse();
     return (      
       <React.Fragment>
-
-        {/* <div>
-          <h4 className="Header">How are you feeling {sessionStorage.getItem("userName")}?</h4>
-        </div> */}
         
         <div className="container">
 
@@ -68,9 +90,38 @@ export default class EmotionList extends Component {
             {/* End of div emotions-list */} 
 
             <div className="bottom-left">
-                {/* {this.props.emotions.map(emotion => (
-                  <EmotionSummary key={emotion.id} emotion={emotion} {...this.props} />
-                  ))} */}
+
+              <div className="search">
+                
+                <div>                
+                  <button
+                    type="button"
+                    className="listArticlesBtn"
+                    onClick={() => {                      
+                      // this.props.history.push(`/articles`)                     
+                    }}
+                  >
+                    Read Journal Entries
+                  </button>                  
+                </div>
+
+                  <div>
+                    <h4 className="reflect">... reflect... repent... rejoice... reconcile</h4>
+                  </div>
+
+              </div>
+              {/* End of div search */}
+
+              <div className="journal-article">
+                < JournalCard
+                {...this.props}
+                articles={this.state.articles}
+                addArticle={this.addArticle}
+                userId={this.state.userId}
+                />        
+              </div>
+              {/* End of div journal-article */}
+
             </div>
              {/* End of div bottom-left */}                
             
@@ -85,7 +136,7 @@ export default class EmotionList extends Component {
               </div>
 
               <div className="header-add-task">
-                <h4>My To-Do-List</h4>
+                <h4 className="to-be-header">MY-TO-BE-LIST</h4>
                 <button
                   type="button"
                   className="addTaskBtn"

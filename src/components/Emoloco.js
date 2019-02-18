@@ -12,7 +12,7 @@ export default class Emoloco extends Component {
 
   state = {
     emotions: [],
-    login: []
+    users: []
   };
 
  componentDidMount() {

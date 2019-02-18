@@ -42,7 +42,7 @@ constructNewTask = evt => {
   render() {
     return (
       <React.Fragment>
-      <Form inline>
+      <Form inline autoComplete="off">
       <div className="form-group">
 
         <label htmlFor="emotionId" sm={2} size="lg">Emotion</label>

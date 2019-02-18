@@ -23,7 +23,8 @@
   .login-container {
     display: flex;
     flex-direction: column;
-    /* background: #fefce9; */
+    background-image: url("./checkboxesSquare.jpg");
+    border-image-width: 400px;
     width:400px;
     align-items: center;
     border-radius:6px;
@@ -33,12 +34,14 @@
   }
 
  .userName {
+    opacity: 0.9;
     text-align: center;
     border-radius:4px;
-    background-color :#3cbcc3;
+    background-color :#eba63f;
     border: #ccc 1px solid;
     padding: 8px;
     width:250px;
+    font-size: 1.5em;
   }
   
  .email {
@@ -51,12 +54,15 @@
   } 
   
   .password {
+    opacity: 0.;
+    /* background: rgba(76, 175, 80, 0.3); */
     text-align: center;
     border-radius:4px;
-    background-color :#3cbcc3;
+    background-color :#eba63f;
     border: #ccc 1px solid;
     padding: 8px;
     width:250px;
+    font-size: 1.5em;
   } 
   
   .btnSignIn{

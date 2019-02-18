@@ -59,56 +59,60 @@ handleLogin = evt => {
 render() {
     return (
       <div className="form">
-        <form className="login-container" onSubmit={this.handleLogin}>
-         
+        <form className="login-container" 
+        onSubmit={this.handleLogin}
+        autoComplete="off">
+
           <h1 className="h1">Welcome to EmoLocation</h1>
           <br></br>
-          
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>        
             
           <div className="userName">
-            {/* <label htmlFor="inputUserName">
-                User Name :  </label> */}
             <input onChange={this.handleFieldChange} type="text"
-                    id="userName"
-                    placeholder="User Name"
-                    required="" autoFocus="" />
+              id="userName"
+              placeholder="User Name"
+              required />
           </div>
           <br></br>
-          <br></br>
+          {/* <br></br> */}
           
-          <div className="email">
-            {/* <label htmlFor="inputUserEmail">
-                Email :  </label> */}
+          {/* <div className="email">
+            <label htmlFor="inputUserEmail">
+                Email :  </label>
             <input onChange={this.handleFieldChange} type="email"
                     id="email"
                     placeholder="Email"
                     required="" autoFocus="" />
-          </div>
-          <br></br>
-          <br></br>
-          
+          </div> */}
+                    
           <div className="password"> 
-            {/* <label htmlFor="inputPassword">
-                Password :  </label> */}
             <input onChange={this.handleFieldChange} type="password"
-                    id="password"
-                    placeholder="Password"
-                    required="" />
+              id="password"
+              placeholder="Password"
+              required />
           </div>
           <br></br>
-          <br></br>
           
-          <button className="btnSignIn" type="submit"
-              onClick={this.handleLogin}>
-              Sign In
-          </button>
+          <div className="btnGroup">
+            <button className="btnSignIn" type="submit"
+                onClick={this.handleLogin}>
+                Sign In
+            </button>
 
-          {/* <h5 className="request">Not Registered?</h5> */}
-
-          <button className="btnSignUp" type="button"
-              onClick={()=> this.props.history.push("/registration")}>
-              Sign Up
-          </button>
+            <button className="btnSignUp" type="button"
+                onClick={()=> this.props.history.push("/registration")}>
+                Sign Up
+            </button>
+          </div>
         </form>
       </div>
     )

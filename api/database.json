@@ -23,42 +23,6 @@
       "email": "rlwool@aol.com",
       "password": "p",
       "id": 4
-    },
-    {
-      "userName": "",
-      "email": "",
-      "password": "",
-      "id": 5
-    },
-    {
-      "userName": "",
-      "email": "",
-      "password": "",
-      "id": 6
-    },
-    {
-      "userName": "",
-      "email": "",
-      "password": "",
-      "id": 7
-    },
-    {
-      "userName": "",
-      "email": "",
-      "password": "",
-      "id": 8
-    },
-    {
-      "userName": "",
-      "email": "",
-      "password": "",
-      "id": 9
-    },
-    {
-      "userName": "",
-      "email": "",
-      "password": "",
-      "id": 10
     }
   ],
   "emotions": [
@@ -249,14 +213,6 @@
       "complete": false
     },
     {
-      "userId": 4,
-      "emotionId": 4,
-      "dueDate": "2019-02-28",
-      "task": "Make promises and commitments",
-      "complete": false,
-      "id": 13
-    },
-    {
       "userId": 2,
       "emotionId": 5,
       "dueDate": "2019-03-01",
@@ -319,6 +275,14 @@
       "dueDate": "2019-02-06",
       "task": "lonel",
       "complete": true
+    },
+    {
+      "userId": 1,
+      "emotionId": 1,
+      "dueDate": "2019-02-06",
+      "task": "Feed Cat",
+      "complete": false,
+      "id": 23
     }
   ],
   "examples": [
@@ -396,6 +360,56 @@
       "id": 16,
       "emotionId": 4,
       "example": ""
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "userId": "1",
+      "entryDate": "2019-02-17",
+      "article": "This is the first journal entry for Tom Smith who is userId 1"
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
+      "article": "This is my first journal entry",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
+      "article": "This is my first journal entry",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
+      "article": "This is my first journal entry",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:50:02 GMT-0600 (Central Standard Time)",
+      "article": "second journal entry",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:58:35 GMT-0600 (Central Standard Time)",
+      "article": "Third journal entry",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "entryDate": "Sun Feb 17 2019 22:59:18 GMT-0600 (Central Standard Time)",
+      "article": "Fourth Journal Entry",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "entryDate": "Mon Feb 18 2019 13:05:09 GMT-0600 (Central Standard Time)",
+      "article": "Journal entry five",
+      "id": 8
     }
   ]
 }
