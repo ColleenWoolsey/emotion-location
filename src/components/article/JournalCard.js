@@ -6,9 +6,9 @@ import "../emotion/List.css"
 export default class JournalCard extends Component {
 
     state = {
-        userId: sessionStorage.getItem("user"),
-        entryDate: Date(),
-        article: ""
+      userId: sessionStorage.getItem("user"),
+      entryDate: Date(),
+      article: ""  
     };
     
     // Update state whenever an input field is edited
@@ -25,8 +25,8 @@ export default class JournalCard extends Component {
         evt.preventDefault();
     
         const article = {
-            userId: Number(this.state.userId),
-            entryDate: this.state.entryDate,
+            userId: Number(sessionStorage.getItem("user")),
+            entryDate: Date(),
             article: this.state.article
         };
     
@@ -35,7 +35,7 @@ export default class JournalCard extends Component {
         .then(() => 
           this.props.history.push("/home"))
           alert("Your journal entry has been saved")
-    }
+        }  
 
   render() {
     console.log("props passed from EmotionList", this.props)

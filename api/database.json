@@ -133,12 +133,12 @@
       "id": 2
     },
     {
+      "id": 3,
       "userId": 1,
       "emotionId": 3,
-      "dueDate": "2019-02-16",
+      "dueDate": "2019-02-21",
       "task": "Send letters to my children at their milestones",
-      "complete": false,
-      "id": 3
+      "complete": false
     },
     {
       "id": 4,
@@ -356,52 +356,136 @@
   ],
   "articles": [
     {
-      "id": 1,
-      "userId": "1",
-      "entryDate": "2019-02-17",
-      "article": "This is the first journal entry for Tom Smith who is userId 1"
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 18:41:15 GMT-0600 (Central Standard Time)",
+      "article": "This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. ",
+      "id": 1
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
-      "article": "This is my first journal entry",
+      "entryDate": "Mon Feb 18 2019 18:48:05 GMT-0600 (Central Standard Time)",
+      "article": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
       "id": 2
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
-      "article": "This is my first journal entry",
+      "entryDate": "Mon Feb 18 2019 18:50:00 GMT-0600 (Central Standard Time)",
+      "article": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
       "id": 3
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
-      "article": "This is my first journal entry",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:50:02 GMT-0600 (Central Standard Time)",
-      "article": "second journal entry",
+      "entryDate": "Mon Feb 18 2019 18:57:39 GMT-0600 (Central Standard Time)",
+      "article": "ccccccccccccccccccccccccccccc",
       "id": 5
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:58:35 GMT-0600 (Central Standard Time)",
-      "article": "Third journal entry",
+      "entryDate": "Mon Feb 18 2019 19:00:24 GMT-0600 (Central Standard Time)",
+      "article": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
       "id": 6
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:59:18 GMT-0600 (Central Standard Time)",
-      "article": "Fourth Journal Entry",
+      "entryDate": "Mon Feb 18 2019 19:02:12 GMT-0600 (Central Standard Time)",
+      "article": "ooooooooooooooooooooooooo",
       "id": 7
     },
     {
-      "userId": 4,
-      "entryDate": "Mon Feb 18 2019 13:05:09 GMT-0600 (Central Standard Time)",
-      "article": "Journal entry five",
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:08:42 GMT-0600 (Central Standard Time)",
+      "article": "ppppppppppppppppppppppppppp",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:10:03 GMT-0600 (Central Standard Time)",
+      "article": "jjjjjjjjjjjjjjjjjjjjjjjj",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:10:50 GMT-0600 (Central Standard Time)",
+      "article": "tttttttttttttttttttttttttttttt",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:12:07 GMT-0600 (Central Standard Time)",
+      "article": "llllllllllllllllllllllllllll",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:18:25 GMT-0600 (Central Standard Time)",
+      "article": "sssssssssssssssssssssssss",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:18:50 GMT-0600 (Central Standard Time)",
+      "article": "ddddddddddddddddddddddddd",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:26:22 GMT-0600 (Central Standard Time)",
+      "article": "99999999999999999999999999",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:30:56 GMT-0600 (Central Standard Time)",
+      "article": "55555555555555555555555",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:32:38 GMT-0600 (Central Standard Time)",
+      "article": "222222222222222222222222",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:33:35 GMT-0600 (Central Standard Time)",
+      "article": "3333333333333333333333333",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:35:30 GMT-0600 (Central Standard Time)",
+      "article": "bbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:36:03 GMT-0600 (Central Standard Time)",
+      "article": "7777777777777777777777",
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 19:49:37 GMT-0600 (Central Standard Time)",
+      "article": "vvvvvvvvvvvvvvvvvvvvvvv",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 20:18:21 GMT-0600 (Central Standard Time)",
+      "article": "ccccccccccccccccccc",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 20:28:48 GMT-0600 (Central Standard Time)",
+      "article": "pppppppppppppppppppppp",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 20:37:22 GMT-0600 (Central Standard Time)",
+      "article": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "id": 23
     }
   ]
 }

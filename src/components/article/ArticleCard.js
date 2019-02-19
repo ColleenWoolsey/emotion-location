@@ -14,9 +14,10 @@ export default class ArticleCard extends Component {
         <div key={this.props.article.id}>
          <Card className="cardA">
           <div className="top-line">
+          
 
           <CardSubtitle className="entry-date">{this.props.article.entryDate}</CardSubtitle>
-          <CardSubtitle className="journal-entry">{this.props.article.emotionName}</CardSubtitle>           
+          <CardSubtitle className="journal-entry">{this.props.article.article}</CardSubtitle>           
 
           </div>
           {/* End of top-line div */}          

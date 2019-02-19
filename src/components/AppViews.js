@@ -25,7 +25,8 @@ export default class AppViews extends Component {
     
   verifyUser = (userName, password) => {  
     return LoginManager.getNameAndPassword(userName, password)
-  }  
+  }
+  
   
   addUser = newUser =>
     LoginManager.post(newUser)
@@ -96,15 +97,11 @@ export default class AppViews extends Component {
               {...this.props} 
               {...props} 
               tasks={this.state.tasks}
-              // articles={this.state.articles}
-              // examples={this.state.examples}
+              articles={this.state.articles}
               addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               updateTask={this.updateTask}
               addArticle={this.addArticle}
-              
-              // userName={sessionStorage.getItem("userName")}
-              // user={sessionStorage.getItem("user")}
             />
             )
         }}
@@ -130,6 +127,7 @@ export default class AppViews extends Component {
           console.log("/articles", props)
           return (
             <ArticleList
+              {...props}
               {...this.props}
               articles={this.state.articles}
               userId={this.state.userId} 
