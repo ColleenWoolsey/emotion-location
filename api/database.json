@@ -23,6 +23,11 @@
       "email": "rlwool@aol.com",
       "password": "p",
       "id": 4
+    },
+    {
+      "userName": "",
+      "password": "",
+      "id": 5
     }
   ],
   "emotions": [
@@ -357,135 +362,57 @@
   "articles": [
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 18:41:15 GMT-0600 (Central Standard Time)",
-      "article": "This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. This is the first journal entry for Tom Smith who has a userId of 1. It is purposefully long because the textarea field will likely need styling. ",
+      "entryDate": "Mon Feb 18 2019 22:06:02 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross Says ... You don't have to tell them you did this with a paper towel. We don't know where that goes. Hit it, and get away from it. Look at your painting and make a decision. Drop in a happy little sky here. If you learn to make one tree, you can make a million trees.\n\nThere's some little stringy ones that live down here. Bravery test! Truly the joy of painting is the friends that you make doing it. Don't be afraid to go out on a limb once in a while. Let's get crazy. You didn't know you had so much power, did you?",
       "id": 1
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 18:48:05 GMT-0600 (Central Standard Time)",
-      "article": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "entryDate": "Mon Feb 18 2019 22:06:57 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross Says ... We'll put a few little nicety things in there. Everybody likes mountains. I used to work for weeks to make a tree. Chickens need a place to live too. All you're worried about is this nice outside shape. Gentle, swirling motions here.\n\nIf you over-mix it, you just get one dead color. You have to make these big decisions in your world. Sort of an orangy-yellowish color. This is such a super day! Just let it float. This is one that you can do.",
       "id": 2
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 18:50:00 GMT-0600 (Central Standard Time)",
-      "article": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+      "entryDate": "Mon Feb 18 2019 22:07:31 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Let's build us a little cloud. Sometimes it's fun to play little games in your mountains. Let's do another one -- what the heck! Just sorta work it around and around here. Everything should get lighter toward the horizon. So many things you can create.\n\nLet's have some big, fluffy clouds in this painting. This is where you take out all your frustrations and all your hostilities, and just have a good time. Enough of that. Just let your imagination take you to anywhere you want to be. Just decide basically where you wanna start, and off you go! Show it who's boss!",
       "id": 3
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 18:57:39 GMT-0600 (Central Standard Time)",
-      "article": "ccccccccccccccccccccccccccccc",
+      "entryDate": "Mon Feb 18 2019 22:09:34 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Don't over do it -- be careful. Be careful. Always start with a clean brush in a light area and work outward. We planned this son-of-a-gun right from the beginning. People are so excited when they see this happen. Everybody will see nature through different eyes.",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 22:10:54 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving.\n\nIf there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
       "id": 5
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:00:24 GMT-0600 (Central Standard Time)",
-      "article": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+      "entryDate": "Mon Feb 18 2019 23:05:41 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
       "id": 6
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:02:12 GMT-0600 (Central Standard Time)",
-      "article": "ooooooooooooooooooooooooo",
+      "entryDate": "Mon Feb 18 2019 23:06:46 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Today's such a wonderful day, let's just make a happy little painting. Maybe I'll have a bit mountain today. You can do anything that you believe you can do. Get it to where you want it, and leave it alone. That's the fun part of this whole technique.",
       "id": 7
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:08:42 GMT-0600 (Central Standard Time)",
-      "article": "ppppppppppppppppppppppppppp",
+      "entryDate": "Mon Feb 18 2019 23:12:02 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... I don't know exactly what they are, and I don't really care at this point. Just leave that space open. Learn to work with anything that happens. It helps, when you're doing these kinds of things, make up little stories in your mind. We'll start playing a little bit. Just let it go, have fun.\n\nDevote a little time to working with it. Practice visualizing things in your mind. You can do anything that you believe you can do. Just let it work around and play. Art is an expression of self. The only thing I'm good at is falling down.",
       "id": 8
     },
     {
       "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:10:03 GMT-0600 (Central Standard Time)",
-      "article": "jjjjjjjjjjjjjjjjjjjjjjjj",
+      "entryDate": "Tue Feb 19 2019 08:54:42 GMT-0600 (Central Standard Time)",
+      "article": "cc",
       "id": 9
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:10:50 GMT-0600 (Central Standard Time)",
-      "article": "tttttttttttttttttttttttttttttt",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:12:07 GMT-0600 (Central Standard Time)",
-      "article": "llllllllllllllllllllllllllll",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:18:25 GMT-0600 (Central Standard Time)",
-      "article": "sssssssssssssssssssssssss",
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:18:50 GMT-0600 (Central Standard Time)",
-      "article": "ddddddddddddddddddddddddd",
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:26:22 GMT-0600 (Central Standard Time)",
-      "article": "99999999999999999999999999",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:30:56 GMT-0600 (Central Standard Time)",
-      "article": "55555555555555555555555",
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:32:38 GMT-0600 (Central Standard Time)",
-      "article": "222222222222222222222222",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:33:35 GMT-0600 (Central Standard Time)",
-      "article": "3333333333333333333333333",
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:35:30 GMT-0600 (Central Standard Time)",
-      "article": "bbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:36:03 GMT-0600 (Central Standard Time)",
-      "article": "7777777777777777777777",
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 19:49:37 GMT-0600 (Central Standard Time)",
-      "article": "vvvvvvvvvvvvvvvvvvvvvvv",
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 20:18:21 GMT-0600 (Central Standard Time)",
-      "article": "ccccccccccccccccccc",
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 20:28:48 GMT-0600 (Central Standard Time)",
-      "article": "pppppppppppppppppppppp",
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "entryDate": "Mon Feb 18 2019 20:37:22 GMT-0600 (Central Standard Time)",
-      "article": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "id": 23
     }
   ]
 }

@@ -245,20 +245,20 @@
     font-weight: bold;
     color: #3cbcc3;
 }
-.editTaskBtn {
+.editBtn {
     margin-right: 12px;
     border-radius:5px;
-    border: 1px solid #3cbcc3;
+    border: 3px solid #3cbcc3;
     background-color: #fefce9;
 }
-.delTaskBtn {
-    border: 1px solid #3cbcc3;
+.delBtn {
+    border: 3px solid #3cbcc3;
     background-color: #fefce9;
     border-radius:5px;
 }
 .check-box {
     color: #3cbcc3;
-    font-size: 2em;
+    font-size: 5em;
 }
 .bottom-line {
     display: flex;
@@ -266,6 +266,74 @@
     background-color: #fefce9;
     padding: 3px;
 }
+
+
+/* **********  THIS STYLES ARE IN EmotionCard.js (in order of use)  ********** */
+
+.articles-list { 
+    background-image: url("./lantern.jpg");    
+    border-radius:30px;
+    margin: 0 auto 0 auto;
+    padding: 5px;
+    border: #438945 15px solid;
+    max-width: 90%;
+    overflow: auto;
+    background-size: 100%;
+    opacity:  0.85;
+    overflow-y: scroll;
+}
+.cardA {
+    display: block;
+    max-height: 110px;
+    width:800px;
+    float: right; 
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    padding:7px;
+    border: #3cbcc3 5px solid;
+    outline: 7px solid #438945;
+    overflow-y: scroll;      
+    background-color: #fefce9;
+}
+.top-line {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.article-date {    
+    padding-top: 5px;
+    font-weight: bold;    
+}
+.btns-group {
+    /* border: 5px dashed yellow; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+.editArticleBtn {
+    margin-right: 10px;
+    border-radius:5px;
+    border: 3px solid #3cbcc3;
+    background-color: #fefce9;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+.delArticleBtn {
+    margin-right: 10px;
+    border: 3px solid #3cbcc3;
+    background-color: #fefce9;
+    border-radius:5px;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+.returnBtn {
+    margin-right: 30px;
+    border-radius:5px;
+    border: 3px solid #3cbcc3;
+    background-color: #e0f6f6;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+
 
 /* **********  THIS STYLES ARE IN TaskAddForm.js & TaskEditForm (in order of use)  ********** */
 .form-group {
@@ -276,14 +344,7 @@
 .form-control {
 
 }
-.addTaskBtn {
-    margin-left: 30px;
-    margin-bottom: 12px;
-    margin-top: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius:10px;
-}
+
 .add-form-btn {
 
 }
@@ -293,29 +354,6 @@
 .edit-form-btn {
 
 }
-
-
-
-
-
-/* EmotionList.js */
-
-
-/* TaskList.js */
-.task-card {
-    display: flex;
-    flex-direction: column;    
-    justify-content: left;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;
-    /* border: 1px solid black; */
-    padding-bottom: 12px;
-    background-color: #Fefce9;
-    
-}
-
-
 
 /* ExamplesList */
 

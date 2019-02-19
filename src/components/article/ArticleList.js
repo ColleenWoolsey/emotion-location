@@ -7,12 +7,8 @@ export default class ArticleList extends Component {
     return (
       <React.Fragment>
         <div className="articles-list">
-          {this.props.articles.map(article => (
-            <ArticleCard key={article.id} 
-            article={article} 
-            {...this.props}
-            
-           />
+          {this.props.users.map(user => (
+            <ArticleCard key={user.id} user={user} {...this.props} />
           ))}
         </div>
       </React.Fragment>    

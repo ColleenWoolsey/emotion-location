@@ -28,9 +28,8 @@ export default class TaskCard extends Component {
             <section>
               <button
                 type="button"
-                className="editTaskBtn"
-                onClick={() => {
-                  
+                className="editBtn"
+                onClick={() => {                  
                   this.props.history.push(`/task/${this.props.task.id}`)                     
                 }}
               >
@@ -39,7 +38,7 @@ export default class TaskCard extends Component {
             
               <button
                 type="button"
-                className="delTaskBtn"
+                className="delBtn"
                 onClick={() => {
                   this.props.deleteTask(this.props.task.id)
                   // .then(() => this.props.history.push("/home"))

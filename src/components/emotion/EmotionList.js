@@ -4,6 +4,7 @@ import EmotionCard from "./EmotionCard";
 import EmotionSummary from "./EmotionSummary";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
+import LoginManager from "../../modules/LoginManager";
 import ArticleManager from "../../modules/ArticleManager";
 import JournalCard from "../article/JournalCard";
 import ArticleCard from "../article/ArticleCard";
@@ -55,13 +56,22 @@ export default class EmotionList extends Component {
         console.log("allTasks from componentDidMount", allTasks)
     })
 
-    // ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
-    // .then(allArticles => {
-    //     this.setState({
-    //         articles: allArticles
-    //     })        
-    //     console.log("allArticles from componentDidMount", allArticles)
-    // })
+    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
+    .then(allArticles => {
+        this.setState({
+            articles: allArticles
+        })        
+        console.log("allArticles from componentDidMount", allArticles)
+    })
+  
+    LoginManager.getAllUserInfo()
+    .then(allUsers => {
+        this.setState({
+            users: allUsers
+        })
+        console.log("allUserInfo from componentDidMount", allUsers)
+    })
+
   };
 
   render() {
