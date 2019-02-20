@@ -18,29 +18,29 @@ export default class ArticleCard extends Component {
 //   })
 //   this.props.constructNewDate(this.props.artiicle.entryDate)
 //   .then(() => 
-//       this.props.history.push("/srticles"));
+//       this.props.history.push("/articles"));
 // }
 
-  render() {
-    console.log("users array from ArticleList", this.props.articles)
-    return (
-      <React.Fragment>
-        <div key={this.props.user.id}>
-         
-         <Card className="cardA">
+    render() {
+      console.log("users array from ArticleList", this.props.article)
+      return (
+        <React.Fragment>
+          <div key={this.props.article.id}>
            
-         {/* <div className="articles-picture">
-          <Image src={"./lantern.jpg"} width={500} height={300} mode='fit' />  
-         </div> */}
-          <div className="top-line">
-            <div>
-
-              <CardSubtitle className="article-date">
-                {/* {this.constructNewDate} */}
-                {this.props.user.entryDate}
-              </CardSubtitle>
-
-            </div>
+           <Card className="cardA">
+             
+           {/* <div className="articles-picture">
+            <Image src={"./lantern.jpg"} width={500} height={300} mode='fit' />  
+           </div> */}
+            <div className="top-line">
+              <div>
+  
+                <CardSubtitle className="article-date">
+                  {/* {this.constructNewDate} */}
+                  {this.props.article.entryDate}
+                </CardSubtitle>
+  
+              </div>
 
             <div className="btns-group">
 
@@ -86,15 +86,15 @@ export default class ArticleCard extends Component {
           {/* End of top-line div */}
 
           <div className="journal-entry">
-            <CardText className="journal-entry">{this.props.user.article}</CardText>           
+            <CardText className="journal-entry">{this.props.article}</CardText>           
           </div>
           
         </Card>
         {/* End of cardA div */}
         </div>
-        
+      
         {/* End of key div */} 
-      </React.Fragment>
+        </React.Fragment>
     );
   }
 }

@@ -4,12 +4,6 @@ import ArticleManager from "../../modules/ArticleManager";
 import "../emotion/List.css"
 
 export default class JournalCard extends Component {
-
-    state = {
-      userId: sessionStorage.getItem("user"),
-      entryDate: Date(),
-      article: ""  
-    };
     
     // Update state whenever an input field is edited
     handleFieldChange = evt => {
@@ -38,7 +32,7 @@ export default class JournalCard extends Component {
         }  
 
   render() {
-    console.log("props passed from EmotionList", this.props)
+    console.log("props passed from EmotionList to beginning of render", this.props)
     return (
       <React.Fragment>
        

@@ -20,10 +20,11 @@ export default class EmotionList extends Component {
   addArticle = article =>
     ArticleManager.post(article)
       .then(() => ArticleManager.getArticlesByUser(sessionStorage.getItem("user")))
-      .then(allArticles =>
+      .then(articles =>
         this.setState({
-          articles: allArticles
+          articles: articles
         })
+        
       ); 
 
   deleteTask = task =>
@@ -61,22 +62,30 @@ export default class EmotionList extends Component {
         this.setState({
             articles: allArticles
         })        
-        console.log("allArticles from componentDidMount", allArticles)
+        console.log("getArticlesByUser from componentDidMount", allArticles)
+        console.log ("this.props", this.props)
+        console.log ("this.state", this.state)
+        console.log ("this.state.articles", this.state.articles)
+        console.log ("this.props.articles", this.props.articles)
     })
   
-    LoginManager.getAllUserInfo()
+    LoginManager.getById(sessionStorage.getItem("user"))
     .then(allUsers => {
         this.setState({
             users: allUsers
         })
         console.log("allUserInfo from componentDidMount", allUsers)
+        console.log ("this.props", this.props)
+        console.log ("this.state", this.state)
+        console.log ("this.state.articles", this.state.articles)
+        console.log ("this.props.articles", this.props.articles)
     })
 
   };
 
   render() {
 
-    this.state.tasks.sort(function(a, b) 
+    this.props.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
                  b = new Date(b.dueDate);
                  return a>b ? -1 : a<b ? 1 : 0;}).reverse();
@@ -102,10 +111,10 @@ export default class EmotionList extends Component {
                   <button
                     type="button"
                     className="listArticlesBtn"
-                    onClick={() => {                 
-                      this.props.history.push("/articles")
-                         
+                    onClick={() => {                
+                      this.props.history.push("/articles/")                         
                   }}> 
+                     
                   >                 
                     Read Journal Entries
                   </button>                  
@@ -123,7 +132,7 @@ export default class EmotionList extends Component {
                 {...this.props}
                 articles={this.state.articles}
                 addArticle={this.addArticle}
-                userId={this.state.userId}
+                userId={sessionStorage.getItem("user")}
                 />        
               </div>
               {/* End of div journal-article */}

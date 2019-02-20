@@ -12,7 +12,8 @@ export default class NavBar extends Component {
       <nav>
         <ul className="nav">
           
-        <li className="signout" onClick={this.endSessionStorage}>
+        <li className="signout" 
+          onClick={this.endSessionStorage}>
           <Link to="/">Sign Out</Link>           
         </li>
 

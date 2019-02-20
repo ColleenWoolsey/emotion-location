@@ -10,6 +10,7 @@ import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
 import ArticleManager from "../modules/ArticleManager";
 import ArticleList from "./article/ArticleList";
+import ArticleCard from "./article/ArticleCard";
 import EmotionManager from "../modules/EmotionManager";
 
 import "./emotion/List.css";
@@ -62,21 +63,7 @@ export default class AppViews extends Component {
           tasks: tasks
       }))
     })
-  }
-
-  // componentDidMount() {
-
-    // LoginManager.getAllUserInfo()
-    // .then(allUsers => {
-    //     this.setState({
-    //         users: allUsers
-    //     })
-    //     console.log("allUserInfo from componentDidMount", allUsers)
-    // })
-           
-    // }
-
-  
+  } 
 
   render() {
   return(
@@ -102,7 +89,7 @@ export default class AppViews extends Component {
               {...this.props} 
               {...props} 
               tasks={this.state.tasks}
-              articles={this.state.articles}
+              // articles={this.state.articles}
               addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               updateTask={this.updateTask}
@@ -129,15 +116,14 @@ export default class AppViews extends Component {
       {/* this is for list of Journal Entries */}
       <Route exact path="/articles" 
         render={(props) => {
-          console.log("/articles", props)
+          console.log("/articles", this.state.articles)
+          console.log("/articles", this.props.articles)
           return (
             <ArticleList
-              {...props}
-              {...this.props}
-              tasks={this.state.tasks}
+              {...this.props}              
               articles={this.state.articles}
               users={this.state.users}
-              userId={this.state.userId} 
+               
             />
           );
         }} 

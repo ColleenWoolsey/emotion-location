@@ -182,7 +182,7 @@
       "userId": 4,
       "emotionId": 4,
       "dueDate": "2019-02-21",
-      "task": "Forsake manipulating others",
+      "task": "Forsake manipulating  others",
       "complete": false
     },
     {
@@ -397,22 +397,16 @@
       "id": 6
     },
     {
-      "userId": 1,
+      "userId": 4,
       "entryDate": "Mon Feb 18 2019 23:06:46 GMT-0600 (Central Standard Time)",
       "article": "Bob Ross says ... Today's such a wonderful day, let's just make a happy little painting. Maybe I'll have a bit mountain today. You can do anything that you believe you can do. Get it to where you want it, and leave it alone. That's the fun part of this whole technique.",
       "id": 7
     },
     {
-      "userId": 1,
+      "userId": 4,
       "entryDate": "Mon Feb 18 2019 23:12:02 GMT-0600 (Central Standard Time)",
       "article": "Bob Ross says ... I don't know exactly what they are, and I don't really care at this point. Just leave that space open. Learn to work with anything that happens. It helps, when you're doing these kinds of things, make up little stories in your mind. We'll start playing a little bit. Just let it go, have fun.\n\nDevote a little time to working with it. Practice visualizing things in your mind. You can do anything that you believe you can do. Just let it work around and play. Art is an expression of self. The only thing I'm good at is falling down.",
       "id": 8
-    },
-    {
-      "userId": 1,
-      "entryDate": "Tue Feb 19 2019 08:54:42 GMT-0600 (Central Standard Time)",
-      "article": "cc",
-      "id": 9
     }
   ]
 }

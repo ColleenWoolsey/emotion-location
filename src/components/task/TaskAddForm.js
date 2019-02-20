@@ -34,8 +34,10 @@ constructNewTask = evt => {
     };
 
 // Create the task and redirect user to task list
+    console.log("task", task)
+
     this.props.addTask(task)
-    .then(() => 
+    .then(() =>
       this.props.history.push("/home"));
 };
 

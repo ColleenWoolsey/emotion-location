@@ -3,7 +3,7 @@ const remoteURL = "http://localhost:5002";
 export default {
 
 getAllEmotionInfo() {
-  return fetch(`${remoteURL}/emotions/?_embed=tasks`)
+  return fetch(`${remoteURL}/emotions/?_embed=examples`)
   .then(response=>response.json())
 },
 
