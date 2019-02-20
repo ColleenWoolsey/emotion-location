@@ -3,10 +3,15 @@
 /* **********  THIS STYLES ARE IN EmotionList.js (in order of use)  ********** */
 .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; 
-    align-items: baseline;
-    padding:  7px;    
+    border-radius:30px;
+    padding: 5px;
+    border: #438945 15px solid;
+    max-width: 95%;
+    overflow: auto;
+    background-size: 100%;
+    /* opacity:  0.85; */
+    overflow-y: scroll;
+    align-items: baseline;        
     background-color: #438945;       
 }
 
@@ -20,8 +25,7 @@
     flex-wrap: nowrap;
     flex-direction: row;    
     margin-right: 7px;
-    background-color: #438945;
-    /* border: 5px dashed blue; */        
+    background-color: #438945;       
 }
 .bottom-left {
     background-color: #fefce9;
@@ -46,7 +50,7 @@
     color: #fefce9;
     opacity:  0.8;
 }
-.listArticlesBtn {
+.listArticlesBtn {    
     background: #eba63f;
     width:125px;
     padding-top:5px;
@@ -54,11 +58,11 @@
     color: #e0f6f6;
     border-radius:10px;
     border: #fefce9 2px solid;    
-    margin-top:15px;
+    margin-top:5px;
     margin-bottom:20px;
     margin-left:10px;
     font-weight:600;
-    font-size: 1.1em;
+    font-size: .9em;
 }
 .reflect {
    margin-left: 40px;
@@ -75,7 +79,8 @@
     border: 5px solid #eba63f;
     background-image: url("./Pencil.jpg");
     margin: 7px;
-    flex-basis: 60%;    
+    flex-basis: 60%;
+    height: 170px;   
     background-color: #fefce9;
     opacity: .8;
 }
@@ -245,20 +250,20 @@
     font-weight: bold;
     color: #3cbcc3;
 }
-.editTaskBtn {
+.editBtn {
     margin-right: 12px;
     border-radius:5px;
-    border: 1px solid #3cbcc3;
+    border: 3px solid #3cbcc3;
     background-color: #fefce9;
 }
-.delTaskBtn {
-    border: 1px solid #3cbcc3;
+.delBtn {
+    border: 3px solid #3cbcc3;
     background-color: #fefce9;
     border-radius:5px;
 }
 .check-box {
     color: #3cbcc3;
-    font-size: 2em;
+    font-size: 5em;
 }
 .bottom-line {
     display: flex;
@@ -267,77 +272,165 @@
     padding: 3px;
 }
 
-/* **********  THIS STYLES ARE IN TaskAddForm.js & TaskEditForm (in order of use)  ********** */
-.form-group {
+
+/* **********  THESE STYLES ARE IN EmotionCard.js (in order of use)  ********** */
+.articles-list { 
+    background-image: url("./lantern.jpg");    
+    border-radius:30px;
+    margin: 0 auto 0 auto;
+    padding: 5px;
+    border: #438945 15px solid;
+    max-width: 90%;
+    overflow: auto;
+    background-size: 100%;
+    opacity:  0.85;
+    overflow-y: scroll;
+}
+.cardA {
+    display: block;
+    max-height: 110px;
+    width:800px;
+    float: right; 
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    padding:7px;
+    border: #3cbcc3 5px solid;
+    outline: 7px solid #438945;
+    overflow-y: scroll;      
+    background-color: #fefce9;
+}
+.top-line {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.article-date {    
+    padding-top: 5px;
+    font-weight: bold;    
+}
+.btns-group {
+    /* border: 5px dashed yellow; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+.editArticleBtn {
+    margin-right: 10px;
+    border-radius:5px;
+    border: 3px solid #3cbcc3;
+    background-color: #fefce9;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+.delArticleBtn {
+    margin-right: 10px;
+    border: 3px solid #3cbcc3;
+    background-color: #fefce9;
+    border-radius:5px;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+.returnBtn {
+    margin-right: 30px;
+    border-radius:5px;
+    border: 3px solid #3cbcc3;
+    background-color: #e0f6f6;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+
+
+/* **********  THESE STYLES ARE IN TaskAddForm.js & TaskEditForm (in order of use)  ********** */
+
+.addTaskContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;    
+    padding:  10px;    
+    background-color: #438945;
+    border: 5px dashed black; 
 }
-.form-control {
-
-}
-.addTaskBtn {
-    margin-left: 30px;
-    margin-bottom: 12px;
-    margin-top: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius:10px;
-}
-.add-form-btn {
-
-}
-.clear-form-btn {
-
-}
-.edit-form-btn {
-
-}
-
-
-
-
-
-/* EmotionList.js */
-
-
-/* TaskList.js */
-.task-card {
+.emotions-list-examples {
     display: flex;
-    flex-direction: column;    
-    justify-content: left;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;
-    /* border: 1px solid black; */
-    padding-bottom: 12px;
-    background-color: #Fefce9;
+    
+    margin: 5px;
+    padding: 5px;
+    background-color: #eba63f;
+    text-align: center;    
+    border: 5px solid #438945;       
+}
+.card-container {
+    width: 12.5%;
+    background-color: #eba63f;
+    border: 5px solid #438945;
     
 }
-
-
-
-/* ExamplesList */
-
-.examples-list {
+.cardS {
+    display: flex;  
+    flex-direction: column;    
+    margin: 5px;
+    padding: 5px;
+    background-color: #fefce9;
+    text-align: left;    
+    border: 5px solid #eba63f;
+    font-size: 90%;         
+}
+.cardS-title {
+    background-color: #e40c2b;
+    text-align: center;
+}
+.bottomTasks {
+    background-image: url("./road.jpg");    
+    border-radius: 30px;
+    /* margin: 0 auto 0 auto; */
+    padding: 5px;
+    border: #438945 10px solid;
+    max-width: 100%;
+    /* overflow: auto; */
+    background-size: 50%;
+    opacity:  0.9;
+    margin: 20px;
+    background-color: #fefce9;
+    /* border: 5px dashed red; */
+    
+     
+}
+.taskInputForm {
     display: flex;
-    border: 2px solid black;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #eba63f;
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin: 50px;
+    padding: 5px;
+    min-height: 36px;
+    border-radius: 30px;
+    /* border: 5px dashed orange; */
 }
-.examples-card {
-    display: flex;
-    flex-direction: column;
-    background-color: li;
+.form-group {
+    
 }
-.examples-card-body {
-    background-color: violet;
-    font-size: .8em;
+.task-input {
+    width: 400px;
+    font-size: .9em;
+    font-weight: bold;
 }
-.examples-card-title {
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    justify-content: center;
+.form-control {
+    /* border: 5px dashed pink; */
 }
-
-
+.add-form-btn {
+    margin-right: 30px;
+    border-radius:15px;
+    border: 2px solid #438945;
+    background-color: #fefce9;
+    width: 70px;
+    outline: 7px solid #438945;
+}
+.clear-form-btn {
+    margin-right: 10px;
+    border-radius:15px;
+    border: 2px solid #438945;
+    background-color: #fefce9;
+    width: 70px;
+    outline: 7px solid #438945;
+}

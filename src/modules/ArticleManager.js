@@ -6,7 +6,7 @@ export default {
   },
  
   getAll() {
-    return fetch(`${remoteURL}/articles/?_expand=emotion`).then(e => e.json());
+    return fetch(`${remoteURL}/articles`).then(e => e.json());
   },
 
   getArticlesByUser(id) {

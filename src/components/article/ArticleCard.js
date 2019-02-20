@@ -1,41 +1,96 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import ArticleManager from "../../modules/ArticleManager";
+import { CardBody, Card, CardImg, CardTitle, CardText, } from 'reactstrap';
+import {  CardDeck, CardSubtitle } from 'reactstrap';
 import "../emotion/List.css"
 export default class ArticleCard extends Component {
 
-  // handleCheckChange = e => {
-  //   e.preventDefault();
-  //   };
+//   constructNewDate = evt => {
+//     evt.preventDefault();
+
+//   var today = new Date().toLocaleDateString('en-US', {  
+//     day : 'numeric',
+//     month : 'short',
+//     year : 'numeric'
+//   })
+//   this.props.constructNewDate(this.props.artiicle.entryDate)
+//   .then(() => 
+//       this.props.history.push("/articles"));
+// }
+
+    render() {
+      console.log("users array from ArticleList", this.props.article)
+      return (
+        <React.Fragment>
+          <div key={this.props.article.id}>
+           
+           <Card className="cardA">
+             
+           {/* <div className="articles-picture">
+            <Image src={"./lantern.jpg"} width={500} height={300} mode='fit' />  
+           </div> */}
+            <div className="top-line">
+              <div>
   
-  //  this.props
-  //  .addCheckChange(completeCheck, this.props.task.id)
-  // }
+                <CardSubtitle className="article-date">
+                  {/* {this.constructNewDate} */}
+                  {this.props.article.entryDate}
+                </CardSubtitle>
+  
+              </div>
 
-  render() {
-    // {this.state.tasks.sort(function(a, b){
-    //   return new Date(a.dueDate) - new Date(b.dueDate)})}
-    console.log("props passed from ArticleList", this.props)
-    return (
-      <React.Fragment>
-        <div key={this.props.article.id}>
-         <div className="cardA">
-          <div className="top-line">
+            <div className="btns-group">
 
-            <section className="entry-date">{this.props.article.entryDate}</section>
-            <section className="journal-entry">{this.props.task.article.emotionName}</section>           
+              <div>
+                <button
+                  type="button"
+                  className="editArticleBtn"
+                  onClick={() => {                  
+                    this.props.history.push("/home")                     
+                  }}
+                >
+                  Edit
+                </button>
+              </div>
 
+              <div>
+                <button
+                  type="button"
+                  className="delArticleBtn"
+                  onClick={() => {                  
+                    this.props.history.push("/home")                     
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+
+              <div>
+                <button
+                  type="button"
+                  className="returnBtn"
+                  onClick={() => {                  
+                    this.props.history.push("/home")                     
+                  }}
+                >
+                  Return
+                </button>
+              </div>
+
+            </div>
+            {/* End of btns-date div */}
           </div>
-          {/* End of top-line div */}          
+          {/* End of top-line div */}
 
-          <div className="bottom-line"></div>
-
+          <div className="journal-entry">
+            <CardText className="journal-entry">{this.props.article}</CardText>           
           </div>
-          {/* End of cardA div */}
-
+          
+        </Card>
+        {/* End of cardA div */}
         </div>
+      
         {/* End of key div */} 
-      </React.Fragment>
+        </React.Fragment>
     );
   }
 }

@@ -2,12 +2,12 @@ const remoteURL = "http://localhost:5002";
 
 export default {
   getAllUserInfo() {
-    return fetch(`${remoteURL}/users/?_embed=tasks&_embed=emotions&_embed=examples`)
+    return fetch(`${remoteURL}/users/?_embed=tasks&_embed=articles`)
     .then(response=>response.json())
  },
 
-  get(id) {
-    return fetch(`${remoteURL}/users/${id}`).then(e => e.json());
+  getById(id) {
+    return fetch(`${remoteURL}/users/${id}?_embed=tasks&_embed=articles`).then(e => e.json());
   },
 
   getAll() {

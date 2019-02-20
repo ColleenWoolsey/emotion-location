@@ -10,6 +10,9 @@ import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
 import ArticleManager from "../modules/ArticleManager";
 import ArticleList from "./article/ArticleList";
+import ArticleCard from "./article/ArticleCard";
+import EmotionManager from "../modules/EmotionManager";
+
 import "./emotion/List.css";
 
 export default class AppViews extends Component {
@@ -25,14 +28,12 @@ export default class AppViews extends Component {
     
   verifyUser = (userName, password) => {  
     return LoginManager.getNameAndPassword(userName, password)
-    // .then(users =>
-    //   this.setState({
-    //     users: users
-    //   })
-    // )}
   }
-  
-  
+
+  getExamples = (id) => {  
+    return EmotionManager.getExamplesByEmo(id)
+  }
+
   addUser = newUser =>
     LoginManager.post(newUser)
       .then(() => LoginManager.getAll())
@@ -65,7 +66,7 @@ export default class AppViews extends Component {
           tasks: tasks
       }))
     })
-  }
+  } 
 
   render() {
   return(
@@ -91,13 +92,12 @@ export default class AppViews extends Component {
               {...this.props} 
               {...props} 
               tasks={this.state.tasks}
+              articles={this.state.articles}
+              examples={this.state.examples}
               addCheckChange={this.addCheckChange}
               deleteTask={this.deleteTask}
               updateTask={this.updateTask}
               addArticle={this.addArticle}
-              
-              // userName={sessionStorage.getItem("userName")}
-              // user={sessionStorage.getItem("user")}
             />
             )
         }}
@@ -120,12 +120,14 @@ export default class AppViews extends Component {
       {/* this is for list of Journal Entries */}
       <Route exact path="/articles" 
         render={(props) => {
-          console.log("/articles", props)
+          console.log("/articles", this.state.articles)
+          console.log("/articles", this.props.articles)
           return (
             <ArticleList
-              {...props}
+              {...this.props}              
               articles={this.state.articles}
-              userId={this.state.userId} 
+              users={this.state.users}
+               
             />
           );
         }} 
@@ -148,12 +150,15 @@ export default class AppViews extends Component {
       <Route path="/tasks/new"
         render={props => {
           console.log("/tasks/new props from", props)
+          console.log("/tasks/new props from", this.props)
+          console.log("/tasks/new props from", this.props.emotions)
           return (
             <TaskAddForm 
               {...props}           
               {...this.props}
               tasks={this.state.tasks}
               addTask={this.addTask}
+              examples={this.state.examples}
             />
           );
         }}

@@ -16,23 +16,25 @@ export default class Emoloco extends Component {
   };
 
  componentDidMount() {
-    EmotionManager.getAll()
+    EmotionManager.getAllEmotionInfo()
     .then(allEmotions => {
     console.log("allEmotions from componentDidMount", allEmotions)
         this.setState({
             emotions: allEmotions
-        })                 
+        })                        
     })
+    // Fetched : `${remoteURL}/emotions/?_embed=examples`
+      
 
     LoginManager.getAll()
     .then(allUsers => {
+      console.log("getAll from componentDidMount", allUsers)
         this.setState({
             users: allUsers
-        })
-        console.log("allUsers from componentDidMount", allUsers)
+        })        
     })
-           
-    }
+    // Fetched:  `${remoteURL}/users`      
+  }
 
   render() {
     return (

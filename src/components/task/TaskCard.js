@@ -10,8 +10,7 @@ export default class TaskCard extends Component {
       complete: !this.props.task.complete
     };
   
-   this.props
-   .addCheckChange(completeCheck, this.props.task.id)
+   this.props.addCheckChange(completeCheck, this.props.task.id)
   }
 
   render() {
@@ -28,9 +27,8 @@ export default class TaskCard extends Component {
             <section>
               <button
                 type="button"
-                className="editTaskBtn"
-                onClick={() => {
-                  
+                className="editBtn"
+                onClick={() => {                  
                   this.props.history.push(`/task/${this.props.task.id}`)                     
                 }}
               >
@@ -39,7 +37,7 @@ export default class TaskCard extends Component {
             
               <button
                 type="button"
-                className="delTaskBtn"
+                className="delBtn"
                 onClick={() => {
                   this.props.deleteTask(this.props.task.id)
                   // .then(() => this.props.history.push("/home"))

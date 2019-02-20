@@ -23,6 +23,11 @@
       "email": "rlwool@aol.com",
       "password": "p",
       "id": 4
+    },
+    {
+      "userName": "",
+      "password": "",
+      "id": 5
     }
   ],
   "emotions": [
@@ -33,9 +38,7 @@
       "giftTitle": "THE GIFT OF HURT",
       "gift": "Healing through relationship and Courage to risk",
       "impairment": "Resentment",
-      "summary": "Hurt lets us know that we have pain. It’s the thread that runs through all feelings. It’s an opportunity to admit, accept, and surrender to the truth of our neediness. Hurt points to our need for help from those who have genuine regard and love for us. All healing comes thru relationship.",
-      "examples": "suggested task 1",
-      "eColor": "primary"
+      "summary": "FIRST STEP TOWARD HEALING - Hurt lets us know that we have pain. It’s the thread that runs through all feelings. It’s an opportunity to admit, accept, and surrender to the truth of our neediness. Hurt points to our need for help from those who have genuine regard and love for us. All healing comes thru relationship - Defensiveness denies and minimizes the pain - When we refuse to feel the pain in our hearts we HARM others - To admit hurt is to begin to hope for a solution not just relief."
     },
     {
       "id": 2,
@@ -44,9 +47,7 @@
       "giftTitle": "THE GIFT OF LONELINESS",
       "gift": "Loneliness speaks to our deep hunger to belong, be known, and loved. Causes us to seek intimacy",
       "impairment": "Apathy",
-      "summary": "Loneliness speaks to our deep hunger to belong and be known, received and loved. It’s a gift that causes us to seek out relationship where we can be expectant. We are lonely when we have both a desire to live in hope, and a willingness to hear, “no”.",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "secondary"
+      "summary": "FIRST STEP TOWATD INTIMACY - Loneliness speaks to our deep hunger to belong and be known, received and loved. It’s a gift that causes us to seek out relationship where we can be expectant. We are lonely when we have both a desire to live in hope, and a willingness to hear, “no”. APATHY is the opposite of love -It denies our loneliness. Apathy makes us inhuman - it neither loves nor hates - It does not care."
     },
     {
       "id": 3,
@@ -55,9 +56,7 @@
       "giftTitle": "THE GIFT OF SADNESS",
       "gift": "Acceptance and serenity about what we can't control",
       "impairment": "Self-Pity & Hopeless Resignation",
-      "summary": "Sadness speaks to how much we VALUE what is missed, what’s gone, what’s lost. It also speaks of how much we value what we love, what we have and what we live. The more we live an open hearted life of fullness, the more we lose! Sadness gives us the gift of valuing and honoring life.",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "success"
+      "summary": "FIRST STEP TOWARD HEALING FROM LOSS - Sadness speaks to how much we VALUE what is missed, what’s gone, what’s lost. It also speaks of how much we value what we love, what we have and what we live. The more we live an open hearted life of fullness, the more we lose! Sadness gives us the gift of valuing and honoring life. If we don’t acknowledge our sadness, the grief deepens and stays. SELF-PITY is a way to avoid genuine sadness. It sounds like - Nothing ever goes right for me - I’m always the one who has to sacrifice - It’s no big deal - Self-pity is a strategy to manipulate others to feel sadness for us. RESIGNATION is rooted in hopelessness. It’s a feigned acceptance of painful unresolved issues which helps us avoid dependency, neediness and vulnerability. It sounds like - Don’t cry over spilt milk - It’s water under the bridge. When we can’t ache within for what was lost we have resigned ourselves to an existence that never lets life affect us!"
     },
     {
       "id": 4,
@@ -66,9 +65,7 @@
       "giftTitle": "THE GIFT OF ANGER ",
       "gift": "Passion that moves us to express the substance and commitments of our heart",
       "impairment": "Pride & Depression",
-      "summary": "ANGER MOVES US TO ACTION. It shows our yearning and hunger for life. It exposes the substance, desires and commitments of our hearts. Angry people can be known because of their unwillingness to hide. It’s the first step to authentic living. It’s a caring feeling saying something matters.",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "danger"
+      "summary": "FIRST STEP TOWARD AUTHENTIC LIVING - It shows our yearning and hunger for life. It exposes the substance, desires and commitments of our hearts. Angry people can be known because of their unwillingness to hide. It’s a caring feeling saying something matters - The energy of compassion is rooted in anger - the desire to make the pain we see and feel come to an end. It alerts us to look inside to see what fear or hurt we are experiencing. Anger exposes what we value and expresses our willingness to do what is required to reach that value … even die for what we believe in. ANGER MOVES US TO ACTION!"
     },
     {
       "id": 5,
@@ -77,9 +74,7 @@
       "giftTitle": "THE GIFT OF FEAR",
       "gift": "Wisdom & Faith come from seeking truth instead of safety",
       "impairment": "Anxiety, Judgement & Blindness",
-      "summary": "FEAR MAKES US AWARE OF OUR CHOICES. Fear brings us STRENGTH. It allows us to experience RISK (or run from it). Risk your heart with your need. TRUST others for assistance (or not). DEPEND on others for their skill and willingness. COLLABORATE with others for mutual gain (or become fretful and controlling). We can gain wisdom through the deeply experienced awareness of spiritual truth that starts with listening to fear.",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "warning"
+      "summary": "FIRST STEP TOWARD WISDOM AND SERENITY - FEAR MAKES US AWARE OF OUR CHOICES. Fear brings us STRENGTH. It allows us to experience RISK (or run from it). We risk our hearts by expressing our needs. We risk TRUSTING others for assistance (or not). We choose to DEPEND on others for their skill and willingness. We enjoy opportunities to COLLABORATE with others for mutual gain (or we become fretful and controlling). We gain WISDOM through the deeply experienced awareness of spiritual truth that starts with listening to fear."
     },
     {
       "id": 6,
@@ -88,9 +83,7 @@
       "giftTitle": "THE GIFT OF SHAME",
       "gift": "Humility - Recognition of our potential to fail and do harm, to succeed and to love",
       "impairment": "Toxic Shame & Contempt",
-      "summary": "SHAME is a consciousness of our limitations and giftedness that allows empathy for others. It allows us to stop comparison and competition in order to prove our worth, and start giving ourselves to something greater - the service of others - In humility we are grateful and merciful.",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "info"
+      "summary": "FIRST STEP TOWARD HUMILITY - It's a consciousness of our limitations and giftedness that allows empathy for others. It allows us to stop comparison and competition in order to prove our worth, and start giving ourselves to something greater - the service of others - In humility we are grateful and merciful. Shame acknowledges we are feeling creatures who succeed and fail, need daily, are full of dreams and capabilities, desire great things but are deficient without others. It longs to know our value (that we belong) and that we add life (that we matter)."
     },
     {
       "id": 7,
@@ -99,9 +92,7 @@
       "giftTitle": "THE GIFT OF GUILT",
       "gift": "Freedom & Forgiveness - Desire and vulnerability for change",
       "impairment": "Toxic Shame & Shamelessness",
-      "summary": "GUILT prompts us to seek the forgiveness that sets us free. Through guilt the heart confronts behavior and behavior reveals the state of our hearts. Guilt is our most precious gift because the relinquishing of the heart to another has transforming power. Love comes through truth not merit.",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "light"
+      "summary": "FIRST STEP TOWARD FREEDOM - Guilt prompts us to seek the forgiveness that sets us free. Through guilt the heart confronts behavior and behavior reveals the state of our hearts. Guilt is our most precious gift because the relinquishing of the heart to another has transforming power. We discover love comes through truth not merit."
     },
     {
       "id": 8,
@@ -110,9 +101,7 @@
       "giftTitle": "THE GIFT OF GLADNESS",
       "gift": "Joy with sadness that comes to those who hope",
       "impairment": "Pleasure without heart",
-      "summary": "",
-      "examples": "Dropdown of suggested tasks",
-      "eColor": "dark"
+      "summary": ""
     }
   ],
   "tasks": [
@@ -133,12 +122,12 @@
       "id": 2
     },
     {
+      "id": 3,
       "userId": 1,
       "emotionId": 3,
-      "dueDate": "2019-02-16",
+      "dueDate": "2019-02-21",
       "task": "Send letters to my children at their milestones",
-      "complete": false,
-      "id": 3
+      "complete": false
     },
     {
       "id": 4,
@@ -177,7 +166,7 @@
       "userId": 4,
       "emotionId": 4,
       "dueDate": "2019-02-21",
-      "task": "Forsake manipulating others",
+      "task": "Forsake manipulating  others",
       "complete": false
     },
     {
@@ -269,146 +258,353 @@
       "id": 21
     },
     {
-      "id": 22,
       "userId": 4,
-      "emotionId": 2,
-      "dueDate": "2019-02-06",
-      "task": "lonel",
-      "complete": true
-    },
-    {
-      "userId": 1,
-      "emotionId": 1,
-      "dueDate": "2019-02-06",
-      "task": "Feed Cat",
-      "complete": false,
-      "id": 23
+      "emotionId": 8,
+      "dueDate": "2019-02-26",
+      "task": "u",
+      "complete": true,
+      "id": 22
     }
   ],
   "examples": [
     {
       "id": 1,
       "emotionId": 1,
-      "example": ""
+      "example": "1. Start hurting"
     },
     {
       "id": 2,
       "emotionId": 1,
-      "example": ""
+      "example": "2. Stop Resenting"
     },
     {
       "id": 3,
       "emotionId": 1,
-      "example": ""
+      "example": "3. Take ownership of hurting others"
     },
     {
       "id": 4,
-      "emotionId": 2,
-      "example": ""
+      "emotionId": 1,
+      "example": "4. Acknowledge my inability to heal alone"
     },
     {
       "id": 5,
-      "emotionId": 2,
-      "example": ""
+      "emotionId": 1,
+      "example": "5. Reach out for care, assurance, and help from those not in denial"
     },
     {
       "id": 6,
       "emotionId": 2,
-      "example": ""
+      "example": "1. Relinquish power"
     },
     {
       "id": 7,
       "emotionId": 2,
-      "example": ""
+      "example": "2. Stop demanding"
     },
     {
       "id": 8,
       "emotionId": 2,
-      "example": ""
+      "example": "3. Stop blaming"
     },
     {
       "id": 9,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 2,
+      "example": "4. Stop pretending to enjoy what I don't like"
     },
     {
       "id": 10,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 2,
+      "example": "5. Make time for a friend"
     },
     {
       "id": 11,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 2,
+      "example": "6. Sow wonder, celebration and passion"
     },
     {
       "id": 12,
       "emotionId": 3,
-      "example": ""
+      "example": "1. Value openly"
     },
     {
       "id": 13,
-      "emotionId": 4,
-      "example": ""
+      "emotionId": 3,
+      "example": "2. Create a culture of honor"
+    },
+    {
+      "id": 14,
+      "emotionId": 3,
+      "example": "3. Celebrate milestones"
     },
     {
       "id": 15,
-      "emotionId": 4,
-      "example": ""
+      "emotionId": 3,
+      "example": "4. Hug a loved one"
     },
     {
       "id": 16,
+      "emotionId": 3,
+      "example": "5. Visit old friends"
+    },
+    {
+      "id": 17,
+      "emotionId": 3,
+      "example": "6. Watch the sunrise"
+    },
+    {
+      "id": 18,
+      "emotionId": 3,
+      "example": "7. Grieve when dreams don't come true"
+    },
+    {
+      "id": 19,
       "emotionId": 4,
-      "example": ""
+      "example": "1. Forsake manipulation"
+    },
+    {
+      "id": 20,
+      "emotionId": 4,
+      "example": "2. Tell the truth about my heart's yearnings"
+    },
+    {
+      "id": 21,
+      "emotionId": 4,
+      "example": "3. Admit fault"
+    },
+    {
+      "id": 22,
+      "emotionId": 4,
+      "example": "4. Build bridges"
+    },
+    {
+      "id": 23,
+      "emotionId": 4,
+      "example": "5. Admit the failure of self-sufficiency"
+    },
+    {
+      "id": 24,
+      "emotionId": 4,
+      "example": "6. Empathize - meet others in ther pain"
+    },
+    {
+      "id": 25,
+      "emotionId": 5,
+      "example": "1. Seek truth not safety"
+    },
+    {
+      "id": 26,
+      "emotionId": 5,
+      "example": "2. Acknowledge fear of failure and needs not being met"
+    },
+    {
+      "id": 27,
+      "emotionId": 5,
+      "example": "3. Claim full responsiblity for my choices"
+    },
+    {
+      "id": 28,
+      "emotionId": 5,
+      "example": "4. Evaluate situation and count costs"
+    },
+    {
+      "id": 29,
+      "emotionId": 5,
+      "example": "5. Choose to risk"
+    },
+    {
+      "id": 30,
+      "emotionId": 5,
+      "example": "6. Hold a child's hand in the dark"
+    },
+    {
+      "id": 31,
+      "emotionId": 6,
+      "example": "1. Recognize my potential to fail and do harm"
+    },
+    {
+      "id": 32,
+      "emotionId": 6,
+      "example": "2. Recognize my potential to succeed and to love"
+    },
+    {
+      "id": 33,
+      "emotionId": 6,
+      "example": "3. Stop comparison and competition"
+    },
+    {
+      "id": 34,
+      "emotionId": 6,
+      "example": "4. Be humble"
+    },
+    {
+      "id": 35,
+      "emotionId": 6,
+      "example": "5. Lay down perfection for progress"
+    },
+    {
+      "id": 36,
+      "emotionId": 7,
+      "example": "1. Look into another's eyes and see the hurt"
+    },
+    {
+      "id": 37,
+      "emotionId": 7,
+      "example": "2. Acknowledge the need for change"
+    },
+    {
+      "id": 38,
+      "emotionId": 7,
+      "example": "3. Be fully truthful and exposed"
+    },
+    {
+      "id": 39,
+      "emotionId": 7,
+      "example": "4. Abandon justification and judging"
+    },
+    {
+      "id": 40,
+      "emotionId": 7,
+      "example": "5. Ask for forgiveness"
+    },
+    {
+      "id": 41,
+      "emotionId": 7,
+      "example": "6. Receive love through truth not merit"
+    },
+    {
+      "id": 42,
+      "emotionId": 8,
+      "example": "1. FEEL ALL MY FEELINGS"
+    },
+    {
+      "id": 43,
+      "emotionId": 8,
+      "example": "2. Tell the truth"
+    },
+    {
+      "id": 44,
+      "emotionId": 8,
+      "example": "3. Give it to God"
+    },
+    {
+      "id": 45,
+      "emotionId": 8,
+      "example": "4. Follow life's call"
+    },
+    {
+      "id": 46,
+      "emotionId": 8,
+      "example": "5. Submit to authority"
+    },
+    {
+      "id": 47,
+      "emotionId": 8,
+      "example": "6. Acknowledge that I matter"
+    },
+    {
+      "id": 48,
+      "emotionId": 8,
+      "example": "7. Recognize what I value"
+    },
+    {
+      "id": 49,
+      "emotionId": 8,
+      "example": "8. Risk loss"
+    },
+    {
+      "id": 50,
+      "emotionId": 8,
+      "example": "9. Enjoy Success"
+    },
+    {
+      "id": 51,
+      "emotionId": 1,
+      "example": "6. Move toward a solution and not just relief"
+    },
+    {
+      "id": 52,
+      "emotionId": 2,
+      "example": "7. Forsake apathy"
+    },
+    {
+      "id": 53,
+      "emotionId": 2,
+      "example": "8. Acknowledge my need for love"
+    },
+    {
+      "id": 54,
+      "emotionId": 3,
+      "example": "8. Accept what I can't control and hope that good will come"
+    },
+    {
+      "id": 55,
+      "emotionId": 4,
+      "example": "7. Speak truth with love and respect"
+    },
+    {
+      "id": 56,
+      "emotionId": 4,
+      "example": "8. Make promises"
+    },
+    {
+      "id": 57,
+      "emotionId": 6,
+      "example": "6. Generously offer mercy and forgiveness"
+    },
+    {
+      "id": 58,
+      "emotionId": 8,
+      "example": "10. HOPE"
     }
   ],
   "articles": [
     {
-      "id": 1,
-      "userId": "1",
-      "entryDate": "2019-02-17",
-      "article": "This is the first journal entry for Tom Smith who is userId 1"
+      "userId": 1,
+      "entryDate": "Mon Feb 18 2019 22:06:02 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross Says ... You don't have to tell them you did this with a paper towel. We don't know where that goes. Hit it, and get away from it. Look at your painting and make a decision. Drop in a happy little sky here. If you learn to make one tree, you can make a million trees.\n\nThere's some little stringy ones that live down here. Bravery test! Truly the joy of painting is the friends that you make doing it. Don't be afraid to go out on a limb once in a while. Let's get crazy. You didn't know you had so much power, did you?",
+      "id": 1
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
-      "article": "This is my first journal entry",
+      "entryDate": "Mon Feb 18 2019 22:06:57 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross Says ... We'll put a few little nicety things in there. Everybody likes mountains. I used to work for weeks to make a tree. Chickens need a place to live too. All you're worried about is this nice outside shape. Gentle, swirling motions here.\n\nIf you over-mix it, you just get one dead color. You have to make these big decisions in your world. Sort of an orangy-yellowish color. This is such a super day! Just let it float. This is one that you can do.",
       "id": 2
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
-      "article": "This is my first journal entry",
+      "entryDate": "Mon Feb 18 2019 22:07:31 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Let's build us a little cloud. Sometimes it's fun to play little games in your mountains. Let's do another one -- what the heck! Just sorta work it around and around here. Everything should get lighter toward the horizon. So many things you can create.\n\nLet's have some big, fluffy clouds in this painting. This is where you take out all your frustrations and all your hostilities, and just have a good time. Enough of that. Just let your imagination take you to anywhere you want to be. Just decide basically where you wanna start, and off you go! Show it who's boss!",
       "id": 3
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:39:05 GMT-0600 (Central Standard Time)",
-      "article": "This is my first journal entry",
+      "entryDate": "Mon Feb 18 2019 22:09:34 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Don't over do it -- be careful. Be careful. Always start with a clean brush in a light area and work outward. We planned this son-of-a-gun right from the beginning. People are so excited when they see this happen. Everybody will see nature through different eyes.",
       "id": 4
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:50:02 GMT-0600 (Central Standard Time)",
-      "article": "second journal entry",
+      "entryDate": "Mon Feb 18 2019 22:10:54 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving.\n\nIf there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
       "id": 5
     },
     {
       "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:58:35 GMT-0600 (Central Standard Time)",
-      "article": "Third journal entry",
+      "entryDate": "Mon Feb 18 2019 23:05:41 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
       "id": 6
     },
     {
-      "userId": 1,
-      "entryDate": "Sun Feb 17 2019 22:59:18 GMT-0600 (Central Standard Time)",
-      "article": "Fourth Journal Entry",
+      "userId": 4,
+      "entryDate": "Mon Feb 18 2019 23:06:46 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... Today's such a wonderful day, let's just make a happy little painting. Maybe I'll have a bit mountain today. You can do anything that you believe you can do. Get it to where you want it, and leave it alone. That's the fun part of this whole technique.",
       "id": 7
     },
     {
       "userId": 4,
-      "entryDate": "Mon Feb 18 2019 13:05:09 GMT-0600 (Central Standard Time)",
-      "article": "Journal entry five",
+      "entryDate": "Mon Feb 18 2019 23:12:02 GMT-0600 (Central Standard Time)",
+      "article": "Bob Ross says ... I don't know exactly what they are, and I don't really care at this point. Just leave that space open. Learn to work with anything that happens. It helps, when you're doing these kinds of things, make up little stories in your mind. We'll start playing a little bit. Just let it go, have fun.\n\nDevote a little time to working with it. Practice visualizing things in your mind. You can do anything that you believe you can do. Just let it work around and play. Art is an expression of self. The only thing I'm good at is falling down.",
       "id": 8
     }
   ]

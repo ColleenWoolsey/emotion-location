@@ -4,6 +4,7 @@ import EmotionCard from "./EmotionCard";
 import EmotionSummary from "./EmotionSummary";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
+import LoginManager from "../../modules/LoginManager";
 import ArticleManager from "../../modules/ArticleManager";
 import JournalCard from "../article/JournalCard";
 import ArticleCard from "../article/ArticleCard";
@@ -12,17 +13,18 @@ export default class EmotionList extends Component {
 
   state = {
     tasks: [],
-    examples: [],
+    user: [],
     articles: []   
   };
 
   addArticle = article =>
     ArticleManager.post(article)
       .then(() => ArticleManager.getArticlesByUser(sessionStorage.getItem("user")))
-      .then(allArticles =>
+      .then(articles =>
         this.setState({
-          articles: allArticles
+          articles: articles
         })
+        
       ); 
 
   deleteTask = task =>
@@ -60,18 +62,30 @@ export default class EmotionList extends Component {
         this.setState({
             articles: allArticles
         })        
-        console.log("allArticles from componentDidMount", allArticles)
+        console.log("getArticlesByUser from componentDidMount", allArticles)
+        console.log ("this.props", this.props)
+        console.log ("this.state", this.state)
+        console.log ("this.state.articles", this.state.articles)
+        console.log ("this.props.articles", this.props.articles)
     })
+  
+    // LoginManager.getById(sessionStorage.getItem("user"))
+    // .then(user => {
+    //     this.setState({
+    //         user: user
+    //     })
+    //     console.log("allUserInfo from componentDidMount", user)
+    //     console.log ("this.props", this.props)
+    //     console.log ("this.state", this.state)
+    //     console.log ("this.state.articles", this.state.articles)
+    //     console.log ("this.props.articles", this.props.articles)
+    // })
+
   };
 
   render() {
 
-    this.state.articles.sort(function(a, b) 
-                {a = new Date(a.entryDate);
-                 b = new Date(b.entryDate);
-                 return a>b ? -1 : a<b ? 1 : 0;}).reverse();
-
-    this.state.tasks.sort(function(a, b) 
+    this.props.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
                  b = new Date(b.dueDate);
                  return a>b ? -1 : a<b ? 1 : 0;}).reverse();
@@ -97,17 +111,16 @@ export default class EmotionList extends Component {
                   <button
                     type="button"
                     className="listArticlesBtn"
-                    onClick={() => {                      
-                      // this.props.history.push(`/articles`)                     
-                    }}
-                  >
+                    onClick={() => {              
+                      this.props.history.push("/articles")                         
+                  }}>                  
                     Read Journal Entries
                   </button>                  
                 </div>
 
-                  <div>
-                    <h4 className="reflect">... reflect... repent... rejoice... reconcile</h4>
-                  </div>
+                <div>
+                  <h4 className="reflect">... reflect... repent... rejoice... reconcile</h4>
+                </div>
 
               </div>
               {/* End of div search */}
@@ -117,7 +130,7 @@ export default class EmotionList extends Component {
                 {...this.props}
                 articles={this.state.articles}
                 addArticle={this.addArticle}
-                userId={this.state.userId}
+                userId={sessionStorage.getItem("user")}
                 />        
               </div>
               {/* End of div journal-article */}

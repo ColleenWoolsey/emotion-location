@@ -28,9 +28,7 @@ export default class EmotionCard extends React.Component {
         <React.Fragment>
         <div key={this.props.emotion.id}>
           <Card className="cardE">
-            {/* <CardImg className="cardE-img" top width="100%" src={this.props.emotion.imageURL} alt="imageUrl" /> */}
-            {/* <CardBody className="card-body"> */}
-
+            
               <h3 className="cardE-title">{this.props.emotion.emotionName}<Badge color="secondary"></Badge></h3>
                            
               <CardSubtitle className="cardE-gift-subtitle">GIFT</CardSubtitle>              
@@ -51,8 +49,6 @@ export default class EmotionCard extends React.Component {
                   </ModalFooter> */}
                 </Modal>
 
-              {/* </CardBody>           */}
-            
           </Card> 
         </div>
       </React.Fragment>
