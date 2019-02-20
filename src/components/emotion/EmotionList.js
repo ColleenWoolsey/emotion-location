@@ -13,7 +13,7 @@ export default class EmotionList extends Component {
 
   state = {
     tasks: [],
-    users: [],
+    user: [],
     articles: []   
   };
 
@@ -69,17 +69,17 @@ export default class EmotionList extends Component {
         console.log ("this.props.articles", this.props.articles)
     })
   
-    LoginManager.getById(sessionStorage.getItem("user"))
-    .then(allUsers => {
-        this.setState({
-            users: allUsers
-        })
-        console.log("allUserInfo from componentDidMount", allUsers)
-        console.log ("this.props", this.props)
-        console.log ("this.state", this.state)
-        console.log ("this.state.articles", this.state.articles)
-        console.log ("this.props.articles", this.props.articles)
-    })
+    // LoginManager.getById(sessionStorage.getItem("user"))
+    // .then(user => {
+    //     this.setState({
+    //         user: user
+    //     })
+    //     console.log("allUserInfo from componentDidMount", user)
+    //     console.log ("this.props", this.props)
+    //     console.log ("this.state", this.state)
+    //     console.log ("this.state.articles", this.state.articles)
+    //     console.log ("this.props.articles", this.props.articles)
+    // })
 
   };
 
@@ -111,12 +111,9 @@ export default class EmotionList extends Component {
                   <button
                     type="button"
                     className="listArticlesBtn"
-                    onClick={() => {
-                      // this.props.history.push(`/task/${this.props.task.id}`)              
-                      this.props.history.push("/articles/")                         
-                  }}> 
-                     
-                  >                 
+                    onClick={() => {              
+                      this.props.history.push("/articles")                         
+                  }}>                  
                     Read Journal Entries
                   </button>                  
                 </div>

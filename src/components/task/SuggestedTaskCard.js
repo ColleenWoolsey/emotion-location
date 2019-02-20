@@ -9,7 +9,7 @@ export default class SuggestedTaskCard extends React.Component {
 
   state = {
     examples: []
-};
+  };
   componentDidMount() {
     
     EmotionManager.getExamplesByEmo(this.props.emotion.id) 

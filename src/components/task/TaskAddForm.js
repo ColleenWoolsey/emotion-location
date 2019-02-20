@@ -42,17 +42,6 @@ constructNewTask = evt => {
       this.props.history.push("/home"));
     };
 
-    // componentDidMount() {
-    
-    //   EmotionManager.getExamplesByEmo(this.props.emotion.id) 
-    //   .then(allExamples => {
-    //       this.setState({
-    //           examples: allExamples
-    //       })        
-    //       console.log("allExamples from componentDidMount", allExamples)
-    //   })
-    // }
-
   render() {
     return (
       <React.Fragment>
@@ -78,7 +67,8 @@ constructNewTask = evt => {
           <Form inline autoComplete="off" className="taskInputForm">
 
           <div className="form-group">
-            <label htmlFor="emotionId" sm={2} size="lg">Emotion</label>
+            <label htmlFor="emotionId" sm={2} size="lg">Emotion:  </label>
+            
             <select
               bssize="lg"
               defaultValue=""
@@ -96,7 +86,8 @@ constructNewTask = evt => {
             </div>
 
           <div className="form-group">
-            <label htmlFor="dueDate">Completion Date</label>
+            <label htmlFor="dueDate">Completion Date:  </label>
+            
             <Input className="form-control"
               type="date"
               required
@@ -107,13 +98,15 @@ constructNewTask = evt => {
           </div>
               
           <div className="form-group">
-            <label htmlFor="task">Task</label>
+            <label htmlFor="task">Task:  </label>
+            
             <Input className="form-control"
               type="text"
               required 
               name="task" 
               id="task" 
               placeholder="task"
+              className="task-input"
               onChange={this.handleFieldChange}
               />
           </div>
@@ -129,7 +122,7 @@ constructNewTask = evt => {
 
             <button className="clearFormBtn"
               type="submit"
-              className="clearFormBtn"
+              className="clear-form-btn"
               onClick={this.clearForm}
               id="clear-form-btn"
             >Clear

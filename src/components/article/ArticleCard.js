@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import Image from "./Image"
-import { Link } from "react-router-dom";
-import ArticleManager from "../../modules/ArticleManager";
 import { CardBody, Card, CardImg, CardTitle, CardText, } from 'reactstrap';
 import {  CardDeck, CardSubtitle } from 'reactstrap';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import "../emotion/List.css"
 export default class ArticleCard extends Component {
 
