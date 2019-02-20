@@ -29,7 +29,16 @@ export default class ArticleList extends Component {
       <React.Fragment>
         <div className="articles-list">        
         {this.props.articles.map(article => (
-            <ArticleCard key={article.id} article={article} {...this.props} />
+            <ArticleCard key={article.id}
+            article={article}
+            {...this.props}
+
+            articles={this.state.articles}
+            articles={this.props.articles} 
+            
+            article={this.props.article}
+            article={this.state.article}            
+           />
           ))}
         </div>
       </React.Fragment>    

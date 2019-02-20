@@ -272,91 +272,83 @@
       "task": "Reach out for love and give it away",
       "complete": false,
       "id": 21
-    },
-    {
-      "id": 22,
-      "userId": 4,
-      "emotionId": 2,
-      "dueDate": "2019-02-06",
-      "task": "lonel",
-      "complete": true
     }
   ],
   "examples": [
     {
       "id": 1,
       "emotionId": 1,
-      "example": ""
+      "example": "example of emotion 1"
     },
     {
       "id": 2,
       "emotionId": 1,
-      "example": ""
+      "example": "2nd example of emotion 1"
     },
     {
       "id": 3,
       "emotionId": 1,
-      "example": ""
+      "example": "third example of emotion 1"
     },
     {
       "id": 4,
       "emotionId": 2,
-      "example": ""
+      "example": "example of emotion 2"
     },
     {
       "id": 5,
       "emotionId": 2,
-      "example": ""
+      "example": "2nd example of emotion 2"
     },
     {
       "id": 6,
-      "emotionId": 2,
-      "example": ""
+      "emotionId": 3,
+      "example": "a"
     },
     {
       "id": 7,
-      "emotionId": 2,
-      "example": ""
+      "emotionId": 3,
+      "example": "b"
     },
     {
       "id": 8,
-      "emotionId": 2,
-      "example": ""
+      "emotionId": 4,
+      "example": "c"
     },
     {
       "id": 9,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 4,
+      "example": "d"
     },
     {
       "id": 10,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 5,
+      "example": "e"
     },
     {
       "id": 11,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 5,
+      "example": "f"
     },
     {
       "id": 12,
-      "emotionId": 3,
-      "example": ""
+      "emotionId": 6,
+      "example": "g"
     },
     {
       "id": 13,
-      "emotionId": 4,
-      "example": ""
+      "emotionId": 6,
+      "example": "h"
     },
     {
       "id": 15,
-      "emotionId": 4,
-      "example": ""
+      "emotionId": 7,
+      "example": "i"
     },
     {
       "id": 16,
-      "emotionId": 4,
-      "example": ""
+      "emotionId": 8,
+      "example": "j"
     }
   ],
   "articles": [

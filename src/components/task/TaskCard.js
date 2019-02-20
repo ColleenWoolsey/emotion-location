@@ -10,8 +10,7 @@ export default class TaskCard extends Component {
       complete: !this.props.task.complete
     };
   
-   this.props
-   .addCheckChange(completeCheck, this.props.task.id)
+   this.props.addCheckChange(completeCheck, this.props.task.id)
   }
 
   render() {

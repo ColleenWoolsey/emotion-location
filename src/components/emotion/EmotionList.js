@@ -13,7 +13,7 @@ export default class EmotionList extends Component {
 
   state = {
     tasks: [],
-    examples: [],
+    users: [],
     articles: []   
   };
 
@@ -111,7 +111,8 @@ export default class EmotionList extends Component {
                   <button
                     type="button"
                     className="listArticlesBtn"
-                    onClick={() => {                
+                    onClick={() => {
+                      // this.props.history.push(`/task/${this.props.task.id}`)              
                       this.props.history.push("/articles/")                         
                   }}> 
                      

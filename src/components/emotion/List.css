@@ -21,7 +21,7 @@
     flex-direction: row;    
     margin-right: 7px;
     background-color: #438945;
-    /* border: 5px dashed blue; */        
+    border: 5px dashed blue;        
 }
 .bottom-left {
     background-color: #fefce9;
@@ -268,8 +268,7 @@
 }
 
 
-/* **********  THIS STYLES ARE IN EmotionCard.js (in order of use)  ********** */
-
+/* **********  THESE STYLES ARE IN EmotionCard.js (in order of use)  ********** */
 .articles-list { 
     background-image: url("./lantern.jpg");    
     border-radius:30px;
@@ -335,16 +334,72 @@
 }
 
 
-/* **********  THIS STYLES ARE IN TaskAddForm.js & TaskEditForm (in order of use)  ********** */
-.form-group {
+/* **********  THESE STYLES ARE IN TaskAddForm.js & TaskEditForm (in order of use)  ********** */
+
+.addTaskContainer {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    
+    padding:  10px;    
+    background-color: #438945;
+    border: 5px dashed black; 
+}
+/* .topExamples {
+    display: block;
+     
+    margin-right: 7px;
+    background-color: #eba63f;
+    padding: 10px;
+    margin: 20px;
+    border: 5px dashed blue;
+} */
+.emotions-list-examples {
+    display: flex;
+    
+    margin: 5px;
+    padding: 5px;
+    background-color: #fefce9;
+    text-align: center;    
+    border: 5px dashed black;       
+}
+.card-container {
+    width: 12.5%;
+    border: 5px dashed red;
+}
+.cardS {
+    display: flex;  
+    flex-direction: column;    
+    
+    margin: 5px;
+    padding: 5px;
+    background-color: #fefce9;
+    text-align: center;    
+    border: 5px dashed blue;           
+}
+.cardS-title {
+    display:flex;
+    /* flex-basis: 12.5%; */
+}
+.bottomTasks {
+    background-color: #fefce9;
+    border: 5px dashed red;
+    margin: 10px;
+    padding: 10px;
+     
+}
+.taskInputForm {
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    margin: 30px;
+    padding: 10px;
+    min-height: 170px;
+    border: 5px dashed orange;
 }
 .form-control {
-
+    border: 5px dashed pink;
 }
-
 .add-form-btn {
 
 }
@@ -353,29 +408,6 @@
 }
 .edit-form-btn {
 
-}
-
-/* ExamplesList */
-
-.examples-list {
-    display: flex;
-    border: 2px solid black;
-    flex-direction: column;
-}
-.examples-card {
-    display: flex;
-    flex-direction: column;
-    background-color: li;
-}
-.examples-card-body {
-    background-color: violet;
-    font-size: .8em;
-}
-.examples-card-title {
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    justify-content: center;
 }
 
 
