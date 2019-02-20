@@ -35,10 +35,6 @@ export default class SuggestedTaskCard extends React.Component {
               <h3>{this.props.emotion.emotionName}</h3>
             </CardTitle>
 
-            <CardTitle className="cardS-title">
-              <h5>Suggested Tasks</h5>
-            </CardTitle>
-
             <div className="suggested-tasks">                                
                 {this.state.examples.map(example => (
                   <ExampleCard key={example.id} example={example} {...this.props} 

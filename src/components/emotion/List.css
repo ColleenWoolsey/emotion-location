@@ -9,7 +9,7 @@
     max-width: 95%;
     overflow: auto;
     background-size: 100%;
-    opacity:  0.85;
+    /* opacity:  0.85; */
     overflow-y: scroll;
     align-items: baseline;        
     background-color: #438945;       
@@ -344,47 +344,39 @@
 .addTaskContainer {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
     padding:  10px;    
     background-color: #438945;
     border: 5px dashed black; 
 }
-/* .topExamples {
-    display: block;
-     
-    margin-right: 7px;
-    background-color: #eba63f;
-    padding: 10px;
-    margin: 20px;
-    border: 5px dashed blue;
-} */
 .emotions-list-examples {
     display: flex;
     
     margin: 5px;
     padding: 5px;
-    background-color: #fefce9;
+    background-color: #eba63f;
     text-align: center;    
-    border: 5px dashed black;       
+    border: 5px solid #438945;       
 }
 .card-container {
     width: 12.5%;
-    border: 5px dashed red;
+    background-color: #eba63f;
+    border: 5px solid #438945;
+    
 }
 .cardS {
     display: flex;  
     flex-direction: column;    
-    
     margin: 5px;
     padding: 5px;
     background-color: #fefce9;
-    text-align: center;    
-    border: 5px dashed blue;           
+    text-align: left;    
+    border: 5px solid #eba63f;
+    font-size: 90%;         
 }
 .cardS-title {
-    display:flex;
-    /* flex-basis: 12.5%; */
+    background-color: #e40c2b;
+    text-align: center;
 }
 .bottomTasks {
     background-image: url("./road.jpg");    
@@ -395,7 +387,7 @@
     max-width: 100%;
     /* overflow: auto; */
     background-size: 50%;
-    opacity:  0.8;
+    opacity:  0.9;
     margin: 20px;
     background-color: #fefce9;
     /* border: 5px dashed red; */
