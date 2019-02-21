@@ -16,6 +16,21 @@
       "userName": "Harry Smith",
       "password": "three",
       "id": 3
+    },
+    {
+      "userName": "Santa",
+      "password": "c",
+      "id": 4
+    },
+    {
+      "userName": "Santa",
+      "password": "x",
+      "id": 5
+    },
+    {
+      "userName": "Santa",
+      "password": "x",
+      "id": 6
     }
   ],
   "emotions": [
@@ -542,38 +557,44 @@
     {
       "userId": 1,
       "entryDate": "Mon Feb 18 2019 22:06:02 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross Says ... You don't have to tell them you did this with a paper towel. We don't know where that goes. Hit it, and get away from it. Look at your painting and make a decision. Drop in a happy little sky here. If you learn to make one tree, you can make a million trees.\n\nThere's some little stringy ones that live down here. Bravery test! Truly the joy of painting is the friends that you make doing it. Don't be afraid to go out on a limb once in a while. Let's get crazy. You didn't know you had so much power, did you?",
+      "entry": "Bob Ross Says ... You don't have to tell them you did this with a paper towel. We don't know where that goes. Hit it, and get away from it. Look at your painting and make a decision. Drop in a happy little sky here. If you learn to make one tree, you can make a million trees.\n\nThere's some little stringy ones that live down here. Bravery test! Truly the joy of painting is the friends that you make doing it. Don't be afraid to go out on a limb once in a while. Let's get crazy. You didn't know you had so much power, did you?",
       "id": 1
     },
     {
       "userId": 1,
       "entryDate": "Mon Feb 18 2019 22:06:57 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross Says ... We'll put a few little nicety things in there. Everybody likes mountains. I used to work for weeks to make a tree. Chickens need a place to live too. All you're worried about is this nice outside shape. Gentle, swirling motions here.\n\nIf you over-mix it, you just get one dead color. You have to make these big decisions in your world. Sort of an orangy-yellowish color. This is such a super day! Just let it float. This is one that you can do.",
+      "entry": "Bob Ross Says ... We'll put a few little nicety things in there. Everybody likes mountains. I used to work for weeks to make a tree. Chickens need a place to live too. All you're worried about is this nice outside shape. Gentle, swirling motions here.\n\nIf you over-mix it, you just get one dead color. You have to make these big decisions in your world. Sort of an orangy-yellowish color. This is such a super day! Just let it float. This is one that you can do.",
       "id": 2
     },
     {
       "userId": 1,
       "entryDate": "Mon Feb 18 2019 22:07:31 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross says ... Let's build us a little cloud. Sometimes it's fun to play little games in your mountains. Let's do another one -- what the heck! Just sorta work it around and around here. Everything should get lighter toward the horizon. So many things you can create.\n\nLet's have some big, fluffy clouds in this painting. This is where you take out all your frustrations and all your hostilities, and just have a good time. Enough of that. Just let your imagination take you to anywhere you want to be. Just decide basically where you wanna start, and off you go! Show it who's boss!",
+      "entry": "Bob Ross says ... Let's build us a little cloud. Sometimes it's fun to play little games in your mountains. Let's do another one -- what the heck! Just sorta work it around and around here. Everything should get lighter toward the horizon. So many things you can create.\n\nLet's have some big, fluffy clouds in this painting. This is where you take out all your frustrations and all your hostilities, and just have a good time. Enough of that. Just let your imagination take you to anywhere you want to be. Just decide basically where you wanna start, and off you go! Show it who's boss!",
       "id": 3
     },
     {
       "userId": 1,
       "entryDate": "Mon Feb 18 2019 22:09:34 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross says ... Don't over do it -- be careful. Be careful. Always start with a clean brush in a light area and work outward. We planned this son-of-a-gun right from the beginning. People are so excited when they see this happen. Everybody will see nature through different eyes.",
+      "entry": "Bob Ross says ... Don't over do it -- be careful. Be careful. Always start with a clean brush in a light area and work outward. We planned this son-of-a-gun right from the beginning. People are so excited when they see this happen. Everybody will see nature through different eyes.",
       "id": 4
     },
     {
-      "userId": 1,
+      "userId": 2,
       "entryDate": "Mon Feb 18 2019 22:10:54 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving.\n\nIf there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
+      "entry": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving.\n\nIf there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
       "id": 5
     },
     {
-      "userId": 1,
+      "userId": 2,
       "entryDate": "Mon Feb 18 2019 23:05:41 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
+      "entry": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "entryDate": "Thu Feb 21 2019 16:51:10 GMT-0600 (Central Standard Time)",
+      "entry": "bbbbbb",
+      "id": 7
     }
   ]
 }

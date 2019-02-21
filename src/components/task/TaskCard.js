@@ -13,7 +13,7 @@ export default class TaskCard extends Component {
   }
 
   render() {
-    console.log("props passed from EmotionList", this.props)
+    // console.log("props passed from EmotionList", this.props)
     return (
       <React.Fragment>
         <div key={this.props.task.id}>

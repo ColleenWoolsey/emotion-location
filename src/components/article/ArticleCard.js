@@ -4,35 +4,18 @@ import { CardSubtitle } from 'reactstrap';
 import "../emotion/List.css"
 export default class ArticleCard extends Component {
 
-//   constructNewDate = evt => {
-//     evt.preventDefault();
-
-//   var today = new Date().toLocaleDateString('en-US', {  
-//     day : 'numeric',
-//     month : 'short',
-//     year : 'numeric'
-//   })
-//   this.props.constructNewDate(this.props.artiicle.entryDate)
-//   .then(() => 
-//       this.props.history.push("/articles"));
-// }
-
     render() {
-      console.log("users array from ArticleList", this.props.article)
+      
       return (
         <React.Fragment>
-          <div key={this.props.article.id}>
+          {/* <div key={this.props.article.id}> */}
            
            <Card className="cardA">
              
-           {/* <div className="articles-picture">
-            <Image src={"./lantern.jpg"} width={500} height={300} mode='fit' />  
-           </div> */}
             <div className="top-line">
               <div>
   
                 <CardSubtitle className="article-date">
-                  {/* {this.constructNewDate} */}
                   {this.props.article.entryDate}
                 </CardSubtitle>
   
@@ -82,12 +65,12 @@ export default class ArticleCard extends Component {
           {/* End of top-line div */}
 
           <div className="journal-entry">
-            <CardText className="journal-entry">{this.props.article}</CardText>           
+            <CardText className="journal-entry">{this.props.article.entry}</CardText>           
           </div>
           
         </Card>
         {/* End of cardA div */}
-        </div>
+        {/* </div> */}
       
         {/* End of key div */} 
         </React.Fragment>

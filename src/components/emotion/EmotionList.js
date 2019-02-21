@@ -5,6 +5,7 @@ import TaskManager from "../../modules/TaskManager";
 import LoginManager from "../../modules/LoginManager";
 import ArticleManager from "../../modules/ArticleManager";
 import JournalCard from "../article/JournalCard";
+import ArticleList from "../article/ArticleList";
 import "./List.css";
 export default class EmotionList extends Component {
 
@@ -13,15 +14,6 @@ export default class EmotionList extends Component {
     user: [],
     articles: []   
   };
-
-  addArticle = article =>
-    ArticleManager.post(article)
-      .then(() => ArticleManager.getArticlesByUser(sessionStorage.getItem("user")))
-      .then(articles =>
-        this.setState({
-          articles: articles
-        })        
-      ); 
 
   deleteTask = task =>
     TaskManager.del(task)
@@ -51,34 +43,9 @@ export default class EmotionList extends Component {
             tasks: allTasks
         })        
         console.log("allTasks(getTasksByUser) from componentDidMount", allTasks)
+        console.log ("After tasksCDM - this.props", this.props)
+        console.log ("After tasksCDM - this.state", this.state)
     })
-
-    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
-    .then(allArticles => {
-        this.setState({
-            articles: allArticles
-        })        
-        console.log("getArticlesByUser from componentDidMount", allArticles)
-        console.log ("this.props", this.props)
-        console.log ("this.state", this.state)
-        console.log ("this.state.articles", this.state.articles)
-        console.log ("this.props.articles", this.props.articles)
-        console.log ("this.state.tasks", this.state.tasks)
-        console.log ("this.props.tasks", this.props.tasks)
-    })
-  
-    LoginManager.getById(sessionStorage.getItem("user"))
-    .then(user => {
-        this.setState({
-            user: user
-        })
-        console.log("allUserInfo from componentDidMount", user)
-        console.log ("this.props", this.props)
-        console.log ("this.state", this.state)
-        console.log ("this.state.articles", this.state.articles)
-        console.log ("this.props.articles", this.props.articles)
-    })
-
   };
 
   render() {
@@ -104,13 +71,13 @@ export default class EmotionList extends Component {
             <div className="bottom-left">
 
               <div className="search">
-                
+              
                 <div>                
                   <button
                     type="button"
                     className="listArticlesBtn"
                     onClick={() => {              
-                      this.props.history.push("/articles")                         
+                      this.props.history.push("/articles/list")                         
                   }}>                  
                     Read Journal Entries
                   </button>                  
@@ -124,11 +91,12 @@ export default class EmotionList extends Component {
               {/* End of div search */}
 
               <div className="journal-article">
-                < JournalCard
+              < JournalCard
                 {...this.props}
                 articles={this.state.articles}
-                addArticle={this.addArticle}
-                userId={sessionStorage.getItem("user")}
+                addArticle= {this.state.addArticle}
+                addArticle= {this.props.addArticle}
+                
                 />        
               </div>
               {/* End of div journal-article */}
