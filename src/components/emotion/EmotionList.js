@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import { Alert } from 'reactstrap';
 import EmotionCard from "./EmotionCard";
-import EmotionSummary from "./EmotionSummary";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
 import LoginManager from "../../modules/LoginManager";
 import ArticleManager from "../../modules/ArticleManager";
 import JournalCard from "../article/JournalCard";
-import ArticleCard from "../article/ArticleCard";
 import "./List.css";
 export default class EmotionList extends Component {
 
@@ -23,8 +20,7 @@ export default class EmotionList extends Component {
       .then(articles =>
         this.setState({
           articles: articles
-        })
-        
+        })        
       ); 
 
   deleteTask = task =>
@@ -54,7 +50,7 @@ export default class EmotionList extends Component {
         this.setState({
             tasks: allTasks
         })        
-        console.log("allTasks from componentDidMount", allTasks)
+        console.log("allTasks(getTasksByUser) from componentDidMount", allTasks)
     })
 
     ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
@@ -67,19 +63,21 @@ export default class EmotionList extends Component {
         console.log ("this.state", this.state)
         console.log ("this.state.articles", this.state.articles)
         console.log ("this.props.articles", this.props.articles)
+        console.log ("this.state.tasks", this.state.tasks)
+        console.log ("this.props.tasks", this.props.tasks)
     })
   
-    // LoginManager.getById(sessionStorage.getItem("user"))
-    // .then(user => {
-    //     this.setState({
-    //         user: user
-    //     })
-    //     console.log("allUserInfo from componentDidMount", user)
-    //     console.log ("this.props", this.props)
-    //     console.log ("this.state", this.state)
-    //     console.log ("this.state.articles", this.state.articles)
-    //     console.log ("this.props.articles", this.props.articles)
-    // })
+    LoginManager.getById(sessionStorage.getItem("user"))
+    .then(user => {
+        this.setState({
+            user: user
+        })
+        console.log("allUserInfo from componentDidMount", user)
+        console.log ("this.props", this.props)
+        console.log ("this.state", this.state)
+        console.log ("this.state.articles", this.state.articles)
+        console.log ("this.props.articles", this.props.articles)
+    })
 
   };
 

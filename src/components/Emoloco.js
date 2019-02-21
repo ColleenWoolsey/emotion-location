@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Login from "./authentication/Login";
 import NavBar from "./nav/NavBar";
 import AppViews from "./AppViews";
 import EmotionManager from "../modules/EmotionManager";
 import LoginManager from "../modules/LoginManager";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "./Emoloco.css";
 import "./nav/Nav.css";
 

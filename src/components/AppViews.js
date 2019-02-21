@@ -8,9 +8,9 @@ import EmotionList from "./emotion/EmotionList";
 import EmotionDetail from "./emotion/EmotionDetail";
 import TaskAddForm from "./task/TaskAddForm";
 import TaskEditForm from "./task/TaskEditForm";
-import ArticleManager from "../modules/ArticleManager";
+// import ArticleManager from "../modules/ArticleManager";
 import ArticleList from "./article/ArticleList";
-import ArticleCard from "./article/ArticleCard";
+// import ArticleCard from "./article/ArticleCard";
 import EmotionManager from "../modules/EmotionManager";
 
 import "./emotion/List.css";

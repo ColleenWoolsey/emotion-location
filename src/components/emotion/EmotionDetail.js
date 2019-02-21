@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import "./List.css";
 export default class EmotionDetail extends Component {
   render() {

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ExampleCard from "./ExampleCard";
 import EmotionManager from "../../modules/EmotionManager";
-import { CardBody, Card, CardImg, CardTitle, CardText, } from 'reactstrap';
+import {  Card, CardTitle, } from 'reactstrap';
 import "../emotion/List.css";
-import TaskAddForm from "./TaskAddForm";
+// import TaskAddForm from "./TaskAddForm";
 
 export default class SuggestedTaskCard extends React.Component {
 

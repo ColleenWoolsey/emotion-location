@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { CardBody, Card, CardImg, CardTitle, CardText, } from 'reactstrap';
-import {  CardDeck, CardSubtitle } from 'reactstrap';
+import { Card, CardText, } from 'reactstrap';
+import { CardSubtitle } from 'reactstrap';
 import "../emotion/List.css"
 export default class ArticleCard extends Component {
 

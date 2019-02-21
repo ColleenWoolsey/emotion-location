@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import ArticleManager from "../../modules/ArticleManager";
+import { FormGroup, Input } from 'reactstrap';
+// import ArticleManager from "../../modules/ArticleManager";
 import "../emotion/List.css"
 
 export default class JournalCard extends Component {

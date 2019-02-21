@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EmotionManager from "../../modules/EmotionManager";
+// import EmotionManager from "../../modules/EmotionManager";
 import "../emotion/List.css";
 
 export default class ExampleCard extends Component {

@@ -1,7 +1,6 @@
 import React from 'react';
 import SuggestedTaskCard from "./SuggestedTaskCard";
-import EmotionManager from "../../modules/EmotionManager";
-import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, Input } from 'reactstrap';
 import "../emotion/List.css";
 
 export default class TaskAddForm extends React.Component {

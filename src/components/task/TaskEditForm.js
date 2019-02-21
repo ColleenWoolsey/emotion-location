@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, Input } from 'reactstrap';
 import TaskManager from "../../modules/TaskManager";
 import "../emotion/List.css";
 
@@ -57,67 +57,75 @@ updateExistingTask = evt => {
   render() {
     return (
       <React.Fragment>
-      <Form inline autoComplete="off">
-      <div className="form-group">
-        <label htmlFor="emotionId">Emotion:  </label>
-          <select
-            value={this.state.emotionId}
-            name="emotionId"
-            id="emotionId"
-            onChange={this.handleFieldChange}
-          >
-          
-          <option>{this.state.emotionName}</option>
-          {this.props.emotions.map(evt => (
-            <option key={evt.id} value={evt.id}>
-            {evt.emotionName}
-            </option>
-          ))}
-          </select>
-        </div>
-        <br></br>
-        <br></br>
+        
+        <div className="edit-task-container">
+            
+          <div className="edit-task-form">
+            <Form inline autoComplete="off">
 
-        <div className="form-group">
-          <label htmlFor="dueDate">Due Date:  </label>
-          <Input className="form-control"
-            type="date"
-            required
-            name="dueDate"
-            id="dueDate"
-            onChange={this.handleFieldChange}
-            value={this.state.dueDate}
-            />
-        </div>
-        <br></br>
-        <br></br>
+                <div className="emotion-select">
+                  <label htmlFor="emotionId">Emotion:  </label>
+                    <select
+                      value={this.state.emotionId}
+                      name="emotionId"
+                      id="emotionId"
+                      onChange={this.handleFieldChange}
+                    >
+                    
+                    <option>{this.state.emotionName}</option>
+                    {this.props.emotions.map(evt => (
+                      <option key={evt.id} value={evt.id}>
+                      {evt.emotionName}
+                      </option>
+                    ))}
+                    </select>
+                </div>
+                {/* End of div emotion-select */}
+                
+                <div className="edit-due-date">
+                  <label htmlFor="dueDate">Due Date:  </label>
+                  <Input className="form-control"
+                    type="date"
+                    required
+                    name="dueDate"
+                    id="dueDate"
+                    onChange={this.handleFieldChange}
+                    value={this.state.dueDate}
+                    />
+                </div>
+                {/* End of div due-date */}
+                
+                <div className="edit-task">
+                  {/* <label htmlFor="task">Task:  </label> */}
+                  <Input className="form-control"
+                  type="text"
+                  required 
+                  name="task"
+                  className="edit-task"
+                  onChange={this.handleFieldChange}
+                  id="task" 
+                  value={this.state.task}
+                  />
+                </div>
+                {/* End of div edit-task */}
+                
+                <div>
+                  <button
+                    type="submit"
+                    className="edit-form-button"
+                    onClick={this.updateExistingTask}
+                    id="edit-form-btn"
+                  >Update
+                  </button>
+                </div>
+                {/* End of div edit-form-button */}
+                
+              </Form>
 
-        <div className="form-group">
-          <label htmlFor="task">Task:  </label>
-          <Input className="form-control"
-          // defaultValue={this.state.task}
-          type="text"
-          required 
-          name="task"
-          // placeholder="task"
-          onChange={this.handleFieldChange}
-          id="task" 
-          value={this.state.task}
-          />
-        </div>
-        <br></br>
-        <br></br>
-
-        <div className="form-group">
-            <button
-              type="submit"
-              className="btn"
-              onClick={this.updateExistingTask}
-              id="edit-form-btn"
-            >Update
-            </button>
-        </div>   
-      </Form>
+            </div>
+            {/* End of div edit-task-form */}         
+          </div>
+        
       </React.Fragment>
     )
   }

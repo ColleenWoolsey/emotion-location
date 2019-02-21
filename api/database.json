@@ -13,21 +13,9 @@
       "password": "two"
     },
     {
-      "id": 3,
       "userName": "Harry Smith",
-      "email": "email@gmail.com",
-      "password": "three"
-    },
-    {
-      "userName": "Colleen",
-      "email": "rlwool@aol.com",
-      "password": "p",
-      "id": 4
-    },
-    {
-      "userName": "",
-      "password": "",
-      "id": 5
+      "password": "three",
+      "id": 3
     }
   ],
   "emotions": [
@@ -111,14 +99,14 @@
       "emotionId": 3,
       "dueDate": "2019-02-14",
       "task": "Value openly by having deep sadness",
-      "complete": true
+      "complete": false
     },
     {
       "userId": 1,
       "emotionId": 3,
       "dueDate": "2019-02-15",
       "task": "Write poems and songs",
-      "complete": true,
+      "complete": false,
       "id": 2
     },
     {
@@ -146,24 +134,16 @@
       "id": 5
     },
     {
+      "id": 6,
       "userId": 1,
       "emotionId": 3,
       "dueDate": "2019-02-19",
       "task": "Get up early and hear God whisper in the sunrise",
-      "complete": false,
-      "id": 6
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-20",
-      "task": "Grieve a dream that hasn't come to pass",
       "complete": false
     },
     {
       "id": 8,
-      "userId": 4,
+      "userId": 3,
       "emotionId": 4,
       "dueDate": "2019-02-21",
       "task": "Forsake manipulating  others",
@@ -171,14 +151,14 @@
     },
     {
       "id": 9,
-      "userId": 4,
+      "userId": 3,
       "emotionId": 4,
       "dueDate": "2019-02-24",
       "task": "Do courageous acts",
       "complete": false
     },
     {
-      "userId": 4,
+      "userId": 3,
       "emotionId": 4,
       "dueDate": "2019-02-26",
       "task": "Speak truth with love and respect",
@@ -186,7 +166,7 @@
       "id": 10
     },
     {
-      "userId": 4,
+      "userId": 3,
       "emotionId": 4,
       "dueDate": "2019-02-27",
       "task": "Affirm the capabilities of others",
@@ -195,19 +175,19 @@
     },
     {
       "id": 12,
-      "userId": 4,
+      "userId": 3,
       "emotionId": 4,
       "dueDate": "2019-02-25",
       "task": "Declare my intentions",
       "complete": false
     },
     {
+      "id": 14,
       "userId": 2,
       "emotionId": 5,
       "dueDate": "2019-03-01",
       "task": "Hug my children & hold their hand in the dark",
-      "complete": false,
-      "id": 14
+      "complete": false
     },
     {
       "id": 16,
@@ -258,12 +238,12 @@
       "id": 21
     },
     {
-      "userId": 4,
-      "emotionId": 8,
-      "dueDate": "2019-02-26",
-      "task": "u",
-      "complete": true,
-      "id": 22
+      "userId": 2,
+      "emotionId": 6,
+      "dueDate": "2019-02-27",
+      "task": "x",
+      "complete": false,
+      "id": 23
     }
   ],
   "examples": [
@@ -594,18 +574,6 @@
       "entryDate": "Mon Feb 18 2019 23:05:41 GMT-0600 (Central Standard Time)",
       "article": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
       "id": 6
-    },
-    {
-      "userId": 4,
-      "entryDate": "Mon Feb 18 2019 23:06:46 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross says ... Today's such a wonderful day, let's just make a happy little painting. Maybe I'll have a bit mountain today. You can do anything that you believe you can do. Get it to where you want it, and leave it alone. That's the fun part of this whole technique.",
-      "id": 7
-    },
-    {
-      "userId": 4,
-      "entryDate": "Mon Feb 18 2019 23:12:02 GMT-0600 (Central Standard Time)",
-      "article": "Bob Ross says ... I don't know exactly what they are, and I don't really care at this point. Just leave that space open. Learn to work with anything that happens. It helps, when you're doing these kinds of things, make up little stories in your mind. We'll start playing a little bit. Just let it go, have fun.\n\nDevote a little time to working with it. Practice visualizing things in your mind. You can do anything that you believe you can do. Just let it work around and play. Art is an expression of self. The only thing I'm good at is falling down.",
-      "id": 8
     }
   ]
 }
