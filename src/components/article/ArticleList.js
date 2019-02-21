@@ -5,15 +5,13 @@ export default class ArticleList extends Component {
 
   
   render() {
-    
+    console.log("this.props.articles from /articles/list", this.props.articles)
     return (
       <React.Fragment>
 
         <div className="articles-list">                                
           {this.props.articles.map(article => (
             <ArticleCard key={article.id} article={article} {...this.props} 
-            articles={this.props.articles}
-            user={this.props.user}
               />                  
             ))                
           }

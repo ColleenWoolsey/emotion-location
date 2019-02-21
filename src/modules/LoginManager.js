@@ -15,7 +15,7 @@ export default {
   },
   
   getNameAndPassword(userName, password) {
-    return fetch(`${remoteURL}/users/?userName=${userName}&password=${password}`)
+    return fetch(`${remoteURL}/users/?userName=${userName}&password=${password}&_embed=articles`)
     .then(response => response.json())
   },
 
