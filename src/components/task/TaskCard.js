@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import TaskManager from "../../modules/TaskManager";
+// import TaskManager from "../../modules/TaskManager";
 import "../emotion/List.css"
 export default class TaskCard extends Component {
 

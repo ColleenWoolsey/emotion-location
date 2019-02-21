@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { CardBody, Card, CardImg, CardTitle, CardText, } from 'reactstrap';
-import {  CardDeck, CardSubtitle } from 'reactstrap';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Card, CardText, } from 'reactstrap';
+import { CardSubtitle } from 'reactstrap';
+import { Button, Modal, ModalBody, } from 'reactstrap';
 import { Badge } from 'reactstrap';
 import "./List.css";
 export default class EmotionCard extends React.Component {
@@ -37,7 +35,7 @@ export default class EmotionCard extends React.Component {
               <CardSubtitle className="cardE-impairment-subtitle">IMPAIRMENT</CardSubtitle>
               <CardText className="cardE-impairment-text">{this.props.emotion.impairment}</CardText> 
 
-                <Button className="detailBtn" onClick={this.toggle}>DETAIL</Button>
+                <Button className="detailBtn" onClick={this.toggle}>... more detail</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                   {/* <ModalHeader toggle={this.toggle}></ModalHeader> */}
                   <ModalBody className="bottom-left">

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { CardBody, Card, CardImg, CardTitle, CardText, } from 'reactstrap';
 import { Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap';
 import "./List.css";
 
