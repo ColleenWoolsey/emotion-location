@@ -39,7 +39,7 @@
       "emotionName": "HURT",
       "imageUrl": "./HurtIcon.png",
       "giftTitle": "THE GIFT OF HURT",
-      "gift": "Healing through relationship and Courage to risk",
+      "gift": "Healing through relationship and having the courage to risk",
       "impairment": "Resentment",
       "summary": "FIRST STEP TOWARD HEALING - Hurt lets us know that we have pain. It’s the thread that runs through all feelings. It’s an opportunity to admit, accept, and surrender to the truth of our neediness. Hurt points to our need for help from those who have genuine regard and love for us. All healing comes thru relationship - Defensiveness denies and minimizes the pain - When we refuse to feel the pain in our hearts we HARM others - To admit hurt is to begin to hope for a solution not just relief."
     },
@@ -84,7 +84,7 @@
       "emotionName": "SHAME",
       "imageUrl": "",
       "giftTitle": "THE GIFT OF SHAME",
-      "gift": "Humility - Recognition of our potential to fail and do harm, to succeed and to love",
+      "gift": "Humility - Potential to fail and do harm, to succeed and to love",
       "impairment": "Toxic Shame & Contempt",
       "summary": "FIRST STEP TOWARD HUMILITY - It's a consciousness of our limitations and giftedness that allows empathy for others. It allows us to stop comparison and competition in order to prove our worth, and start giving ourselves to something greater - the service of others - In humility we are grateful and merciful. Shame acknowledges we are feeling creatures who succeed and fail, need daily, are full of dreams and capabilities, desire great things but are deficient without others. It longs to know our value (that we belong) and that we add life (that we matter)."
     },
@@ -253,12 +253,20 @@
       "id": 23
     },
     {
+      "id": 24,
       "userId": 1,
       "emotionId": 3,
       "dueDate": "2019-02-28",
       "task": "Volunteer at the shelter",
+      "complete": false
+    },
+    {
+      "userId": 1,
+      "emotionId": 0,
+      "dueDate": "",
+      "task": "",
       "complete": false,
-      "id": 24
+      "id": 25
     }
   ],
   "examples": [

@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import {withRouter} from 'react-router-dom';
 import { Card, CardText, } from 'reactstrap';
 import { CardSubtitle } from 'reactstrap';
 import "../emotion/List.css"
-export default class ArticleCard extends Component {
+
+class ArticleCard extends React.Component {
+// export default class ArticleCard extends Component {
 
     render() {
       
@@ -12,7 +15,7 @@ export default class ArticleCard extends Component {
            
            <Card className="cardA">
              
-            <div className="top-line">
+            <div className="top-lineA">
               <div>
   
                 <CardSubtitle className="article-date">
@@ -62,7 +65,7 @@ export default class ArticleCard extends Component {
             </div>
             {/* End of btns-date div */}
           </div>
-          {/* End of top-line div */}
+          {/* End of top-lineA div */}
 
           <div className="journal-entry">
             <CardText className="journal-entry">{this.props.article.entry}</CardText>           
@@ -77,3 +80,4 @@ export default class ArticleCard extends Component {
     );
   }
 }
+export default withRouter(ArticleCard);

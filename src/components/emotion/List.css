@@ -29,7 +29,8 @@
     background-color: #438945;       
 }
 .bottom-left {
-    background-color: #fefce9;
+    background-color: white;
+    /* background-color: #fefce9; */
     display: flex;
     margin-top: 15px;
     margin-right: 10px;
@@ -43,14 +44,15 @@
     flex-wrap: wrap;
     flex-basis: column;
     border: 5px solid #eba63f;
-    background-color: #fefce9;    
+    /* background-color: #fefce9;     */
+    background-color: white;
     background-image: url("./pencil2.jpg");
     margin: 7px;
     max-width: 100%;
     height: 170px;
     background-size: 100% 100%;
     color: #fefce9;
-    /* opacity:  0.8; */
+    opacity:  0.8;
     border-radius:5px;
 }
 .listArticlesBtn {    
@@ -76,6 +78,7 @@
     margin-top: 7px;
 }
 .entry-textarea {
+    /* background-color: white; */
     background-color: #fefce9;
 }
 .journal-article {
@@ -86,6 +89,7 @@
     height: 170px;   
     background-color: #fefce9;
     border-radius:5px;
+    opacity: .8;
 }
 .addArticleBtn {
     background: #eba63f;
@@ -103,14 +107,16 @@
 .right {
     display: flex;
     flex-basis: 35%;
-    /* background-color: #3cbcc3; */
     background-color: #e40c2b;
-    padding: 15px;
+    padding: 10px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     margin-right: 15px;
     border-radius: 5px;
-    background-color: #fefce9;
+    max-width: 100%;
+    max-height: 570px;
+    /* overflow: auto; */
+    /* overflow-y: scroll; */
 }
 .top-right {
     display: flex;
@@ -131,26 +137,30 @@
     /* border: 7px solid #3cbcc3; */
     /* border: 2px solid #288d92; */
     justify-content: center;
-    background-color: #fefce9;
+    /* background-color: #fefce9; */
+    background-color: white;
     /* border-radius:5px;    */
 }
 .addTaskBtn {
-    background: #eba63f;
+    background: #3cbcc3;
     width:125px;
     padding-top:5px;
     padding-bottom:5px;
     color: black;
     border-radius:10px;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:10px;
+    margin-bottom:10px;
     margin-left:16px;
     font-weight:500;
     font-size:1.1em;
   } 
 .tasks-list {
     display: flex;
-    flex-direction: column;
-    border-radius:5px;
+    flex-direction: column;    
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    overflow-y: scroll;
 }
 
 
@@ -158,11 +168,12 @@
 .cardE {    
     display: flex;
     flex-direction: column;
-    flex-basis: 12.5%;
-    min-height: 356px;
+    /* min-width: 12.5%; */
+    min-height: 350px;
     margin: 2px;
     padding: 5px;
-    background-color: #fefce9;
+    /* background-color: #fefce9; */
+    background-color: white;
     text-align: center;
     border-radius:5px;
     position: relative;             
@@ -177,6 +188,7 @@
     margin-top: 5px;
     color: #fefce9;
     border-radius:5px;
+    
     position: relative;
 }
 /* This is the css for emotions.giftTitle */
@@ -191,19 +203,25 @@
     margin-top: 0;
     padding: 5px;
     margin-bottom: 5px;
+    background-color: #fefce9;
 }
 /* This is the css for IMPAIRMENT: */
 .cardE-impairment-subtitle {
     background-color: #eba63f;
+    /* border: 2px solid #eba63f; */
     padding: 5px;
+    opacity: .4;
+    font-weight: 500;
 }
 /* This is the css for emotions.impairment */
 .cardE-impairment-text {
-    font-size: .8em;
-    border: 2px solid #eba63f;
+    font-size: .9em;
+    /* border: 2px solid #eba63f; */
     padding: 5px;
     margin-top: 0;
-    margin-bottom: 5px;   
+    margin-bottom: 5px;
+    font-size: .9em;
+    background-color: #fefce9;   
 }
 .detailBtn {
     border: 2px solid eba63f;
@@ -213,7 +231,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     position: absolute;
-    margin-top: 326px;
+    margin-top: 318px;
     
 }
 .modal-body {
@@ -227,10 +245,10 @@
 .cardT {    
     display: flex;
     flex-direction: column;
-    /* margin-top: 1px; */
     padding: 5px;
     background-color: #fefce9;
     text-align: center;
+    background-color: white;
 }
 .top-line {
     display: flex;
@@ -239,7 +257,7 @@
     justify-content: space-between;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: 5px;
+    padding-top: 4px;
     margin-left: 1px;
     margin-right: 1px;
     background-color: #3cbcc3;
@@ -270,8 +288,9 @@
 .bottom-line {
     display: flex;
     flex-wrap: wrap;
-    background-color: #fefce9;
-    padding: 5px;
+    /* background-color: #fefce9; */
+    background-color: #e0f6f6;
+    padding: 4px;
     font-weight: 500;
     margin-left: 1px;
     margin-right: 1px;
@@ -282,65 +301,87 @@
 
 /* **********  THESE STYLES ARE IN EmotionCard.js (in order of use)  ********** */
 .articles-list { 
-    background-image: url("./lantern.jpg");    
+    /* background-image: url("./lantern.jpg");     */
+    background-image: url("./n-double.jpg");
     border-radius:30px;
     margin: 0 auto 0 auto;
     padding: 5px;
     border: #438945 15px solid;
-    max-width: 90%;
+    max-width: 80%;
     overflow: auto;
-    background-size: 100%;
-    opacity:  0.85;
+    /* background-size: 100%; */
+    background-size: 50%;
+    /* opacity:  0.95; */
     overflow-y: scroll;
+    font-weight: 500;
 }
 .cardA {
     display: block;
-    max-height: 110px;
-    width:800px;
-    float: right; 
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 130px;
+    /* width:800px; */
+    width: 600px;    
+    /* float: right;  */
+    /* margin-top: 20px; */
+    /* margin-right: 20px; */
     margin-bottom: 5px;
     padding:7px;
-    border: #3cbcc3 5px solid;
-    outline: 7px solid #438945;
+    /* border: #eba63f 3px solid; */
+    /* border: #eba63f 3px solid; */
+    border: #438945 3px solid;
+    outline: 7px solid black;
     overflow-y: scroll;      
-    background-color: #fefce9;
+    /* background-color: #fefce9;     */
+    background-color: white;
+    /* opacity: .9; */
 }
-.top-line {
+.top-lineA {
     display: flex;
     flex-wrap: nowrap;
+    /* background-color: #eba63f; */
+    background-color: #438945;
+    min-height: 28px;
+    justify-content: space-between;
+    opacity: .7;
 }
 .article-date {    
     padding-top: 5px;
-    font-weight: bold;    
+    font-weight: bold;
+    margin-left: 5px;    
 }
 .btns-group {
     display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+    font-weight: 500;
 }
 .editArticleBtn {
     margin-right: 10px;
     border-radius:5px;
-    border: 3px solid #3cbcc3;
+    /* border: 3px solid #3cbcc3; */
     background-color: #fefce9;
     width: 70px;
-    outline: 7px solid #438945;
+    /* outline: 5px solid #438945; */
+    margin: 3px;
 }
 .delArticleBtn {
     margin-right: 10px;
-    border: 3px solid #3cbcc3;
+    /* border: 3px solid #3cbcc3; */
     background-color: #fefce9;
     border-radius:5px;
     width: 70px;
-    outline: 7px solid #438945;
+    /* outline: 5px solid #438945; */
+    margin: 3px;
 }
 .returnBtn {
     margin-right: 30px;
     border-radius:5px;
-    border: 3px solid #3cbcc3;
-    background-color: #e0f6f6;
+    background-color: #fefce9;
+    /* border: 3px solid #3cbcc3; */
     width: 70px;
-    outline: 7px solid #438945;
+    /* outline: 5px solid #438945; */
+    margin: 3px;
 }
 
 
@@ -350,24 +391,25 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;    
-    padding:  7px;    
+    /* padding:  10px;     */
     background-color: #438945;
+    background-image: url("./road.jpg");
     /* border: 5px dashed black;  */
 }
 .emotions-list-examples {
     display: flex;    
-    margin: 3px;
-    padding: 6px;
+    margin: 10px;
+    padding: 10px;
     background-color: #fefce9;
     text-align: center;    
-    border: 5px solid #438945;        
+    border: 5px solid #438945;       
 }
 .card-container {
     width: 12.5%;
-    background-color: #eba63f;
     outline: 3px solid #eba63f;
-    
-    /* border: 5px dashed black;      */
+    max-height: 450px;
+    border: 4px solid #eba63f;
+    /* outline: 10px solid #438945;     */
 }
 .cardS {
     display: flex;  
@@ -375,15 +417,17 @@
     margin: 3px;
     margin-top: 3px;
     margin-bottom: 3px;
-    padding: 7px;
-    background-color: #fefce9;
+    padding-left: 7px;
+    /* background-color: #fefce9; */
     text-align: left;    
-    /* border: 5px solid #eba63f; */
-    font-size: 90%;        
+    /* border: 5px solid #438945; */
+    font-size: 84%;        
 }
 .cardS-title {
     background-color: #e40c2b;
     text-align: center;
+    margin-right: 7px;
+    margin-top: 5px;
 }
 p::first-letter { 
     font-size: 125%;
@@ -394,22 +438,30 @@ p::first-letter {
     background-image: url("./road.jpg");    
     padding: 5px;
     border: #438945 10px solid;
+    background-size: 35%;
+}
+.topTasks {
+    /* background-image: url("./road.jpg");     */
+    padding: 5px;
+    /* border: #438945 10px solid; */
     max-width: 100%;
     background-size: 35%;
-    opacity:  0.9;
+    /* opacity:  0.9; */
+    color: white;
     /* margin: 20px; */
 }
 .taskInputForm {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #eba63f;
-    font-size: 1.3em;
-    font-weight: bolder;
+    background-image: url("./road.jpg");
+    font-size: 1.1em;
+    font-weight: 500;
     margin: 50px;
     padding: 5px;
     min-height: 30px;
-    opacity: .75;
+    opacity: .9;
+    border: #438945 2px solid;
 }
 .task-input {
     width: 400px;
@@ -456,13 +508,13 @@ p::first-letter {
     right: 282px;
     width: 330px;
     height: 250px;
-    /* border: 10px solid #73AD21; */
-    border: #eba63f 10px solid;
+    border: #e40c2b 10px solid;
     border-radius: 30px;
     font-size: 1.3em;
     font-weight: bolder;
     padding: 10px;
-    text-align: center;
+    /* background-color: #fefce9; */
+    background-color: white;
 }
 .emotion-select {
     margin-top: 20px;
@@ -488,7 +540,7 @@ p::first-letter {
     /* border: 2px solid #eba63f; */
     background-color: #fefce9;
     width: 70px;
-    outline: 7px solid #eba63f;
+    outline: 7px solid #e40c2b;
     position: absolute;
     bottom: -15px;
     right: 105px;
