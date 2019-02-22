@@ -45,85 +45,85 @@ constructNewTask = evt => {
     return (
       <React.Fragment>
 
-<       div className="addTaskContainer">
+      <div className="addTaskContainer">
 
-            <div className="emotions-list-examples">
-                {this.props.emotions.map(emotion => (
-                  <SuggestedTaskCard key={emotion.id} emotion={emotion} {...this.props} />
-                ))}
-            </div>         
+        <Form inline autoComplete="off" className="taskInputForm">
+
+        <div className="topTasks">
+          <label htmlFor="emotionId" sm={2} size="lg">Emotion:  </label>
+          
+          <select
+            bssize="lg"
+            defaultValue=""
+            name="emotionId"
+            id="emotionId"
+            onChange={this.handleFieldChange}
+          >
+            <option value="">Select Emotion</option>
+            {this.props.emotions.map(evt => (
+              <option key={evt.id} value={evt.id}>
+              {evt.emotionName}
+              </option>
+            ))}
+          </select>
+          </div>
+
+        <div className="topTasks">
+          <label htmlFor="dueDate">Completion Date:  </label>
+          
+          <Input className="form-control"
+            type="date"
+            required
+            name="dueDate"
+            id="dueDate"
+            onChange={this.handleFieldChange}
+            />
+        </div>
+            
+        <div className="topTasks">
+          <label htmlFor="task">Task:  </label>
+          
+          <Input className="form-control"
+            type="text"
+            required 
+            name="task" 
+            id="task" 
+            placeholder="task"
+            className="task-input"
+            onChange={this.handleFieldChange}
+            />
+        </div>
+          
+        <div className="topTasks">
+          <button 
+            type="submit"
+            className="add-form-btn"
+            onClick={this.constructNewTask}
+            id="add-form-btn"
+          >Save
+          </button>
+
+          <button className="clearFormBtn"
+            type="submit"
+            className="clear-form-btn"
+            onClick={this.clearForm}
+            id="clear-form-btn"
+          >Clear
+          </button>
+        </div>
+        </Form>
+      </div>                  
 
   {/* ==================================================== */}
 
         <div className="bottomTasks">
 
-          <Form inline autoComplete="off" className="taskInputForm">
-
-          <div className="form-group">
-            <label htmlFor="emotionId" sm={2} size="lg">Emotion:  </label>
-            
-            <select
-              bssize="lg"
-              defaultValue=""
-              name="emotionId"
-              id="emotionId"
-              onChange={this.handleFieldChange}
-            >
-              <option value="">Select Emotion</option>
-              {this.props.emotions.map(evt => (
-                <option key={evt.id} value={evt.id}>
-                {evt.emotionName}
-                </option>
-              ))}
-            </select>
-            </div>
-
-          <div className="form-group">
-            <label htmlFor="dueDate">Completion Date:  </label>
-            
-            <Input className="form-control"
-              type="date"
-              required
-              name="dueDate"
-              id="dueDate"
-              onChange={this.handleFieldChange}
-              />
-          </div>
-              
-          <div className="form-group">
-            <label htmlFor="task">Task:  </label>
-            
-            <Input className="form-control"
-              type="text"
-              required 
-              name="task" 
-              id="task" 
-              placeholder="task"
-              className="task-input"
-              onChange={this.handleFieldChange}
-              />
-          </div>
-            
-          <div className="form-group">
-            <button 
-              type="submit"
-              className="add-form-btn"
-              onClick={this.constructNewTask}
-              id="add-form-btn"
-            >Save
-            </button>
-
-            <button className="clearFormBtn"
-              type="submit"
-              className="clear-form-btn"
-              onClick={this.clearForm}
-              id="clear-form-btn"
-            >Clear
-            </button>
-          </div>
-        </Form>
-        </div>
-        {/* End of div bottomTasks */}
+        < div className="emotions-list-examples">
+          {this.props.emotions.map(emotion => (
+            <SuggestedTaskCard key={emotion.id} emotion={emotion} {...this.props} />
+          ))}
+        </div> 
+          
       </div>
       {/* End of div addTaskContainer */}
       </React.Fragment>
