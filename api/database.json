@@ -141,14 +141,6 @@
       "complete": false
     },
     {
-      "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-18",
-      "task": "Visit an old friend I've been meaning to see",
-      "complete": false,
-      "id": 5
-    },
-    {
       "id": 6,
       "userId": 1,
       "emotionId": 3,
@@ -259,6 +251,14 @@
       "task": "x",
       "complete": false,
       "id": 23
+    },
+    {
+      "userId": 1,
+      "emotionId": 3,
+      "dueDate": "2019-02-28",
+      "task": "Volunteer at the shelter",
+      "complete": false,
+      "id": 24
     }
   ],
   "examples": [
@@ -325,7 +325,7 @@
     {
       "id": 13,
       "emotionId": 3,
-      "example": "2. Create a culture of honor"
+      "example": "2. Honor others"
     },
     {
       "id": 14,
@@ -333,24 +333,19 @@
       "example": "3. Celebrate milestones"
     },
     {
-      "id": 15,
-      "emotionId": 3,
-      "example": "4. Hug a loved one"
-    },
-    {
       "id": 16,
       "emotionId": 3,
-      "example": "5. Visit old friends"
+      "example": "4. Visit old friends"
     },
     {
       "id": 17,
       "emotionId": 3,
-      "example": "6. Watch the sunrise"
+      "example": "5. Watch the sunrise"
     },
     {
       "id": 18,
       "emotionId": 3,
-      "example": "7. Grieve when dreams don't come true"
+      "example": "6. Grieve when dreams don't come true"
     },
     {
       "id": 19,
@@ -358,29 +353,24 @@
       "example": "1. Forsake manipulation"
     },
     {
-      "id": 20,
-      "emotionId": 4,
-      "example": "2. Tell the truth about my heart's yearnings"
-    },
-    {
       "id": 21,
       "emotionId": 4,
-      "example": "3. Admit fault"
+      "example": "2. Admit fault"
     },
     {
       "id": 22,
       "emotionId": 4,
-      "example": "4. Build bridges"
+      "example": "3. Build bridges"
     },
     {
       "id": 23,
       "emotionId": 4,
-      "example": "5. Admit the failure of self-sufficiency"
+      "example": "4. Admit the failure of self-sufficiency"
     },
     {
       "id": 24,
       "emotionId": 4,
-      "example": "6. Empathize - meet others in ther pain"
+      "example": "5. Empathize - meet others in ther pain"
     },
     {
       "id": 25,
@@ -488,29 +478,19 @@
       "example": "4. Follow life's call"
     },
     {
-      "id": 46,
-      "emotionId": 8,
-      "example": "5. Submit to authority"
-    },
-    {
       "id": 47,
       "emotionId": 8,
-      "example": "6. Acknowledge that I matter"
+      "example": "5. Acknowledge that I matter and steward my gifts"
     },
     {
       "id": 48,
       "emotionId": 8,
-      "example": "7. Recognize what I value"
+      "example": "6. Recognize what I value"
     },
     {
       "id": 49,
       "emotionId": 8,
-      "example": "8. Risk loss"
-    },
-    {
-      "id": 50,
-      "emotionId": 8,
-      "example": "9. Enjoy Success"
+      "example": "7. Risk loss and enjoy success"
     },
     {
       "id": 51,
@@ -530,17 +510,17 @@
     {
       "id": 54,
       "emotionId": 3,
-      "example": "8. Accept what I can't control and hope that good will come"
+      "example": "7. Accept what I can't control and hope that good will come"
     },
     {
       "id": 55,
       "emotionId": 4,
-      "example": "7. Speak truth with love and respect"
+      "example": "6. Speak truth with love and respect - Express my heart's desires"
     },
     {
       "id": 56,
       "emotionId": 4,
-      "example": "8. Make promises"
+      "example": "7. Make promises and commitments"
     },
     {
       "id": 57,
@@ -550,7 +530,7 @@
     {
       "id": 58,
       "emotionId": 8,
-      "example": "10. HOPE"
+      "example": "8. HOPE"
     }
   ],
   "articles": [
@@ -589,12 +569,6 @@
       "entryDate": "Mon Feb 18 2019 23:05:41 GMT-0600 (Central Standard Time)",
       "entry": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
       "id": 6
-    },
-    {
-      "userId": 1,
-      "entryDate": "Thu Feb 21 2019 16:51:10 GMT-0600 (Central Standard Time)",
-      "entry": "bbbbbb",
-      "id": 7
     }
   ]
 }

@@ -5,7 +5,7 @@ export default class ArticleList extends Component {
 
   
   render() {
-    console.log("this.props.articles from /articles/list", this.props.articles)
+    console.log("this.props.articles from /articles", this.props.articles)
     return (
       <React.Fragment>
 

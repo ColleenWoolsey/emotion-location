@@ -154,12 +154,12 @@ addArticle = newarticle =>
       />
 
       {/* this is for list of Journal Entries */}
-      <Route exact path="/articles/list" 
+      <Route exact path="/articles" 
         render={(props) => {
-          console.log("/articles/list - props", props)
-          console.log("/articles/list - this.props", this.props)
-          console.log("/articles/list - this.state.articles", this.state.articles)
-          console.log("/articles/list - this.props.articles", this.props.articles)
+          console.log("/articles - props", props)
+          console.log("/articles - this.props", this.props)
+          console.log("/articles - this.state.articles", this.state.articles)
+          console.log("/articles - this.props.articles", this.props.articles)
           
           return (
             <ArticleList
