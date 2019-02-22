@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import {withRouter} from 'react-router-dom';
 import { Card, CardText, } from 'reactstrap';
 import { CardSubtitle } from 'reactstrap';
 import "../emotion/List.css"
-export default class ArticleCard extends Component {
+
+class ArticleCard extends React.Component {
+// export default class ArticleCard extends Component {
 
     render() {
       
@@ -77,3 +80,4 @@ export default class ArticleCard extends Component {
     );
   }
 }
+export default withRouter(ArticleCard);

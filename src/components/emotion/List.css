@@ -158,7 +158,7 @@
 .cardE {    
     display: flex;
     flex-direction: column;
-    flex-basis: 12.5%;
+    /* min-width: 12.5%; */
     min-height: 356px;
     margin: 2px;
     padding: 5px;
@@ -177,6 +177,7 @@
     margin-top: 5px;
     color: #fefce9;
     border-radius:5px;
+    
     position: relative;
 }
 /* This is the css for emotions.giftTitle */
@@ -199,11 +200,12 @@
 }
 /* This is the css for emotions.impairment */
 .cardE-impairment-text {
-    font-size: .8em;
+    font-size: .9em;
     border: 2px solid #eba63f;
     padding: 5px;
     margin-top: 0;
-    margin-bottom: 5px;   
+    margin-bottom: 5px;
+    font-size: .9em;   
 }
 .detailBtn {
     border: 2px solid eba63f;
