@@ -229,7 +229,6 @@
 .cardT {    
     display: flex;
     flex-direction: column;
-    /* margin-top: 1px; */
     padding: 5px;
     background-color: #fefce9;
     text-align: center;
@@ -304,45 +303,54 @@
     margin-right: 20px;
     margin-bottom: 5px;
     padding:7px;
-    border: #3cbcc3 5px solid;
-    outline: 7px solid #438945;
+    border: #eba63f 3px solid;
+    outline: 7px solid black;
     overflow-y: scroll;      
-    background-color: #fefce9;
+    background-color: #fefce9;    
 }
-.top-line {
+.top-lineA {
     display: flex;
     flex-wrap: nowrap;
+    background-color: #eba63f;
+    min-height: 28px;
+    justify-content: space-between;
 }
 .article-date {    
     padding-top: 5px;
-    font-weight: bold;    
+    font-weight: bold;
+    margin-left: 5px;    
 }
 .btns-group {
     display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
 }
 .editArticleBtn {
     margin-right: 10px;
     border-radius:5px;
-    border: 3px solid #3cbcc3;
+    /* border: 3px solid #3cbcc3; */
     background-color: #fefce9;
     width: 70px;
-    outline: 7px solid #438945;
+    /* outline: 5px solid #438945; */
+    margin: 3px;
 }
 .delArticleBtn {
     margin-right: 10px;
-    border: 3px solid #3cbcc3;
+    /* border: 3px solid #3cbcc3; */
     background-color: #fefce9;
     border-radius:5px;
     width: 70px;
-    outline: 7px solid #438945;
+    /* outline: 5px solid #438945; */
+    margin: 3px;
 }
 .returnBtn {
     margin-right: 30px;
     border-radius:5px;
-    border: 3px solid #3cbcc3;
-    background-color: #e0f6f6;
+    background-color: #fefce9;
+    /* border: 3px solid #3cbcc3; */
     width: 70px;
-    outline: 7px solid #438945;
+    /* outline: 5px solid #438945; */
+    margin: 3px;
 }
 
 

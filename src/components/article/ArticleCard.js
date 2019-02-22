@@ -15,7 +15,7 @@ class ArticleCard extends React.Component {
            
            <Card className="cardA">
              
-            <div className="top-line">
+            <div className="top-lineA">
               <div>
   
                 <CardSubtitle className="article-date">
@@ -65,7 +65,7 @@ class ArticleCard extends React.Component {
             </div>
             {/* End of btns-date div */}
           </div>
-          {/* End of top-line div */}
+          {/* End of top-lineA div */}
 
           <div className="journal-entry">
             <CardText className="journal-entry">{this.props.article.entry}</CardText>           
