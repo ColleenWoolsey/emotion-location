@@ -4,8 +4,8 @@
 .container {
     display: flex;
     border-radius:10px;
-    padding: 5px;
-    border: #438945 15px solid;
+    padding-left: 15px;
+    padding-bottom: 15px;
     max-width: 98%;
     overflow: auto;
     background-size: 100%;
@@ -31,7 +31,7 @@
 .bottom-left {
     background-color: #fefce9;
     display: flex;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-right: 10px;
     margin-left: 2px;
     min-height: 170px;
@@ -50,7 +50,7 @@
     height: 170px;
     background-size: 100% 100%;
     color: #fefce9;
-    opacity:  0.8;
+    /* opacity:  0.8; */
     border-radius:5px;
 }
 .listArticlesBtn {    
@@ -85,7 +85,6 @@
     flex-basis: 60%;
     height: 170px;   
     background-color: #fefce9;
-    opacity: .8;
     border-radius:5px;
 }
 .addArticleBtn {
@@ -96,28 +95,28 @@
     color: #e0f6f6;
     border-radius:10px;
     border: #fefce9 2px solid;    
-    margin-top: 5px;
-    margin-bottom: 5px;
     margin-right: 10px;
+    margin-left: 410px;
     font-weight:600;
-    font-size:0.8em;
-    align-self: flex-end;
+    font-size:0.8em;   
 }
 .right {
     display: flex;
     flex-basis: 35%;
-    background-color: #eba63f;
+    /* background-color: #3cbcc3; */
+    background-color: #e40c2b;
     padding: 15px;
-    margin-top: 2px;
+    margin-top: 15px;
     margin-bottom: 15px;
     margin-right: 15px;
     border-radius: 5px;
+    background-color: #fefce9;
 }
 .top-right {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    margin-top: 0;
+    background-color: #e40c2b;
 }
 .header {
     text-align: center;
@@ -129,19 +128,19 @@
 .header-add-task {
     display: flex;
     flex-direction: row;
-    border: 7px solid #3cbcc3;
+    /* border: 7px solid #3cbcc3; */
+    /* border: 2px solid #288d92; */
     justify-content: center;
     background-color: #fefce9;
-    border-radius:5px;   
+    /* border-radius:5px;    */
 }
 .addTaskBtn {
-    background: #fefce9;
+    background: #eba63f;
     width:125px;
     padding-top:5px;
     padding-bottom:5px;
     color: black;
     border-radius:10px;
-    border: #3cbcc3 2px solid;    
     margin-top:20px;
     margin-bottom:20px;
     margin-left:16px;
@@ -151,10 +150,6 @@
 .tasks-list {
     display: flex;
     flex-direction: column;
-    background-color: #3cbcc3;
-    padding-right: 7px;
-    padding-left: 7px;
-    padding-bottom: 7px;
     border-radius:5px;
 }
 
@@ -164,12 +159,13 @@
     display: flex;
     flex-direction: column;
     flex-basis: 12.5%;
-    min-height: 97%;
+    min-height: 356px;
     margin: 2px;
     padding: 5px;
     background-color: #fefce9;
     text-align: center;
-    border-radius:5px;              
+    border-radius:5px;
+    position: relative;             
 }
 .cardE-img {
 }
@@ -181,6 +177,7 @@
     margin-top: 5px;
     color: #fefce9;
     border-radius:5px;
+    position: relative;
 }
 /* This is the css for emotions.giftTitle */
 .cardE-gift-subtitle {
@@ -197,22 +194,27 @@
 }
 /* This is the css for IMPAIRMENT: */
 .cardE-impairment-subtitle {
-    background-color: #3cbcc3;
+    background-color: #eba63f;
     padding: 5px;
 }
 /* This is the css for emotions.impairment */
 .cardE-impairment-text {
     font-size: .8em;
-    border: 2px solid #3cbcc3;
+    border: 2px solid #eba63f;
     padding: 5px;
     margin-top: 0;
     margin-bottom: 5px;   
 }
 .detailBtn {
-    border: 2px solid #3cbcc3;
-    background-color: #e0f6f6;
+    border: 2px solid eba63f;
+    background-color: #fefce9;
     border-radius: 5px;
     font-size: .9em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    margin-top: 326px;
+    
 }
 .modal-body {
     padding: 5px;
@@ -225,37 +227,41 @@
 .cardT {    
     display: flex;
     flex-direction: column;
-    margin: 2px;
+    /* margin-top: 1px; */
     padding: 5px;
-    background-color: #e0f6f6;
+    background-color: #fefce9;
     text-align: center;
 }
 .top-line {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 3px;
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: #3cbcc3;
 }
 .emotion-name {
     font-weight: bolder;
     color: black;
 }
 .editBtn {
-    margin-right: 12px;
-    margin-left: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
     border-radius:5px;
     border: 2px solid #3cbcc3;
     background-color: #fefce9;
-    width: 60px;
+    width: 50px;
 }
 .delBtn {
-    margin-right: 12px;
+    margin-right: 10px;
     border-radius:5px;
     border: 2px solid #3cbcc3;
     background-color: #fefce9;
-    width: 60px;
+    width: 50px;
 }
 .check-box {
     color: #3cbcc3;
@@ -265,8 +271,12 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #fefce9;
-    padding: 3px;
+    padding: 5px;
     font-weight: 500;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-align: left;
+    border: 2px solid #3cbcc3;
 }
 
 
@@ -340,47 +350,54 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;    
-    padding:  10px;    
+    padding:  7px;    
     background-color: #438945;
-    border: 5px dashed black; 
+    /* border: 5px dashed black;  */
 }
 .emotions-list-examples {
     display: flex;    
-    margin: 5px;
-    padding: 5px;
-    background-color: #eba63f;
+    margin: 3px;
+    padding: 6px;
+    background-color: #fefce9;
     text-align: center;    
-    border: 5px solid #438945;       
+    border: 5px solid #438945;        
 }
 .card-container {
     width: 12.5%;
     background-color: #eba63f;
-    border: 5px solid #438945;    
+    outline: 3px solid #eba63f;
+    
+    /* border: 5px dashed black;      */
 }
 .cardS {
     display: flex;  
     flex-direction: column;    
-    margin: 5px;
-    padding: 5px;
+    margin: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 7px;
     background-color: #fefce9;
     text-align: left;    
-    border: 5px solid #eba63f;
-    font-size: 90%;         
+    /* border: 5px solid #eba63f; */
+    font-size: 90%;        
 }
 .cardS-title {
     background-color: #e40c2b;
     text-align: center;
 }
+p::first-letter { 
+    font-size: 125%;
+    color: #438945;
+    font-weight: bold;
+  }
 .bottomTasks {
     background-image: url("./road.jpg");    
-    border-radius: 30px;
     padding: 5px;
     border: #438945 10px solid;
     max-width: 100%;
-    background-size: 50%;
+    background-size: 35%;
     opacity:  0.9;
-    margin: 20px;
-    background-color: #fefce9;
+    /* margin: 20px; */
 }
 .taskInputForm {
     display: flex;
@@ -391,8 +408,8 @@
     font-weight: bolder;
     margin: 50px;
     padding: 5px;
-    min-height: 36px;
-    border-radius: 30px;
+    min-height: 30px;
+    opacity: .75;
 }
 .task-input {
     width: 400px;
@@ -402,30 +419,29 @@
 .add-form-btn {
     margin-right: 30px;
     border-radius:15px;
-    border: 2px solid #438945;
+    border: 3px solid #438945;
     background-color: #fefce9;
     width: 70px;
-    outline: 7px solid #438945;
+    height: 35px;
 }
 .clear-form-btn {
     margin-right: 10px;
     border-radius:15px;
-    border: 2px solid #438945;
+    border: 3px solid #438945;
     background-color: #fefce9;
     width: 70px;
-    outline: 7px solid #438945;
+    height: 35px;
 }
 
 /* **********  THESE STYLES ARE IN TaskEditForm.js (in order of use)  ********** */
 
 .edit-task-container {   
-    background-image: url("./multiple-children2.jpg");    
+    background-image: url("./multiple-children3.jpg");    
     border-radius: 30px;
-    border: #e40e2b 10px solid;
+    border: 20px solid #73AD21;
     max-width: 60%;
     min-height: 598px;
     background-size: 100%;
-    background-color: #fefce9;
     background-repeat: no-repeat;
     position: relative;
     display: block;
@@ -437,10 +453,12 @@
 .edit-task-form {
     position: absolute;
     bottom: -42px;
-    right: 280px;
-    width: 320px;
+    right: 282px;
+    width: 330px;
     height: 250px;
-    border: 3px solid #73AD21;
+    /* border: 10px solid #73AD21; */
+    border: #eba63f 10px solid;
+    border-radius: 30px;
     font-size: 1.3em;
     font-weight: bolder;
     padding: 10px;
@@ -460,17 +478,18 @@
 }
 .edit-task {
     font-size: .9em;
-    width: 298px;
-    padding:5px;
+    width: 300px;
+    padding: 5px;
+    margin-left: 1px;
 }
 .edit-form-button {
     margin-right: 30px;
     border-radius:15px;
-    border: 2px solid #438945;
+    /* border: 2px solid #eba63f; */
     background-color: #fefce9;
     width: 70px;
-    outline: 7px solid #438945;
+    outline: 7px solid #eba63f;
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     right: 105px;
 }

@@ -47,17 +47,11 @@ constructNewTask = evt => {
 
 <       div className="addTaskContainer">
 
-          {/* <div className="topExamples"> */}
-
             <div className="emotions-list-examples">
                 {this.props.emotions.map(emotion => (
                   <SuggestedTaskCard key={emotion.id} emotion={emotion} {...this.props} />
                 ))}
-            </div>
-            {/* End of div emotions-list-examples */} 
-
-            {/* </div> */}
-             {/* End of div topExamples */}           
+            </div>         
 
   {/* ==================================================== */}
 

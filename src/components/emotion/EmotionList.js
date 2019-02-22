@@ -77,7 +77,7 @@ export default class EmotionList extends Component {
                     type="button"
                     className="listArticlesBtn"
                     onClick={() => {              
-                      this.props.history.push("/articles/list")                         
+                      this.props.history.push("/articles")                         
                   }}>                  
                     Read Journal Entries
                   </button>                  

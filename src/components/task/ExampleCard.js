@@ -11,7 +11,7 @@ export default class ExampleCard extends Component {
       <React.Fragment>
         <div key={this.props.example.id}>
             
-            <section className="example-name">{this.props.example.example}</section>
+            <p className="example-name">{this.props.example.example}</p>
 
           </div>
           
