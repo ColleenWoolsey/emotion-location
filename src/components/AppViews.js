@@ -102,7 +102,8 @@ addArticle = newarticle =>
         render={(props) => {
           return (
             <Login
-              {...props} 
+              {...props}
+              {...this.props}
               verifyUser={this.verifyUser}
               users={this.state.users} 
             />
@@ -144,6 +145,7 @@ addArticle = newarticle =>
           console.log("/registration", props)
           return (
             <Registration
+              {...this.props}
               {...props}
               users={this.state.users}
               addUser={this.addUser}
@@ -163,6 +165,7 @@ addArticle = newarticle =>
           
           return (
             <ArticleList
+              {...props}
               {...this.props}              
               articles={this.state.articles}
               addArticle={this.addArticle}

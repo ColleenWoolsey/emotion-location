@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import EmotionCard from "./EmotionCard";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
-import LoginManager from "../../modules/LoginManager";
-import ArticleManager from "../../modules/ArticleManager";
 import JournalCard from "../article/JournalCard";
-import ArticleList from "../article/ArticleList";
 import "./List.css";
 export default class EmotionList extends Component {
 

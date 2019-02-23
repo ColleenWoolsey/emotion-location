@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Form, Input } from 'reactstrap';
+import { Button, Modal, ModalBody, } from 'reactstrap';
 // import TaskManager from "../../modules/TaskManager";
 import "../emotion/List.css"
 export default class TaskCard extends Component {
@@ -22,7 +24,6 @@ export default class TaskCard extends Component {
 
             <section>{this.props.task.dueDate}</section>
             <section className="emotion-name">{this.props.task.emotion.emotionName}</section>           
-
             <section>
               <button
                 type="button"
@@ -57,7 +58,6 @@ export default class TaskCard extends Component {
               onChange={this.handleCheckChange} />
               <label>Completed</label>
             </section>
-
           </div>
           {/* End of top-line div */}          
 
