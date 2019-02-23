@@ -12,7 +12,8 @@ class ArticleCard extends React.Component {
       return (
         <React.Fragment>
           {/* <div key={this.props.article.id}> */}
-           
+
+          <div className="article-container">
            <Card className="cardA">
              
             <div className="top-lineA">
@@ -71,12 +72,12 @@ class ArticleCard extends React.Component {
             <CardText className="journal-entry">{this.props.article.entry}</CardText>           
           </div>
           
-        </Card>
+         </Card>
         {/* End of cardA div */}
-        {/* </div> */}
-      
-        {/* End of key div */} 
-        </React.Fragment>
+       </div>      
+       {/* End of key div */}
+
+      </React.Fragment>
     );
   }
 }

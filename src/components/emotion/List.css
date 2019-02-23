@@ -78,8 +78,8 @@
     margin-top: 7px;
 }
 .entry-textarea {
-    /* background-color: white; */
-    background-color: #fefce9;
+    background-color: white;
+    /* background-color: #fefce9; */
 }
 .journal-article {
     border: 5px solid #eba63f;
@@ -107,7 +107,7 @@
 .right {
     display: flex;
     flex-basis: 35%;
-    background-color: #e40c2b;
+    background-color: white;
     padding: 10px;
     margin-top: 15px;
     margin-bottom: 0px;
@@ -257,7 +257,7 @@
     justify-content: space-between;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: 4px;
+    padding-top: 5px;
     margin-left: 1px;
     margin-right: 1px;
     background-color: #3cbcc3;
@@ -269,6 +269,7 @@
 .editBtn {
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 4px;
     border-radius:5px;
     border: 2px solid #3cbcc3;
     background-color: #fefce9;
@@ -276,6 +277,7 @@
 }
 .delBtn {
     margin-right: 10px;
+    margin-bottom: 4px;
     border-radius:5px;
     border: 2px solid #3cbcc3;
     background-color: #fefce9;
@@ -291,7 +293,7 @@
     /* background-color: #fefce9; */
     background-color: #e0f6f6;
     padding: 4px;
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 1px;
     margin-right: 1px;
     text-align: left;
@@ -300,20 +302,22 @@
 
 
 /* **********  THESE STYLES ARE IN EmotionCard.js (in order of use)  ********** */
-.articles-list { 
+.articles-list {
+    display: flex;
+    flex-direction: column;
     /* background-image: url("./lantern.jpg");     */
     background-image: url("./n-double.jpg");
     border-radius:30px;
-    margin: 0 auto 0 auto;
     padding: 5px;
     border: #438945 15px solid;
     max-width: 80%;
+    max-height: 610px;
     overflow: auto;
-    /* background-size: 100%; */
+    background-size: 100%;
     background-size: 50%;
-    /* opacity:  0.95; */
-    overflow-y: scroll;
     font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
 }
 .cardA {
     display: block;
@@ -390,26 +394,29 @@
 .addTaskContainer {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;    
-    /* padding:  10px;     */
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-height: 250px;
     background-color: #438945;
     background-image: url("./road.jpg");
-    /* border: 5px dashed black;  */
+    background-size: 35%;
+    border-top: 10px solid #438945;
+    border-left: 10px solid #438945;
+    border-right: 10px solid #438945;
 }
 .emotions-list-examples {
     display: flex;    
     margin: 10px;
     padding: 10px;
-    background-color: #fefce9;
+    background-color: white;
+    /* background-color: #fefce9; */
     text-align: center;    
-    border: 5px solid #438945;       
+    border: 5px solid #438945;      
 }
 .card-container {
     width: 12.5%;
     outline: 3px solid #eba63f;
-    max-height: 450px;
     border: 4px solid #eba63f;
-    /* outline: 10px solid #438945;     */
 }
 .cardS {
     display: flex;  
@@ -418,10 +425,8 @@
     margin-top: 3px;
     margin-bottom: 3px;
     padding-left: 7px;
-    /* background-color: #fefce9; */
     text-align: left;    
-    /* border: 5px solid #438945; */
-    font-size: 84%;        
+    font-size: 84%;       
 }
 .cardS-title {
     background-color: #e40c2b;
@@ -429,26 +434,28 @@
     margin-right: 7px;
     margin-top: 5px;
 }
+.example-name {
+    margin: 2px;
+}
 p::first-letter { 
     font-size: 125%;
     color: #438945;
     font-weight: bold;
   }
 .bottomTasks {
-    background-image: url("./road.jpg");    
-    padding: 5px;
+    /* background-image: url("./road.jpg");     */
+    padding: 7px;
     border: #438945 10px solid;
     background-size: 35%;
+    max-width: 100%;
 }
 .topTasks {
-    /* background-image: url("./road.jpg");     */
     padding: 5px;
-    /* border: #438945 10px solid; */
-    max-width: 100%;
-    background-size: 35%;
-    /* opacity:  0.9; */
-    color: white;
-    /* margin: 20px; */
+    color: #fefce9;
+    font-weight: 400;
+    font-size: 1.2em;
+    /* border: 5px dashed #438945; */
+    /* border:  5px dashed yellow; */
 }
 .taskInputForm {
     display: flex;
@@ -457,11 +464,13 @@ p::first-letter {
     background-image: url("./road.jpg");
     font-size: 1.1em;
     font-weight: 500;
-    margin: 50px;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
     padding: 5px;
     min-height: 30px;
     opacity: .9;
-    border: #438945 2px solid;
+    border: #438945 3px solid;
 }
 .task-input {
     width: 400px;
@@ -471,18 +480,18 @@ p::first-letter {
 .add-form-btn {
     margin-right: 30px;
     border-radius:15px;
-    border: 3px solid #438945;
-    background-color: #fefce9;
+    background-color: #438945;
     width: 70px;
     height: 35px;
+    color: white;
 }
 .clear-form-btn {
     margin-right: 10px;
     border-radius:15px;
-    border: 3px solid #438945;
-    background-color: #fefce9;
+    background-color: #438945;
     width: 70px;
     height: 35px;
+    color: white;
 }
 
 /* **********  THESE STYLES ARE IN TaskEditForm.js (in order of use)  ********** */
@@ -539,9 +548,12 @@ p::first-letter {
     border-radius:15px;
     /* border: 2px solid #eba63f; */
     background-color: #fefce9;
-    width: 70px;
-    outline: 7px solid #e40c2b;
+    width: 75px;
+    /* outline: 5px solid #e40c2b; */
     position: absolute;
-    bottom: -15px;
+    bottom: -19px;
     right: 105px;
+    padding: 6px;
+    background-color: #e40c2b;
+    color: white;
 }

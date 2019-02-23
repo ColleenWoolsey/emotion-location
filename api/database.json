@@ -16,21 +16,6 @@
       "userName": "Harry Smith",
       "password": "three",
       "id": 3
-    },
-    {
-      "userName": "Santa",
-      "password": "c",
-      "id": 4
-    },
-    {
-      "userName": "Santa",
-      "password": "x",
-      "id": 5
-    },
-    {
-      "userName": "Santa",
-      "password": "x",
-      "id": 6
     }
   ],
   "emotions": [
@@ -41,7 +26,7 @@
       "giftTitle": "THE GIFT OF HURT",
       "gift": "Healing through relationship and having the courage to risk",
       "impairment": "Resentment",
-      "summary": "FIRST STEP TOWARD HEALING - Hurt lets us know that we have pain. It’s the thread that runs through all feelings. It’s an opportunity to admit, accept, and surrender to the truth of our neediness. Hurt points to our need for help from those who have genuine regard and love for us. All healing comes thru relationship - Defensiveness denies and minimizes the pain - When we refuse to feel the pain in our hearts we HARM others - To admit hurt is to begin to hope for a solution not just relief."
+      "summary": "FEELING HURT IS THE FIRST STEP TOWARD HEALING - Hurt lets us know that we have pain. It’s the thread that runs through all feelings. It’s an opportunity to admit, accept, and surrender to the truth of our neediness. Hurt points to our need for help from those who have genuine regard and love for us. All healing comes thru relationship - Defensiveness denies and minimizes the pain - When we refuse to feel the pain in our hearts we HARM others - To admit hurt is to begin to hope for a solution not just relief."
     },
     {
       "id": 2,
@@ -50,7 +35,7 @@
       "giftTitle": "THE GIFT OF LONELINESS",
       "gift": "Loneliness speaks to our deep hunger to belong, be known, and loved. Causes us to seek intimacy",
       "impairment": "Apathy",
-      "summary": "FIRST STEP TOWATD INTIMACY - Loneliness speaks to our deep hunger to belong and be known, received and loved. It’s a gift that causes us to seek out relationship where we can be expectant. We are lonely when we have both a desire to live in hope, and a willingness to hear, “no”. APATHY is the opposite of love -It denies our loneliness. Apathy makes us inhuman - it neither loves nor hates - It does not care."
+      "summary": "FEELING LONELY IS THE FIRST STEP TOWATD INTIMACY - Loneliness speaks to our deep hunger to belong and be known, received and loved. It’s a gift that causes us to seek out relationship where we can be expectant. We are lonely when we have both a desire to live in hope, and a willingness to hear, “no”. APATHY is the opposite of love -It denies our loneliness. Apathy makes us inhuman - it neither loves nor hates - It does not care."
     },
     {
       "id": 3,
@@ -59,7 +44,7 @@
       "giftTitle": "THE GIFT OF SADNESS",
       "gift": "Acceptance and serenity about what we can't control",
       "impairment": "Self-Pity & Hopeless Resignation",
-      "summary": "FIRST STEP TOWARD HEALING FROM LOSS - Sadness speaks to how much we VALUE what is missed, what’s gone, what’s lost. It also speaks of how much we value what we love, what we have and what we live. The more we live an open hearted life of fullness, the more we lose! Sadness gives us the gift of valuing and honoring life. If we don’t acknowledge our sadness, the grief deepens and stays. SELF-PITY is a way to avoid genuine sadness. It sounds like - Nothing ever goes right for me - I’m always the one who has to sacrifice - It’s no big deal - Self-pity is a strategy to manipulate others to feel sadness for us. RESIGNATION is rooted in hopelessness. It’s a feigned acceptance of painful unresolved issues which helps us avoid dependency, neediness and vulnerability. It sounds like - Don’t cry over spilt milk - It’s water under the bridge. When we can’t ache within for what was lost we have resigned ourselves to an existence that never lets life affect us!"
+      "summary": "FEELING SAD IS THE FIRST STEP TOWARD HEALING FROM LOSS - Sadness speaks to how much we VALUE what is missed, what’s gone, what’s lost. It also speaks of how much we value what we love, what we have and what we live. The more we live an open hearted life of fullness, the more we lose! Sadness gives us the gift of valuing and honoring life. If we don’t acknowledge our sadness, the grief deepens and stays. SELF-PITY is a way to avoid genuine sadness. It sounds like - Nothing ever goes right for me - I’m always the one who has to sacrifice - It’s no big deal - Self-pity is a strategy to manipulate others to feel sadness for us. RESIGNATION is rooted in hopelessness. It’s a feigned acceptance of painful unresolved issues which helps us avoid dependency, neediness and vulnerability. It sounds like - Don’t cry over spilt milk - It’s water under the bridge. When we can’t ache within for what was lost we have resigned ourselves to an existence that never lets life affect us!"
     },
     {
       "id": 4,
@@ -68,7 +53,7 @@
       "giftTitle": "THE GIFT OF ANGER ",
       "gift": "Passion that moves us to express the substance and commitments of our heart",
       "impairment": "Pride & Depression",
-      "summary": "FIRST STEP TOWARD AUTHENTIC LIVING - It shows our yearning and hunger for life. It exposes the substance, desires and commitments of our hearts. Angry people can be known because of their unwillingness to hide. It’s a caring feeling saying something matters - The energy of compassion is rooted in anger - the desire to make the pain we see and feel come to an end. It alerts us to look inside to see what fear or hurt we are experiencing. Anger exposes what we value and expresses our willingness to do what is required to reach that value … even die for what we believe in. ANGER MOVES US TO ACTION!"
+      "summary": "FEELING ANGRY IS THE FIRST STEP TOWARD AUTHENTIC LIVING - It shows our yearning and hunger for life. It exposes the substance, desires and commitments of our hearts. Angry people can be known because of their unwillingness to hide. It’s a caring feeling saying something matters - The energy of compassion is rooted in anger - the desire to make the pain we see and feel come to an end. It alerts us to look inside to see what fear or hurt we are experiencing. Anger exposes what we value and expresses our willingness to do what is required to reach that value … even die for what we believe in. ANGER MOVES US TO ACTION!"
     },
     {
       "id": 5,
@@ -77,7 +62,7 @@
       "giftTitle": "THE GIFT OF FEAR",
       "gift": "Wisdom & Faith come from seeking truth instead of safety",
       "impairment": "Anxiety, Judgement & Blindness",
-      "summary": "FIRST STEP TOWARD WISDOM AND SERENITY - FEAR MAKES US AWARE OF OUR CHOICES. Fear brings us STRENGTH. It allows us to experience RISK (or run from it). We risk our hearts by expressing our needs. We risk TRUSTING others for assistance (or not). We choose to DEPEND on others for their skill and willingness. We enjoy opportunities to COLLABORATE with others for mutual gain (or we become fretful and controlling). We gain WISDOM through the deeply experienced awareness of spiritual truth that starts with listening to fear."
+      "summary": "FEELING FEAR IS THE FIRST STEP TOWARD WISDOM AND SERENITY - FEAR MAKES US AWARE OF OUR CHOICES. Fear brings us STRENGTH. It allows us to experience RISK (or run from it). We risk our hearts by expressing our needs. We risk TRUSTING others for assistance (or not). We choose to DEPEND on others for their skill and willingness. We enjoy opportunities to COLLABORATE with others for mutual gain (or we become fretful and controlling). We gain WISDOM through the deeply experienced awareness of spiritual truth that starts with listening to fear."
     },
     {
       "id": 6,
@@ -86,7 +71,7 @@
       "giftTitle": "THE GIFT OF SHAME",
       "gift": "Humility - Potential to fail and do harm, to succeed and to love",
       "impairment": "Toxic Shame & Contempt",
-      "summary": "FIRST STEP TOWARD HUMILITY - It's a consciousness of our limitations and giftedness that allows empathy for others. It allows us to stop comparison and competition in order to prove our worth, and start giving ourselves to something greater - the service of others - In humility we are grateful and merciful. Shame acknowledges we are feeling creatures who succeed and fail, need daily, are full of dreams and capabilities, desire great things but are deficient without others. It longs to know our value (that we belong) and that we add life (that we matter)."
+      "summary": "FEELING SHAME IS THE FIRST STEP TOWARD HUMILITY - It's a consciousness of our limitations and giftedness that allows empathy for others. It allows us to stop comparison and competition in order to prove our worth, and start giving ourselves to something greater - the service of others - In humility we are grateful and merciful. Shame acknowledges we are feeling creatures who succeed and fail, need daily, are full of dreams and capabilities, desire great things but are deficient without others. It longs to know our value (that we belong) and that we add life (that we matter)."
     },
     {
       "id": 7,
@@ -95,7 +80,7 @@
       "giftTitle": "THE GIFT OF GUILT",
       "gift": "Freedom & Forgiveness - Desire and vulnerability for change",
       "impairment": "Toxic Shame & Shamelessness",
-      "summary": "FIRST STEP TOWARD FREEDOM - Guilt prompts us to seek the forgiveness that sets us free. Through guilt the heart confronts behavior and behavior reveals the state of our hearts. Guilt is our most precious gift because the relinquishing of the heart to another has transforming power. We discover love comes through truth not merit."
+      "summary": "FEELING GUILT IS THE FIRST STEP TOWARD FREEDOM - Guilt prompts us to seek the forgiveness that sets us free. Through guilt the heart confronts behavior and behavior reveals the state of our hearts. Guilt is our most precious gift because the relinquishing of the heart to another has transforming power. We discover love comes through truth not merit."
     },
     {
       "id": 8,
@@ -231,14 +216,6 @@
     {
       "userId": 2,
       "emotionId": 5,
-      "dueDate": "2019-03-08",
-      "task": "Declare my hunger for love",
-      "complete": false,
-      "id": 20
-    },
-    {
-      "userId": 2,
-      "emotionId": 5,
       "dueDate": "2019-03-07",
       "task": "Reach out for love and give it away",
       "complete": false,
@@ -249,7 +226,7 @@
       "emotionId": 6,
       "dueDate": "2019-02-27",
       "task": "x",
-      "complete": false,
+      "complete": true,
       "id": 23
     },
     {
@@ -261,12 +238,28 @@
       "complete": false
     },
     {
-      "userId": 1,
-      "emotionId": 0,
-      "dueDate": "",
-      "task": "",
+      "id": 26,
+      "userId": 2,
+      "emotionId": 2,
+      "dueDate": "2019-02-18",
+      "task": "xxxxxx",
+      "complete": true
+    },
+    {
+      "userId": 2,
+      "emotionId": 2,
+      "dueDate": "2019-02-07",
+      "task": "vvvv",
       "complete": false,
-      "id": 25
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "emotionId": 2,
+      "dueDate": "2019-02-28",
+      "task": "You don't have to tell them you did this with a paper towel. We don't know where that goes. Hit it, and get away from it. Look at your painting and make a decision. Drop in a happy little sky here.",
+      "complete": false,
+      "id": 29
     }
   ],
   "examples": [
@@ -568,15 +561,21 @@
     },
     {
       "userId": 2,
-      "entryDate": "Mon Feb 18 2019 22:10:54 GMT-0600 (Central Standard Time)",
-      "entry": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving.\n\nIf there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
-      "id": 5
-    },
-    {
-      "userId": 2,
       "entryDate": "Mon Feb 18 2019 23:05:41 GMT-0600 (Central Standard Time)",
       "entry": "Bob Ross says ... Brush mix! It's too far away. Let's build us a mountain! Don't let this get too strong or it'll stand out. I wanna be careful to not let the color go past the tape. All kinds of beautiful little things just happen.",
       "id": 6
+    },
+    {
+      "userId": 2,
+      "entryDate": "Fri Feb 22 2019 16:06:09 GMT-0600 (Central Standard Time)",
+      "entry": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving. If there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "entryDate": "Fri Feb 22 2019 16:07:33 GMT-0600 (Central Standard Time)",
+      "entry": "Bob Ross says ... Begin laying in just some beautiful little highlights. We'll just sort of see what happens. The round brush is so fun, let's go back to that. Just make little X's, and we'll put in a happy little sky. Always keep the brush moving. If there's a secret to anything, it's practice. It's easy to add more color, but it's a son of a gun to take it away. Absolutely no limits! You know me, I get crazy. Follow these angles.",
+      "id": 8
     }
   ]
 }
