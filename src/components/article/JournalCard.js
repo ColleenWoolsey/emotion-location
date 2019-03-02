@@ -61,7 +61,7 @@ export default class JournalCard extends Component {
                 onChange={this.handleFieldChange}
               />
             </FormGroup>
-
+                      
             <FormGroup>
               <button
                 type="submit"
@@ -69,8 +69,9 @@ export default class JournalCard extends Component {
                 onClick={this.constructNewArticle}
               >
                 Submit
-              </button>             
-            </FormGroup>
+              </button>
+            </FormGroup>             
+           >
           </form>
         
       </React.Fragment>

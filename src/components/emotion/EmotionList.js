@@ -108,6 +108,7 @@ export default class EmotionList extends Component {
 
                 <div>
                   <h4 className="reflect">... reflect... repent... rejoice... reconcile</h4>
+                  <h6 className="p-Chip">API built from "The Voice of the Heart" by Chip Dodd</h6>
                 </div>
 
               </div>
@@ -117,7 +118,7 @@ export default class EmotionList extends Component {
               < JournalCard
                 articles={this.props.articles}
                 addArticle= {this.props.addArticle}  
-                />        
+                />       
               </div>
               {/* End of div journal-article */}
 
