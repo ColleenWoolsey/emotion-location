@@ -26,7 +26,7 @@ export default class Emoloco extends Component {
 
     LoginManager.getAll()
     .then(allUsers => {
-      console.log("getAll from componentDidMount", allUsers)
+      console.log("getAll (Users) from componentDidMount", allUsers)
         this.setState({
             users: allUsers
         })        

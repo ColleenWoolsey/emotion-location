@@ -39,10 +39,10 @@ export default class JournalCard extends Component {
     // console.log("this.props.article", this.props.article)
           this.props.addArticle(newarticle)
           .then(() => 
-            this.props.history.push("/home"));
-            alert("Your journal entry has been saved")
+          // this.props.history.push("/home"))
+            alert("Your journal entry has been saved"))
           };
-        
+
   render() {
     
     return (

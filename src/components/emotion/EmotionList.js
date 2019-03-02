@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ArticleManager from "../../modules/ArticleManager";
 import EmotionCard from "./EmotionCard";
 import TaskCard from "../task/TaskCard";
 import TaskManager from "../../modules/TaskManager";
@@ -32,6 +33,14 @@ export default class EmotionList extends Component {
     ))
   }
 
+  listArticles = (id) => {
+    return ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
+    .then(userArticles =>
+      this.setState({
+        articles: userArticles
+      }))
+  }
+
   componentDidMount() {
     
     TaskManager.getTasksByUser(sessionStorage.getItem("user"))
@@ -43,10 +52,25 @@ export default class EmotionList extends Component {
         console.log ("After tasksCDM - this.props", this.props)
         console.log ("After tasksCDM - this.state", this.state)
     })
+
+    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
+    .then(allArticles => {
+        this.setState({
+            articles: allArticles
+        })        
+        console.log("getAll from componentDidMount", allArticles)
+        console.log ("After artCDM - this.props", this.props)
+        console.log ("After artCDM - this.state", this.state)
+        console.log ("After artCDM - this.state.articles", this.state.articles)
+        console.log ("After artCDM - this.props.articles", this.props.articles)
+        console.log ("After artCDM - this.state.tasks", this.state.tasks)
+        console.log ("After artCDM - this.props.tasks", this.props.tasks)
+        console.log ("After artCDM - this.state.user", this.state.user)
+        console.log ("After artCDM - this.props.user", this.props.user)
+    })
   };
 
   render() {
-
     this.props.tasks.sort(function(a, b) 
                 {a = new Date(a.dueDate);
                  b = new Date(b.dueDate);
@@ -73,9 +97,11 @@ export default class EmotionList extends Component {
                   <button
                     type="button"
                     className="listArticlesBtn"
-                    onClick={() => {              
-                      this.props.history.push("/articles")                         
-                  }}>                  
+                      onClick={() => {
+                        this.props.listArticles(sessionStorage.getItem("user"))        
+                        this.props.history.push("/articles")                        
+                  }}
+                  >                  
                     Read Journal Entries
                   </button>                  
                 </div>
@@ -89,11 +115,8 @@ export default class EmotionList extends Component {
 
               <div className="journal-article">
               < JournalCard
-                {...this.props}
-                articles={this.state.articles}
-                addArticle= {this.state.addArticle}
-                addArticle= {this.props.addArticle}
-                
+                articles={this.props.articles}
+                addArticle= {this.props.addArticle}  
                 />        
               </div>
               {/* End of div journal-article */}
@@ -124,7 +147,8 @@ export default class EmotionList extends Component {
               </div>
               {/* End of div header-add-task */}
 
-              <div className="tasks-list">                                
+              <div className="tasks-list">
+                                             
                 {this.state.tasks.map(task => (
                   <TaskCard key={task.id} task={task} {...this.props} 
                   tasks={this.state.tasks}

@@ -33,6 +33,14 @@ export default class AppViews extends Component {
     return EmotionManager.getExamplesByEmo(id)
   }
 
+  listArticles = (id) => {
+    return ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
+    .then(userArticles =>
+      this.setState({
+        articles: userArticles
+      }))
+  }
+
   addUser = newUser =>
     LoginManager.post(newUser)
       .then(() => LoginManager.getAllUserInfo()
@@ -48,8 +56,8 @@ addArticle = newarticle =>
     .then(articles =>
       this.setState({
         articles: articles
-      })        
-    ); 
+      })      
+    );
 
   addTask = (task) => {
     return TaskManager.post(task)
@@ -76,24 +84,24 @@ addArticle = newarticle =>
     })
   } 
 
-  componentDidMount() {    
+  // componentDidMount() {    
    
-    ArticleManager.getArticlesByUser(sessionStorage.getItem("user"))
-    .then(allArticles => {
-        this.setState({
-            articles: allArticles
-        })        
-        console.log("getArticlesByUser from componentDidMount", allArticles)
-        console.log ("After artCDM - this.props", this.props)
-        console.log ("After artCDM - this.state", this.state)
-        console.log ("After artCDM - this.state.articles", this.state.articles)
-        console.log ("After artCDM - this.props.articles", this.props.articles)
-        console.log ("After artCDM - this.state.tasks", this.state.tasks)
-        console.log ("After artCDM - this.props.tasks", this.props.tasks)
-        console.log ("After artCDM - this.state.user", this.state.user)
-        console.log ("After artCDM - this.props.user", this.props.user)
-    })
-  };
+  //   ArticleManager.getAll()
+  //   .then(allArticles => {
+  //       this.setState({
+  //           articles: allArticles
+  //       })        
+  //       console.log("getAll from componentDidMount", allArticles)
+  //       console.log ("After artCDM - this.props", this.props)
+  //       console.log ("After artCDM - this.state", this.state)
+  //       console.log ("After artCDM - this.state.articles", this.state.articles)
+  //       console.log ("After artCDM - this.props.articles", this.props.articles)
+  //       console.log ("After artCDM - this.state.tasks", this.state.tasks)
+  //       console.log ("After artCDM - this.props.tasks", this.props.tasks)
+  //       console.log ("After artCDM - this.state.user", this.state.user)
+  //       console.log ("After artCDM - this.props.user", this.props.user)
+  //   })
+  // };
 
   render() {
   return(
@@ -116,7 +124,7 @@ addArticle = newarticle =>
         render={props => {
           console.log("/home - props", props)
           console.log("/home - this.props", this.props)
-          
+          console.log("/home - this.state", this.state)
           console.log("/home - this.state.articles", this.state.articles)
           console.log("/home - this.props.articles", this.props.articles)
           console.log("/home - this.state.tasks", this.state.tasks)
@@ -134,6 +142,7 @@ addArticle = newarticle =>
               deleteTask={this.deleteTask}
               updateTask={this.updateTask}
               addArticle={this.addArticle}
+              listArticles={this.listArticles} 
               addUser={this.addUser}
             />
             )
@@ -160,6 +169,7 @@ addArticle = newarticle =>
         render={(props) => {
           console.log("/articles - props", props)
           console.log("/articles - this.props", this.props)
+          console.log("/articles - this.state", this.state)
           console.log("/articles - this.state.articles", this.state.articles)
           console.log("/articles - this.props.articles", this.props.articles)
           
@@ -169,8 +179,7 @@ addArticle = newarticle =>
               {...this.props}              
               articles={this.state.articles}
               addArticle={this.addArticle}
-              // articles={this.props.articles}
-               
+              listArticles={this.listArticles}             
             />
           );
         }} 
