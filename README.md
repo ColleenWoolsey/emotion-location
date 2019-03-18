@@ -1,5 +1,7 @@
 FRONT END CAPSTONE - EMO-LOCATION
 
+![Alt text](\src\EmoLocation.png?raw=true "Main Page")
+
 It’s time to get creative with CRUD.  Modularization, dynamic routing, state and props mean less code that works harder.  Seeing a project through from ERD to completion was as exciting as taking the training wheels off a bike.
 Growth areas included: 
 1. Creating meaningful issue tickets and employing them
