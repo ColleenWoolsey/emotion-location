@@ -94,43 +94,19 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-14",
-      "task": "Value openly by having deep sadness",
-      "complete": false
-    },
-    {
-      "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-15",
-      "task": "Write poems and songs",
-      "complete": false,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-21",
-      "task": "Send letters to my children at their milestones",
-      "complete": false
-    },
-    {
       "id": 4,
       "userId": 1,
       "emotionId": 3,
       "dueDate": "2019-02-17",
-      "task": "Hug Harry and say I love you",
-      "complete": false
+      "task": "Send the wonderful vet tech Allison a thank-you note for her kindness to Sassie and I",
+      "complete": true
     },
     {
       "id": 6,
       "userId": 1,
-      "emotionId": 3,
-      "dueDate": "2019-02-19",
-      "task": "Get up early and hear God whisper in the sunrise",
+      "emotionId": 5,
+      "dueDate": "2019-02-28",
+      "task": "Seek truth not safety",
       "complete": false
     },
     {
@@ -177,7 +153,7 @@
       "id": 14,
       "userId": 2,
       "emotionId": 5,
-      "dueDate": "2019-03-01",
+      "dueDate": "2019-03-28",
       "task": "Hug my children & hold their hand in the dark",
       "complete": false
     },
@@ -185,7 +161,7 @@
       "id": 16,
       "userId": 2,
       "emotionId": 5,
-      "dueDate": "2019-03-03",
+      "dueDate": "2019-03-18",
       "task": "Tell my mother of the hurt",
       "complete": false
     },
@@ -198,12 +174,12 @@
       "complete": false
     },
     {
+      "id": 18,
       "userId": 2,
       "emotionId": 5,
-      "dueDate": "2019-03-06",
+      "dueDate": "2019-03-31",
       "task": "Tell my spouse I was wrong",
-      "complete": false,
-      "id": 18
+      "complete": false
     },
     {
       "userId": 2,
@@ -212,14 +188,6 @@
       "task": "Admit my lack of sufficiency and inability to control circumstances",
       "complete": false,
       "id": 19
-    },
-    {
-      "userId": 2,
-      "emotionId": 5,
-      "dueDate": "2019-03-07",
-      "task": "Reach out for love and give it away",
-      "complete": false,
-      "id": 21
     },
     {
       "userId": 2,
@@ -233,9 +201,9 @@
       "id": 24,
       "userId": 1,
       "emotionId": 3,
-      "dueDate": "2019-02-28",
-      "task": "Volunteer at the shelter",
-      "complete": false
+      "dueDate": "2019-02-19",
+      "task": "Value openly by having deep sadness",
+      "complete": true
     },
     {
       "id": 26,
@@ -250,16 +218,48 @@
       "emotionId": 2,
       "dueDate": "2019-02-07",
       "task": "vvvv",
-      "complete": false,
+      "complete": true,
       "id": 28
     },
     {
       "userId": 1,
       "emotionId": 2,
       "dueDate": "2019-02-28",
-      "task": "You don't have to tell them you did this with a paper towel. We don't know where that goes. Hit it, and get away from it. Look at your painting and make a decision. Drop in a happy little sky here.",
+      "task": "Stop pretending to enjoy what I don't like",
       "complete": false,
-      "id": 29
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "emotionId": 4,
+      "dueDate": "2019-02-28",
+      "task": "Admit fault and build bridges",
+      "complete": false,
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "emotionId": 6,
+      "dueDate": "2019-02-28",
+      "task": "Stop comparing and competing",
+      "complete": false,
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "emotionId": 8,
+      "dueDate": "2019-02-28",
+      "task": "Risk loss and enjoy success",
+      "complete": false,
+      "id": 33
+    },
+    {
+      "id": 34,
+      "userId": 1,
+      "emotionId": 1,
+      "dueDate": "2019-02-28",
+      "task": "Acknowledge my inability to heal alone",
+      "complete": false
     }
   ],
   "examples": [
