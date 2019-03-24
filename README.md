@@ -1,18 +1,20 @@
-FRONT END CAPSTONE - EMO-LOCATION
+FRONT END CAPSTONE - EMOLOCATION
 
 ![Main Page](/src/EmoLocation.png?raw=true)
 ![Edit Page](/src/EditTask.png?raw=true)
 
-It’s time to get creative with CRUD.  Modularization, dynamic routing, state and props mean less code that works harder.  Seeing a project through from ERD to completion was as exciting as taking the training wheels off a bike.
-Growth areas included: 
-1. Creating meaningful issue tickets and employing them
-2. Re-working issue tickets to meet unforeseen challenges
-3. Enjoying a little fun with bootstrap
+FRONT END CAPSTONE - EMOLOCATION
+
+Creativity with CRUD inspired by Geolocation
+
+Modularization and dynamic routing mean DRY code that works harder. This browser-based single page application employs React, HTML, CSS, jQuery, JavaScript and Bootstrap. Seeing a project through from ERD to completion was as exciting as taking the training wheels off a bike.
+
+Growth areas included: Flexibly balancing creativity and stretch goals with MVP and a firm deadline. Extensive project planning was done upfront with detailed issue tickets that allowed me to meet coding benchmarks.
 
 I started with a grid for REACT routing akin to the LA freeway system and finished with something closer to the Chicago Dan Ryan Express - Thanks to google, perseverance, and the many folk willing to explain things “just one more time.”
 Best part was the opportunity to develop something I feel passionate about and daring to hope it makes a difference.
 
-Emo-Location is a TO-BE list Emotion Tracker for those who want to live truthfully and move responsibly. It incorporates specificity and timeframes to challenge the  avoidance strategy of vagueness. Information relative to the 8 emotions encourages a better partnership between functionality and fully experiencing feelings.
+Emo-Location is a TO-BE list Emotion Tracker for those who want to live truthfully and move responsibly. It incorporates specificity and timeframes to challenge the avoidance strategy of vagueness. Information and assessments relative to the 8 emotions encourage a better partnership between functionality and fully experiencing feelings.
 
 
 
