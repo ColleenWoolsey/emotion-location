@@ -1,5 +1,7 @@
 FRONT END CAPSTONE - EMOLOCATION
 
+https://vimeo.com/user97612572/review/331607051/f80ac4aef7
+
 ![Main Page](/src/EmoLocation.png?raw=true)
 ![Edit Page](/src/EditTask.png?raw=true)
 
@@ -27,7 +29,7 @@ To get started as a user, create a new account. When you reach the dashboard you
 6. Add a Journal Entry
 7. Explore Further Detail about each of the 8 emotions
 
-![](EmoDemo.gif)
+![](https://vimeo.com/user97612572/review/331607051/f80ac4aef7)
 
 
 ## Getting Started
