@@ -1,11 +1,6 @@
-FRONT END CAPSTONE - EMOLOCATION
+# FRONT END CAPSTONE - EMOLOCATION
 
-https://vimeo.com/user97612572/review/331607051/f80ac4aef7
-
-![Main Page](/src/EmoLocation.png?raw=true)
-![Edit Page](/src/EditTask.png?raw=true)
-
-FRONT END CAPSTONE - EMOLOCATION
+![](EmoDemo.gif)
 
 Creativity with CRUD inspired by Geolocation
 
@@ -29,9 +24,6 @@ To get started as a user, create a new account. When you reach the dashboard you
 6. Add a Journal Entry
 7. Explore Further Detail about each of the 8 emotions
 
-![](https://vimeo.com/user97612572/review/331607051/f80ac4aef7)
-
-
 ## Getting Started
 To run EmoLocation locally, create an empty directory and clone the project by running the following command in your terminal
 ```git@github.com:ColleenWoolsey/emotion-location.git```
@@ -50,6 +42,12 @@ Navigate back to the root directory and run: ``` npm install ``` This will insta
 To run the app in development mode run ``` npm start ``` and open [http://localhost:3000]( http://localhost:3000) to view it in the browser. To start the server open another window of your terminal, navigate to api and run: ``` json-server -p 5002 -w database.json ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+https://vimeo.com/user97612572/review/331607051/f80ac4aef7
+
+![Main Page](/src/EmoLocation.png?raw=true)
+![Edit Page](/src/EditTask.png?raw=true)
+
 
 {
   "users": [
