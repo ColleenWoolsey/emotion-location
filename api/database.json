@@ -16,6 +16,11 @@
       "userName": "Harry Smith",
       "password": "three",
       "id": 3
+    },
+    {
+      "userName": "",
+      "password": "",
+      "id": 4
     }
   ],
   "emotions": [
@@ -259,6 +264,14 @@
       "emotionId": 1,
       "dueDate": "2019-02-28",
       "task": "Acknowledge my inability to heal alone",
+      "complete": false
+    },
+    {
+      "id": 35,
+      "userId": 1,
+      "emotionId": 3,
+      "dueDate": "2019-04-30",
+      "task": "Visit my Best Friend",
       "complete": false
     }
   ],
