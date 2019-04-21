@@ -2,7 +2,7 @@
 
 ![](EmoDemo.gif)
 
-Creativity with CRUD inspired by Geolocation
+## Creativity with CRUD inspired by Geolocation
 
 Modularization and dynamic routing mean DRY code that works harder. This browser-based single page application employs React, HTML, CSS, jQuery, JavaScript and Bootstrap. Seeing a project through from ERD to completion was as exciting as taking the training wheels off a bike.
 
